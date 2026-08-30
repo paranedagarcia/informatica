@@ -1,7 +1,10 @@
 {
-  "label": "📚 Programación",
+  "label": "📁 Programación",
   "link": {
     "type": "generated-index",
-    "slug": "/programacion"
+    "slug": "/programacion",
+    "title": "📚 Programación",
+    "description": "Sección dedicada a la programación. Desde conceptos básicos hasta técnicas avanzadas.",
+
   }
 }

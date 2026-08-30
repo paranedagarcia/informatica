@@ -7,7 +7,7 @@ import {links as footerLinks} from './footer_links';
 
 const config: Config = {
   title: 'Informatica',
-  tagline: 'Ingeniería Informática',
+  tagline: 'Desarrolla sobre Tecnología de la Información',
   favicon: 'img/favicon.ico',
 
   markdown: {
@@ -33,10 +33,6 @@ const config: Config = {
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/informatica',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'patricioaraneda', // Usually your GitHub org/user name.
-  projectName: 'informatica', // Usually your repo name.
 
   onBrokenLinks: 'throw',
 

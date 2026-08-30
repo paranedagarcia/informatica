@@ -1,6 +1,9 @@
 {
-  "label": "📚 Modelamiento",
+  "label": "📁 Modelamiento",
   "link": {
-    "type": "generated-index"
+    "type": "generated-index",
+    "title": "📚Modelamiento",
+    "description": "Sección dedicada al modelamiento en el manual de informática.",
+    "slug": "model amiento"
   }
 }

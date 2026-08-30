@@ -10,7 +10,7 @@ description: "Programación en Rust"
 https://rust-lang.org/
 
 :::info
-Acceda al curso inicial de Programación en Rust. En modalidad básica o avanzada, aprenderás a crear las funciones necesarias para tus procesos de información. 
+Acceda al curso inicial de Programación en Rust. Aprenderás a crear las funciones necesarias para tus procesos de información. 
 
-[**Programación en Rust**](http://patricioaraneda.cl/python/)
+[**Programación en Rust**](http://patricioaraneda.cl/rust)
 :::

@@ -1,8 +1,9 @@
 {
-  "label": "📚 Herramientas",
+  "label": "📁 Herramientas",
   "link": {
     "type": "generated-index",
     "slug": "/herramientas",
-    "description": "Herramientas para modelamiento de información"
+    "title": "📚 Herramientas",
+    "description": "Herramientas para modelamiento de información."
   }
 }

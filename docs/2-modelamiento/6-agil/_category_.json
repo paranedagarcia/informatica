@@ -1,7 +1,9 @@
 {
-  "label": "📚 Desarrollo Ágil",
+  "label": "📁 Desarrollo Ágil",
   "link": {
     "type": "generated-index",
-    "slug": "/desarrollo-agil"
+    "slug": "/desarrollo-agil",
+    "title": "📚 Desarrollo Ágil",
+    "description": "Desarrollo ágil."
   }
 }
