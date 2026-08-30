@@ -22,6 +22,10 @@ export const links = [
       label: 'Inteligencia Artificial',
       href: 'https://patricioaraneda.cl/inteligencia-artificial/',
     },
+    {
+      label: 'Ingeniería Informática',
+      href: 'https://patricioaraneda.cl/informatica/',
+    },
   ],
 },
 {
@@ -48,7 +52,7 @@ export const links = [
     
     {
       label: 'GitHub',
-      href: 'https://github.com/paranedagarcia/sql-manual',
+      href: 'https://github.com/paranedagarcia',
     },
     {
       label: 'ORCID',
