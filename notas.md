@@ -36,3 +36,20 @@ Diseñemos el cuestionario sobre TOGAF y Zachman.
 
 ¿Cómo se vincula el marco Zachman con el diseño de bases de datos?
 ¿Qué herramientas tecnológicas facilitan la implementación del marco Zachman?
+
+¿Cómo se aplica el Manifiesto Ágil?
+Diferencia entre Kanban y Scrum
+Ejemplos de ciclos híbridos
+
+## scrum
+
+¿Cómo se calcula la velocidad del equipo?
+¿Qué es la 'Deuda Técnica' en Scrum?
+
+¿Cómo calcular el Burndown Chart?
+Ver ejemplos de Burnup Chart
+Diferencias entre Agile y Waterfall
+
+¿Cómo se calcula el gráfico de quemado en Scrum?
+Ver ejemplos de Burndown Chart
+Diferencias entre Burndown y Burnup

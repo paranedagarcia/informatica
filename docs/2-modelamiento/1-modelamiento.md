@@ -1,7 +1,7 @@
 ---
-id: intro
-title: "Ingeniería Informática"
+id: modelamiento
+title: "Modelamiento y paradigmas de desarrollo"
 sidebar_label: "📄 Presentación"
 sidebar_position: 1
-slug: /intro
+slug: /modelamiento
 ---

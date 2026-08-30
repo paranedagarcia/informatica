@@ -1,18 +1,7 @@
 ---
 id: datos
-title: "Desarrollo Agil"
+title: "Modelamiento de datos"
 sidebar_label: "📄 Modelo de datos"
 description: "Fundamentos del modelamiento de datos"
 ---
 
-## Manifiesto Agil
-
-## Scrum
-
-## Kanban
-
-## XP
-
-## Product backlog
-
-## Sprint
