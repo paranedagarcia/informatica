@@ -1,52 +1,58 @@
 import type {ReactNode} from 'react';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import clsx from 'clsx';
 import Heading from '@theme/Heading';
 import styles from './styles.module.css';
 
-type FeatureItem = {
-  title: string;
-  Svg: React.ComponentType<React.ComponentProps<'svg'>>;
-  description: ReactNode;
-};
+const SUPPORTED_IMAGE_EXTENSIONS = ['png', 'jpg', 'webp', 'svg','gif'];
 
-const FeatureList: FeatureItem[] = [
+function hasSupportedImageFormat(imagePath) {
+  const extension = imagePath.split('.').pop()?.toLowerCase();
+  return SUPPORTED_IMAGE_EXTENSIONS.includes(extension);
+}
+
+
+const FeatureList = [
   {
-    title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    title: 'Fundamentos',
+    image: '/img/fundamentos.jpg',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Conozca los conceptos básicos de la Ingeniería de la Información y aplique para la resolución de problemas en cualquier àmbito.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    title: 'Programación',
+    image: '/img/programacion.jpg',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Aprenda las bases de la programación, algoritmos y estructuras de datos, incluyendo la sintaxis, estructuras de control y conceptos fundamentales.
       </>
     ),
   },
   {
-    title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    title: 'Gobernanza',
+    image: '/img/gobernanza.jpg',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Aprenda las mejores prácticas para la gobernanza de los datos e información en el ámbito organizacional (en construcción...).
       </>
     ),
   },
 ];
 
-function Feature({title, Svg, description}: FeatureItem) {
+function Feature({image, title, description}) {
+  if (!hasSupportedImageFormat(image)) {
+    return null;
+  }
+
+  const imageUrl = useBaseUrl(image);
+
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <Svg className={styles.featureSvg} role="img" />
+        <img className={styles.featureSvg} src={imageUrl} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>

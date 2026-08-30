@@ -3,6 +3,10 @@ export const links = [
   title: 'Otros cursos de la serie',
   items: [
     {
+      label: 'Ingeniería Informática',
+      href: 'https://patricioaraneda.cl/informatica/',
+    },
+    {
       label: 'Programación en Python',
       href: 'https://patricioaraneda.cl/python/',
     },
@@ -23,9 +27,10 @@ export const links = [
       href: 'https://patricioaraneda.cl/inteligencia-artificial/',
     },
     {
-      label: 'Ingeniería Informática',
-      href: 'https://patricioaraneda.cl/informatica/',
+      label: 'IA en Gestión Pública',
+      href: 'https://patricioaraneda.cl/ia-gestionpublica/',
     },
+    
   ],
 },
 {

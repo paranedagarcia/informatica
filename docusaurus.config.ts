@@ -3,11 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import {links as footerLinks} from './footer_links';
 
+
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
   title: 'Informatica',
-  tagline: 'Desarrolla sobre Tecnología de la Información',
+  tagline: 'Desarrolla sobre las Tecnologías de la Información',
   favicon: 'img/favicon.ico',
 
   markdown: {
@@ -41,6 +42,13 @@ const config: Config = {
     locales: ['es'],
   },
 
+  scripts: [
+    {
+      src: 'https://patricioaraneda.cl/public/css/docusaurus/footer_links.ts',
+      async: true,
+      type: 'module',
+    }
+  ],
   presets: [
     [
       'classic',

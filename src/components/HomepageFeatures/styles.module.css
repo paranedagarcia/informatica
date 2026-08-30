@@ -6,6 +6,12 @@
 }
 
 .featureSvg {
+  height: 225px;
+  width: 400px;
+}
+/*
+.featureSvg {
   height: 200px;
   width: 200px;
 }
+*/
