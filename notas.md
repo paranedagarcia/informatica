@@ -41,6 +41,17 @@ Diseñemos el cuestionario sobre TOGAF y Zachman.
 Diferencia entre Kanban y Scrum
 Ejemplos de ciclos híbridos
 
+## TGS
+
+Dame un ejemplo de Isomorfismo
+Explica la Entropía en TI
+¿Qué es el modelo de Stacey?
+Ver el Mapa Conceptual
+
+¿Qué es la entropía negativa?
+Explícame el isomorfismo
+¿Cómo funciona la homeostasis?
+
 ## scrum
 
 ¿Cómo se calcula la velocidad del equipo?
