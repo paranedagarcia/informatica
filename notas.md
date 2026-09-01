@@ -64,3 +64,13 @@ Diferencias entre Agile y Waterfall
 ¿Cómo se calcula el gráfico de quemado en Scrum?
 Ver ejemplos de Burndown Chart
 Diferencias entre Burndown y Burnup
+
+## ciclo de vida
+
+¿Qué es la viabilidad técnica?
+Explícame el punto de equilibrio.
+¿Cómo se hace un Quiz de esto?
+
+Explícame el Gráfico de Stacey
+Ejemplos de ciclos de vida híbridos
+¿Qué es el Filtro de Idoneidad?
