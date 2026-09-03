@@ -16,8 +16,7 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 </figure>
 </center>
 
-<br />
-#### Ejemplo:
+<br/>
 <Tabs>
 <TabItem value="mnp" label="Antecedentes" default>
 <div class="alert alert--primary">
@@ -25,11 +24,9 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 </div>
 </TabItem>
 <TabItem value="mnp-python" label="💻 Código">
-```python showLineNumbers
 
-```
 </TabItem>
-</Tabs><br />
+</Tabs><br/>
 
 Explícame qué es la Arquitectura Empresarial
 ¿Cómo se aplica Scrum en ingeniería de sistemas?
@@ -79,3 +76,9 @@ Explícame el punto de equilibrio.
 Explícame el Gráfico de Stacey
 Ejemplos de ciclos de vida híbridos
 ¿Qué es el Filtro de Idoneidad?
+
+## programacion
+
+Ejemplos de algoritmos de ordenación
+Diferencia entre variables y funciones
+Cómo usar bucles 'for' y 'while'
