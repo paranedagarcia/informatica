@@ -1,4 +1,9 @@
 
+import YouTubeVideo from '@site/src/components/YouTubeVideo';
+
+- Programa Universitario de Bioética- UNAM
+<YouTubeVideo id="iNoOj41oRYY" title="Etica y regulación en la IA" />
+
 <details>
 <summary>💻 </summary>
 
