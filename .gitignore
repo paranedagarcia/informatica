@@ -10,6 +10,8 @@
 
 # Misc
 /plan
+/programas
+
 .DS_Store
 .env
 .env.local
