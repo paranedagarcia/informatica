@@ -82,3 +82,10 @@ Ejemplos de ciclos de vida híbridos
 Ejemplos de algoritmos de ordenación
 Diferencia entre variables y funciones
 Cómo usar bucles 'for' y 'while'
+
+## sistemas
+
+¿Qué causa la entropía en un sistema?
+¿Cómo ayuda la homeostasis a la resiliencia?
+
+¿Cómo manejar la Ley de Brooks?

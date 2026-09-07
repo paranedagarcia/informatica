@@ -40,6 +40,6 @@ El ecosistema de herramientas CASE se clasifica y detalla de la siguiente manera
 *   **LAMBDES (*Logic Analyzer of Models and metamodels Based on Descriptive Semantics*):** Un kit de herramientas diseñado para traducir la representación visual XMI de diagramas de StarUML en lógica de primer orden (FOPL) para ejecutar análisis automáticos de consistencia estructural mediante el potente demostrador de teoremas SPASS.
 
 #### D. Modelado de Procesos de Negocio (BPMN)
-Para el modelado organizativo y funcional basado en la notación BPMN 2.0, tus fuentes señalan las siguientes suites líderes:
+Para el modelado organizativo y funcional basado en la notación BPMN 2.0, existen las siguientes suites líderes:
 *   **Bizagi Modeler, ADONIS NP (de BOC Group), ARIS Express, ibo Prometheus, Signavio Process Manager y Camunda Modeler:** Herramientas CASE nativas que asisten a analistas y expertos de negocio a modelar diagramas de colaboración, definir reglas de enrutamiento y exportar la lógica del negocio a formatos de intercambio directo para que puedan ser ejecutados directamente por motores de procesos (*workflows*) sin necesidad de programar código intermedio.
 

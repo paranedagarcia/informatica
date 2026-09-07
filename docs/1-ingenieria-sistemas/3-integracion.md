@@ -1,10 +1,10 @@
 ---
-id: arquitectura-integracion
+id: ae-integracion
 title:  ""
 sidebar_label: "📄 Integración Empresarial"
 ---
 
-## **Guía Integral**
+## 📄 **Guía Integral**
 **De la Taxonomía Ontológica a la Agilidad Organizacional**
 
 ### Fundamentos de la Ingeniería de Sistemas 

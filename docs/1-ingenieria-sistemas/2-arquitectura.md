@@ -1,6 +1,6 @@
 ---
-id: arquitectura-empresarial
-title:  "Arquitectura Empresarial"
+id: ae-empresarial
+title:  "📄 Arquitectura Empresarial"
 sidebar_label: "📄 Arquitectura Empresarial"
 ---
 ## **AE**
@@ -10,6 +10,7 @@ La **Arquitectura Empresarial (AE)** (o *Enterprise Architecture*, EA) es un enf
 <center>
 ![](img/ae.jpg)
 </center>
+
 ### ¿Qué es y para qué sirve?
 La Arquitectura Empresarial actúa como un puente entre la **planificación estratégica** y los **esfuerzos de implementación** técnica. En lugar de ver a la tecnología y al negocio como silos separados, la AE proporciona un "mapa general" o *big picture* que unifica procesos, personas, información y sistemas. 
 
@@ -91,13 +92,18 @@ Cada fila representa el punto de vista de un actor o rol clave en la cadena de d
 #### Características y Reglas Clave del Marco
 
 Para aplicar correctamente el marco, John Zachman propuso un conjunto de siete reglas básicas que restringen y guían la generación de los planos arquitectónicos:
+
 * **No hay orden en las columnas:** La regla número 1 indica que las columnas no poseen un orden jerárquico ni temporal implícito. El hecho de que la motivación se liste al final no significa que se defina al último o que tenga menor prioridad.
+
 * **El número de perspectivas y columnas es fijo:** Debe haber estrictamente seis filas y seis columnas, número que no puede reducirse ni ampliarse.
+
 * **No es una metodología, es una clasificación:** A diferencia de marcos como **TOGAF** (que define un ciclo paso a paso como el ADM), el Marco Zachman **no prescribe un proceso, secuencia ni método de desarrollo**. Es un esquema de clasificación taxonómico puro y descriptivo. Su propósito es asegurar que todos los puntos de vista de la empresa sean mapeados de forma integral y estructurada sin importar el orden en que se creen.
+
 * **Independencia de herramientas:** Es abstracto y completamente neutral respecto al uso de tecnologías, notaciones o metodologías específicas.
 
 #### Fortalezas y Desafíos en la Práctica
 * **Fortalezas:** Proporciona un vocabulario común, es fácil de entender a nivel de concepto y ayuda a gestionar la complejidad empresarial al estructurar el diseño holístico. Es ampliamente considerado el estándar de referencia más longevo y popular dentro del ámbito académico y corporativo.
+
 * **Desafíos:** Al no ofrecer un manual de procesos "paso a paso", muchas organizaciones encuentran complejo llevarlo a la práctica y recurren a consultorías externas ante la falta de conocimiento operativo (*know-how*). Además, la profundidad requerida para completar los modelos de cada una de las 36 celdas puede llegar a ser abrumadora para los equipos de arquitectura si se intenta modelar todo a la vez.
 
 ---
@@ -106,12 +112,11 @@ Para aplicar correctamente el marco, John Zachman propuso un conjunto de siete r
 
 <center>
 ![](img/togaf.jpg)
-
 </center>
 
 El **Marco TOGAF** (*The Open Group Architecture Framework*) es un enfoque y una metodología altamente popular diseñada para el diseño, planificación, implementación y gobernanza de la Arquitectura Empresarial (AE) de una organización. 
 
-Aunque convencionalmente se le denomina "marco de referencia", tus fuentes aclaran que esto es en parte un nombre inapropiado; en realidad, **TOGAF no es un marco arquitectónico estático**, sino un manual detallado de fases y procesos metodológicos que guían a los arquitectos en la creación y evolución de su propia arquitectura de TI.
+Aunque convencionalmente se le denomina "marco de referencia", en realidad, **TOGAF no es un marco arquitectónico estático**, sino un manual detallado de fases y procesos metodológicos que guían a los arquitectos en la creación y evolución de su propia arquitectura de TI.
 
 Su estructura y funcionamiento se basan en los siguientes componentes fundamentales:
 
@@ -120,6 +125,7 @@ Su estructura y funcionamiento se basan en los siguientes componentes fundamenta
 Como meta-arquitectura, TOGAF está constituido por dos partes esenciales que trabajan de manera conjunta:
 
 *   **ADM (*Architecture Development Method*):** Es el corazón y motor operativo de TOGAF. Proporciona directrices paso a paso, iterativas y en un ciclo continuo, para guiar la creación y el desarrollo de la arquitectura empresarial en sus diferentes fases.
+
 *   **El Continuo Empresarial (*Enterprise Continuum*):** Es un modelo que describe de manera lógica cómo una organización puede transicionar y moverse de manera ordenada desde su estado actual ("dónde está") hacia el estado futuro deseado ("dónde quiere estar"), clasificando los activos arquitectónicos desde los más genéricos (comunes de la industria) hasta los más específicos de la propia empresa.
 
 
@@ -168,18 +174,22 @@ A continuación se detallan las diferencias clave:
 
 #### Naturaleza y Enfoque (¿Qué es cada uno?)
 * **El Marco Zachman es un esquema de clasificación o taxonomía:** No prescribe ningún proceso, secuencia o ciclo de vida para el desarrollo de la arquitectura. Su enfoque consiste en asegurar que todos los planos y descripciones relevantes de una empresa estén mapeados y clasificados de forma integral.
+
 * **TOGAF es un enfoque y metodología orientados a procesos:** No es en sí mismo un marco arquitectónico rígido, sino un manual de fases organizadas en torno a un método llamado **ADM** (*Architecture Development Method*). Se enfoca principalmente en la gestión, planificación y gobernanza de la creación de la AE, más que en predefinir el aspecto final de las vistas.
 
 #### Estructura y Componentes Principales
 * **Zachman utiliza una Matriz Estática (6x6):** La clasificación cruza **seis interrogantes básicas** (las columnas: *Qué, Cómo, Dónde, Quién, Cuándo, Por qué*) con **seis perspectivas de los interesados** (las filas: *Planificador, Propietario, Diseñador, Constructor, Subcontratista y Empresa en funcionamiento*). Cuenta con reglas estrictas de completitud (el formato es fijo y las columnas no tienen un orden jerárquico o temporal).
+
 * **TOGAF utiliza el Ciclo ADM:** Es una estructura circular e iterativa de **fases consecutivas** (desde la Fase Preliminar y Visión de la Arquitectura, pasando por Negocio, Sistemas de Información y Tecnología, hasta la Planificación de la Migración, Gobernanza y Gestión de Cambios). También introduce el *Enterprise Continuum* para guiar el tránsito de la empresa desde su estado actual al deseado.
 
 #### Dominios y Capas de la Arquitectura
 * **TOGAF prescribe cuatro capas específicas de arquitectura:** Negocio (*Business*), Datos/Información (*Data/Information*), Aplicaciones (*Applications*) y Tecnología (*Technology*).
+
 * **Zachman descompone la organización en seis bloques de modelado (las columnas):** Datos, Procesos, Redes, Personas, Tiempo y Motivación.
 
 #### Entregables y Lenguajes de Modelado
 * **Zachman define vistas preestructuradas:** Trata de predefinir qué representaciones lógicas y físicas requiere cada rol (por ejemplo, el modelo semántico para el Propietario o la arquitectura de red para el Diseñador). Sin embargo, carece de un instrumento o herramienta de modelado propio, por lo que frecuentemente se utiliza con la notación UML.
+
 * **TOGAF es flexible en el formato de sus entregables:** Las salidas del proceso ADM no tienen una forma gráfica o look definido por defecto; pueden ser textos planos en un Wiki, documentos tradicionales o modelos lógicos en herramientas de software. The Open Group proporciona un lenguaje estandarizado llamado **ArchiMate** para dar soporte visual al modelado de AE bajo las fases de TOGAF.
 
 #### Sinergia (¿Cómo se aplican juntos en la práctica?)
@@ -208,7 +218,7 @@ Cuando un sistema empresarial crece en tamaño y complejidad, se vuelve inmaneja
 #### Adaptabilidad en un Entorno Abierto (Ciclos de Retroalimentación)
 Las organizaciones son sistemas abiertos que interactúan dinámicamente con su entorno, el cual incluye competidores, leyes, clientes y tendencias tecnológicas cambiantes. La AE actúa como un mecanismo de retroalimentación continua que ayuda a la empresa a aprender y adaptarse. A través de un proceso iterativo y evolutivo de planificación, implementación y análisis de brechas (*gap analysis*), la arquitectura se actualiza de manera constante para responder a los cambios dinámicos del mercado.
 
-
+---
 ## **Herramientas**
 
 La implementación del **Marco Zachman** se ve facilitada por diversas herramientas tecnológicas y lenguajes de modelado, aunque hay unos principios fundamentales de diseño sobre este marco:

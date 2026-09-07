@@ -63,7 +63,7 @@ while C <= 40:
 
 ## **Ejemplos con pseudocodigo**
 
-Como mencionamos anteriormente, elegir el algoritmo de ordenación adecuado es un factor crítico en el rendimiento del software; de hecho, las fuentes técnicas registran un caso real en el que un programador redujo el tiempo de procesamiento de ordenación de una base de datos **de 12 horas a tan solo 15 segundos** al cambiar de un algoritmo ineficiente a uno optimizado.
+Como se mencionó anteriormente, elegir el algoritmo de ordenación adecuado es un factor crítico en el rendimiento del software; de hecho, se hanregistrdo casos en el que un programador redujo el tiempo de procesamiento de ordenación de una base de datos **de 12 horas a tan solo 15 segundos** al cambiar de un algoritmo ineficiente a uno optimizado.
 
 El **pseudocódigo** es la herramienta ideal para aprender a diseñar algoritmos. Al no estar atado a la sintaxis rígida de un lenguaje de programación específico, te permite concentrarte de manera exclusiva en la **lógica pura del problema**. 
 
