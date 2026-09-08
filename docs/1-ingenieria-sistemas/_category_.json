@@ -2,8 +2,8 @@
   "label": "📁 Ingeniería de Sistemas",
   "link": {
     "type": "generated-index",
-    "slug": "/ingenieria-sistemas",
     "title": "📚 Ingeniería de Sistemas",
-    "description": "Ingeniería de sistemas. Desarrollo de tecnologías y procesos desde una perspectiva global."
+    "description": "Ingeniería de sistemas. Desarrollo de tecnologías y procesos desde una perspectiva global.",
+    "slug": "/ingenieria-sistemas"
   }
 }

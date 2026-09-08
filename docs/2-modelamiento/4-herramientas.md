@@ -3,7 +3,6 @@ id: herramientas
 title: "📄 Herramientas CASE"
 sidebar_label: "📄 Herramientas CASE"
 description: "Ingeniería de requisitos y trazabilidad"
-slug: /herramientas
 ---
 
 
