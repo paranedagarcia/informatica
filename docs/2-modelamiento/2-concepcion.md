@@ -75,7 +75,7 @@ La **viabilidad técnica** (o factibilidad técnica) es una de las tres dimensio
 Este análisis se centra en responder a la pregunta fundamental de los analistas: **¿Se puede construir el sistema de esta manera y con la tecnología disponible?**
 
 
-### Dimensiones clave de la viabilidad técnica
+### Dimensiones clave
 
 Para determinar si un proyecto es técnicamente viable, el analista de sistemas debe examinar tres frentes críticos:
 
@@ -101,7 +101,7 @@ La viabilidad técnica requiere analizar si conviene construir el sistema desde 
 
 
 
-### ¿Por qué es un paso tan crítico?
+#### ¿Por qué es un paso tan crítico?
 Tomar decisiones técnicas apresuradas o equivocadas durante el estudio inicial puede tener repercusiones devastadoras para la vida económica del proyecto. En el peor de los casos, un mal diagnóstico de viabilidad técnica puede provocar la **cancelación tardía de un proyecto viable** o, por el contrario, la **continuación de un proyecto inviable** que drenará el presupuesto y generará un enorme desgaste organizacional.
 
 
@@ -114,25 +114,27 @@ El **Análisis del Punto de Equilibrio** (*Break-Even Analysis*) es una técnica
 Se detalla su concepto, su funcionamiento matemático y sus limitaciones:
 
 
-### ¿Qué representa el Punto de Equilibrio?
+#### ¿Qué representa el Punto de Equilibrio?
 Al comparar los costos por sí solos, el punto de equilibrio se define como **el punto exacto en el que la curva de costos totales del sistema actual y la del sistema propuesto se cruzan**. 
 
 Este cruce geométrico representa el umbral a partir del cual **es rentable para la organización reemplazar la tecnología actual y adquirir el nuevo sistema de información**.
 
-### La Composición de los Costos en el Gráfico
+#### La Composición de los Costos en el Gráfico
 Para graficar y calcular este punto, el analista de sistemas divide los costos tangibles en dos grandes categorías:
 1.  **Costos Únicos de Desarrollo:** Son los costos de instalación, adquisición de hardware/software, diseño y puesta en marcha que se pagan una sola vez al inicio del proyecto.
 
 2.  **Costos Recurrentes de Operación:** Son los costos continuos que ocurren a lo largo del tiempo de operación del sistema (mantenimiento, personal, suministros).
 
-#### La dinámica del sistema actual vs. el propuesto:
+**La dinámica del sistema actual vs. el propuesto:**
+
 *   **El Sistema Actual (ej. Manual):** Suele carecer de costos de desarrollo iniciales, pero sus costos operativos incrementales se elevan rápidamente a medida que aumenta el volumen de transacciones de la empresa debido al uso intensivo de mano de obra.
 
 *   **El Sistema Computacional Propuesto:** Exige una inversión inicial elevada (un salto drástico en el eje Y del costo), pero sus costos operativos incrementales por transacciones adicionales son sumamente bajos.
 
 
 
-#### Ejemplo Práctico: El Sistema de Inventarios
+**Ejemplo Práctico: El Sistema de Inventarios**
+
 Imagina una pequeña tienda que gestiona su inventario mediante un sistema de registro manual. 
 *   A medida que el negocio crece y el volumen de ventas se eleva, los costos de este sistema manual se disparan de forma incremental (se necesita más personal, más tiempo, hay más errores).
 *   El analista propone un sistema computarizado. Aunque este software cuesta una suma importante al principio (Día 1), su costo marginal por procesar transacciones adicionales es insignificante.
@@ -142,12 +144,154 @@ Imagina una pequeña tienda que gestiona su inventario mediante un sistema de re
 
 
 
-#### Utilidad y Limitaciones del Análisis
+**Utilidad y Limitaciones del Análisis**
+
 *   **Cuándo utilizarlo:** Es sumamente valioso cuando la organización se encuentra en una etapa de expansión y el **volumen de transacciones/operaciones es la variable clave** que define los costos operativos del negocio.
 
 *   **Su gran desventaja:** El análisis tradicional del punto de equilibrio parte del supuesto de que **los beneficios permanecen exactamente iguales sin importar el sistema que se use**. En la práctica de TI, sabemos que esto no es realista, ya que un sistema computarizado moderno no solo reduce costos, sino que aporta beneficios adicionales tangibles e intangibles (como una mejor experiencia del cliente o velocidad de servicio) que modifican los ingresos.
 
-#### El Análisis de Sensibilidad y el Punto de Equilibrio
+**El Análisis de Sensibilidad y el Punto de Equilibrio**
+
 El punto de equilibrio no es estático; se puede someter a un **análisis de sensibilidad de una sola variable**. Esto permite evaluar de forma matemática cómo se desplaza este punto si cambian factores críticos de la operación:
 *   *¿Qué pasa con el punto de equilibrio si aumentan los costos fijos totales?* (El umbral de unidades requeridas para ser rentables se desplaza hacia arriba).
 *   *¿Qué pasa si el precio de venta del producto baja o el costo variable unitario sube?* (El margen de contribución disminuye, requiriendo un mayor volumen operativo para alcanzar la rentabilidad).
+
+---
+
+## **Business Case**
+
+El **Business Case** (o Caso de Negocio) dentro del ciclo de vida del desarrollo de software (SDLC) es un análisis financiero y estratégico detallado que se realiza para **justificar si es conveniente o no llevar a cabo una inversión** en un nuevo sistema de información u otro proyecto de software. Su propósito fundamental es responder a la pregunta de si el proyecto aportará valor real y medible a la organización antes de comprometer recursos masivos.
+
+Es un documento de toma de decisiones que justifica la realización de una inversión o proyecto. A diferencia del Project Charter—que formaliza el inicio de los trabajos—, el Business Case se elabora en una fase previa y tiene como objetivo responder a una pregunta fundamental: **¿Por qué deberíamos hacer este proyecto?** o **¿Tiene sentido financiero y estratégico invertir recursos en esto?**
+
+Sus componentes clave e integración en el ciclo de vida:
+
+
+### Detalles y Componentes
+Para que un Business Case sea persuasivo y riguroso para la junta directiva o los patrocinadores, debe estructurarse con las siguientes secciones elementales:
+
+*   **Resumen Ejecutivo:** Una síntesis de una página que resume el problema, la solución propuesta, los costes estimativos, los beneficios financieros esperados (como el ROI o el tiempo de recuperación) y la recomendación final.
+
+*   **Definición del Problema u Oportunidad:** Describir con precisión y claridad la necesidad de negocio que origina la iniciativa (como resolver una ineficiencia operativa, pérdida de clientes, adaptarse a un cambio regulatorio o aprovechar un nuevo nicho de mercado, obsolescencia tecnológica o cumplimiento de normativas).
+
+*   **Alineación Estratégica:** Detallar cómo el sistema propuesto apoya directamente el cumplimiento de las metas generales, la visión y la estrategia de la organización.
+
+*   **Análisis de Alternativas:** Evaluar de forma exhaustiva las distintas formas de abordar el problema. Un análisis comparativo de los diferentes caminos posibles para solucionar el problema. Por norma general, siempre deben evaluarse al menos tres opciones:
+    *   **Opción 0 (No hacer nada / Status Quo):** Evaluar el impacto y coste que sufriría la empresa si continúa operando exactamente igual.
+    *   **Opción A (Comprar una solución de terceros):** Analizar la viabilidad de adquirir un software o servicio ya existente en el mercado.
+    *   **Opción B (Desarrollar una solución interna a la medida):** La propuesta recomendada que se defenderá en el documento.
+
+*   **Análisis Financiero (Costo-Beneficio):** Proyectar los flujos de dinero en el tiempo y justificar la inversión empleando métricas de rentabilidad capital como el **Valor Neto Actual (VNA)**, la **Tasa Interna de Retorno (TIR)**, el **Periodo de Recuperación de la Inversión (Payback)** o el **Retorno sobre la Inversión (ROI)**.
+    *   *Costes:* Coste de desarrollo (horas de ingeniería), infraestructura, licencias de software, mantenimiento y costes de capacitación.
+    *   *Beneficios:* Retorno de inversión (ROI), ahorros en tiempo de mano de obra, reducción de errores y aumento de la productividad.
+
+*   **Identificación de Riesgos y Factores Críticos de Éxito (CSF):** Mapear los posibles factores de riesgo que podrían obstaculizar el éxito (técnicos, comerciales, regulatorios o de cambio cultural) y proponer planes de mitigación preliminares.
+
+
+
+### Integración
+El Business Case no es una actividad de programación; es el detonador estratégico del software:
+
+*   **Fase de Inicio (Inception / Pre-conceptual):** Ocurre antes de que comience el desarrollo formal del producto. El Business Case representa la **base estructural que justifica el "porqué" de un proyecto**. Utilizando una analogía de la industria petrolera, equivale a decidir si hay evidencias suficientes que justifiquen perforaciones de exploración antes de invertir en la excavación real.
+
+*   **Filtro de Selección de Portafolio:** La alta gerencia, el Director de Portafolio o la PMO evalúan y comparan de manera objetiva diferentes Business Cases en competencia para decidir racionalmente a cuáles de ellos se les asignará el presupuesto limitado de la compañía.
+
+*   **Mapeo de Beneficios:** El documento establece las métricas de negocio con las que el equipo evaluará el impacto del software una vez que el proyecto finalice y entre en producción, asegurando que se cumplan las metas prometidas.
+
+*   **La Brecha del Director del Proyecto:** Una de las grandes patologías en el desarrollo de software es que las empresas suelen excluir al Director del Proyecto (DP) de la redacción del Business Case porque asumen que los ingenieros no comprenden de finanzas. Esto suele derivar en que marketing o ventas elaboren un Business Case "altamente optimista" sin rigor técnico. Al asignarse el DP en fases tardías, este se ve presionado a aceptar suposiciones poco realistas de costo o tiempo, y si el proyecto falla debido a estas promesas ficticias, la culpa suele recaer injustamente en el equipo técnico.
+
+
+### Ejemplo Práctico 
+**El Caso de "Marathon Vitamin Shops"**
+
+Imaginemos el escenario de **Marathon Vitamin Shops**, una cadena minorista tradicional que vende suplementos alimenticios en tiendas físicas y mediante un catálogo de pedidos por correspondencia. Los propietarios identifican que, para seguir siendo competitivos frente al mercado digital, deben dar soporte a compras electrónicas.
+
+Un Business Case estructurado para este proyecto de TI se formularía de la siguiente manera:
+
+*   **Problema/Oportunidad:** Los canales tradicionales (tiendas físicas y pedidos por correo) son estáticos y limitados. La empresa necesita establecer un sitio web de comercio electrónico con la capacidad de vender productos directamente, automatizar el procesamiento de pedidos y ofrecer información de salud personalizada para capturar nuevos segmentos de mercado.
+
+*   **Análisis de Alternativas:**
+    1.  *Crear un paquete a medida:* Desarrollar un software único desde cero.
+    2.  *Comprar COTS:* Adquirir licencias de un software comercial de comercio electrónico estándar (como QuickBooks Pro).
+    3.  *Subcontratar un ASP:* Alquilar una plataforma de software en la nube de un tercero (los "Magos del Jardín").
+
+*   **Análisis Financiero:** Al evaluar la rentabilidad con una tasa de descuento de capital de la empresa del 15%, se estima que la alternativa del **ASP/SaaS** requiere una inversión inicial de configuración baja y se estabiliza con un costo operativo mensual predecible. Mediante un análisis de flujo de caja y punto de equilibrio, se demuestra que con un volumen de ventas moderado, la inversión se recuperará completamente en el tercer trimestre del segundo año, ofreciendo un VNA superior a las demás opciones.
+
+*   **Evaluación de Riesgos:** Al recurrir a un proveedor externo (ASP), el Business Case identifica un riesgo alto de pérdida de control general sobre los datos del negocio, problemas de privacidad y confidencialidad en los registros de los clientes, y la dependencia directa de la viabilidad financiera de esa empresa externa. Por lo tanto, se define que el contrato debe incluir acuerdos de nivel de servicio (SLA) rigurosos para mitigar la amenaza.
+
+Una vez aprobado este Business Case por el comité directivo, se designa al Director de Proyecto y se firma el Acta de Constitución (*Project Charter*). El equipo de desarrollo puede entonces iniciar el modelado técnico en UML traduciendo los objetivos comerciales en requisitos lógicos y de comportamiento, comenzando con casos de uso clave al nivel de Procesos de Negocios Elementales, como el caso de uso *Procesar Venta*.
+
+
+
+#### Formas de Crear un Business Case
+
+La elaboración de un Business Case sólido requiere un balance entre el análisis cuantitativo y la consulta con las áreas afectadas:
+
+*   **Entrevistas con Usuarios y Clientes:** Para dimensionar de forma precisa el dolor o la ineficiencia (el "coste de no hacer nada").
+
+*   **Estimación por Analogía:** Utilizar datos históricos de proyectos de desarrollo similares dentro de la empresa para proyectar los tiempos y costes técnicos.
+
+*   **Talleres de Cocreación:** Reunir a los líderes de Ingeniería, Finanzas y Operaciones para acordar los supuestos de negocio y asegurar que los beneficios proyectados sean realistas y medibles.
+
+
+---
+## **Project Charter**
+
+El **Project Charter** (o *Acta de Constitución del Proyecto*) es el documento formal que marca el nacimiento oficial de un proyecto. En la ingeniería de sistemas y el análisis de negocio tradicionales, antes de comprometer grandes cantidades de tiempo, presupuesto y recursos técnicos, es vital delimitar qué se va a construir y bajo qué condiciones.
+
+El Project Charter es el documento que **autoriza formalmente el inicio del proyecto**. Al ser firmado por los patrocinadores (*sponsors*) o interesados clave, cumple tres funciones de gobernanza críticas:
+
+1.  **Formaliza la autoridad:** Otorga el poder organizacional al Director de Proyecto (*Project Manager*) para utilizar los recursos de la empresa en las actividades del proyecto.
+
+2.  **Establece la frontera del proyecto:** Explicita de forma clara y preliminar los límites del producto, definiendo con precisión **qué incluye y qué queda fuera del alcance**. Esto evita el crecimiento descontrolado del alcance (*scope creep*).
+
+3.  **Sirve de base para la planificación:** Documenta los supuestos (hipótesis que se dan por ciertas) y las restricciones (factores limitantes como fechas de entrega o tecnologías obligatorias) que guiarán la planeación detallada posterior.
+
+#### ⚖️ Diferencia clave con el *Business Case*
+Es muy común confundir estos dos documentos en la fase de concepción inicial, pero tienen propósitos totalmente distintos:
+*   **Business Case (Caso de Negocio):** Es un paso previo. Justifica **si es conveniente o no** realizar la inversión financiera, evaluando la necesidad de negocio, beneficios esperados, riesgos de alto nivel y alternativas (como la opción de "no hacer nada").
+
+*   **Project Charter:** Se redacta **una vez aprobado** el Business Case. Su objetivo no es justificar la inversión, sino **autorizar y arrancar formalmente el trabajo** definiendo las reglas del juego.
+
+
+
+#### Componentes clave para crear un Project Charter
+
+Aunque los formatos organizacionales pueden variar, un Project Charter estructurado debe contener al menos los siguientes elementos esenciales:
+
+1.  **Título del Proyecto y Descripción General:** Identificación clara de la iniciativa.
+2.  **Objetivos del Producto / Proyecto:** Qué se espera lograr al finalizar, expresado en términos preliminares y medibles.
+3.  **Nombramiento del Project Manager:** Quién liderará el proyecto y el nivel de autoridad que se le asigna.
+4.  **Límites de Alcance (Inclusiones y Exclusiones):** Qué entregables están cubiertos y cuáles están estrictamente excluidos.
+5.  **Supuestos y Restricciones:** Circunstancias que se asumen como verdaderas y límites físicos, presupuestarios o tecnológicos de partida.
+
+
+
+#### Ejemplo Práctico: Proyecto "SafeRoad Data Pipeline"
+
+Para ilustrar su aplicación real, consideremos el escenario de la startup de ciencia de datos **SafeRoad**, la cual requiere un sistema para analizar la accidentalidad vehicular en Chicago.
+
+#### **Acta de Constitución del Proyecto: SafeRoad Pipeline**
+
+*   **1. Propósito y Objetivos del Producto:**  
+    Desarrollar un flujo de datos (*data pipeline*) personalizado que se conecte de manera automática al portal de datos abiertos de la ciudad de Chicago para extraer, limpiar y modelar los datos de accidentes de tránsito. El objetivo final es permitir que los analistas de SafeRoad identifiquen los factores clave que causan estos incidentes.
+*   **2. Designación del Director de Proyecto:**  
+    Se nombra a *[Nombre del Project Manager]* como Director del Proyecto, con autoridad para coordinar las actividades del equipo de ingeniería de datos y administrar el uso de los entornos de desarrollo, prueba y producción.
+*   **3. Límites del Alcance (Scope Boundaries):**  
+    *   **Inclusiones:** Extracción de datos del portal de Chicago mediante API, desarrollo del pipeline de transformación en Python, y almacenamiento en una base de datos relacional PostgreSQL modelada a la medida.
+    *   **Exclusiones:** Queda fuera de este proyecto el desarrollo de la interfaz gráfica de usuario (*frontend*) o la realización de los modelos de analítica predictiva de ciencia de datos; nuestra firma solo entregará el repositorio de datos PostgreSQL optimizado y listo para su consumo.
+*   **4. Restricciones Clave:**  
+    *   **Tecnológica:** Los datos deben modelarse obligatoriamente utilizando una base de datos PostgreSQL, según las directivas de arquitectura técnica del cliente.
+    *   **Temporal:** El pipeline debe estar completamente validado y en producción en un plazo no mayor a 12 semanas.
+*   **5. Supuestos:**  
+    *   La API del portal de datos abiertos de Chicago mantendrá su disponibilidad y su estructura de datos GeoJSON/JSON durante el transcurso del desarrollo.
+    *   El cliente (SafeRoad) proveerá la infraestructura del servidor de base de datos PostgreSQL con accesos SSH activos a partir de la semana 4 de desarrollo.
+
+
+
+#### Formas de Creación en la Práctica
+Para crear este documento de forma colaborativa durante las fases de concepción, el analista de sistemas asume un rol sociotécnico y de facilitación, apoyándose en:
+*   **Técnicas de Consenso en Grupo:** Se organizan lluvias de ideas y mapas de afinidad utilizando votación por puntos (*dot voting*) o la técnica de grupo nominal para que los principales interesados se pongan de acuerdo en los límites del proyecto.
+
+*   **Análisis de Interesados (Stakeholders):** Identificar desde el primer día a todos los afectados por el sistema para incorporar sus restricciones y requerimientos de negocio en el acta, evitando trabas organizacionales una vez iniciado el desarrollo.
+
