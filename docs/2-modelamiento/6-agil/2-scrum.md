@@ -18,7 +18,7 @@ A diferencia de las metodologías tradicionales que asumen que el desarrollo es 
 
 A continuación se detallan los roles, artefactos y eventos de Scrum.
 
----
+
 
 ### Los 3 Roles (El Equipo de Scrum)
 Scrum equilibra el control del caos mediante una estricta división de responsabilidades entre tres roles clave, evitando la figura de un director de proyecto tradicional:
@@ -182,7 +182,6 @@ El **Gráfico de Burnup** generado ilustra cómo el equipo de desarrollo logró 
 ![](img/burndown_chart_example.png)
 </center>
 
-He diseñado y publicado el **Gráfico de Burndown correspondiente** (`burndown_chart_example.png`) en tu panel de **Studio** para que puedas contrastarlo de manera directa con el Gráfico de Burnup que analizamos anteriormente. 
 
 Este gráfico utiliza exactamente los mismos datos del escenario (partiendo de una base de 120 puntos de historia y un incremento de alcance de +20 puntos en el Sprint 3), ilustrando de forma muy clara cómo se comporta y se interpreta una curva de trabajo restante ante los cambios en el proyecto.
 
