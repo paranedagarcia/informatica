@@ -7,6 +7,11 @@ slug: /pseudocodigo
 
 ![](img/pseudocodigo.jpg)
 
+:::info[💻 Código en colab:]
+[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19pLXiQYpoe8Ol8BP0l0DYONQpeIyDGcg?usp=sharing)
+
+:::
+
 ## **Pseudocódigo**
 
 El **pseudocódigo** es una descripción informal y de alto nivel del algoritmo o de los pasos lógicos que seguirá un programa de ordenador. No está diseñado para ser ejecutado directamente por una máquina, sino para ser leído y comprendido por seres humanos. Combina el lenguaje natural (como el español o el inglés) con estructuras básicas y universales de la programación, omitiendo los detalles sintácticos más rígidos de los lenguajes formales (como los puntos y comas, las llaves o la declaración estricta de tipos de datos).
