@@ -4,13 +4,25 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 - Programa Universitario de Bioética- UNAM
 <YouTubeVideo id="iNoOj41oRYY" title="Etica y regulación en la IA" />
 
-:::info[💻 Código:]
-[![](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/19pLXiQYpoe8Ol8BP0l0DYONQpeIyDGcg?usp=sharing)
-
+:::info[🖥️ Código:]
+[![](https://colab.research.google.com/assets/colab-badge.svg)]()
 :::
 
+ ➡️
+
+--- columnas
+<div class="container">
+  <div class="row">
+    <div class="col col--7">
+    </div>
+    <div class="col col--5">
+    </div>
+  </div>
+</div>
+----
+
 <details>
-<summary>💻 </summary>
+<summary>🖥️ </summary>
 
 </details>
 
@@ -28,7 +40,7 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 **texto**
 </div>
 </TabItem>
-<TabItem value="mnp-python" label="💻 Código">
+<TabItem value="mnp-python" label="🖥️ Código">
 
 </TabItem>
 </Tabs><br/>

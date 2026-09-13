@@ -10,5 +10,5 @@ description: "Programación en Python"
 :::info
 Acceda al curso completo de Programación en Python. En modalidad básica o avanzada, aprenderás a crear las funciones necesarias para tus procesos de análisis de datos. 
 
-[**Programación en Python**](http://patricioaraneda.cl/python/)
+[**Programación en Python ➡️**](http://patricioaraneda.cl/python/)
 :::

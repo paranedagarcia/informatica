@@ -12,5 +12,5 @@ https://rust-lang.org/
 :::info
 Proximamente podrás acceder al curso inicial de Programación en Rust. Aprenderás a crear las funciones necesarias para tus procesos de información. 
 
-🛠️​ **En construcción...**
+🛠️​ **En construcción... ➡️**
 :::
