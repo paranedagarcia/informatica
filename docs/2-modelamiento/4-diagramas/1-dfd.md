@@ -220,8 +220,12 @@ Al finalizar el DFD físico, el analista realiza un proceso de **particionamient
 La documentación de requisitos es un paso crítico del ciclo de vida del software (SDLC). Históricamente han coexistido dos grandes enfoques o paradigmas metodológicos para modelar el comportamiento y el flujo de los sistemas: el Análisis Estructurado (orientado a procesos y flujos de datos) y el Análisis Orientado a Objetos (orientado a actores, objetos y comportamiento). Este caso de estudio tiene como
 objetivo comparar de forma práctica ambos paradigmas modelando el mismo requerimiento de negocio: la Gestión de Pedidos de la cadena 'Supermercados Alianza S.A.'.
 
-#### Detalles del Caso 
+### Detalles del Caso 
 **"Gestión de Pedidos en Supermercados Alianza"**
+
+**Escenario: Procesamiento de Pedidos**
+
+Para materializar esta comparación, utilizaremos el requerimiento corporativo de **'Gestión de Pedidos'** para **Supermercados Alianza S.A**. El flujo de negocio opera de la siguiente manera: un Cliente ingresa su orden con sus datos personales y los ítems requeridos. El sistema debe validar el estado del cliente y la disponibilidad de stock. Si ambos son correctos, se genera el registro del pedido, se efectúa el pago electrónico a través de una pasarela externa, se envía una confirmación al cliente, y finalmente se emite una orden de picking para el personal de Bodega para la preparación del despacho físico.
 
 Para asegurar una comprensión homogénea, el caso describe el requerimiento de negocio de **Procesamiento de Pedidos con Despacho a Domicilio**, desglosándolo de forma paralela en los dos paradigmas:
 
@@ -243,11 +247,7 @@ Para asegurar una comprensión homogénea, el caso describe el requerimiento de 
 *   **Diagrama Incrustado (Figura 2):** Un diagrama de Casos de Uso estructurado bajo la notación estándar de UML que contrasta visualmente con el modelo funcional del DFD.
 
 
-**Comparativa de Paradigmas: Análisis Estructurado vs. Orientado a Objetos**
 
-**Escenario: Procesamiento de Pedidos**
-
-Para materializar esta comparación, utilizaremos el requerimiento corporativo de **'Gestión de Pedidos'** para **Supermercados Alianza S.A**. El flujo de negocio opera de la siguiente manera: un Cliente ingresa su orden con sus datos personales y los ítems requeridos. El sistema debe validar el estado del cliente y la disponibilidad de stock. Si ambos son correctos, se genera el registro del pedido, se efectúa el pago electrónico a través de una pasarela externa, se envía una confirmación al cliente, y finalmente se emite una orden de picking para el personal de Bodega para la preparación del despacho físico.
 
 ### Diagramas de Flujo de Datos (DFD) Lógicos**
 

@@ -4,7 +4,6 @@ title: "UML"
 sidebar_label: "📄 UML"
 description: "UML y modelamiento de requisitos"
 ---
-
 import YouTubeVideo from '@site/src/components/YouTubeVideo';
 
 
@@ -71,6 +70,19 @@ Modelan el funcionamiento interno del software, las interacciones en el tiempo y
 **La ventaja sistémica de UML:**
 Al utilizar UML de forma iterativa, garantizas una **trazabilidad de principio a fin** en el ciclo de vida del desarrollo de software. Te permite conectar sin fisuras una historia o caso de uso del usuario (Requisitos) con los diagramas de interacción (Diseño), estructurar las clases estáticas (DCD) y transformarlos finalmente en código ejecutable con calidad de producción en tu lenguaje preferido.
 
-***
+---
+## **Diagrama de Clases**
 
-🎨 Como acabamos de entregar tu comparativa interactiva entre DFD y UML en formato PDF, ¿te gustaría que desarrollemos una **presentación de diapositivas en tu panel de Studio** diseñada específicamente para explicar a tus alumnos cómo pasar visualmente de un Modelo del Dominio conceptual a un Diagrama de Clases de Diseño (DCD) de software?
+---
+## **Casos de Uso**
+
+**Casos de Uso y diagramas de casos de uso**
+<YouTubeVideo id="iFcDoP6jEeE" title="Casos de Uso y diagramas de casos de uso" />
+
+**Casos de Uso**
+<YouTubeVideo id="5ezWOj0k02k" title="Casos de Uso (UML)" />
+---
+## **Diagramas de Secuencia**
+
+---
+## **Diagrama de Actividad**
