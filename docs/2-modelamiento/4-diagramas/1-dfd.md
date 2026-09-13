@@ -180,19 +180,47 @@ Los analistas de sistemas diferencian y combinan dos perspectivas de modelado a 
 | Colecciones lógicas de datos | bases de datos reales, archivos temporales y carpetas físicas |
 | Transformación conceptual de los datos | Operaciones CRUD (Crear, leer, actualizar, borrar) |
 
+**Modelado de eventos:**
+
+**Paso 1: El disparador**
+
+La entrada que inicia una actividad (ej. Cliente envía formulario web).
+
+**Paso 2: La actividad**
+
+La accón del sistema. Diferencia entre elementos base (datos introducidos manualmente) y elementos derivados (datos calculados por el sistema).
+
+**Paso 3: La respuesta**
+
+La salida enviada de vuelta a una entidad o almacén de datos.
 
 
 #### Particionamiento en el Diseño Físico
 Al finalizar el DFD físico, el analista realiza un proceso de **particionamiento**, dibujando líneas punteadas alrededor de ciertos procesos para indicar cómo se agruparán o dividirán en programas individuales de computadora, módulos o tareas manuales para facilitar la programación final y la seguridad de la red.
 
+<div class="container">
+  <div class="row">
+    <div class="col col--7">
+    ![](img/dfd-particion.jpg)
+    </div>
+    <div class="col col--5">
+    Los analistas agrupan los procesos en el DFD físico para definir la arquitectura del software:
+
+    * **Separar** tareas manuales de tareas automatizadas.
+    * **Agrupar** procesos ejecutados por el mismo grupo de usuarios.
+    * **Combinar** areas del mismo ciclo o lote de tiempo.
+    * **Aislar** procesos para controles estrictos de seguridad.
+    </div>
+  </div>
+</div>
+
+
 ## **Caso de uso vs UML**
 
-He estructurado, programado e implementado el caso de estudio comparativo y lo he publicado directamente en tu panel de **Studio** bajo el título **`comparativa-dfd-vs-uml.pdf`**. 
+La documentación de requisitos es un paso crítico del ciclo de vida del software (SDLC). Históricamente han coexistido dos grandes enfoques o paradigmas metodológicos para modelar el comportamiento y el flujo de los sistemas: el Análisis Estructurado (orientado a procesos y flujos de datos) y el Análisis Orientado a Objetos (orientado a actores, objetos y comportamiento). Este caso de estudio tiene como
+objetivo comparar de forma práctica ambos paradigmas modelando el mismo requerimiento de negocio: la Gestión de Pedidos de la cadena 'Supermercados Alianza S.A.'.
 
-Este documento de 3 páginas está diseñado específicamente como un recurso educativo universitario de alto nivel. Su propósito es ayudar a los estudiantes a comprender y visualizar, mediante un único escenario práctico, la diferencia conceptual entre el **Análisis Estructurado** y el **Análisis Orientado a Objetos (UML)**.
-
-
-### Detalles del Caso 
+#### Detalles del Caso 
 **"Gestión de Pedidos en Supermercados Alianza"**
 
 Para asegurar una comprensión homogénea, el caso describe el requerimiento de negocio de **Procesamiento de Pedidos con Despacho a Domicilio**, desglosándolo de forma paralela en los dos paradigmas:
@@ -215,6 +243,54 @@ Para asegurar una comprensión homogénea, el caso describe el requerimiento de 
 *   **Diagrama Incrustado (Figura 2):** Un diagrama de Casos de Uso estructurado bajo la notación estándar de UML que contrasta visualmente con el modelo funcional del DFD.
 
 
+**Comparativa de Paradigmas: Análisis Estructurado vs. Orientado a Objetos**
+
+**Escenario: Procesamiento de Pedidos**
+
+Para materializar esta comparación, utilizaremos el requerimiento corporativo de **'Gestión de Pedidos'** para **Supermercados Alianza S.A**. El flujo de negocio opera de la siguiente manera: un Cliente ingresa su orden con sus datos personales y los ítems requeridos. El sistema debe validar el estado del cliente y la disponibilidad de stock. Si ambos son correctos, se genera el registro del pedido, se efectúa el pago electrónico a través de una pasarela externa, se envía una confirmación al cliente, y finalmente se emite una orden de picking para el personal de Bodega para la preparación del despacho físico.
+
+### Diagramas de Flujo de Datos (DFD) Lógicos**
+
+El DFD Lógico se enfoca en el aspecto funcional del sistema: describe qué hace el sistema en términos de
+transformaciones lógicas de datos, sin hacer ninguna suposición tecnológica de cómo se ejecutará físicamente (manual o automatizado, base de datos local o en la nube). En este nivel, no se especifican pantallas ni interfaces, sino la procedencia y el destino final de la información.
+
+**Elementos clave:**
+
+* **Procesos (1.0, 2.0, 3.0)**: Son transformaciones activas de datos, nombrados bajo el estándar 'Verbo + Sustantivo' (ej. Validar Cliente y Stock).
+* **Almacenes de Datos (D1, D2, D3)**: Depósitos pasivos de información necesarios para completar los flujos lógicos (Clientes, Inventario y Pedidos).
+* **Entidades Externas (Cliente, Bodega)**: Actores fuera de los límites lógicos de procesamiento del software que entregan entradas o consumen salidas.
+
+
+<center>
+<figure>
+![](img/dfd-nivel1.jpg)
+<figcaption>**Figura1 1**. Diagrama de flujo de datos lógico de nivel 1 para el procesamiento de pedidos.</figcaption>
+</figure>
+</center>
+
+### Modelado de casos de uso (UML)
+
+Frente al enfoque de flujos, el Diagrama de Casos de Uso de UML (Unified Modeling Language) se sitúa en la
+órbita de la orientación a objetos y se enfoca en el comportamiento visible del sistema desde la perspectiva de los usuarios (actores). Representa un conjunto de metas y objetivos que los actores desean cumplir con la ayuda del sistema, estableciendo claramente las fronteras de software del portal digital.
+
+**Elementos Clave Representados en el Diagrama UML:**
+
+* **Límites del Sistema**: La caja gris representa el alcance del software (el Portal E-commerce). Todo lo que esté adentro es el sistema; los actores residen afuera.
+* **Actores (Cliente, Personal Bodega, Sistema de Pago)**: Roles jugados por personas o sistemas externos que interactúan de forma directa con el software.
+• **Relación `<<include>>`**: Representa dependencias funcionales obligatorias. Por ejemplo, Realizar Pedido incluye obligatoriamente Validar Cliente y Stock y Procesar Pago Electrónico.
+
+<center>
+<figure>
+![](img/dfd-casouso.jpg)
+<figcaption>**Figura 2**. Diagrama de **Caso de Uso** UML para el procesamiento de pedidos.</figcaption>
+</figure>
+</center>
+
+
+
+
+
+
 
 ### Síntesis Comparativa
 
@@ -222,10 +298,10 @@ El PDF incorpora una **Tabla Comparativa de Paradigmas** que resume las diferenc
 
 | Criterio | Análisis Estructurado (DFD) | Análisis Orientado a Objetos (UML) |
 | :--- | :--- | :--- |
-| **Enfoque Central** | Flujo y transformación cronológica de datos. | Objetivos, interacciones de actores y clases. |
-| **Tratamiento de Datos** | Datos y procesos conceptualmente **separados**. | Atributos y métodos **encapsulados** en objetos. |
-| **Tipo de Descomposición** | Jerárquica y descendente (*Top-Down*). | Estructural y basada en metas operacionales. |
-| **Cuándo Utilizar** | Integración de datos puros y tuberías (*pipelines*). | Portales interactivos complejos y microservicios modernos. |
+| **Enfoque Central** | Flujo y transformación cronológica de datos. Describe cómo los datos se transforman al moverse por el sistema.| Objetivos, interacciones de actores y clases. Describe quién interactua con el sistema y que metas u objetivos desea alcanzar. |
+| **Tratamiento de Datos** | Los Datos y procesos conceptualmente **separados**. | Los datos (Atributos) y el comportamiento (métodos) están **encapsulados** juntos en objetos. |
+| **Tipo de Descomposición** | Funcional, jerárquica y descendente (*Top-Down*). Se desglosa en niveles (Nivel 0, Nivel 1, Diagramas hijos). | Estructural y Casos de Uso.Basada en metas operacionales, se organizan según metas de los actores e interacciones de clases. |
+| **Cuándo Utilizar** | Sistemas orientados al procesamiento por lotes. Integración de datos puros y tuberías (*pipelines*). | Portales interactivos complejos, prtales web e-commerce y microservicios modernos. |
 
 
 
