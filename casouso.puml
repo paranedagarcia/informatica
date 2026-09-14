@@ -1,0 +1,27 @@
+```mermaid
+flowchart LR
+    cliente["👤 Cliente<br/><i>Actor Principal</i>"]
+    pasarela["⚙️ Pasarela de Pagos<br/><i>Sistema Externo</i>"]
+    bd["🗄️ Sistema de Inventario / BD<br/><i>Sistema Secundario</i>"]
+
+    subgraph sistema["Sistema: Plataforma E-Commerce / POS"]
+        UC_Pago(["UC-01: Procesar Pago Electrónico"])
+        UC_Validar(["Validar Cliente y Carrito"])
+        UC_Autorizar(["Autorizar Transacción Bancaria"])
+        UC_Stock(["Registrar Venta y Decrementar Stock"])
+        UC_Desc(["Aplicar Código de Descuento"])
+        UC_Rechazo(["Notificar Rechazo de Pago"])
+    end
+
+    cliente --- UC_Pago
+    UC_Autorizar --- pasarela
+    UC_Stock --- bd
+
+    UC_Pago -.->|include| UC_Validar
+    UC_Pago -.->|include| UC_Autorizar
+    UC_Pago -.->|include| UC_Stock
+    UC_Desc -.->|extend| UC_Pago
+    UC_Rechazo -.->|extend| UC_Pago
+
+    style sistema fill:#f8f8f8,stroke:#333,stroke-width:2px
+```
