@@ -1,6 +1,6 @@
 ---
 id: intro
-title: "Manual de Ingeniería Informática"
+title: "Manual de Ingeniería"
 sidebar_label: "📄 Presentación"
 sidebar_position: 1
 ---
@@ -22,7 +22,7 @@ Este manual es un apoyo a la formación en el área de informática, consistente
 
 
 
-## Informática
+## **Informática**
 
 Bajo la óptica de la disciplina, el campo de la informática se divide en dos grandes áreas que deben estar completamente alineadas para lograr el éxito:
 
@@ -38,3 +38,7 @@ Bajo la óptica de la disciplina, el campo de la informática se divide en dos g
 *   **Gestión de Ciclo de Vida y Calidad:** Abarca todas las etapas desde el análisis de requisitos de los clientes hasta la programación de código, pasando por exhaustivas pruebas de verificación, estrategias de conversión en producción y el posterior mantenimiento continuo ante fallos o solicitudes de cambio.
 
 *   **Perfil Multidisciplinario y Liderazgo:** El ingeniero informático actual supera la clásica etiqueta del "nerd tecnológico". La complejidad de los desafíos contemporáneos requiere un profesional que combine una profunda excelencia técnica con habilidades de comunicación, liderazgo, comprensión de la economía (gestión de costos y compromisos arquitectónicos) y adaptabilidad al cambio.
+
+### Plan de estudio
+
+![](img/ingenieria.svg)
