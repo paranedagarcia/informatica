@@ -122,16 +122,116 @@ Desde la perspectiva del actor, cada óvalo debe producir un resultado de valor 
 **Casos de Uso**
 <YouTubeVideo id="5ezWOj0k02k" title="Casos de Uso (UML)" />
 
+#### Límite del sistema (el alcance)
+
+La comunicación siempres cruza el límite del sistema.
+```mermaid
+---
+config:
+  theme: redux-color
+  usecase:
+    colorScheme: rotate
+---
+usecase-beta
+direction LR
+actor Customer("Cliente")
+systemBoundary "PLATAFORMA E-COMMERCE"
+  Checkout("UC-01: Procesar pago electrónico")
+end
+Pagos[Pasarela Pagos]
+Checkout --> Pagos
+Customer --> Checkout
+
+```
 ### Relaciones entre Casos de Uso
 
 Para organizar la lógica y evitar redundancias en el modelo, se utilizan tres relaciones de comportamiento:
 
-* **Inclusión (`<<include>>`):** Indica que un caso de uso común (subfunción) se ejecuta de forma **obligatoria** dentro del flujo de otro caso de uso para evitar duplicar texto o lógica en la especificación.
+* **Inclusión (`<<include>>`):** La Obligación. Indica que un caso de uso común (subfunción) se ejecuta de forma **obligatoria** dentro del flujo de otro caso de uso para evitar duplicar texto o lógica en la especificación.
+    * Dirección de flecha: Apunta al caso común (subfunción).
+    * Condicionalidad: Obligatorio. El caso base no está completo sin él.
+    * Cuándo usarlo: Para evitar duplicar texto (ej. validar usuario, pagar cuotas).
 
-* **Extensión (`<<extend>>`):** Representa un comportamiento **opcional o de excepción** que solo se ejecuta en puntos específicos si se cumple una condición determinada.
+* **Extensión (`<<extend>>`):** La excepción. Representa un comportamiento **opcional o de excepción** que solo se ejecuta en puntos específicos si se cumple una condición determinada.
+    * Dirección de flecha: Apunta DESDE el caso extendido HACIA el caso base.
+    * Condicionalidad: Opcional/Condicional. El caso base funciona perfectamente por sí solo.
+    * Cuándo usarlo: Para manejar excepciones (ej. Tarjeta rechazada, seguro adicional).
 
 * **Generalización:** Expresa una relación de **herencia** de un concepto general a uno especializado, pudiendo aplicarse tanto entre actores como entre casos de uso.
 
+![](img/cu-relaciones.jpg)
+
+#### Aplicación de `<<include>>`
+
+<div class="container">
+  <div class="row">
+    <div class="col col--6">
+
+```mermaid
+usecase-beta
+Inscribir("Inscribir en el curso")
+Hospedaje("Hacer arreglos de hospedaje")
+Pagar("Pagar cuotas de estudiantes")
+
+Inscribir ..> : include Pagar
+Hospedaje ..> : include Pagar
+```
+
+    </div>
+    <div class="col col--6">
+    **Reutilización pura**. No importa si te inscribes o buscas hospedaje, el sistema siempre te obligará a pagar las cuotas. Se extrae para no repetir en proceso en el diagrama.
+    </div>
+  </div>
+</div>
+
+#### Aplicación de `<<extend>>`
+
+<div class="container">
+  <div class="row">
+    <div class="col col--6">
+```mermaid
+usecase-beta
+Seguro("Seguro médico de estudiantes")
+Base("Pagar cuotas de estudiantes")
+
+Seguro ..> : extend Base
+```
+    </div>
+    <div class="col col--6">
+    En caso base (Pagar cuotas) está completo por sí solo. El seguro es un comportamiento adicional que solo se activa bajo una condición específica.
+    </div>
+  </div>
+</div>
+
+
+#### Storyboard completo
+
+
+```mermaid
+---
+config:
+  theme: redux-color
+  usecase:
+    colorScheme: rotate
+---
+usecase-beta
+actor Participante
+actor Presidente
+
+systemBoundary "GESTION DE CONFERENCIA"
+  Registrar("Registrarse")
+  Organizar("Organizar Traducción")
+  Reservar("Reservar Cuarto")
+end
+Hotel[Reservaciones de Hotel]
+
+Participante --> Registrar
+Presidente --> Registrar
+
+Organizar ..> : extend Registrar
+Registrar ..> : include Reservar
+Reservar --> Hotel
+```
 
 
 ### Utilización en un Proyecto
@@ -260,6 +360,9 @@ Registrar --> Inventario
 ## **Diagrama de Secuencia**
 
 Un **Diagrama de Secuencia** es un diagrama de comportamiento e interacción en el Lenguaje Unificado de Modelado (**UML**) que ilustra la sucesión de interacciones y el intercambio de mensajes entre objetos o componentes del sistema a lo largo del tiempo. 
+
+![](img/sec-infografia.jpg)
+
 
 A diferencia de los diagramas de clases (que muestran la estructura estática) o de los casos de uso (que muestran metas desde una caja negra), el diagrama de secuencia adopta una visión dinámica de "caja transparente". Su eje vertical representa el **paso del tiempo** (avanzando de arriba hacia abajo) y su eje horizontal representa los **participantes u objetos** involucrados.
 
