@@ -12,7 +12,7 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 ![](img/informatica.jpg)
 </center>
 
-
+La propuesta de este manual es simple, cambiar el abordaje de la ingeniería informática. **Aprender el qué hacer antes del cómo hacer**. Primero conocer los conceptos básicos de la Ingeniería de la Información y aplicarlos para la resolución de problemas en cualquier àmbito de negocio. Estudiar el problema, luego modelarlo y resolver técnicamente.
 
 La **Ingeniería Informática** se define como la disciplina y el proceso estructurado que utiliza la tecnología computacional y/o Tecnologías de la Información para proveer soluciones organizacionales y técnicas. Su propósito central es diseñar, desarrollar, integrar y gestionar sistemas de software, hardware y redes para capturar, almacenar, procesar, asegurar y distribuir información de manera eficiente.
 
@@ -40,5 +40,7 @@ Bajo la óptica de la disciplina, el campo de la informática se divide en dos g
 *   **Perfil Multidisciplinario y Liderazgo:** El ingeniero informático actual supera la clásica etiqueta del "nerd tecnológico". La complejidad de los desafíos contemporáneos requiere un profesional que combine una profunda excelencia técnica con habilidades de comunicación, liderazgo, comprensión de la economía (gestión de costos y compromisos arquitectónicos) y adaptabilidad al cambio.
 
 ### Plan de estudio
+
+
 
 ![](img/ingenieria.svg)
