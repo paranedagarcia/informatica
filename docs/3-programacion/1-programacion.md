@@ -4,6 +4,93 @@ title:  "Introducción"
 sidebar_label: "📄 Programar"
 ---
 
+**¿Qué es un programa?** básicamente es un archivo con ciertas instrucciones que hace que un computador realice acciones que de lo contrario lo convierten en un conjunto de fierros y circuitos, como un buen pisapapeles. Nada hace.
+
+Las computadoras solo ejecutan operaciones simples. Solo evalúan el resultados de las operaciones fundamentales, como sumar, dividir, restar y multiplicar, pero sin embargo lo hacen a velocidades muy rápidas y con una alta tasa de frecuencia.
+
+Las operaciones ue realiza, las efectúa sin comprensión de su significado.
+
+### Componentes Internos del Computador y sus Funciones
+Los componentes electrónicos de un computador (CPU, Disco, memoria ram)
+
+![](img/arquitectura.jpg)
+
+El procesador
+
+![](img/cpu-infografia.jpg)
+
+
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col--6">
+    ![](img/cpu.jpg)
+    </div>
+    <div class="col col--6">
+    **Unidad Central de Procesamiento (CPU / Procesador):** Es el motor de cómputo responsable de leer, interpretar y ejecutar las instrucciones programadas en el software. Realiza las operaciones aritméticas, lógicas y el control del flujo del programa. Los procesadores contemporáneos incorporan **múltiples núcleos (*multicore*)** en un solo chip para ejecutar tareas simultáneas con mayor rendimiento y menor consumo de energía.
+    </div>
+    <div class="col col--6">
+    ![](img/ram.jpg)
+    </div>
+    <div class="col col--6">
+    **Memoria Principal (RAM):** Es el espacio de almacenamiento volátil y de alta velocidad donde se mantienen temporalmente los datos, las variables, las instrucciones de la aplicación y los objetos activos que la CPU requiere procesar en tiempo real. Un mayor tamaño de memoria evita cuellos de botella y permite ejecutar tareas complejas en memoria (*in-memory computing*).
+    </div>
+    <div class="col col--6">
+    ![](img/disco.jpg)
+    </div>
+    <div class="col col--6">
+    **Dispositivos de Almacenamiento Secundario (Discos HDD/SSD/NVM):** Proporcionan **persistencia de datos** de carácter permanente o semipermanente. Almacenan el sistema operativo, los archivos maestros, las bases de datos y los programas fuente de manera que la información sobreviva al apagado del equipo o al cierre de las sesiones de software.
+    </div>
+  </div>
+</div>
+
+
+* **Sistema de Entradas/Salidas (E/S) y Controladores (*Drivers*):** Los controladores de dispositivos (*device drivers*) y buses de comunicación sirven como interfaz entre el hardware físico (teclados, lectores de código de barras, pantallas, tarjetas de red) y el sistema operativo, gestionando el intercambio de señales de entrada y salida.
+
+:::info[Actividad:]
+Investiga acerca de los siguientes aspectos:
+1. ¿Cómo funciona el **CPU** a nivel de microcircuitos?
+2. El sistema binario y conversión numérica y textual
+:::
+
+### Relación entre el Hardware y los Lenguajes de Programación
+
+<center>
+<figure>
+![](img/lenguaje.jpg)
+<figcaption>Un **lenguaje de programación** es el puente que convierte las abstracciones lógicas de alto nivel (humanas) en secuencias de instrucciones binarias que controlan el hardware físisco.</figcaption>
+</figure>
+</center>
+
+Una computadora puede calcular fácilmente la velocidad de un viaje conocidos distancia y tiempo. Pero desconoce los conceptos mencionados, por ello se instruye a la computadora con lo siguiente:
+* acepta un número que representa la distancia
+* acepta un número que represente el tiempo
+* divide el primer valor por el segundo valor y guarda ese resultado en la memoria de trabajo
+* muestra el resultado (que representa velocidad) en un formato legible
+
+Estas acciones constituyen un programa. Que traduce estas instruccione a un lenguaje que la computadora entiende.
+
+
+La conexión entre los componentes físicos y el código de software se organiza a través de distintos **niveles de abstracción y mecanismos de traducción**:
+
+1. **Lenguaje Máquina y Código Binario:** En el nivel más bajo, la CPU solo es capaz de entender e interpretar instrucciones en código binario (secuencias de unos y ceros).
+
+2. **Lenguajes de Bajo Nivel / Ensamblador:** Interactúan de forma directa con los registros del procesador y las rutinas físicas de entrada/salida (*low-level I/O*), estando íntimamente ligados a la arquitectura del hardware específico.
+
+3. **Lenguajes de Alto Nivel (Python, Java, C++, C#, etc.):** Permiten escribir instrucciones utilizando abstracciones lógicas del dominio del problema, liberando al programador de gestionar manualmente los detalles físicos de la arquitectura de la computadora.
+
+4. **Mecanismos de Traducción (Compiladores e Intérpretes):** 
+   * **Compiladores:** Traducen el código fuente escrito en lenguajes de alto nivel a código máquina ejecutable nativo para el procesador.
+   * **Máquinas Virtuales e Intérpretes:** Lenguajes como Java o C# utilizan un entorno de ejecución abstracto (**Virtual Machine**) que actúa como una capa intermedia entre la aplicación y el hardware. La máquina virtual interpreta o compila en tiempo de ejecución las instrucciones intermedias (*bytecodes*) para la CPU específica, garantizando la portabilidad del software en diferentes plataformas.
+
+5. **Mapeo de Memoria:** Las variables, estructuras de datos y objetos declarados en el código de un programa se asignan y traducen a **direcciones físicas en la memoria RAM** durante la ejecución.
+
+6. **Comunicación con Periféricos:** Para que un programa de alto nivel controle componentes físicos (como una caja registradora, una pantalla táctil o una impresora), utiliza bibliotecas o interfaces nativas (por ejemplo, **JNI - Java Native Interface**) que invocan los controladores (*drivers*) de bajo nivel del sistema operativo.
+
+
+---
 ## **El programar**
 
 **Programar** es el proceso de diseñar, construir e instruir a una computadora para que ejecute tareas específicas o resuelva un problema determinado utilizando un lenguaje que la máquina pueda entender. 
@@ -19,7 +106,7 @@ Dado que las computadoras no poseen pensamiento propio, necesitan ser instruidas
 
 
 
-### ¿Qué implica realmente la programación?
+#### ¿Qué implica realmente la programación?
 
 * **Es una técnica de resolución de problemas:** Más que simplemente escribir código, aprender a programar consiste en aprender a **pensar de forma lógica y estructurada** para descomponer un problema complejo en una secuencia organizada de pasos.
 * **Consta de un ciclo completo:** El proceso de programación abarca la comprensión del problema, la elaboración del **algoritmo** (la receta o secuencia lógica), la traducción a la sintaxis del lenguaje de programación, la ejecución, la **verificación** de los resultados y la **depuración** (*debugging*) para corregir errores.
@@ -99,26 +186,292 @@ Las metodologías se distribuyen en un continuo que abarca desde modelos complet
 [Ir a los marcos de trabajo ➡️​](/docs/modelamiento/metodologias)
 
 
+***
+## **Lenguaje de máquina**
+
+A nivel de **hardware y arquitectura de procesadores**, una **lista o secuencia de instrucciones (IL)** es la serie ordenada de comandos en código máquina (binario) almacenada en memoria que la Unidad Central de Procesamiento (CPU) lee, interpreta y ejecuta para realizar el cómputo de un programa.
+
+
+
+#### Componentes del Hardware que Procesan la Lista
+Para procesar la lista de instrucciones, la arquitectura de la CPU utiliza varios registros y componentes clave:
+
+* **Program Counter (PC / Contador de Programa):** Registro que contiene la dirección de memoria de la siguiente instrucción en la lista que debe ser capturada.
+
+* **Instruction Register (IR / Registro de Instrucción):** Almacena el código binario de la instrucción que se acaba de leer de la memoria o de la caché de instrucciones (L1i).
+
+* **Unidad de Control (CU):** Analiza el código de operación (*opcode*) dentro de la instrucción y emite las señales eléctricas requeridas para activar los buses, registros y la Unidad Aritmético-Lógica (ALU).
+
+
+
+#### Ejecución mediante Segmentación (*Pipelining*)
+En las arquitecturas modernas de procesadores, la lista de instrucciones no se procesa de forma aislada (esperando a que una instrucción termine del todo para empezar la siguiente). 
+
+En su lugar, se utiliza la técnica de **segmentación (*pipelining*)**, donde **múltiples instrucciones de la lista se ejecutan simultáneamente en el hardware**, estando cada una en una fase o filtro distinto del proceso (Captura -> Decodificación -> Ejecución -> Acceso a Memoria -> Escritura).
+
+
+#### Relación con la Arquitectura del Conjunto de Instrucciones (ISA)
+La estructura de las instrucciones en la lista depende de la especificación **ISA (*Instruction Set Architecture*)** del chip:
+
+* **Arquitecturas RISC (ej. ARM, RISC-V):** Las instrucciones de la lista son simples, homogéneas y de tamaño fijo, diseñadas para ejecutarse idealmente en un solo ciclo de reloj.
+
+* **Arquitecturas CISC (ej. x86_64):** La lista puede contener instrucciones complejas de tamaño variable. La Unidad de Control las traduce internamente a una secuencia más fina de **microoperaciones** de bajo nivel.
+
+
 
 ***
-## **Lenguajes de programación**
+## **Lenguaje de programación**
 
-Un **lenguaje de programación** es un sistema formal de símbolos, reglas sintácticas y semánticas que permite a un especialista escribir instrucciones estructuradas para que una computadora ejecute tareas específicas, procese información o controle algoritmos.
+Un **lenguaje de programación** es un sistema formal constituido por un conjunto de reglas, símbolos y algoritmos que permite a un desarrollador escribir código fuente con instrucciones precisas para ser procesadas y ejecutadas por una computadora. Funciona como el puente de comunicación entre la lógica humana del problema y el hardware de procesamiento. Permite entonces a un especialista escribir instrucciones estructuradas para que una computadora ejecute tareas específicas, procese información o controle algoritmos.
+
+Para estructurar y analizar cualquier lenguaje de programación (al igual que cualquier lenguaje formal o de modelado), se distinguen cuatro componentes y conceptos normativos clave:
+
+
+### Conceptos Fundamentales
+
+#### Alfabeto (Conjunto de Símbolos / Caracteres)
+* **Definición:** Es el **conjunto finito y bien definido de símbolos elementales o caracteres gráficos** aceptados por el lenguaje como entradas válidas.
+* **Detalle:** Incluye las letras (mayúsculas y minúsculas), dígitos numéricos, signos de puntuación y operadores matemáticos o lógicos (por ejemplo, `A-Z`, `a-z`, `0-9`, `+`, `-`, `=`, `;`, `{`, `}`).
+* **Función:** Representa el nivel básico de entrada que lee el entorno antes de formar términos con significado.
+
+#### Léxico (Vocabulario / *Tokens*)
+* **Definición:** Es el **conjunto de palabras válidas, identificadores y componentes léxicos (*tokens*)** que se pueden construir combinando los caracteres permitidos en el alfabeto.
+* **Detalle:** Incluye:
+  * **Palabras reservadas o claves:** Términos con un significado prefijado por el lenguaje (ej. `if`, `while`, `class`, `return`, `maximize`).
+  * **Identificadores:** Nombres creados por el desarrollador para definir variables, funciones o clases.
+  * **Literales y Operadores:** Valores numéricos, cadenas de texto encerradas entre comillas y símbolos operativos.
+* **En el compilador:** El *analizador léxico* escanea el código texto para verificar que todos los términos formados sean vocablos válidos del lenguaje.
+
+#### Sintaxis (Estructura / Gramática)
+* **Definición:** Es el conjunto de **reglas formales y gramaticales que gobiernan la combinación estructurada de las unidades léxicas** para construir oraciones, expresiones y bloques de código válidos.
+* **Detalle:** Determina la forma y la estructura correcta que debe tener el programa (por ejemplo, exigir paréntesis al definir una condición o terminar las sentencias con un punto y coma `;`).
+* **Error Sintáctico:** Ocurre cuando el programador viola una regla de la gramática del lenguaje (por ejemplo, un paréntesis sin cerrar o una palabra clave mal colocada). El compilador detiene el proceso e informa del error antes de la ejecución.
+
+#### Semántica (Significado e Interpretación)
+* **Definición:** Es la **interpretación del significado de las construcciones sintácticamente correctas**; es decir, qué comportamiento o valor ejecuta realmente el software al correr el código.
+* **Detalle:** La semántica relaciona los elementos de la sintaxis abstracta con un dominio de ejecución o modelo de cómputo.
+* **Error Semántico:** Una instrucción puede ser sintácticamente impecable (respetar toda la gramática), pero carecer de sentido lógico o fallar en ejecución (por ejemplo, intentar dividir un número entre cero, declarar una variable e intentar sumar tipos de datos incompatibles, o generar un bucle infinito que no termina).
+
+
+
+#### Resumen Analógico
+
+| Nivel | En el Idioma Español | En un Lenguaje de Programación |
+| :--- | :--- | :--- |
+| **Alfabeto** | Las letras de la `A` a la `Z` y signos de puntuación. | Caracteres ASCII/Unicode (`a-z`, `0-9`, `{`, `}`, `;`). |
+| **Léxico** | Palabras válidas del diccionario ("el", "perro", "corre"). | *Tokens*, palabras reservadas (`if`, `while`) y nombres de variables. |
+| **Sintaxis** | Reglas gramaticales: *Sujeto + Verbo + Predicado* ("El perro corre"). | Estructura correcta de sentencias: `if (x > 0) { return true; }`. |
+| **Semántica** | El sentido real de la frase (distinguir algo lógico de un absurdo). | El comportamiento en memoria y CPU durante la ejecución del programa. |
+
+
 
 Respecto a **cuáles son los más populares actualmente**, los datos de fuentes de la industria como el **[TIOBE Index](https://www.tiobe.com/tiobe-index/)**, la encuesta anual de **[Stack Overflow 2025](https://survey.stackoverflow.co/2025/technology)** y el informe de **[Charisma University](https://charisma.edu.eu/insight/top-coding-languages/)** muestran que la popularidad varía según la métrica evaluada (búsquedas, uso en proyectos reales, actividad de código o satisfacción del desarrollador).
 
+
+### Lenguaje populares
+
 **Los lenguajes de programación más populares actualmente**:
 
-Los datos reflejan que **Python** lidera ampliamente las métricas de búsqueda e interés general impulsado por la Inteligencia Artificial y la Ciencia de Datos, mientras que **JavaScript** y **TypeScript** dominan el desarrollo web y la actividad de contribuidores en repositorios de código.
-
-**Temas clave identificados en la investigación:**
-1. **Liderazgo de Python impulsado por la Inteligencia Artificial**: Se posiciona como el lenguaje #1 en los índices globales de búsqueda (TIOBE y PYPL), impulsado por herramientas como PyTorch y TensorFlow.
-2. **Dominio de JavaScript y TypeScript en la Web**: JavaScript se mantiene como el lenguaje más utilizado por desarrolladores (66% de uso en producción según Stack Overflow), mientras TypeScript lidera el volumen de contribuidores en GitHub.
-3. **Rust como el lenguaje más admirado**: Destaca por noveno año consecutivo como el lenguaje más admirado por los programadores gracias a su seguridad de memoria sin recolector de basura.
-4. **Fortaleza de los lenguajes tradicionales de sistemas**: C, C++, Java y C# continúan en el top 5 global para infraestructura crítica, software corporativo y motores de videojuegos.
+A continuación se presenta el resumen de los **10 lenguajes de programación más populares y relevantes**, detallando sus características, paradigmas y usos principales:
 
 
+#### 1. Python
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/pyhon.webp)
+    </div>
+    <div class="col col--9">
 
+**Resumen:** Lidera los índices globales de búsqueda e interés general (como TIOBE y PYPL). Ha experimentado el mayor crecimiento interanual impulsado por el auge masivo de la Inteligencia Artificial y la Ciencia de Datos.
+
+**Usos Principales:** Inteligencia Artificial (IA), Aprendizaje Automático (TensorFlow, PyTorch), Ciencia de Datos, desarrollo backend (Django, FastAPI), automatización y scripts.
+
+**Paradigma Principal:** **Multiparadigma** (Orientado a Objetos, Imperativo y Funcional).
+    </div>
+  </div>
+</div>
+
+#### 2. JavaScript
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/JavaScript.webp)
+    </div>
+    <div class="col col--9">
+**Resumen:** Es el pilar fundamental del desarrollo web, presente en más del 98% de los sitios web del mundo. Ocupa la primera posición de adopción laboral entre los desarrolladores con un 66% de uso profesional según Stack Overflow.
+
+**Usos Principales:** Desarrollo web frontend interactivo, aplicaciones web full-stack (mediante Node.js), aplicaciones móviles híbridas (React Native) y aplicaciones de escritorio (Electron).
+
+**Paradigma Principal:** **Multiparadigma** (Basado en Prototipos, Funcional e Imperativo).
+    </div>
+  </div>
+</div>
+
+
+#### 3. TypeScript
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/typescript.webp)
+    </div>
+    <div class="col col--9">
+    **Resumen:** Desarrollado por Microsoft como un superconjunto tipado de JavaScript. Se convirtió en el lenguaje número 1 en GitHub por cantidad de contribuidores mensuales gracias a que el tipado estático mejora la fiabilidad del código asistido por IA.
+
+**Usos Principales:** Aplicaciones web empresariales a gran escala, desarrollo con frameworks modernos (Next.js, Angular, SvelteKit) y APIs backend de alto rendimiento.
+
+**Paradigma Principal:** **Multiparadigma** (Orientado a Objetos, Funcional e Imperativo con Tipado Estático).
+    </div>
+  </div>
+</div>
+
+
+#### 4. Java
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/java.png)
+    </div>
+    <div class="col col--9">
+    **Resumen:** Basado en la filosofía *"Escribe una vez, ejecútalo en cualquier lugar"* a través de la Máquina Virtual de Java (JVM). Es la columna vertebral histórica de los sistemas corporativos y la infraestructura bancaria.
+
+**Usos Principales:** Sistemas informáticos empresariales (ERP, CRM), aplicaciones bancarias y financieras, desarrollo móvil nativo en Android y procesamiento de Big Data (Hadoop, Spark).
+
+**Paradigma Principal:** **Orientado a Objetos** (Estructurado en Clases).
+    </div>
+  </div>
+</div>
+
+
+#### 5. C# (C-Sharp)
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/c_sharp.webp)
+    </div>
+    <div class="col col--9">
+
+**Resumen:** Lenguaje desarrollado por Microsoft dentro del ecosistema .NET. Fue galardonado como "Lenguaje del Año" por TIOBE tras registrar el mayor incremento interanual de adopción.
+
+**Usos Principales:** Desarrollo de videojuegos (motor gráfico Unity), desarrollo empresarial .NET, servicios web API, software de escritorio Windows e infraestructura en la nube.
+
+**Paradigma Principal:** **Multiparadigma** (fuertemente Orientado a Objetos, Orientado a Componentes y Funcional).
+    </div>
+  </div>
+</div>
+
+
+#### 6. C++
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/cplus.webp)
+    </div>
+    <div class="col col--9">
+
+    **Resumen:** Extensión directa de C que incorpora orientación a objetos y abstracción sin renunciar al control directo de la memoria física y al rendimiento extremo a nivel de hardware.
+
+**Usos Principales:** Motores de videojuegos de alta fidelidad (Unreal Engine), sistemas de tiempo real, trading financiero de alta frecuencia, sistemas embebidos y software de sistemas.
+
+**Paradigma Principal:** **Multiparadigma** (Orientado a Objetos, Genérico y Procedimental).
+    </div>
+  </div>
+</div>
+
+
+
+#### 7. C
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/c_logo.png)
+    </div>
+    <div class="col col--9">
+
+**Resumen:** Uno de los lenguajes más influyentes en la historia de la informática. Proporciona una ejecución de máxima velocidad y un acceso de bajo nivel a los recursos físicos del procesador y la memoria.
+
+**Usos Principales:** Sistemas operativos (kernel de Linux, Windows y macOS), firmware, controladores de dispositivos (*drivers*), sistemas embebidos / IoT y herramientas de bajo nivel.
+
+**Paradigma Principal:** **Imperativo / Procedimental**.
+    </div>
+  </div>
+</div>
+
+
+#### 8. Go (Golang)
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/go.webp)
+    </div>
+    <div class="col col--9">
+
+**Resumen:** Diseñado por Google para ofrecer simplicidad sintáctica, compilación ultrarrápida y soporte nativo para concurrencia masiva (*Goroutines*). Es el lenguaje estándar de la infraestructura en la nube.
+
+**Usos Principales:** Aplicaciones *cloud-native*, arquitectura de microservicios, herramientas de DevOps e infraestructura (Docker, Kubernetes) y servicios backend concurrentes.
+
+**Paradigma Principal:** **Concurrente e Imperativo** (Procedimental estructurado basado en interfaces).
+    </div>
+  </div>
+</div>
+
+
+
+#### 9. Rust
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/rust.webp)
+    </div>
+    <div class="col col--9">
+
+**Resumen:** Creado para ofrecer rendimiento al nivel de C/C++ y garantizar la seguridad de la memoria en tiempo de compilación sin utilizar un recolector de basura (*Garbage Collector*). Es el lenguaje más admirado por los desarrolladores por noveno año consecutivo en Stack Overflow.
+
+**Usos Principales:** Programación de sistemas de alto rendimiento, infraestructura de servidores, tecnología blockchain, WebAssembly y componentes donde la seguridad de memoria es crítica.
+
+**Paradigma Principal:** **Multiparadigma** (Funcional, Imperativo y Orientado a Objetos mediante *traits*).
+    </div>
+  </div>
+</div>
+
+
+
+#### 10. SQL (Structured Query Language)
+
+<div class="container">
+  <div class="row">
+    <div class="col col--3">
+    ![](img/sql.svg)
+    </div>
+    <div class="col col--9">
+
+**Resumen:** Lenguaje de dominio específico estándar para la definición, gestión y consulta de datos almacenados en sistemas gestores de bases de datos relacionales.
+
+**Usos Principales:** Consulta y gestión de bases de datos relacionales (PostgreSQL, MySQL, SQL Server, Oracle), análisis de inteligencia de negocios (BI) y reporte de datos.
+
+**Paradigma Principal:** **Declarativo** (Consulta de datos).
+    </div>
+  </div>
+</div>
+
+
+
+
+
+#### Tabla Comparativa
+
+| Lenguaje | Paradigma Principal | Usos Principales | Factor Destacado |
+| :--- | :--- | :--- | :--- |
+| **Python** | Multiparadigma (POO, Funcional) | IA, Aprendizaje Automático, Data Science, Web Backend | #1 en TIOBE y motor del auge de la IA. |
+| **JavaScript** | Multiparadigma (Prototipos, Funcional) | Desarrollo Web Frontend, Node.js Full-stack, Móvil | #1 en adopción por desarrolladores (66%). |
+| **TypeScript** | Multiparadigma (POO, Tipado Estático) | Web Empresarial, Next.js, Angular, APIs Backend | #1 en GitHub por contribuidores activos. |
+| **Java** | Orientado a Objetos | Software Corporativo, Banca, Android, Big Data | Estándar en la industria empresarial y JVM. |
+| **C#** | Multiparadigma (POO, Componentes) | Videojuegos (Unity), Ecosistema .NET, Servicios Web | Galardonado "Lenguaje del Año" por TIOBE. |
+| **C++** | Multiparadigma (POO, Genérico) | Videojuegos (Unreal Engine), Sistemas, Trading | Máximo rendimiento con abstracción de objetos. |
+| **C** | Imperativo / Procedimental | Sistemas Operativos (Kernel), Firmware, Drivers, IoT | Control absoluto del hardware y memoria física. |
+| **Go (Golang)** | Concurrente e Imperativo | Cloud-Native, Microservicios, Docker, Kubernetes | Simplicidad y concurrencia nativa para la nube. |
+| **Rust** | Multiparadigma (Funcional, Traits) | Sistemas, Blockchain, WebAssembly, Seguridad Crítica | El más admirado por 9 años consecutivos. |
+| **SQL** | Declarativo | Gestión y Consulta de Bases de Datos Relacionales | Estándar universal para manipulación de datos. |
 
 
 
