@@ -191,6 +191,8 @@ Las metodologías se distribuyen en un continuo que abarca desde modelos complet
 
 A nivel de **hardware y arquitectura de procesadores**, una **lista o secuencia de instrucciones (IL)** es la serie ordenada de comandos en código máquina (binario) almacenada en memoria que la Unidad Central de Procesamiento (CPU) lee, interpreta y ejecuta para realizar el cómputo de un programa.
 
+Este IL es de hecho el alfabeto de un lenguaje de máquina. Este es el conjunto de símbolos más simple que se puede utilizar para dar comandos a una computadora. 
+
 
 
 #### Componentes del Hardware que Procesan la Lista
