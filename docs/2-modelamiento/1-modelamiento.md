@@ -7,6 +7,14 @@ sidebar_position: 1
 
 El **modelamiento (o modelado)** es una disciplina fundamental que actúa como puente entre los problemas del mundo real y las soluciones computacionales de software, hardware y procesos. Al mencionar "problemas del mundo real" asumiremos el conocimiento del concepto de sistema que describe la industria objeto del análisis.
 
+:::info[Herramientas]
+**UML:** para diagramar usaremos Umbrello: https://apps.kde.org/es/umbrello/
+
+**BMPN:** para crear procesos de negocio usaremos Camunda: 
+* version online: https://bpmn.io/
+* version escritorio: 
+:::
+
 :::info[nota]
 Abordaremos el concepto de "**Industria**" para toda institución pública o privada, independiente de su tamaño, y que puede ser objeto para desarrollar alguna solución basada en tecnologías de información. Esto abarca desde el negocio del barrio hasta la industria minera del norte de Chile.
 :::

@@ -26,12 +26,13 @@ Este manual es un apoyo a la formación en el área de informática, consistente
 
 Bajo la óptica de la disciplina, el campo de la informática se divide en dos grandes áreas que deben estar completamente alineadas para lograr el éxito:
 
-**Tecnología de la Información (TI):** Representa el soporte físico y lógico del sistema. Incluye todos los componentes tangibles —como servidores, computadoras, enrutadores y cables de red— e intangibles —como sistemas operativos, bases de datos, software de seguridad y herramientas de desarrollo— que facilitan el procesamiento técnico y el flujo de datos.
-
 **Sistemas de Información (SI):** Representa el componente funcional e integrador que vincula a las personas, la tecnología y los procesos de negocio. Se enfoca en cómo la organización recopila, gestiona, distribuye y utiliza la información para dar soporte a la toma de decisiones, optimizar las operaciones de valor y cumplir con su estrategia de negocio.
 
+**Tecnología de la Información (TI):** Este representa el soporte físico y lógico del sistema. Incluye todos los componentes tangibles —como servidores, computadoras, enrutadores y cables de red— e intangibles —como sistemas operativos, bases de datos, software de seguridad y herramientas de desarrollo— que facilitan el procesamiento técnico y el flujo de datos.
+
+
 ### Temas y competencias clave:
-*   **Enfoque Sociotécnico:** La ingeniería informática reconoce que un sistema de información es mucho más que la simple adquisición de ordenadores o la instalación de software. Exige entender la interacción entre la tecnología, las tareas y el comportamiento humano para que las soluciones computacionales aporten valor real a la organización.
+*   **Enfoque Sociotécnico:** Se reconoce que un sistema de información es mucho más que la simple adquisición de ordenadores o la instalación de software. Exige entender la interacción entre la tecnología, las tareas y el comportamiento humano para que las soluciones computacionales aporten valor real a la organización. Esto implica conocer a cabalidad el entorno del negocio (la industria) donde se insertará la solución a un problema determinado.
 
 *   **Análisis y Arquitectura de Sistemas:** Consiste en tomar problemas organizacionales complejos y descomponerlos de manera jerárquica en componentes lógicos y físicos más sencillos de software y hardware. Su objetivo es diseñar arquitecturas estables, gestionar rigurosamente sus interfaces de conexión y mitigar los riesgos de integración.
 
@@ -44,3 +45,7 @@ Bajo la óptica de la disciplina, el campo de la informática se divide en dos g
 
 
 ![](img/ingenieria.svg)
+
+El camino del ingeniero propuesto en este manual, es partir por conocer qué hacer, saber los fundamentos del entorno donde trabajará, para luego conocer las herramientas necesarias para saber qué hacer.
+
+![](img/ingenieria-caso.svg)
