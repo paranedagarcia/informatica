@@ -71,6 +71,13 @@ El gran aporte de Bertalanffy fue identificar cómo los especialistas de cada su
 
 <center>
 <figure>
+![](img/is-resumen.jpg)
+<figcaption></figcaption>
+</figure>
+</center>
+
+<center>
+<figure>
 ![](img/tgs-ciclo.jpg)
 <figcaption>**El ciclo de vida del sistema**. Ningún sistema existe en el vacío. Todos viven a través de 4 fases.</figcaption>
 </figure>
@@ -78,7 +85,33 @@ El gran aporte de Bertalanffy fue identificar cómo los especialistas de cada su
 
 A continuación, se detallan sus conceptos fundamentales:
 
-#### Isomorfismos entre sistemas
+### Organización y jerarquía
+Un principio clave de la TGS es que los sistemas no son planos, sino que están estructurados en **jerarquías funcionales y estructurales**.
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col--6">
+    **Sistemas de sistemas:** Las redes delimitadas de relaciones entre partes forman unidades holísticas que interactúan con otros sistemas para conformar sistemas aún más grandes. Las organizaciones se componen de subsistemas interrelacionados (como departamentos o áreas funcionales).
+    
+    Jerarquía de complejidad: El universo está compuesto de sistemas dentro de sistemas.
+
+    Las salidas de un nivel superior a menudo dictan las entradas y restricciones del nivel inferior.
+    </div>
+    <div class="col col--6">
+
+    ![](img/is-sistemas.jpg)
+  
+    </div>
+  </div>
+</div>
+
+**Control y estructura de decisiones:** Las jerarquías en las empresas limitan las interacciones ineficientes y definen con claridad la estructura de poder y decisiones. Esta jerarquía de autoridad se despliega en niveles horizontales de administración (control operacional, planeación y control administrativo de nivel medio, y administración estratégica).
+
+**Diferenciación de estructuras:** Tradicionalmente, Henry Ford e investigadores posteriores impusieron estructuras jerárquicas rígidas y centralizadas para optimizar la eficiencia de producción masiva (lo que suele sesgar los proyectos hacia silos funcionales aislados), las cuales hoy coexisten con redes modulares, organizaciones matriciales u orientadas a procesos que buscan flexibilizar y coordinar la comunicación.
+
+### Isomorfismos entre sistemas
 
 El **isomorfismo** (del griego *iso*, igual, y *morphe*, forma) se refiere a la existencia de estructuras, principios, leyes o patrones lógicos similares en sistemas pertenecientes a disciplinas completamente diferentes (biología, física, computación, economía o sociología).
 
@@ -86,7 +119,14 @@ El **isomorfismo** (del griego *iso*, igual, y *morphe*, forma) se refiere a la 
 
 * **Modelos y correspondencias formales:** En la informática y el diseño de software, el isomorfismo se formaliza mediante representaciones abstractas comunes (como las teorías matemáticas en UML o los diagramas de comportamiento), donde se demuestra que sistemas físicos o lógicos distintos comparten la misma semántica estructural y de transición. Esto permite aplicar la resolución de problemas de un dominio a otro.
 
-### Ejemplos de Isomofirmos
+<center>
+<figure>
+![](img/is-isomorfismo.jpg)
+<figcaption>**Isomorfismo**. La repetición de patrones estructirales. Equivalencia estructural entre disciplinas completamente diferentes..</figcaption>
+</figure>
+</center>
+
+#### Ejemplos de Isomofirmos
 
 **3 ejemplos cotidianos de isomorfismo** que ilustran cómo diferentes realidades comparten exactamente la misma estructura y dinámica de funcionamiento:
 
@@ -124,14 +164,7 @@ Este isomorfismo ocurre entre un sistema biológico natural y un sistema de soft
 *   **El comportamiento isomorfo (Sinergia y emergencia):** Ninguna abeja sabe qué está pasando en todo el bosque, pero mediante reglas locales simples (si una encuentra flores, regresa al panal y realiza una "danza" indicando la dirección y distancia), la colmena entera optimiza la recolección de comida de forma masiva. En Waze, ningún conductor tiene una vista satelital completa del tráfico en tiempo real, pero el simple hecho de que cada teléfono envíe su velocidad y ubicación de forma pasiva permite que el servidor central calcule rutas óptimas y alerte de accidentes a toda la comunidad de manera instantánea. El orden y la inteligencia del mapa *emergen* desde abajo hacia arriba (*bottom-up*).
 
 
-#### Organización y jerarquía
-Un principio clave de la TGS es que los sistemas no son planos, sino que están estructurados en **jerarquías funcionales y estructurales**.
 
-* **Sistemas de sistemas:** Las redes delimitadas de relaciones entre partes forman unidades holísticas que interactúan con otros sistemas para conformar sistemas aún más grandes. Las organizaciones se componen de subsistemas interrelacionados (como departamentos o áreas funcionales).
-
-* **Control y estructura de decisiones:** Las jerarquías en las empresas limitan las interacciones ineficientes y definen con claridad la estructura de poder y decisiones. Esta jerarquía de autoridad se despliega en niveles horizontales de administración (control operacional, planeación y control administrativo de nivel medio, y administración estratégica).
-
-* **Diferenciación de estructuras:** Tradicionalmente, Henry Ford e investigadores posteriores impusieron estructuras jerárquicas rígidas y centralizadas para optimizar la eficiencia de producción masiva (lo que suele sesgar los proyectos hacia silos funcionales aislados), las cuales hoy coexisten con redes modulares, organizaciones matriciales u orientadas a procesos que buscan flexibilizar y coordinar la comunicación.
 
 ### Homeostasis
 
@@ -155,6 +188,13 @@ Un principio clave de la TGS es que los sistemas no son planos, sino que están 
 * **El ciclo de retroalimentación (*Feedback*):** La homeostasis opera gracias a la retroalimentación, un subsistema de regulación donde las salidas del sistema se miden frente a los objetivos originales para ajustar y corregir dinámicamente las entradas o procesos. 
 
 * **Ejemplo práctico en TI:** Los sistemas empresariales modernos autorregulados de cadena de suministro (ERP) que analizan las ventas en tiempo real e indican automáticamente qué fabricar para mantener niveles óptimos de inventario sin intervención humana son una manifestación de homeostasis tecnológica.
+
+<center>
+<figure>
+![](img/is-homeostasis.jpg)
+<figcaption>**Homeostasis**. El arte del equilibrio dinámico. La retroalimentación utiliza las salidas del sistema para ajustar las entradas y corregir desviaciones automáticamente.</figcaption>
+</figure>
+</center>
 
 #### Ejemplos
 
@@ -192,10 +232,24 @@ Los equipos de desarrollo de proyectos operan como sistemas socio-técnicos comp
 
 ### Entropía y entropía negativa
 
+<center>
+<figure>
+![](img/is-entropia.jpg)
+<figcaption>**Entropía**. La tendencia natural hacia el desorden. Si unsistema se aísla, su estructura se degrada, pierde energía y avanza inevitablemente hacia el caos.</figcaption>
+</figure>
+</center>
+
 Estos conceptos describen la tendencia de los sistemas hacia el desorden o el orden:
 * **Entropía:** Es la ley de la naturaleza que dicta que los sistemas tienden naturalmente al desgaste, la desorganización, el desorden y, eventualmente, a la desintegración o el caos. Los sistemas cerrados o aislados son especialmente vulnerables a la entropía, ya que no intercambian recursos ni energía con su entorno.
 
 * **Negentropía (Entropía negativa):** Es la fuerza mediante la cual los sistemas abiertos combaten la entropía. Al importar continuamente energía, información, conocimiento y recursos del entorno a través de sus límites permeables, los sistemas logran reestructurarse, mantener el orden y sobrevivir.
+
+<center>
+<figure>
+![](img/is-negentropia.jpg)
+<figcaption>**Negentropía**. La energía externa que restaura el orden. Los sistemas abiertos importan recursos, energía o información para combatir le entropía y sobrevivir.</figcaption>
+</figure>
+</center>
 
 * **La necesidad del diseño inteligente:** Para contrarrestar la entropía en empresas de rápido crecimiento, se requiere de un esfuerzo constante de **diseño inteligente** (como el modelado de arquitecturas de procesos de negocio, gobierno de TI o arquitecturas de sistemas complejos), lo que permite que el sistema opere de forma estable cerca del "borde del caos" sin desintegrarse.
 
@@ -254,6 +308,13 @@ La teoría define y clasifica los sistemas bajo varios principios clave:
 
 * **Entradas, Procesos, Salidas y Retroalimentación:** Todos los sistemas toman entradas de su entorno, realizan procesos que las transforman o cambian, y generan salidas. La retroalimentación (*feedback*) sirve como un mecanismo de control que compara el rendimiento de las salidas con los objetivos originales para regular y corregir el sistema.
 
+<center>
+<figure>
+![](img/is-ciclo.jpg)
+<figcaption>Todo sistema procesa elementos de su entorno.</figcaption>
+</figure>
+</center>
+
 ### Clasificación de los Sistemas 
 **(Abiertos vs. Cerrados)**
 
@@ -268,6 +329,14 @@ La TGS clasifica los sistemas según el nivel de interacción que tienen con el 
 A partir de la formulación de Bertalanffy, otros teóricos expandieron la TGS para resolver problemas prácticos en la integración de múltiples disciplinas. Por ejemplo, en 1956, el profesor **Kenneth Boulding** identificó que los especialistas de distintos subsistemas (como físicos, economistas, químicos o sociólogos) solían hablar sus propios lenguajes técnicos, lo que dificultaba la comunicación. Boulding abogó por la necesidad de utilizar un lenguaje común, como las matemáticas, para lograr una integración de sistemas verdaderamente exitosa. 
 
 Hoy en día, la TGS se aplica de forma práctica en la ingeniería de sistemas, la arquitectura de procesos y el diseño de la arquitectura empresarial, permitiendo descomponer organizaciones complejas en partes manejables sin perder de vista la sinergia general del negocio.
+
+
+<center>
+<figure>
+![](img/is-abiertos.jpg)
+<figcaption>La empresa como sistema abierto.</figcaption>
+</figure>
+</center>
 
 ## **TGS y la Ingeniería de Sistemas**
 
