@@ -84,6 +84,8 @@ La Arquitectura de Negocio permite transicionar la organización de un modelo in
 
 ### Arquitectura de Información o Datos
 
+![](img/ae-información.webp)
+
 La **Arquitectura de Datos e Información** (*Data and Information Architecture*) es el dominio fundamental de la Arquitectura Empresarial encargado de estructurar, organizar, gobernar y gestionar los activos de datos e información de una organización. 
 
 Mientras que la Arquitectura de Negocio establece *qué hace* la empresa y sus objetivos estratégicos, la Arquitectura de Datos e Información define la materia prima y el conocimiento necesario para alimentar los procesos de negocio, respaldar la toma de decisiones y orientar los sistemas de software.
@@ -177,6 +179,8 @@ En el contexto de la transformación digital, la Arquitectura de Datos e Informa
 
 ### Arquitectura de Aplicaciones
 
+![](img/ae-aplicaciones.webp)
+
 La **Arquitectura de Aplicaciones** (*Enterprise Application Architecture* - EAA) es el dominio de la Arquitectura Empresarial enfocado en definir la estructura, el inventario, la interacción y las pautas de gobierno de los sistemas de software y aplicaciones que automatizan y soportan las funciones y procesos del negocio.
 
 A diferencia del desarrollo de software individual, la Arquitectura de Aplicaciones adopta una **perspectiva de portafolio a escala corporativa**, coordinando cómo coexisten, se integran y evolucionan los distintos sistemas (desarrollos propios, paquetes comerciales COTS, servicios en la nube y sistemas legados).
@@ -236,6 +240,8 @@ Toda iniciativa en la Arquitectura de Aplicaciones se rige por tres rutas de imp
 
 
 ### Arquitectura Técnica o Tecnológica
+
+![](img/AE-tecnologia.webp)
 
 La **Arquitectura Tecnológica** (*Technology Architecture* o *Enterprise Technical Architecture - ETA*) es el cuarto dominio fundamental de la Arquitectura Empresarial que define la estructura, los estándares, los servicios de infraestructura y la plataforma de software de sistema y hardware necesarios para alojar y soportar las aplicaciones, los datos y los procesos de negocio de la organización.
 

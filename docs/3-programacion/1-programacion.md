@@ -226,6 +226,13 @@ La estructura de las instrucciones en la lista depende de la especificación **I
 
 Un **lenguaje de programación** es un sistema formal constituido por un conjunto de reglas, símbolos y algoritmos que permite a un desarrollador escribir código fuente con instrucciones precisas para ser procesadas y ejecutadas por una computadora. Funciona como el puente de comunicación entre la lógica humana del problema y el hardware de procesamiento. Permite entonces a un especialista escribir instrucciones estructuradas para que una computadora ejecute tareas específicas, procese información o controle algoritmos.
 
+<center>
+<figure>
+![](img/lenguajes.jpg)
+<figcaption>Lenguajes de programación y su impaco en la industria.</figcaption>
+</figure>
+</center>
+
 Para estructurar y analizar cualquier lenguaje de programación (al igual que cualquier lenguaje formal o de modelado), se distinguen cuatro componentes y conceptos normativos clave:
 
 

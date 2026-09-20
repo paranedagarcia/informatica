@@ -46,7 +46,7 @@ Escribir los pasos estructurados de un algoritmo de forma clara y comentada acos
 
 Un estudiante que necesite automatizar una tarea repetitiva, como mostrar una tabla de conversión matemática, puede estructurar su lógica primero en pseudocódigo de esta manera:
 
-```text
+```text showLineNumbers
 // Pseudocódigo (La Receta Lógica)
 Establecer temperatura Celsius en -20
 Mientras la temperatura sea menor o igual a 40, repetir:
@@ -203,7 +203,7 @@ FIN PARA
 #### Sumar dos números (Estructura secuencial)
 
 
-```python
+```python showLineNumbers
 Proceso SumarNumeros
     Definir num1, num2, suma Como Entero
     Escribir "Ingresa el primer número:"
@@ -218,7 +218,7 @@ FinProceso
 #### Determinar mayoria de edad
 
 
-```python
+```python showLineNumbers
 Proceso VerificarEdad
     Definir edad Como Entero
     Escribir "Ingresa tu edad:"
@@ -248,7 +248,7 @@ A continuación, se presentan los tres algoritmos de ordenación más importante
 Este algoritmo representa un enfoque intuitivo y directo. Su lógica radica en "buscar el elemento más pequeño y colocarlo al principio" de forma reiterada.
 
 #### Pseudocódigo:
-```text
+```text showLineNumbers
 Algoritmo Ordenamiento_Seleccion(secuencia)
     N = longitud(secuencia)
     
@@ -280,7 +280,7 @@ FinAlgoritmo
 Este algoritmo utiliza la estrategia **"Divide y Vencerás"**. Divide la secuencia en mitades cada vez más pequeñas de manera recursiva hasta llegar a elementos individuales (que ya están ordenados por definición), para luego **mezclarlos** en orden.
 
 #### Pseudocódigo:
-```text
+```text showLineNumbers
 Algoritmo Ordenamiento_Mezcla(secuencia)
     N = longitud(secuencia)
     
@@ -341,7 +341,7 @@ FinFuncion
 Al igual que Merge Sort, utiliza "Divide y Vencerás". Sin embargo, en lugar de dividir ciegamente a la mitad, selecciona un elemento llamado **pivote** y reorganiza la lista de modo que todos los menores queden a la izquierda y los mayores a la derecha (proceso de **particionamiento**).
 
 #### Pseudocódigo:
-```text
+```text showLineNumbers
 Algoritmo Quicksort(secuencia, inicio, fin)
     Si inicio < fin Entonces
         // Particionamos la lista y colocamos el pivote en su posición final
@@ -418,7 +418,7 @@ $$
 <TabItem value="ps1-python" label="💻 Pseudocodigo">
 
 **Solución en Pseudocódigo:**
-```text
+```text showLineNumbers
 Algoritmo Convertir_Fahrenheit_A_Celsius
     // Declaración de variables
     Definir fahrenheit, celsius Como Real
@@ -451,7 +451,7 @@ FinAlgoritmo
 <TabItem value="ps2-python" label="💻 Pseudocódigo">
 
 **Solución en Pseudocódigo:**
-```text
+```text showLineNumbers
 Algoritmo Evaluar_Calificacion
     // Declaración de variables
     Definir calificacion Como Entero
@@ -491,7 +491,7 @@ FinAlgoritmo
 
 
 **Solución en Pseudocódigo:**
-```text
+```text showLineNumbers
 Algoritmo Generar_Tabla_Temperaturas
     // Declaración de variables
     Definir celsius, fahrenheit Como Real
@@ -532,7 +532,7 @@ FinAlgoritmo
 <TabItem value="ps4-python" label="💻 Pseudocódigo">
 
 **Solución en Pseudocódigo:**
-```text
+```text showLineNumbers
 Algoritmo Encontrar_Temperatura_Maxima
     // Declaración de variables y estructura de datos para 7 días
     Dimension temperaturas
@@ -581,7 +581,7 @@ FinAlgoritmo
 <TabItem value="ps5-python" label="💻 Pseudocódigo">
 
 **Solución en Pseudocódigo:**
-```text
+```text showLineNumbers
 Algoritmo Verificar_Numero_Primo
     // Declaración de variables
     Definir numero, divisor Como Entero
