@@ -10,9 +10,9 @@ El **modelamiento (o modelado)** es una disciplina fundamental que actúa como p
 :::info[Herramientas]
 **UML:** para diagramar usaremos Umbrello: https://apps.kde.org/es/umbrello/
 
-**BMPN:** para crear procesos de negocio usaremos Camunda: 
+**BMPN:** para crear procesos de negocio usaremos **Camunda**: 
 * version online: https://bpmn.io/
-* version escritorio: 
+* version escritorio: https://docs.camunda.io/build-with-camunda/
 :::
 
 :::info[nota]

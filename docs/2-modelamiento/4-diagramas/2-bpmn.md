@@ -58,7 +58,7 @@ Elementos puramente visuales que no alteran la lógica de control del proceso, p
 
 ### Ejemplo de Aplicación (Conexión Histórica)
 
-En el caso de estudio de **Supermercados Alianza S.A.** que modelamos en la versión 2 de tu PDF de Arquitectura Fractal, la lógica de control homeostática se diseña bajo este estándar:
+En el caso de estudio de **Supermercados Alianza S.A.** que modelamos anteriormente, la lógica de control homeostática se diseña bajo este estándar:
 1.  **El POS (Punto de Venta) en Tienda:** El proceso inicia con un *Evento de Inicio de Mensaje* ("Cliente presenta productos"). Las cajas registradoras ejecutan una secuencia de *Tareas de Usuario* ("Escanear código", "Registrar ítem") dentro del *Lane de Cajero*.
 
 2.  **La Compuerta XOR:** Tras finalizar la transacción, una *Compuerta de Decisión Exclusiva (XOR)* evalúa el medio de pago: si es Efectivo, se ejecuta una tarea rápida; si es Crédito, se invoca una *Tarea de Servicio* asíncrona para conectarse con el motor transaccional financiero remoto.
