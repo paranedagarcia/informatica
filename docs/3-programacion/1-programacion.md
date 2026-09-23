@@ -229,7 +229,7 @@ Un **lenguaje de programación** es un sistema formal constituido por un conjunt
 <center>
 <figure>
 ![](img/lenguajes.jpg)
-<figcaption>Lenguajes de programación y su impaco en la industria.</figcaption>
+<figcaption>Lenguajes de programación y su impacto en la industria.</figcaption>
 </figure>
 </center>
 

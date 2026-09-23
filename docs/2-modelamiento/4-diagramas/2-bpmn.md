@@ -13,7 +13,7 @@ Su propósito esencial es actuar como un **puente lingüístico y analítico** q
 
 <YouTubeVideo id="l-sCUKQZ44s" title="Tutorial: How to get started with Camunda" />
 
-### Las Dos Grandes Revoluciones de BPMN
+### Las 2 Grandes Revoluciones
 
 Para comprender el impacto de BPMN frente a diagramas de flujo tradicionales (como los DFD), hay que destacar dos características clave:
 
@@ -30,8 +30,16 @@ Un diagrama de procesos de negocio (BPD) se construye organizando sus símbolos 
 #### 1. Objetos de Flujo (Flow Objects)
 Son los nodos principales que definen el comportamiento dinámico del proceso:
 *   **Eventos (Event - Círculos):** Representan cosas que "suceden" instantáneamente durante el proceso (sin duración física). Tienen tres formatos: **Inicio** (borde delgado), **Intermedio** (borde doble) y **Fin** (borde grueso). Además, se clasifican según sus disparadores en *Mensajes* (un sobre), *Temporizadores* (un reloj), *Errores* (un rayo para excepciones) o *Señales*.
+
+![](img/bpmn-eventos.jpg)
+
+Los evenos **Capturan** (reciben entradas) o **Lanzan** (envían salidas).
+
 *   **Actividades (Activity - Rectángulos con esquinas redondeadas):** Representan el trabajo o tareas que toman tiempo en ejecutarse. Se dividen en **Tareas** (unidades atómicas no descomponibles, como una *Tarea de Usuario* para humanos o una *Tarea de Servicio* automatizada por sistemas) y **Subprocesos** (unidades complejas que encapsulan su propio flujo interno y que pueden colapsarse para mantener el diseño limpio).
+
 *   **Compuertas (Gateway - Rombos):** Son los puntos de decisión que controlan la división, divergencia y convergencia de los caminos del proceso. Las más comunes son la **Exclusiva (XOR)** (solo se toma un camino), la **Paralela (AND)** (todos los caminos se ejecutan al mismo tiempo), la **Inclusiva (OR)** (uno o varios caminos según condiciones) y la **Basada en Eventos** (el flujo se define por el primer evento que ocurra, como la recepción de un mensaje o el paso de un temporizador).
+
+![](img/bpmn-compuertas.jpg)
 
 #### 2. Objetos de Conexión (Connecting Objects)
 Son las líneas que enlazan los elementos del flujo:
@@ -42,7 +50,14 @@ Son las líneas que enlazan los elementos del flujo:
 #### 3. Swimlanes (Líneas de Carril)
 Ayudan a organizar y delimitar las responsabilidades operacionales dentro del diagrama:
 *   **Pool (Piscina):** Representa un participante principal del proceso (por ejemplo, una organización completa, un departamento o un sistema de información masivo como un ERP). Actúa como un contenedor contenedor rígido; las comunicaciones entre pools independientes se modelan exclusivamente con *Flujos de Mensajes*.
+
 *   **Lane (Carril):** Son las subdivisiones internas horizontales o verticales de un Pool. Se utilizan para clasificar y agrupar actividades de acuerdo con los roles de los usuarios (ej. *Cajero, Supervisor*), áreas de la empresa (ej. *Bodega, Finanzas*) o componentes de software específicos.
+
+![](img/bpmn-carril.jpg)
+
+:::warning
+**Regla:** Los flujos de secuencia no pueden cruzar Pools. Se debe usar flujos de mensaje para hablar con el mundo exterior.
+:::
 
 #### 4. Datos (Data)
 Elementos que representan la información física o digital procesada, consumida o producida por el sistema:
@@ -64,3 +79,4 @@ En el caso de estudio de **Supermercados Alianza S.A.** que modelamos anteriorme
 2.  **La Compuerta XOR:** Tras finalizar la transacción, una *Compuerta de Decisión Exclusiva (XOR)* evalúa el medio de pago: si es Efectivo, se ejecuta una tarea rápida; si es Crédito, se invoca una *Tarea de Servicio* asíncrona para conectarse con el motor transaccional financiero remoto.
 3.  **El Lazo de Retroalimentación Inter-Pool:** Cuando el inventario físico desciende de la meta de seguridad, el sistema genera automáticamente un *Flujo de Mensajes* (línea discontinua) que viaja desde el Pool de la *Tienda* hacia el Pool del *Centro de Distribución (CD)* para activar el WMS (Warehouse Management System), modelando la homeostasis del negocio de manera completamente sinérgica y sin fisuras organizativas.
 
+![](img/bpmn-resumen.jpg)
