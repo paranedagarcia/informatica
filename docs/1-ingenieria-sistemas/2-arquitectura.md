@@ -549,7 +549,7 @@ John Zachman concibió su modelo para ser **completamente independiente de cualq
 Debido a su naturaleza abstracta y de clasificación, en el Marco Zachman **existe una falta de un instrumento o herramienta de modelado específica** que venga integrado por defecto en la matriz.
 
 #### 3. El Lenguaje Unificado de Modelado (UML) y RUP
-Para resolver la falta de una herramienta nativa, los arquitectos y diseñadores recurren de manera muy extendida al [**UML (Unified Modeling Language)**](/docs/modelamiento/diagramas/uml) para crear las representaciones diagramáticas y los modelos requeridos en las diversas celdas y perspectivas de la matriz. 
+Para resolver la falta de una herramienta nativa, los arquitectos y diseñadores recurren de manera muy extendida al [**UML (Unified Modeling Language)**](/docs/uml) para crear las representaciones diagramáticas y los modelos requeridos en las diversas celdas y perspectivas de la matriz. 
 * En la práctica, se suele combinar el uso de la **notación UML** con el **Proceso Unificado Racional (RUP - *Rational Unified Process*)** para el modelado de la Arquitectura de Negocio (BA) y la creación de la vista general (*big picture*) de la organización.
 
 #### 4. Herramientas de Arquitectura Empresarial (EA Tools) y Repositorios
