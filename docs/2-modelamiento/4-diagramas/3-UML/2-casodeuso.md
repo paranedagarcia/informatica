@@ -278,7 +278,7 @@ Desde la perspectiva del actor, cada óvalo debe producir un resultado de valor 
 <YouTubeVideo id="iFcDoP6jEeE" title="Casos de Uso y diagramas de casos de uso" />
 
 **Casos de Uso**
-<YouTubeVideo id="5ezWOj0k02k" title="Casos de Uso (UML)" />
+<YouTubeVideo id="VjkCd2xAF4k" title="Casos de Uso (UML)" />
 
 #### Límite del sistema (el alcance)
 
