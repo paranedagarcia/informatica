@@ -24,7 +24,9 @@ Por esta razón, considero fundamental que la formación en Ingeniería Informá
 
 De esta manera, la programación y las tecnologías informáticas se entienden no como un fin en sí mismas, sino como **herramientas para analizar problemas y construir soluciones que respondan realmente a las necesidades de una organización o de la sociedad**.
 
-
+:::info[Documentos]
+* [Universidad Los Lagos - Clase Sistemas](/files/01-IS-sistemas.pdf)
+:::
 
 Sus bases y definiciones principales abarcan los siguientes aspectos:
 

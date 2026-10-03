@@ -15,6 +15,10 @@ La Arquitectura Empresarial actúa como un puente entre la **planificación estr
 
 En la práctica, sirve para diseñar tanto el **estado actual ("As-Is")** de la organización como el **estado futuro deseado ("To-Be")**, trazando una ruta de migración clara que minimice riesgos y redundancias. Esto ayuda a superar el problema histórico de los "silos de aplicaciones" —sistemas aislados que funcionan bien por sí mismos pero que juntos impiden la coordinación organizacional— y a construir una base unificada para la ejecución.
 
+:::info[Documentos]
+* [Universidad Los Lagos - Clase Arquitectura E.](/files/02-IS-AE.pdf)
+:::
+
 ### Los 4 Dominios de la AE
 Tradicionalmente, la AE divide la complejidad de una organización en **cuatro dominios interconectados e interdependientes**:
 

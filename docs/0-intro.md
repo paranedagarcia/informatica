@@ -49,3 +49,5 @@ Bajo la óptica de la disciplina, el campo de la informática se divide en dos g
 El camino del ingeniero propuesto en este manual, es partir por conocer qué hacer, saber los fundamentos del entorno donde trabajará, para luego conocer las herramientas necesarias para saber qué hacer.
 
 ![](img/ingenieria-caso.svg)
+
+![](/files/malla-icinformatica.svg)
