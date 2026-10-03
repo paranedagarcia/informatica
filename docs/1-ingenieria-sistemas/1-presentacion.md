@@ -4,12 +4,27 @@ title:  "📄 Ingeniería de Sistemas"
 sidebar_label: "📄 Introducción"
 ---
 
+## **Sistemas** 
 
 La **Ingeniería de Sistemas** (o *systems engineering*) se describe como una disciplina integral y estructurada que aborda el desarrollo de tecnologías y procesos desde una perspectiva global. 
 
 <center>
 ![](img/is.jpg)
 </center>
+
+¿Por qué se propone iniciar una formación en Ingeniería Informática con este tema, cuando tradicionalmente se comienza con las bases de la programación y los lenguajes?
+
+Desde mi experiencia de años trabajando en el área, he podido observar que todo proyecto informático parte de una situación fundamental: **comprender el problema que se busca resolver**.
+
+La informática tiene como propósito utilizar herramientas y tecnologías para resolver problemas y generar soluciones. Para hacerlo correctamente, no basta con conocer lenguajes de programación o herramientas tecnológicas; primero es necesario **comprender el negocio, la organización o el entorno donde se presenta el problema**. Se verá en [arquitectura empresarial](/docs/ingenieria-sistemas/ae-empresarial).
+
+Además, cualquier negocio o industria, independiente de su tamaño, puede entenderse como un **sistema**, compuesto por elementos que se relacionan entre sí y que interactúan con su entorno.
+
+Por esta razón, considero fundamental que la formación en Ingeniería Informática comience desarrollando la capacidad de **comprender los sistemas, su funcionamiento, sus componentes y sus relaciones**, antes de abordar las herramientas tecnológicas que permitirán diseñar e implementar soluciones.
+
+De esta manera, la programación y las tecnologías informáticas se entienden no como un fin en sí mismas, sino como **herramientas para analizar problemas y construir soluciones que respondan realmente a las necesidades de una organización o de la sociedad**.
+
+
 
 Sus bases y definiciones principales abarcan los siguientes aspectos:
 
@@ -85,7 +100,7 @@ El gran aporte de Bertalanffy fue identificar cómo los especialistas de cada su
 
 A continuación, se detallan sus conceptos fundamentales:
 
-### Organización y jerarquía
+#### Organización y jerarquía
 Un principio clave de la TGS es que los sistemas no son planos, sino que están estructurados en **jerarquías funcionales y estructurales**.
 
 
@@ -111,7 +126,7 @@ Un principio clave de la TGS es que los sistemas no son planos, sino que están 
 
 **Diferenciación de estructuras:** Tradicionalmente, Henry Ford e investigadores posteriores impusieron estructuras jerárquicas rígidas y centralizadas para optimizar la eficiencia de producción masiva (lo que suele sesgar los proyectos hacia silos funcionales aislados), las cuales hoy coexisten con redes modulares, organizaciones matriciales u orientadas a procesos que buscan flexibilizar y coordinar la comunicación.
 
-### Isomorfismos entre sistemas
+#### Isomorfismos entre sistemas
 
 El **isomorfismo** (del griego *iso*, igual, y *morphe*, forma) se refiere a la existencia de estructuras, principios, leyes o patrones lógicos similares en sistemas pertenecientes a disciplinas completamente diferentes (biología, física, computación, economía o sociología).
 
@@ -166,7 +181,7 @@ Este isomorfismo ocurre entre un sistema biológico natural y un sistema de soft
 
 
 
-### Homeostasis
+#### Homeostasis
 
 <div class="container">
   <div class="row">
@@ -230,7 +245,7 @@ Los equipos de desarrollo de proyectos operan como sistemas socio-técnicos comp
 * **El equilibrio dinámico:** Si las métricas muestran una desviación o si se identifican impedimentos en el flujo de trabajo, el equipo utiliza esta retroalimentación acumulada para diseñar respuestas y planes de acción específicos para la siguiente iteración. Este proceso de inspección y adaptación continua actúa como un regulador interno que estabiliza el ritmo operativo del equipo, resolviendo los cuellos de botella y manteniendo la estabilidad y salud del proceso de desarrollo ante los cambios imprevistos del entorno.
 
 
-### Entropía y entropía negativa
+#### Entropía y entropía negativa
 
 <center>
 <figure>
@@ -253,7 +268,7 @@ Estos conceptos describen la tendencia de los sistemas hacia el desorden o el or
 
 * **La necesidad del diseño inteligente:** Para contrarrestar la entropía en empresas de rápido crecimiento, se requiere de un esfuerzo constante de **diseño inteligente** (como el modelado de arquitecturas de procesos de negocio, gobierno de TI o arquitecturas de sistemas complejos), lo que permite que el sistema opere de forma estable cerca del "borde del caos" sin desintegrarse.
 
-### Equifinalidad
+#### Equifinalidad
 
 La **equifinalidad** es el principio que establece que un sistema abierto puede alcanzar el **mismo estado final** (u objetivo) partiendo de condiciones iniciales diferentes y utilizando distintos caminos, métodos o trayectorias.
 
@@ -261,7 +276,7 @@ La **equifinalidad** es el principio que establece que un sistema abierto puede 
 
 * **Múltiples metodologías, mismo valor:** En el desarrollo de software, la equifinalidad implica que dos equipos de desarrollo que se enfrentan al mismo problema de negocio pueden elegir caminos metodológicos diferentes (uno aplicando prácticas predictivas y el otro ágiles como Scrum o Kanban) y lograr de forma exitosa el mismo fin: un producto de software de calidad que aporta valor al negocio.
 
-### Sinergia
+#### Sinergia
 La **sinergia** es el fenómeno por el cual el resultado del funcionamiento conjunto de los componentes de un sistema es superior a la simple suma de los resultados individuales de cada componente (*"el todo es mayor que la suma de sus partes"*).
 
 <center>
@@ -286,7 +301,9 @@ Este fenómeno sistémico donde **el resultado o la salida del funcionamiento co
     *   **Equipos de Trabajo de Alto Rendimiento:** En las metodologías de desarrollo de software (como Scrum o marcos de ingeniería concurrente), el conocimiento técnico y de negocio de profesionales multidisciplinarios se combina de forma simultánea. Esto genera una retroalimentación constante e intensa (comportamiento de enjambre o *swarming*). Como resultado, el equipo entra en un estado de **hiperproductividad** (o "zona") donde la respuesta colectiva ante problemas complejos es infinitamente superior y más rápida que la de cualquier especialista trabajando de manera aislada.
 
 
-### Holismo (La perspectiva del "Todo")
+#### Holismo 
+**(La perspectiva del "Todo")**
+
 El **holismo** es la doctrina o enfoque sistémico que establece que **un sistema debe ser analizado y comprendido como una unidad completa y unificada, y no mediante la simple división o descomposición de sus partes** (método conocido como reduccionismo). El holismo respeta la profunda interconexión de los componentes y se enfoca en estudiar las relaciones entre ellos, las cuales dan origen a las llamadas propiedades emergentes.
 
 *   **Aplicación en Sistemas de Información:** 
@@ -315,7 +332,7 @@ La teoría define y clasifica los sistemas bajo varios principios clave:
 </figure>
 </center>
 
-### Clasificación de los Sistemas 
+#### Clasificación
 **(Abiertos vs. Cerrados)**
 
 La TGS clasifica los sistemas según el nivel de interacción que tienen con el entorno que los rodea:
@@ -325,7 +342,7 @@ La TGS clasifica los sistemas según el nivel de interacción que tienen con el 
 
 * **El Continuo de Apertura:** En la realidad, los sistemas nunca son completamente abiertos o completamente cerrados; en su lugar, existen a lo largo de un continuo que va desde el más cerrado hasta el más abierto.
 
-### La Evolución y la Integración Multidisciplinaria
+#### La Evolución y la Integración Multidisciplinaria
 A partir de la formulación de Bertalanffy, otros teóricos expandieron la TGS para resolver problemas prácticos en la integración de múltiples disciplinas. Por ejemplo, en 1956, el profesor **Kenneth Boulding** identificó que los especialistas de distintos subsistemas (como físicos, economistas, químicos o sociólogos) solían hablar sus propios lenguajes técnicos, lo que dificultaba la comunicación. Boulding abogó por la necesidad de utilizar un lenguaje común, como las matemáticas, para lograr una integración de sistemas verdaderamente exitosa. 
 
 Hoy en día, la TGS se aplica de forma práctica en la ingeniería de sistemas, la arquitectura de procesos y el diseño de la arquitectura empresarial, permitiendo descomponer organizaciones complejas en partes manejables sin perder de vista la sinergia general del negocio.
@@ -386,3 +403,14 @@ La narrativa visual se articula en torno a la conexión de **cinco unidades fund
 
 *   **Mensaje Clave:** Provee las competencias de control para que el futuro ingeniero pueda dirigir con éxito el despliegue de soluciones tecnológicas complejas a tiempo y dentro del presupuesto.
 
+---
+## 📝 **Test:** Fundamentos de Sistemas
+
+Antes de continuar, comprueba tus conocimientos adquiridos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/sistemas.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

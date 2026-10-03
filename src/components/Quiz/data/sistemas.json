@@ -1,0 +1,167 @@
+{
+  "quizTitle": "Cuestionario: Ingeniería de Sistemas",
+  "quizSynopsis": "Evaluación sobre los conceptos fundamentales de la Ingeniería de Sistemas y la Teoría General de Sistemas (TGS).",
+  "nrOfQuestions": "10",
+  "questions": [
+    {
+      "question": "1. ¿Cómo se define formalmente la Ingeniería de Sistemas según el documento?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La creación y ejecución de un proceso interdisciplinario diseñado para asegurar que los requisitos de los clientes e interesados se alcancen de manera eficiente.",
+        "El estudio exclusivo de la programación orientada a objetos y algoritmos matemáticos aislados.",
+        "La reparación física y ensamblaje de componentes de hardware informático.",
+        "La gestión presupuestaria y financiera de proyectos comerciales."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El texto establece que la Ingeniería de Sistemas se define como la creación y ejecución de un proceso interdisciplinario para asegurar que los requisitos de los clientes e interesados se alcancen de manera eficiente.",
+      "point": "10"
+    },
+    {
+      "question": "2. ¿Qué es un 'sistema' en el contexto de las bases de la disciplina?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un conjunto de programas de software sin interacción humana.",
+        "Un grupo de elementos (humanos o no) organizados que actúan de forma conjunta para alcanzar una meta común.",
+        "Una base de datos relacional orientada a la contabilidad.",
+        "Un conjunto de reglas legales que rigen a las empresas."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Un sistema se concibe como un grupo o colección de elementos (humanos o no humanos) organizados de tal manera que actúan de forma conjunta como un todo para alcanzar un objetivo común.",
+      "point": "10"
+    },
+    {
+      "question": "3. ¿Quién formuló originalmente la Teoría General de Sistemas (TGS) en 1951?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Henry Ford",
+        "Ludwig von Bertalanffy",
+        "Kenneth Boulding",
+        "Claude Shannon"
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La Teoría General de Sistemas (TGS) fue propuesta originalmente por el biólogo austríaco Ludwig von Bertalanffy en 1951.",
+      "point": "10"
+    },
+    {
+      "question": "4. ¿Qué analogía utilizó Ludwig von Bertalanffy para introducir la TGS?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La estructura del cuerpo humano y sus subsistemas (músculos, esqueleto, sistema circulatorio).",
+        "El funcionamiento de un motor de combustión interna.",
+        "La red de cañerías de agua de una ciudad.",
+        "Un circuito integrado de computación."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Bertalanffy utilizó la nomenclatura de la anatomía humana para explicar cómo subsistemas (músculos, esqueleto, sistema circulatorio) se interrelacionan para conformar un sistema unificado.",
+      "point": "10"
+    },
+    {
+      "question": "5. En el marco de la TGS, ¿qué se entiende por 'Sinergia'?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La descomposición de un sistema en partes aisladas.",
+        "El fenómeno donde la salida o resultado conjunto es superior a la simple suma de las partes individuales.",
+        "El desgaste natural y desorganización de un sistema.",
+        "La capacidad de un sistema para aislarse del entorno."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La sinergia establece que 'el todo es mayor que la suma de sus partes', significando que los componentes se potencian al trabajar juntos dentro del sistema.",
+      "point": "10"
+    },
+    {
+      "question": "6. ¿Qué define el concepto de 'Isomorfismo'?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La tendencia al caos en sistemas cerrados.",
+        "La existencia de estructuras, principios o patrones lógicos similares en disciplinas completamente diferentes.",
+        "El cambio de requisitos en la fase de desarrollo.",
+        "La incompatibilidad de lenguajes de programación."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El isomorfismo ('igual forma') se refiere a la presencia de leyes, estructuras o patrones equivalentes en sistemas de dominios disímiles (biología, física, informática, etc.).",
+      "point": "10"
+    },
+    {
+      "question": "7. ¿Cuál es un ejemplo de isomorfismo presentado en el documento?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El flujo de agua en cañerías en comparación con el tráfico vehicular.",
+        "La diferencia entre hardware y software.",
+        "El costo fijos versus los costos variables.",
+        "Un diagrama de clases frente a un diagrama de secuencia."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El documento utiliza el flujo de agua en tuberías y el tráfico vehicular como ejemplo de isomorfismo de redes de flujo, compartiendo las mismas leyes matemáticas y cuellos de botella.",
+      "point": "10"
+    },
+    {
+      "question": "8. ¿Qué es la 'Homeostasis' en la teoría de sistemas?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La desintegración inevitable de las fronteras de un sistema.",
+        "La capacidad de un sistema para autorregularse y mantener un equilibrio dinámico interno ante cambios del entorno.",
+        "La consecución de objetivos a través de un único camino predeterminado.",
+        "La acumulación continua de errores en un proceso."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La homeostasis es la propiedad del sistema de autorregularse y conservar un equilibrio dinámico mediante lazos de retroalimentación negativa frente a fluctuaciones externas.",
+      "point": "10"
+    },
+    {
+      "question": "9. ¿Cómo se distinguen la 'Entropía' y la 'Negentropía'?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La entropía es la tendencia natural al desorden/caos, mientras que la negentropía es la energía o información que importa un sistema abierto para mantener el orden.",
+        "La entropía es aplicable solo a software y la negentropía a hardware.",
+        "Son términos idénticos que describen el equilibrio operacional.",
+        "La entropía es el estado final de un proyecto y la negentropía el estado inicial."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La entropía impulsa a los sistemas hacia la desorganización, mientras que los sistemas abiertos importan recurso o información externa (negentropía) para contrarrestar el desgaste y sobrevivir.",
+      "point": "10"
+    },
+    {
+      "question": "10. ¿En qué consiste el principio de 'Equifinalidad'?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "En que todos los proyectos deben concluir en la misma fecha.",
+        "En que un sistema abierto puede alcanzar el mismo estado final partiendo de condiciones iniciales distintas y usando diferentes caminos.",
+        "En que solo existe una única metodología correcta para resolver un problema.",
+        "En la incapacidad de un sistema para evolucionar."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La equifinalidad establece que un sistema abierto puede llegar al mismo estado final u objetivo desde diferentes puntos de origen y mediante distintas trayectorias.",
+      "point": "10"
+    }
+  ]
+}
