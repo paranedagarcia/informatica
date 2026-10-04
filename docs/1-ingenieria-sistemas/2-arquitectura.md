@@ -64,8 +64,6 @@ La **Arquitectura de Negocio** (*Business Architecture* - BA o EBA) es la discip
 
 * **Marco Zachman:** Ocupa las filas superiores de la matriz (perspectivas del *Planner* / Contextual y del *Owner* / Conceptual), respondiendo a las preguntas de *Qué* (entidades de negocio), *Cómo* (procesos), *Dónde* (ubicaciones), *Quién* (organizaciones/roles), *Cuándo* (eventos) y *Por qué* (estrategia/motivaciones).
 
-* **Modelo EA³ Cube (Bernard):** Se ubica en el segundo nivel de la pirámide (*Products & Services*), impulsado por el nivel superior de "Metas e Iniciativas" estratégicas y guiando los niveles inferiores de flujos de información, sistemas e infraestructura.
-
 
 #### Artefactos y Entregables Típicos
 * **Mapa/Paisaje de Procesos (*Process Landscape*):** Representación jerárquica de las cadenas de valor y procesos organizacionales.
@@ -97,7 +95,8 @@ Mientras que la Arquitectura de Negocio establece *qué hace* la empresa y sus o
 A continuación se detalla este dominio:
 
 
-#### La Distinción Clave: Arquitectura de Datos vs. Arquitectura de Información
+#### La Distinción Clave
+**Arquitectura de Datos vs. Arquitectura de Información**
 
 En la práctica organizativa e industrial existe una confusión habitual donde los términos "datos" e "información" se utilizan de forma indistinta. Sin embargo, la literatura especializada establece una separación clara basada en su propósito y nivel de abstracción:
 
@@ -155,9 +154,6 @@ Para estructurar los datos e información de una empresa, este dominio se organi
 * **Marco Zachman:**
   * Corresponde a la columna del **"Qué" (*Data / What*)**.
   * Organiza las representaciones abstractas en filas: desde la lista de cosas importantes para el negocio (*Scope/Planner*), pasando por el modelo semántico conceptual (*Owner*), el modelo lógico de datos (*Designer*), el modelo físico (*Builder*), las definiciones detalladas fuera de contexto (*Subcontractor*) hasta la base de datos funcionando (*Functioning Enterprise*).
-* **Modelo EA^3 Cube (Bernard):**
-  * Se ubica en el **Nivel 3 ("Data & Information")**, posicionado estratégicamente entre las capas superiores de Servicios de Negocio/Flujos de Información e inferiores de Sistemas, Aplicaciones e Infraestructura de Redes.
-  * Promueve el uso de diccionarios de datos, modelos ERD, DFDs y matrices de intercambio de información para asegurar la alineación vertical.
 
 
 
@@ -202,7 +198,7 @@ A diferencia del desarrollo de software individual, la Arquitectura de Aplicacio
 #### Posicionamiento en los Marcos de Referencia
 
 * **TOGAF (Fase C - *Information Systems Architectures*):** La Fase C de TOGAF comprende de forma conjunta la Arquitectura de Datos y la **Arquitectura de Aplicaciones**. Su objetivo es desarrollar la *Target Application Architecture*, la cual describe los planos de las aplicaciones individuales a desplegar, sus interacciones y su alineación con la visión del negocio.
-* **Modelo \\(EA^3\\) Cube (Bernard):** Corresponde al **Nivel 4 ("*Systems & Applications*")**, ubicado estratégicamente por debajo de la capa de Datos e Información y por encima del nivel de Redes e Infraestructura.
+
 * **Marco Zachman:** Representa el aspecto del **"Cómo" (*Function / How*)** en el sistema, conectando la visión de procesos del propietario (*Owner*) con las especificaciones lógicas del diseñador (*Designer*) y físicas del constructor (*Builder*).
 
 
@@ -243,7 +239,7 @@ Toda iniciativa en la Arquitectura de Aplicaciones se rige por tres rutas de imp
 
 
 
-### Arquitectura Técnica o Tecnológica
+### Arquitectura Tecnológica
 
 ![](img/AE-tecnologia.webp)
 
@@ -253,10 +249,10 @@ Mientras que las capas superiores definen el *qué* (Negocio), el *significado/c
 
 
 
-#### Posicionamiento en los Marcos de Referencia de AE
+#### Posicionamiento en los Marcos de Referencia
 
 * **TOGAF (Fase D - *Technology Architecture*):** En el ciclo ADM, la Fase D se enfoca en desarrollar la *Arquitectura Tecnológica Objetivo*, definiendo los componentes tecnológicos (hardware, software de sistema, redes, servicios en la nube) y servicios que permiten desplegar los bloques de construcción de aplicaciones y datos.
-* **Modelo \\(EA^3\\) Cube (Bernard):** Corresponde al **Nivel 5 ("*Networks & Infrastructure*")**, el nivel base de la matriz jerárquica que organiza las redes de datos, voz y video, la infraestructura física de centros de cómputo y las soluciones de conectividad y nube.
+
 * **Marco Zachman:** Corresponde a la intersección del **"Dónde" (*Location / Network*)** y la perspectiva del **Constructor (*Builder / Technology Model*)**, especificando la configuración física, los componentes de red y los estándares de hardware/software de soporte.
 
 
@@ -267,12 +263,16 @@ Para gestionar la complejidad de la infraestructura corporativa, la Arquitectura
 
 1. **Plataformas de Cómputo (*Platform Architecture*):**
    * Define los componentes de hardware (servidores físicos, máquinas virtuales, estaciones de trabajo), sistemas operativos (ej. Windows Server, Linux) y entornos de motores de bases de datos (DBMS).
+
 2. **Redes y Telecomunicaciones (*Network Architecture*):**
    * Especifica la infraestructura de comunicación de datos, voz y video, abarcando redes de área local (LAN), redes extendidas (WAN), topologías físicas/lógicas, enrutadores, conmutadores, enlaces móviles y protocolos de red (como TCP/IP).
+
 3. **Middleware e Integración (*Middleware Architecture*):**
    * Define las tecnologías que crean un entorno integrado entre aplicaciones heterogéneas, sistemas legados y servidores (ej. Enterprise Service Bus - ESB, brokers de mensajería MOM, llamadas a procedimientos remotos RPC y gateways de base de datos).
+
 4. **Infraestructura de Nube y Servicios (*Cloud Services & Infrastructure*):**
    * Incorpora modelos de servicio de infraestructura (IaaS) y plataforma (PaaS), contenedores, plataformas de orquestación y entornos híbridos o multicloud para brindar flexibilidad, escalabilidad y agilidad operativa.
+
 5. **Arquitectura de Distribución y Almacenamiento (*Distributed & Storage Architecture*):**
    * Define la gestión de almacenamiento masivo (redes SAN/NAS), clusters de servidores, tolerancia a fallos, soluciones para Big Data (como nodos Hadoop/NoSQL) y monitoreo de rendimiento.
 
@@ -292,8 +292,11 @@ Para gestionar la complejidad de la infraestructura corporativa, la Arquitectura
 
 Un aspecto central de la Arquitectura Tecnológica es el control del ciclo de vida y la **evaluación del estado de los componentes** (*Architectural Status*):
 * 🟢 **Estratégico (*Strategic*):** Tecnologías y estándares definidos para el desarrollo e inversión a largo plazo.
+
 * 🟡 **Mantener (*Maintain*):** Tecnologías operativas que no deben expandirse a nuevos proyectos pero se conservan por estabilidad.
+
 * 🔴 **Obsoleto / No Soportado (*Outdated / Phase Out*):** Componentes marcados para retiro o reemplazo inmediato debido al fin de soporte del proveedor o altos riesgos de seguridad.
+
 * 🔵 **En Evaluación (*Evaluating*):** Tecnologías emergentes en fase de prueba de concepto (PoC) antes de ser adoptadas masivamente.
 
 Además, la Arquitectura Tecnológica coordina los **Planes de Recuperación ante Desastres (*Disaster Recovery Plan - SP-5*)** y las políticas de ciberseguridad perimetral para garantizar la continuidad del negocio y la resiliencia operativa de la empresa ante fallos de infraestructura.

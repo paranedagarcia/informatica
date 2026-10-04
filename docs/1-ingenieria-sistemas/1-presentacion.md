@@ -274,6 +274,8 @@ Estos conceptos describen la tendencia de los sistemas hacia el desorden o el or
 
 La **equifinalidad** es el principio que establece que un sistema abierto puede alcanzar el **mismo estado final** (u objetivo) partiendo de condiciones iniciales diferentes y utilizando distintos caminos, métodos o trayectorias.
 
+![](img/sistema-equifinalidad.svg)
+
 * **Diferentes rutas para la optimización:** En la investigación de operaciones y el modelado matemático, la equifinalidad se observa cuando un algoritmo encuentra diferentes alternativas de nivelación de recursos ("Equilibrio 1" y "Equilibrio 2") que consiguen exactamente el mismo plazo de entrega del proyecto pero con distribuciones de personal distintas.
 
 * **Múltiples metodologías, mismo valor:** En el desarrollo de software, la equifinalidad implica que dos equipos de desarrollo que se enfrentan al mismo problema de negocio pueden elegir caminos metodológicos diferentes (uno aplicando prácticas predictivas y el otro ágiles como Scrum o Kanban) y lograr de forma exitosa el mismo fin: un producto de software de calidad que aporta valor al negocio.

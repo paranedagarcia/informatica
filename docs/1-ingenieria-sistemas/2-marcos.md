@@ -9,12 +9,9 @@ sidebar_label: "📄 Marcos de trabajo"
 
 El **Marco Zachman** (o *Zachman Framework*) es uno de los pilares fundamentales e históricos de la Arquitectura Empresarial. Fue introducido originalmente por **John A. Zachman en 1987** y revisado y extendido una década después, en 1996. 
 
-<center>
-<figure>
-![](img/Zachman.webp)
-<figcaption>Guía del marco Zachman: La ontología de la Arquitectura Empresarial.</figcaption>
-</figure>
-</center>
+![](img/ae-zachman-infografia.jpg)
+
+
 
 Zachman, quien trabajaba para la empresa IBM en el área de metodologías de planificación de sistemas de información, propuso este modelo aplicando por analogía los conceptos de la **arquitectura de construcción clásica** al diseño y desarrollo de empresas y sus sistemas de computación. Al hacerlo, acuñó el término "Arquitectura Empresarial" (*Enterprise Architecture*).
 
@@ -27,6 +24,13 @@ La matriz de 36 celdas se rige por la regla de la Perspectiva Única: cada celda
 
 ### La Matriz de 6x6
 El marco toma la forma de una matriz de doble entrada que se rige por la regla de la Perspectiva Única: cada celda representa un aspecto independiente y necesario para la completitud del modelo. Intersecta **seis interrogantes básicas (las columnas)** con **seis perspectivas de los interesados (las filas)**, dando lugar a un esquema de clasificación descriptivo de 36 celdas en total:
+
+<center>
+<figure>
+![](img/Zachman.webp)
+<figcaption>Guía del marco Zachman: La ontología de la Arquitectura Empresarial.</figcaption>
+</figure>
+</center>
 
 **Las Columnas: Las Interrogantes (Abstracciones del Producto)**
 
@@ -130,7 +134,7 @@ El método ADM se representa de forma circular y cuenta con un conjunto de fases
 
 
 
-### Flexibilidad
+#### Flexibilidad
 Un aspecto clave es que **TOGAF no prescribe ni define el aspecto o la apariencia visual que deben tener sus entregables**. Estos pueden materializarse como documentos de texto en un Wiki corporativo o como diagramas UML de alta complejidad en una herramienta especializada. 
 
 Por esta razón, la organización que promueve TOGAF (*The Open Group*) proporciona un lenguaje de modelado visual estándar llamado **ArchiMate** para dar soporte gráfico al diseño de las vistas de AE. Asimismo, dada la flexibilidad de TOGAF, es una práctica común de la industria **unirlo de forma sinérgica con el Marco Zachman**; se utiliza el proceso dinámico ADM de TOGAF para guiar el orden de construcción de los planos del proyecto, y se utiliza la matriz estática de Zachman como el "archivador o repositorio taxonómico" ideal para clasificar y organizar esos planos una vez generados.
@@ -198,29 +202,137 @@ La elección del ciclo de vida debe basarse en el Continuo de los Ciclos de Vida
 Impacto Estratégico ("So What?"): El éxito final de esta sinergia reside en la creación de una PMO Ágil. Esta unidad debe ser multidisciplinaria y orientada a la invitación (no impositiva), actuando como un Centro de Excelencia. Una PMO que impone EA fallará; una PMO que actúa como consultora de Zachman y TOGAF optimizará la entrega de valor, garantizando que la arquitectura sea un motor de agilidad y no un lastre burocrático.
 
 ---
-## **FEAF**
+## **FEAF** 
 
-El **FEAF** (*Federal Enterprise Architecture Framework* o Marco de Arquitectura Empresarial Federal) es un marco de trabajo integral desarrollado a finales de la década de 1990 para el **Gobierno Federal de los Estados Unidos**. Surgió como respuesta a mandatos legales como la ley *Clinger-Cohen Act* de 1996, con el objetivo de transformar la gestión de Tecnologías de la Información (TI) y resolver problemas de ineficiencia y duplicación en agencias públicas.
+![](img/ae-feaf-infografia.jpg)
+
+El **Federal Enterprise Architecture Framework (FEAF)** es el marco de arquitectura empresarial del Gobierno federal de Estados Unidos. Fue establecido en **1999** por el Consejo Federal de CIO (*Federal CIO Council*) como respuesta a la **Ley Clinger-Cohen de 1996**, que obligaba a cada agencia federal a desarrollar y mantener una arquitectura de TI integrada para gobernar la gestión y adquisición de tecnología y vincularla con los objetivos estratégicos de la agencia.
+
+El propósito declarado del FEAF es **facilitar el desarrollo compartido de procesos e información comunes entre las agencias federales y otras entidades gubernamentales**, proporcionando un lenguaje y una estructura comunes para describir, analizar y gestionar las inversiones de TI en todo el Gobierno.
 
 
-### Aspectos Fundamentales
+El desarrollo y uso de la arquitectura empresarial federal se apoya en un conjunto de leyes y circulares, entre ellas:
 
-1. **Objetivo Principal:**
-   * **Estandarizar y gobernar** el desarrollo de la arquitectura empresarial en distintas agencias.
-   * Promover la **interoperabilidad**, optimizar el uso de recursos tecnológicos, reducir sistemas redundantes y facilitar la comunicación entre áreas directivas y técnicas.
+| Norma | Año | Relevancia |
+|---|---|---|
+| GPRA (Government Performance and Results Act) | 1993 | Gestión basada en resultados |
+| PRA (Paperwork Reduction Act) | 1995 | Gestión de recursos de información |
+| CCA (Clinger-Cohen Act) | 1996 | Obliga a cada agencia a mantener una arquitectura de TI integrada; asigna la responsabilidad al CIO |
+| GPEA (Government Paperwork Elimination Act) | 1998 | Trámites electrónicos |
+| FISMA | 2002 | Seguridad de la información |
+| E-Government Act | 2002 | Asigna a la Oficina de E-Gobierno y TI de la OMB la supervisión de las arquitecturas empresariales de las agencias |
+| Circulares OMB A-11 y A-130 | — | Presupuesto y gestión de recursos de información |
 
-2. **Estructura y Modelos de Referencia (*Consolidated Reference Model*):**
-   * El FEAF se apoya en un conjunto de modelos de referencia estandarizados que abarcan diferentes capas de la organización:
-     * **BRM (*Business Reference Model*):** Centrado en las funciones y servicios de negocio.
-     * **DRM (*Data Reference Model*):** Estandarización y flujo de datos interinstitucionales.
-     * **ARM (*Application Reference Model*):** Funcionalidad de software y servicios de integración.
-     * **IRM (*Infrastructure Reference Model*):** Hardware, centros de datos y redes.
-     * **SRM (*Security Reference Model*):** Controles de seguridad y gestión de riesgos.
-     * **PRM (*Performance Reference Model*):** Medición de resultados y valor generado.
-   * Además, incluye una metodología de ejecución paso a paso llamada *Collaborative Planning Methodology* (CPM).
+La gestión del programa FEA (Federal Enterprise Architecture) corresponde a la **OMB (Office of Management and Budget)**, dentro de su Oficina de E-Gobierno y Tecnología de la Información, que publica la guía oficial, los modelos de referencia y las herramientas de evaluación.
 
-3. **Aplicabilidad:**
-   * Aunque fue diseñado para el ámbito gubernamental público, sus principios, taxonomías y modelos de referencia se pueden adaptar y utilizar en **empresas e instituciones del sector privado** para estructurar sus propios planes de arquitectura empresarial.
+### Evolución histórica
+
+- **Septiembre de 1999**: el Federal CIO Council publica el FEAF versión 1.1. Se apoya en prácticas previas como el modelo de arquitectura empresarial del **NIST**, e incorpora elementos del marco de Zachman y de la metodología *Enterprise Architecture Planning* de Spewak.
+- **2001–2002**: con la *President's Management Agenda*, el grupo de trabajo de E-Gobierno (proyecto *Quicksilver*) detecta solapamiento masivo y redundancia de sistemas entre agencias y recomienda crear el **Proyecto FEA** y la **Oficina FEA en la OMB**. La OMB publica los primeros modelos de referencia tras la aprobación del E-Government Act de 2002.
+- **2 de mayo de 2012**: la OMB publica el documento **"Common Approach to Federal Enterprise Architecture"**, que presenta un enfoque general para desarrollar y usar la arquitectura empresarial en el Gobierno federal, promoviendo servicios compartidos, la eliminación de duplicidades y la colaboración entre gobierno, industria y ciudadanía.
+- **29 de enero de 2013**: se publica la **versión 2 (FEAF-II)**, que cumple los criterios del *Common Approach* y reorganiza los cinco modelos de referencia originales en **seis**, integrados en el *Consolidated Reference Model* (CRM).
+- También se desarrollaron metodologías complementarias: la **Federal Segment Architecture Methodology (FSAM)** y su sucesora, la **Collaborative Planning Methodology (CPM)**, pensada para ser más flexible y aplicable a distintos niveles de planificación (internacional, nacional, federal, sectorial, agencia, segmento, sistema y aplicación).
+
+### Características clave
+
+#### Partición de la arquitectura
+
+El FEAF divide una arquitectura empresarial en cuatro capas:
+
+1. **Arquitectura de negocio**: qué se hace, quién lo hace, cómo, cuándo y por qué.
+2. **Arquitectura de datos**: la información que la agencia utiliza para operar.
+3. **Arquitectura de aplicaciones**: el software que procesa los datos según las reglas de negocio.
+4. **Arquitectura tecnológica**: el hardware y las comunicaciones que soportan las tres capas anteriores.
+
+#### Los seis modelos de referencia (FEAF-II)
+
+En la versión 2, el **Consolidated Reference Model (CRM)** vincula seis modelos de referencia, cada uno asociado a un dominio de sub-arquitectura. Su objetivo es facilitar el análisis entre agencias y la identificación de inversiones duplicadas, vacíos y oportunidades de colaboración.
+
+| Dominio | Modelo de referencia | Propósito |
+|---|---|---|
+| Estrategia | **PRM** (Performance Reference Model) | Vincula estrategia, componentes internos de negocio e inversiones, y mide el impacto de las inversiones en los resultados estratégicos |
+| Negocio | **BRM** (Business Reference Model) | Describe las funciones de negocio comunes (misión y servicios de soporte) con independencia de la estructura orgánica, fomentando la cooperación entre agencias |
+| Datos | **DRM** (Data Reference Model) | Ayuda a identificar los activos de datos, comprender su significado, su acceso y su aprovechamiento para los resultados |
+| Aplicaciones | **ARM** (Application Reference Model) | Clasifica estándares y tecnologías de sistemas y aplicaciones que soportan las capacidades de servicio, permitiendo compartir y reutilizar soluciones comunes |
+| Infraestructura | **IRM** (Infrastructure Reference Model) | Clasifica estándares y tecnologías de red/nube para servicios de voz, datos, vídeo y móvil |
+| Seguridad | **SRM** (Security Reference Model) | Proporciona un lenguaje común para discutir los requisitos de seguridad y privacidad en el contexto de negocio |
+
+En la versión 1, los cinco modelos eran PRM, BRM, SRM (*Service Component Reference Model*), TRM (*Technical Reference Model*) y DRM; el FEAF-II los reagrupó y expandió a los seis anteriores.
+
+#### Principios del *Common Approach* (2012)
+
+- La arquitectura se orienta a resultados: las metas estratégicas impulsan los servicios de negocio, que a su vez definen los requisitos de las tecnologías habilitadoras.
+- Estandarización del desarrollo y uso de arquitecturas dentro y entre agencias.
+- Uso de la arquitectura empresarial para **eliminar despilfarro y duplicación, aumentar los servicios compartidos, cerrar brechas de desempeño** y promover la participación de gobierno, industria y ciudadanía.
+- La **Collaborative Planning Methodology (CPM)** como ciclo completo de planificación e implementación, aplicable a todos los niveles de alcance (internacional, nacional, federal, sectorial, agencia, segmento, sistema y aplicación).
+
+#### Vinculación con el ciclo presupuestario
+
+El FEAF se integró en los procesos federales de gestión de cartera e inversión: las agencias debían alinear sus inversiones de TI con los modelos de referencia (por ejemplo, en la justificación de inversiones del *Exhibit 300* del proceso presupuestario de la OMB), de modo que la OMB pudiera analizar la cartera de TI de todo el Gobierno con una taxonomía común y detectar solapamientos.
+
+### Casos de uso
+
+#### Análisis de inversiones de TI a escala gubernamental (OMB)
+
+Las agencias usan los modelos de referencia del FEA para mostrar la alineación de sus inversiones de TI con áreas de misión, funciones de negocio comunes o servicios empresariales; el uso de una taxonomía común permite a la OMB realizar análisis gubernamentales de las inversiones y de los recursos de información. La OMB llegó a desarrollar herramientas como el **FEAMS (Federal Enterprise Architecture Management System)** para que las agencias pudieran identificar socios de colaboración y compartir componentes tecnológicos durante el proceso presupuestario, así como un **EA Assessment Framework** para evaluar anualmente la capacidad de los programas de arquitectura de las agencias.
+
+#### Iniciativas "Lines of Business" (líneas de negocio)
+
+A partir de 2004, la OMB identificó, usando los datos recopilados para el FEA y el presupuesto, grandes iniciativas colaborativas para transformar el Gobierno y generar ahorros: **Gestión Financiera, Gestión de Recursos Humanos, Gestión de Subvenciones (*Grants Management*), Gestión de Casos (*Case Management*), Arquitectura Federal de Salud y Seguridad de Sistemas de Información**, a las que en 2006 se añadieron **Optimización de Infraestructura de TI, Sistemas Geoespaciales y Formulación y Ejecución Presupuestaria**. El objetivo a largo plazo era trasladar funciones comunes, replicadas en cada agencia, hacia **centros de servicios compartidos** (*shared service centers*) seleccionados por concurso.
+
+Ejemplo documentado de aplicación de los principios de interoperabilidad: **DisasterAssistance.gov** (lanzado el 31 de diciembre de 2008), que integró sistemas de FEMA con los de la Administración de Pequeñas Empresas (SBA), la Administración de la Seguridad Social, el Departamento de Trabajo y el Departamento de Educación, usando arquitectura orientada a servicios (SOA) y el modelo de intercambio de datos NIEM.
+
+#### CMS (Centers for Medicare & Medicaid Services)
+
+Los CMS mantienen su arquitectura empresarial alineada con el marco del Departamento de Salud y Servicios Humanos (DHHS), que a su vez se alinea con el FEAF de la OMB. Este enfoque federado busca maximizar la utilidad y la interoperabilidad en todo el Gobierno federal; la arquitectura de CMS se modela y mantiene en una herramienta de arquitectura interactiva.
+
+#### Resultados medidos en agencias (seguimiento GAO-12-791)
+
+La GAO (oficina de auditoría del Congreso) evaluó en 2012 hasta qué punto las agencias medían y reportaban los beneficios de sus arquitecturas empresariales, y dio seguimiento a sus recomendaciones. Casos verificables documentados por la GAO:
+
+- **Departamento del Interior**: reportó **8,7 millones de dólares de ahorro en el año fiscal 2013** como resultado de sus esfuerzos de arquitectura empresarial, e identificó inversiones heredadas para retirar.
+- **Departamento del Tesoro**: reportó una reducción del gasto en infraestructura como porcentaje de su presupuesto de TI, del **45,9 % en el año fiscal 2010 al 37,6 % en 2013**, gracias a la consolidación de centros de datos guiada por su arquitectura.
+- **Ejército de EE. UU.**: reportó el **retiro de 59 sistemas en 2013** mediante el uso de la arquitectura empresarial en su área de misión de negocio.
+- **Administración de la Seguridad Social**: reportó resultados asociados a la **consolidación de requisitos de hardware y compras agrupadas**, con ahorros de costos comunicados a la OMB.
+- **Departamento de Justicia**: demostró en 2019 que medía y reportaba **ahorros y costos evitados en centros de datos** mediante su arquitectura empresarial.
+- **Departamento de Estado**: identificó **275 casos de duplicación potencial** mediante el uso de su arquitectura empresarial (2020).
+- **Fundación Nacional de Ciencias (NSF)**: midió costos evitados en los años fiscales 2012–2015 asociados a la consolidación de centros de datos y a la migración de su correo electrónico a la nube.
+
+#### Uso como herramienta contra la duplicación (contexto GAO)
+
+La necesidad del FEA se justificó con evidencias de duplicación: en 2002 la OMB identificó 10 sistemas potencialmente redundantes relacionados con la elaboración de normas; la GAO reportó que el Departamento de Defensa contaba con **más de 200 sistemas de inventario no integrados**; y en 2011 la GAO identificó 81 áreas de duplicación, solapamiento o fragmentación potencial en programas gubernamentales. La arquitectura empresarial fue señalada por la GAO como el mecanismo para reducir dicha duplicación en las inversiones.
+
+#### Adopción e influencia internacional
+
+El FEAF se usa también fuera del Gobierno federal estadounidense como marco de referencia: es uno de los marcos más adoptados junto a TOGAF y DoDAF en el sector público de EE. UU., y se ha aplicado como modelo guía en análisis de transformación digital de otros gobiernos (por ejemplo, un estudio aplicado a *ACT Health* en Australia, que utiliza los seis modelos de referencia para mejorar interoperabilidad, agilidad, integración y reutilización). También se considera alineado con iniciativas internacionales como el *Global E-Gov Forum*.
+
+#### Valoración crítica
+
+- **Madurez desigual**: las evaluaciones de la GAO de 2001 y 2003 mostraron que la mayoría de las agencias se encontraban en los estadios iniciales de madurez (alrededor del 79 % en el estadio 1 de un marco de cinco), y que solo la Oficina Ejecutiva del Presidente alcanzaba el estadio máximo.
+
+- **Medición de resultados**: el informe GAO-12-791 concluyó que las agencias debían medir y reportar periódicamente los resultados de sus arquitecturas para demostrar su valor, recomendación que dio lugar a los casos de ahorro documentados en la sección 5.4.
+
+- **Valor práctico**: cuando se aplica con compromiso directivo, el FEAF ha demostrado ahorros cuantificables (consolidación de centros de datos, retiro de sistemas, eliminación de aplicaciones duplicadas) y mejoras de interoperabilidad entre agencias.
+
+#### Referencias
+
+1. The White House (archivo), *Federal Enterprise Architecture (FEA)* — guía oficial, modelos de referencia y herramientas de la OMB. https://obamawhitehouse.archives.gov/omb/e-gov/fea
+2. Centers for Medicare & Medicaid Services (CMS), *Federal Enterprise Architecture Framework*. https://www.cms.gov/data-research/cms-information-technology/enterprise-architecture/federal-enterprise-architecture-framework
+3. OMB, *The Common Approach to Federal Enterprise Architecture* (2 de mayo de 2012) y *Federal Enterprise Architecture Framework version 2* (29 de enero de 2013). Disponibles en la referencia 1.
+4. U.S. GAO, *Organizational Transformation: Enterprise Architecture Value Needs to Be Measured and Reported* (GAO-12-791). https://www.gao.gov/products/gao-12-791
+5. Congressional Research Service, *Federal Enterprise Architecture and E-Government: Issues for Information Technology Management* (RL33417). https://www.everycrsreport.com/reports/RL33417.html
+6. Congresso de EE. UU., audiencia *Federal Enterprise Architecture* (House of Representatives, 108.º Congreso). https://www.govinfo.gov/content/pkg/CHRG-108hhrg96944/html/CHRG-108hhrg96944.htm
+7. ScienceDirect, *Federal Enterprise Architecture – an overview*. https://www.sciencedirect.com/topics/computer-science/federal-enterprise-architecture
+8. Wikipedia, *Federal enterprise architecture* (historia y legislación). https://en.wikipedia.org/wiki/Federal_enterprise_architecture
+9. Project Open Data, *FEMA Case Study (DisasterAssistance.gov)*. https://github.com/project-open-data/project-open-data.github.io/blob/master/fema-case-study.md
+10. FEA Consolidated Reference Model Document, versión 2.3 (octubre de 2007). https://www.reginfo.gov/public/jsp/Utilities/FEA_CRM_v23_Final_Oct_2007_Revised.pdf
+11. EAPJ, *How the Federal EA Framework Supports Government Digital Transformation* (caso ACT Health). https://eapj.org/wp-content/uploads/2020/09/How-the-Federal-EA-Framework-Supports-Government-Digital-Transformation.pdf
+12. Nextgov, *The federal enterprise architecture: Where it fits* (2008). https://www.nextgov.com/modernization/2008/06/the-federal-enterprise-architecture-where-it-fits/198667/
+
+:::info
+**Nota:** este contenido se basa exclusivamente en las fuentes citadas, priorizando organismos oficiales (OMB, GAO, CMS, Congreso). Las cifras de ahorro corresponden a lo reportado por las propias agencias y verificado por la GAO.
+:::
+
 
 
 ### FEAF vs. TOGAF vs. Zachman
@@ -269,6 +381,38 @@ En la práctica real de las organizaciones, estos tres enfoques no compiten entr
 
 * **Resultados Obtenidos:** Se facilitó la interoperabilidad del Registro Médico Electrónico (*EHR*) y la plataforma de Intercambio de Información de Salud (*HIE*), garantizando el cumplimiento estricto de las regulaciones gubernamentales de privacidad de datos médicos (*Affordable Care Act*) y reduciendo los costos de mantenimiento de software.
 
+### FEAF vs TOGAF ADM
+
+En un proyecto real de **Arquitectura Empresarial (AE)**, la integración entre **FEAF** y **TOGAF ADM** permite combinar la **estructura estandarizada y taxonómica de los Modelos de Referencia Consolidados de FEAF** (junto a su Metodología de Planificación Colaborativa - CPM) con el **motor de proceso iterativo y dinámico por fases de TOGAF**.
+
+A continuación se presenta el **cuadro comparativo y de mapeo** de los componentes de un proyecto real entre ambos marcos:
+
+
+#### Mapeo de Componentes de un Proyecto: FEAF vs. TOGAF ADM
+
+| Fase del Proyecto Real | Componentes y Modelos de FEAF (CPM / CRM) | Fase Correspondiente de TOGAF ADM | Entregables / Acciones Integradas en el Proyecto |
+| :--- | :--- | :--- | :--- |
+| **1. Iniciación y Contexto del Proyecto** | **CPM - Fase 1: Organizar y Planificar**<br/>Definición del alcance del segmento, patrocinio e indicadores del **PRM** (*Performance Reference Model*). | **Fase Preliminar** & **Fase A: Visión de la Arquitectura** | • Carta del Proyecto (*Project Charter*).<br/>• Definición de Principios y Gobierno de AE.<br/>• Identificación de *Stakeholders* y visión de negocio. |
+| **2. Definición Estratégica y de Negocio** | **BRM** (*Business Reference Model*)<br/>Estandarización de servicios de negocio, capacidades y funciones interinstitucionales. | **Fase B: Arquitectura de Negocio** | • Mapa de Capacidades de Negocio (*Capability Map*).<br/>• Modelado de Procesos (*As-Is / To-Be*) y Cadenas de Valor.<br/>• Identificación de metas e indicadores clave de rendimiento (KPIs del PRM). |
+| **3. Arquitectura de Información y Datos** | **DRM** (*Data Reference Model*)<br/>Estandarización de datos centrados en el negocio e intercambio de información entre sistemas. | **Fase C: Arquitectura de Sistemas de Información (Datos)** | • Modelo Lógico y Físico de Datos.<br/>• Matriz de Intercambio de Información (*Information Exchange Matrix*).<br/>• Diccionario de Datos y Catálogo de Metadatos. |
+| **4. Arquitectura de Software y Sistemas** | **ARM** (*Application Reference Model*)<br/>Mapeo de componentes de software, aplicaciones y servicios en bus empresarial (*ESB*). | **Fase C: Arquitectura de Sistemas de Información (Aplicaciones)** | • Inventario y Catálogo de Aplicaciones.<br/>• Diagrama de Interfaces e Integración (APIs / SOA).<br/>• Evaluación de alternativas *Build vs. Buy*. |
+| **5. Infraestructura y Plataformas** | **IRM** (*Infrastructure Reference Model*)<br/>Especificación de hardware, centros de datos, redes, virtualización y nube. | **Fase D: Arquitectura de Tecnología** | • Topología física y lógica de Redes.<br/>• Plataformas de Servidores y Almacenamiento.<br/>• Perfil de Estándares Tecnológicos. |
+| **6. Seguridad y Gestión de Riesgos** | **SRM** (*Security Reference Model*)<br/>Diseño de controles de seguridad ajustados al riesgo y cumplimiento normativo. | **Transversal:** Presente en la Fase Preliminar, Fases A–D y Fase G | • Matriz de Riesgos y Controles de Seguridad.<br/>• Políticas de Autenticación, Cifrado y Acceso. |
+| **7. Análisis de Brechas y Soluciones** | **CPM / FSAM - Fase de Análisis de Brechas**<br/>Identificación de redundancias, vacíos e ineficiencias de recursos. | **Fase E: Oportunidades y Soluciones** | • Matriz de Análisis de Brechas (*Gap Analysis*).<br/>• Agrupación de cambios en Paquetes de Trabajo (*Work Packages*).<br/>• Identificación de Arquitecturas de Transición. |
+| **8. Hoja de Ruta y Migración** | **CPM - Plan de Transición**<br/>Cronograma de consolidación y optimización de recursos tecnológicos. | **Fase F: Planificación de la Migración** | • Plan Detallado de Implementación y Migración.<br/>• Hoja de Ruta de la Arquitectura (*Architecture Roadmap*).<br/>• Análisis Costo-Beneficio y Priorización de Proyectos. |
+| **9. Gobernanza de la Ejecución** | **CPM - Fase 2: Implementar y Medir**<br/>Supervisión del despliegue y medición del impacto en los servicios. | **Fase G: Gobernanza de la Implementación** | • Contratos de Arquitectura (*Architecture Contracts*).<br/>• Evaluaciones de Conformidad y Supervisión de proyectos. |
+| **10. Gestión Continua del Cambio** | **PRM (Evaluación Continua)**<br/>Medición periódica del valor generado y retroalimentación operacional. | **Fase H: Gestión de Cambios de la Arquitectura** | • Procedimientos de control de cambios arquitectónicos.<br/>• Actualización periódica del Repositorio de Arquitectura. |
+| **Gestión de Requisitos (Sustento Continuo)** | **Requisitos de Negocio y Gobierno**<br/>Recopilación y trazabilidad continua de requisitos legales e interinstitucionales. | **Gestión de Requisitos (Requirements Management)** | • Proceso central bidireccional que asegura la alineación constante de requisitos con todas las fases. |
+
+
+
+#### Sinergia Práctica entre FEAF y TOGAF ADM en el Proyecto
+
+1. **Modelos de Referencia de FEAF como Taxonomía (El "Qué"):** Los seis modelos del CRM de FEAF (*PRM, BRM, DRM, ARM, IRM, SRM*) actúan como la guía estandarizada y el catálogo de clasificación para poblar el Repositorio de Arquitectura de la organización.
+
+2. **Ciclo ADM de TOGAF como Motor Operativo (El "Cómo"):** El ciclo ADM dicta el orden procesal e iterativo para ejecutar el proyecto desde la visión inicial hasta la gobernanza de la solución desplegada.
+
+3. **Alineación de Resultados:** Esta combinación asegura que las iniciativas tecnológicas no solo sigan un proceso riguroso de diseño y migración, sino que también cumplan con los estándares de interoperabilidad, eficiencia y medición de valor.
 
 
 ---
