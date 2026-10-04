@@ -1,0 +1,167 @@
+{
+  "quizTitle": "Cuestionario: Marcos de Arquitectura Empresarial",
+  "quizSynopsis": "Evaluación sobre los marcos de referencia de Arquitectura Empresarial (Zachman, TOGAF, FEAF).",
+  "nrOfQuestions": "10",
+  "questions": [
+    {
+      "question": "1. ¿Cuál es el propósito fundamental de un Marco de Arquitectura Empresarial (EAF)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Proporcionar una estructura, métodos, pautas y conceptos compartidos para planificar, diseñar y gestionar la arquitectura de una organización.",
+        "Funcionar exclusivamente como un compilador de código fuente para lenguajes de programación.",
+        "Automatizar el cálculo de nóminas e impuestos de los empleados.",
+        "Reemplazar la infraestructura física de redes por conexiones satelitales."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Un Marco de Arquitectura Empresarial (EAF) ofrece una estructura de soporte, herramientas y principios estandarizados para guiar el análisis, diseño, planificación y gobernanza de la AE.",
+      "point": "10"
+    },
+    {
+      "question": "2. ¿Cómo se clasifica la naturaleza del Marco Zachman dentro de la Arquitectura Empresarial?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Como un método de gestión de proyectos ágiles basado en iteraciones semanales.",
+        "Como una ontología o esquema de clasificación taxonómico estático (matriz descriptiva) que no prescribe un proceso metodológico.",
+        "Como un lenguaje de programación orientado a objetos para sistemas distribuidos.",
+        "Como un sistema operativo para servidores corporativos."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El Marco Zachman es una taxonomía u ontología descriptiva estática. No prescribe ningún proceso, secuencia de pasos ni metodología de desarrollo.",
+      "point": "10"
+    },
+    {
+      "question": "3. ¿Qué dimensiones se intersectan en la matriz de 36 celdas del Marco Zachman?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "6 lenguajes de programación con 6 tipos de servidores físicos.",
+        "6 niveles de presupuesto con 6 departamentos operativos.",
+        "6 interrogantes básicas (Qué, Cómo, Dónde, Quién, Cuándo, Por qué) con 6 perspectivas de los interesados (Planificador, Propietario, Diseñador, Constructor, Subcontratista y Empresa en funcionamiento).",
+        "6 fases del ciclo de vida del software con 6 metodologías de prueba."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La matriz del Marco Zachman cruza las 6 interrogantes o abstracciones del producto (columnas) con las 6 perspectivas o puntos de vista de los roles interesados (filas).",
+      "point": "10"
+    },
+    {
+      "question": "4. ¿Cuál es el motor metodológico central que distingue al marco TOGAF?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El Método de Desarrollo de la Arquitectura (ADM - Architecture Development Method), un proceso circular e iterativo por fases.",
+        "La matriz fija de 36 celdas sin proceso implícito.",
+        "Un compilador de código fuente para sistemas integrados.",
+        "Una técnica de estimación de costos en investigación de operaciones."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El corazón de TOGAF es el ciclo ADM (Architecture Development Method), un método dinámico, iterativo y por fases para planificar, diseñar, implementar y gobernar la AE.",
+      "point": "10"
+    },
+    {
+      "question": "5. En TOGAF, ¿qué función cumple el 'Continuo Empresarial' (Enterprise Continuum)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Clasificar las licencias de software comerciales según su fecha de vencimiento.",
+        "Ofrecer un modelo de clasificación lógica para estructurar los activos arquitectónicos a medida que evolucionan desde soluciones genéricas de la industria hacia soluciones específicas de la empresa.",
+        "Medir el tiempo exacto que tarda una consulta a la base de datos.",
+        "Sustituir la necesidad de definir la Arquitectura de Negocio."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El Continuo Empresarial es un esquema de clasificación dentro de TOGAF para organizar activos e ilustrar cómo la arquitectura pasa de modelos comunes/genéricos a modelos adaptados a la organización.",
+      "point": "10"
+    },
+    {
+      "question": "6. ¿Para qué ámbito fue desarrollado originalmente el marco FEAF (Federal Enterprise Architecture Framework)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Para aplicaciones móviles de comercio electrónico.",
+        "Para estandarizar el desarrollo y uso de arquitecturas empresariales entre agencias del gobierno federal (EE. UU.).",
+        "Para la fabricación de microprocesadores.",
+        "Para la administración de redes sociales en empresas privadas."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "FEAF fue creado para promover la interoperabilidad, reducir duplicaciones de recursos y estructurar la arquitectura dentro y entre agencias gubernamentales federales.",
+      "point": "10"
+    },
+    {
+      "question": "7. ¿Cuál es el enfoque principal del marco DoDAF (Department of Defense Architecture Framework)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Sistemas complejos de defensa, operaciones militares e interoperabilidad en misiones críticas.",
+        "Creación de sitios web estáticos para pequeñas empresas.",
+        "Gestión contable exclusiva de clínicas hospitalarias.",
+        "Automatización de procesos de mercadotecnia digital."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "DoDAF fue desarrollado por el Departamento de Defensa de EE. UU. para gestionar sistemas de gran escala, integración tecnológica e interoperabilidad en operaciones militares.",
+      "point": "10"
+    },
+    {
+      "question": "8. ¿Qué relación existe entre el lenguaje ArchiMate y el marco TOGAF?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "ArchiMate es un lenguaje de programación que sustituye al método ADM.",
+        "ArchiMate es el lenguaje estándar de modelado visual (mantenido por The Open Group) diseñado para representar gráficamente las capas y vistas de TOGAF.",
+        "ArchiMate es una base de datos relacional.",
+        "ArchiMate es incompatible con TOGAF."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "ArchiMate es el lenguaje de modelado estándar de The Open Group que proporciona notación gráfica unificada para visualizar los dominios y conceptos definidos en TOGAF.",
+      "point": "10"
+    },
+    {
+      "question": "9. ¿En qué se enfoca la metodología de Arquitectura Empresarial de Gartner?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "En la creación de una matriz estática de 36 celdas sin proceso.",
+        "En los resultados prácticos de negocio, la alineación estratégica y la gestión continua de la transición del estado As-Is al To-Be.",
+        "En la redacción de código en lenguaje ensamblador.",
+        "En eliminar la infraestructura tecnológica de la empresa."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Gartner promueve una metodología orientada a resultados de negocio prácticos, enfocada en cerrar la brecha entre el estado actual (*As-Is*) y el futuro (*To-Be*).",
+      "point": "10"
+    },
+    {
+      "question": "10. ¿Cómo se aplican de forma sinérgica el Marco Zachman y TOGAF en la práctica profesional?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Se usa Zachman para programar bases de datos y TOGAF para configurar servidores.",
+        "Se utiliza el ciclo dinámico ADM de TOGAF como guía de desarrollo paso a paso y la matriz de Zachman como el repositorio taxonómico para clasificar los artefactos generados.",
+        "No se pueden combinar por ser filosofías opuestas.",
+        "TOGAF elimina la necesidad de clasificar artefactos."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "En la práctica, las organizaciones combinan el proceso iterativo ADM de TOGAF para guiar la ejecución de proyectos con la matriz estática de Zachman como archivador estructurado para organizar los entregables.",
+      "point": "10"
+    }
+  ]
+}

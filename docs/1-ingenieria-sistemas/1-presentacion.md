@@ -337,12 +337,68 @@ La teoría define y clasifica los sistemas bajo varios principios clave:
 #### Clasificación
 **(Abiertos vs. Cerrados)**
 
-La TGS clasifica los sistemas según el nivel de interacción que tienen con el entorno que los rodea:
-* **Sistemas Abiertos:** Son aquellos que interactúan activamente con su medio ambiente, importando y exportando libremente energía, materia, personas o información a través de límites permeables. Todos los sistemas sociales y las organizaciones se clasifican como sistemas abiertos.
+En la Teoría General de Sistemas, los sistemas se clasifican bajo diversas dimensiones fundamentales según su relación con el entorno, su origen, la naturaleza de sus componentes y la predictibilidad de sus interacciones
 
-* **Sistemas Cerrados:** Son sistemas aislados que no reciben información, personas ni materias primas del exterior (aunque pueden transferir energía, pero no materia con el entorno).
+La TGS clasifica los sistemas según el nivel de interacción que tienen con el entorno, la cual evalúa el grado de intercambio que tiene el sistema con su medio ambiente a través de sus límites o fronteras:
 
-* **El Continuo de Apertura:** En la realidad, los sistemas nunca son completamente abiertos o completamente cerrados; en su lugar, existen a lo largo de un continuo que va desde el más cerrado hasta el más abierto.
+
+
+<div class="container">
+  <div class="row">
+    <div class="col col--5">
+    ![](img/sistema-aislado.jpg)
+    </div>
+    <div class="col col--7">
+    **Sistemas Aislados**
+    
+    Son sistemas teóricos o de laboratorio que no realizan ningún tipo de intercambio de materia ni de energía a través de su frontera.
+
+    **Intercambio:** Ninguno.
+
+    **Ejemplo:** Un experimento de laboratorio en un recipiente térmicamente sellado y aislado del entorno.
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col--5">
+    ![](img/sistema-cerrado.jpg)
+    </div>
+    <div class="col col--7">
+    **Sistemas Cerrados** 
+    
+    Son sistemas aislados que no reciben información, personas ni materias primas del exterior (aunque pueden transferir energía, pero no materia con el entorno).
+
+    **Intercambio:** Solo energía (no materia).
+
+    **Ejemplo:** El planeta Tierra (considerado térmicamente un sistema cerrado que intercambia energía solar pero no materia con el espacio) o un circuito o mecanismo físico cerrado sin interacción de insumos externos.
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col col--5">
+    ![](img/sistema-abierto.jpg)
+    </div>
+    <div class="col col--7">
+    **Sistemas Abiertos** 
+    
+    Son aquellos que interactúan de forma activa y continua con su medio ambiente, importando y exportando libremente energía, materia, personas o información a través de límites permeables. Todos los sistemas sociales y las organizaciones se clasifican como sistemas abiertos.
+
+    **Intercambio:** Materia y energía.
+
+    **Ejemplo:** Una empresa u organización, un ecosistema natural, el cuerpo humano o un equipo de desarrollo de software que ajusta su trabajo según la retroalimentación del cliente.
+    </div>
+  </div>
+</div>
+
+:::info[nota]
+**Sobre el Continuo de Apertura:** 
+
+En la realidad práctica, los sistemas no son 100% cerrados ni totalmente abiertos de forma absoluta, en su lugar, existen a lo largo de un continuo que va desde el más cerrado hasta el más abierto.
+:::
 
 #### La Evolución y la Integración Multidisciplinaria
 A partir de la formulación de Bertalanffy, otros teóricos expandieron la TGS para resolver problemas prácticos en la integración de múltiples disciplinas. Por ejemplo, en 1956, el profesor **Kenneth Boulding** identificó que los especialistas de distintos subsistemas (como físicos, economistas, químicos o sociólogos) solían hablar sus propios lenguajes técnicos, lo que dificultaba la comunicación. Boulding abogó por la necesidad de utilizar un lenguaje común, como las matemáticas, para lograr una integración de sistemas verdaderamente exitosa. 

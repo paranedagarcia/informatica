@@ -1,166 +1,166 @@
 {
-  "quizTitle": "Cuestionario: Ingeniería de Sistemas",
-  "quizSynopsis": "Evaluación sobre los conceptos fundamentales de la Ingeniería de Sistemas y la Teoría General de Sistemas (TGS).",
+  "quizTitle": "Cuestionario de Arquitectura Empresarial (AE)",
+  "quizSynopsis": "Evaluación sobre los conceptos clave de la Arquitectura Empresarial, dominios.",
   "nrOfQuestions": "10",
   "questions": [
     {
-      "question": "1. ¿Cómo se define formalmente la Ingeniería de Sistemas según el documento?",
+      "question": "1. ¿Cuáles son los cuatro dominios interconectados e interdependientes en los que se divide la Arquitectura Empresarial?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "La creación y ejecución de un proceso interdisciplinario diseñado para asegurar que los requisitos de los clientes e interesados se alcancen de manera eficiente.",
-        "El estudio exclusivo de la programación orientada a objetos y algoritmos matemáticos aislados.",
-        "La reparación física y ensamblaje de componentes de hardware informático.",
-        "La gestión presupuestaria y financiera de proyectos comerciales."
+        "EBA (Negocio), EIA (Información/Datos), EAA (Aplicaciones) y ETA (Técnica/Tecnológica).",
+        "Hardware, Software, Redes y Bases de Datos.",
+        "Estrategia, Táctica, Operación y Mantenimiento.",
+        "Planificación, Finanzas, Ventas y Ciberseguridad."
       ],
       "correctAnswer": "1",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "El texto establece que la Ingeniería de Sistemas se define como la creación y ejecución de un proceso interdisciplinario para asegurar que los requisitos de los clientes e interesados se alcancen de manera eficiente.",
+      "explanation": "La AE divide la complejidad organizacional en cuatro dominios: Arquitectura de Negocio (EBA), Arquitectura de Información o Datos (EIA), Arquitectura de Aplicaciones (EAA) y Arquitectura Técnica/Tecnológica (ETA).",
       "point": "10"
     },
     {
-      "question": "2. ¿Qué es un 'sistema' en el contexto de las bases de la disciplina?",
+      "question": "2. ¿Quién acuñó el término 'Arquitectura Empresarial' e introdujo originalmente su marco en 1987?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "Un conjunto de programas de software sin interacción humana.",
-        "Un grupo de elementos (humanos o no) organizados que actúan de forma conjunta para alcanzar una meta común.",
-        "Una base de datos relacional orientada a la contabilidad.",
-        "Un conjunto de reglas legales que rigen a las empresas."
+        "Scott Bernard",
+        "John A. Zachman",
+        "The Open Group",
+        "Alistair Cockburn"
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "Un sistema se concibe como un grupo o colección de elementos (humanos o no humanos) organizados de tal manera que actúan de forma conjunta como un todo para alcanzar un objetivo común.",
+      "explanation": "John A. Zachman introdujo el modelo en 1987 aplicando por analogía los conceptos de la arquitectura de construcción al desarrollo de empresas y computación, acuñando el término 'Arquitectura Empresarial'.",
       "point": "10"
     },
     {
-      "question": "3. ¿Quién formuló originalmente la Teoría General de Sistemas (TGS) en 1951?",
+      "question": "3. Según las reglas básicas del Marco Zachman, ¿cuál de las siguientes afirmaciones es correcta?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "Henry Ford",
-        "Ludwig von Bertalanffy",
-        "Kenneth Boulding",
-        "Claude Shannon"
+        "Es un ciclo de vida metodológico en cascada que indica el orden estricto de desarrollo.",
+        "Las columnas tienen un orden jerárquico donde la Motivación debe definirse al final.",
+        "No es una metodología, sino un esquema de clasificación taxonómico puro y descriptivo.",
+        "El número de filas y columnas puede modificarse según el tamaño del proyecto."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El Marco Zachman no prescribe un proceso o secuencia de desarrollo. Es una taxonomía estructurada en una matriz fija de 6x6 independiente de herramientas y procesos.",
+      "point": "10"
+    },
+    {
+      "question": "4. Según la definición del Object Management Group (OMG) citada en la fuente, ¿qué es la Arquitectura de Negocio?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un modelo lógico de tablas SQL para bases de datos relacionales.",
+        "La estructura formal de una empresa expresada en términos de su gobernanza, procesos de negocio e información.",
+        "El inventario físico de servidores y componentes de red.",
+        "Un marco de trabajo exclusivo para programación orientada a objetos."
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "La Teoría General de Sistemas (TGS) fue propuesta originalmente por el biólogo austríaco Ludwig von Bertalanffy en 1951.",
+      "explanation": "El OMG define la Arquitectura de Negocio como la estructura formal de una empresa expresada en términos de gobernanza, procesos de negocio e información para alinear objetivos estratégicos con decisiones operativas.",
       "point": "10"
     },
     {
-      "question": "4. ¿Qué analogía utilizó Ludwig von Bertalanffy para introducir la TGS?",
+      "question": "5. ¿Cuáles son las dos partes esenciales que componen la meta-arquitectura de TOGAF?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "La estructura del cuerpo humano y sus subsistemas (músculos, esqueleto, sistema circulatorio).",
-        "El funcionamiento de un motor de combustión interna.",
-        "La red de cañerías de agua de una ciudad.",
-        "Un circuito integrado de computación."
+        "El ADM (Architecture Development Method) y El Continuo Empresarial (Enterprise Continuum).",
+        "El Marco Zachman y la Notación ArchiMate.",
+        "El Estado As-Is y el Estado To-Be.",
+        "La Matriz 6x6 y la Gestión de Requisitos."
       ],
       "correctAnswer": "1",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "Bertalanffy utilizó la nomenclatura de la anatomía humana para explicar cómo subsistemas (músculos, esqueleto, sistema circulatorio) se interrelacionan para conformar un sistema unificado.",
+      "explanation": "TOGAF está compuesto por el ciclo paso a paso ADM (Architecture Development Method) y el modelo clasificatorio Enterprise Continuum.",
       "point": "10"
     },
     {
-      "question": "5. En el marco de la TGS, ¿qué se entiende por 'Sinergia'?",
+      "question": "6. En el ciclo circular del ADM de TOGAF, ¿qué componente se ubica en el centro e interactúa con todas las fases?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "La descomposición de un sistema en partes aisladas.",
-        "El fenómeno donde la salida o resultado conjunto es superior a la simple suma de las partes individuales.",
-        "El desgaste natural y desorganización de un sistema.",
-        "La capacidad de un sistema para aislarse del entorno."
+        "Fase A (Visión de la Arquitectura)",
+        "Fase Preliminar",
+        "Gestión de Requisitos (Requirements Management)",
+        "Fase H (Gestión de Cambios)"
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La Gestión de Requisitos se ubica en el centro exacto del ciclo ADM e interactúa de manera bidireccional y continua con cada una de las fases del proceso.",
+      "point": "10"
+    },
+    {
+      "question": "7. ¿En qué fase del ciclo ADM de TOGAF se desarrollan los planos específicos de las aplicaciones y de los activos de datos?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Fase B (Arquitectura de Negocio)",
+        "Fase C (Arquitectura de Sistemas de Información)",
+        "Fase D (Arquitectura de Tecnología)",
+        "Fase E (Oportunidades y Soluciones)"
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "La sinergia establece que 'el todo es mayor que la suma de sus partes', significando que los componentes se potencian al trabajar juntos dentro del sistema.",
+      "explanation": "La Fase C (Arquitectura de Sistemas de Información) aborda de forma específica los planos de los activos de datos y de las aplicaciones de software.",
       "point": "10"
     },
     {
-      "question": "6. ¿Qué define el concepto de 'Isomorfismo'?",
+      "question": "8. Para evaluar y gestionar el estado actual (As-Is) hacia el estado futuro (To-Be) en la Arquitectura de Aplicaciones, ¿qué dimensiones cruza su matriz de evaluación?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "La tendencia al caos en sistemas cerrados.",
-        "La existencia de estructuras, principios o patrones lógicos similares en disciplinas completamente diferentes.",
-        "El cambio de requisitos en la fase de desarrollo.",
-        "La incompatibilidad de lenguajes de programación."
+        "Costo de Licenciamiento y Número de Usuarios.",
+        "Valor de Negocio (Business Value) y Condición Técnica (Technical Condition).",
+        "Velocidad de Procesamiento y Tamaño de Disco.",
+        "Nivel de Seguridad y Antigüedad del Software."
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "El isomorfismo ('igual forma') se refiere a la presencia de leyes, estructuras o patrones equivalentes en sistemas de dominios disímiles (biología, física, informática, etc.).",
+      "explanation": "La matriz de evaluación del portafolio de aplicaciones cruza el Valor de Negocio con la Condición Técnica para clasificar sistemas en mantener, reemplazar, reevaluar o desarrollar infraestructura.",
       "point": "10"
     },
     {
-      "question": "7. ¿Cuál es un ejemplo de isomorfismo presentado en el documento?",
+      "question": "9. Según el documento, ¿cómo se aplican de manera sinérgica el Marco Zachman y TOGAF en la práctica?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "El flujo de agua en cañerías en comparación con el tráfico vehicular.",
-        "La diferencia entre hardware y software.",
-        "El costo fijos versus los costos variables.",
-        "Un diagrama de clases frente a un diagrama de secuencia."
-      ],
-      "correctAnswer": "1",
-      "messageForCorrectAnswer": "¡Respuesta correcta!",
-      "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "El documento utiliza el flujo de agua en tuberías y el tráfico vehicular como ejemplo de isomorfismo de redes de flujo, compartiendo las mismas leyes matemáticas y cuellos de botella.",
-      "point": "10"
-    },
-    {
-      "question": "8. ¿Qué es la 'Homeostasis' en la teoría de sistemas?",
-      "questionType": "text",
-      "answerSelectionType": "single",
-      "answers": [
-        "La desintegración inevitable de las fronteras de un sistema.",
-        "La capacidad de un sistema para autorregularse y mantener un equilibrio dinámico interno ante cambios del entorno.",
-        "La consecución de objetivos a través de un único camino predeterminado.",
-        "La acumulación continua de errores en un proceso."
+        "Se usa TOGAF para crear bases de datos SQL y Zachman para diseñar pantallas.",
+        "Se adopta el ADM de TOGAF como ruta metodológica y la Matriz de Zachman como repositorio taxonómico para clasificar los artefactos.",
+        "Son marcos mutuamente excluyentes que no pueden combinarse.",
+        "Zachman elimina la necesidad de realizar la Fase Preliminar de TOGAF."
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "La homeostasis es la propiedad del sistema de autorregularse y conservar un equilibrio dinámico mediante lazos de retroalimentación negativa frente a fluctuaciones externas.",
+      "explanation": "Las organizaciones utilizan el ADM de TOGAF para guiar el orden metodológico de construcción y la Matriz de Zachman como el archivador estructurado para organizar los artefactos generados.",
       "point": "10"
     },
     {
-      "question": "9. ¿Cómo se distinguen la 'Entropía' y la 'Negentropía'?",
+      "question": "10. En el pensamiento sistémico aplicado a la AE, ¿qué permite a los arquitectos prevenir disrupciones ante cambios en el sistema?",
       "questionType": "text",
       "answerSelectionType": "single",
       "answers": [
-        "La entropía es la tendencia natural al desorden/caos, mientras que la negentropía es la energía o información que importa un sistema abierto para mantener el orden.",
-        "La entropía es aplicable solo a software y la negentropía a hardware.",
-        "Son términos idénticos que describen el equilibrio operacional.",
-        "La entropía es el estado final de un proyecto y la negentropía el estado inicial."
-      ],
-      "correctAnswer": "1",
-      "messageForCorrectAnswer": "¡Respuesta correcta!",
-      "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "La entropía impulsa a los sistemas hacia la desorganización, mientras que los sistemas abiertos importan recurso o información externa (negentropía) para contrarrestar el desgaste y sobrevivir.",
-      "point": "10"
-    },
-    {
-      "question": "10. ¿En qué consiste el principio de 'Equifinalidad'?",
-      "questionType": "text",
-      "answerSelectionType": "single",
-      "answers": [
-        "En que todos los proyectos deben concluir en la misma fecha.",
-        "En que un sistema abierto puede alcanzar el mismo estado final partiendo de condiciones iniciales distintas y usando diferentes caminos.",
-        "En que solo existe una única metodología correcta para resolver un problema.",
-        "En la incapacidad de un sistema para evolucionar."
+        "Ignorar la infraestructura técnica y enfocarse solo en finanzas.",
+        "Mapear y documentar las interdependencias entre los dominios (Negocio, Información, Aplicaciones y Tecnología).",
+        "Eliminar la retroalimentación de los usuarios.",
+        "Descartar la proyección del estado futuro (To-Be)."
       ],
       "correctAnswer": "2",
       "messageForCorrectAnswer": "¡Respuesta correcta!",
       "messageForIncorrectAnswer": "Respuesta incorrecta.",
-      "explanation": "La equifinalidad establece que un sistema abierto puede llegar al mismo estado final u objetivo desde diferentes puntos de origen y mediante distintas trayectorias.",
+      "explanation": "Documentar las interdependencias entre dominios permite prever el 'efecto dominó' del cambio (por ejemplo, cómo sustituir un servidor o proceso afecta las aplicaciones y flujos de datos).",
       "point": "10"
     }
   ]

@@ -198,13 +198,87 @@ La elección del ciclo de vida debe basarse en el Continuo de los Ciclos de Vida
 Impacto Estratégico ("So What?"): El éxito final de esta sinergia reside en la creación de una PMO Ágil. Esta unidad debe ser multidisciplinaria y orientada a la invitación (no impositiva), actuando como un Centro de Excelencia. Una PMO que impone EA fallará; una PMO que actúa como consultora de Zachman y TOGAF optimizará la entrega de valor, garantizando que la arquitectura sea un motor de agilidad y no un lastre burocrático.
 
 ---
+## **FEAF**
+
+El **FEAF** (*Federal Enterprise Architecture Framework* o Marco de Arquitectura Empresarial Federal) es un marco de trabajo integral desarrollado a finales de la década de 1990 para el **Gobierno Federal de los Estados Unidos**. Surgió como respuesta a mandatos legales como la ley *Clinger-Cohen Act* de 1996, con el objetivo de transformar la gestión de Tecnologías de la Información (TI) y resolver problemas de ineficiencia y duplicación en agencias públicas.
+
+
+### Aspectos Fundamentales
+
+1. **Objetivo Principal:**
+   * **Estandarizar y gobernar** el desarrollo de la arquitectura empresarial en distintas agencias.
+   * Promover la **interoperabilidad**, optimizar el uso de recursos tecnológicos, reducir sistemas redundantes y facilitar la comunicación entre áreas directivas y técnicas.
+
+2. **Estructura y Modelos de Referencia (*Consolidated Reference Model*):**
+   * El FEAF se apoya en un conjunto de modelos de referencia estandarizados que abarcan diferentes capas de la organización:
+     * **BRM (*Business Reference Model*):** Centrado en las funciones y servicios de negocio.
+     * **DRM (*Data Reference Model*):** Estandarización y flujo de datos interinstitucionales.
+     * **ARM (*Application Reference Model*):** Funcionalidad de software y servicios de integración.
+     * **IRM (*Infrastructure Reference Model*):** Hardware, centros de datos y redes.
+     * **SRM (*Security Reference Model*):** Controles de seguridad y gestión de riesgos.
+     * **PRM (*Performance Reference Model*):** Medición de resultados y valor generado.
+   * Además, incluye una metodología de ejecución paso a paso llamada *Collaborative Planning Methodology* (CPM).
+
+3. **Aplicabilidad:**
+   * Aunque fue diseñado para el ámbito gubernamental público, sus principios, taxonomías y modelos de referencia se pueden adaptar y utilizar en **empresas e instituciones del sector privado** para estructurar sus propios planes de arquitectura empresarial.
+
+
+### FEAF vs. TOGAF vs. Zachman
+
+| Criterio / Atributo | **FEAF** | **TOGAF** | **Marco Zachman** |
+| :--- | :--- | :--- | :--- |
+| **Naturaleza y Enfoque** | Marco estandarizado de arquitectura para el sector público (gubernamental), adaptable a empresas privadas. | Metodología y proceso dinámico orientado a la planificación, gestión, transformación y gobernanza de la AE. | Ontología y taxonomía estática descriptiva; no prescribe un método, proceso o ciclo de vida. |
+| **Origen e Historia** | Desarrollado en EE. UU. (1996/1999) impulsado por la *Clinger-Cohen Act* y el *Federal CIO Council*. | Desarrollado por *The Open Group* (1995), originalmente basado en el proyecto TAFIM del DoD. | Creado por John A. Zachman en IBM (1987, revisado en 1996) basándose en la arquitectura clásica. |
+| **Estructura Principal** | Modelos de Referencia Consolidados (*BRM, DRM, ARM, IRM, SRM, PRM*) y Metodología *CPM*. | Ciclo iterativo **ADM** (*Architecture Development Method*) y el **Continuo Empresarial** (*Enterprise Continuum*). | **Matriz Estática de 36 celdas** (6 interrogantes × 6 perspectivas de partes interesadas). |
+| **Propósito Fundamental** | Promover la interoperabilidad interinstitucional, reducir la duplicación de recursos y estandarizar la TI pública. | Guiar paso a paso la evolución de la empresa desde el estado actual (*As-Is*) hacia el estado objetivo (*To-Be*). | Ofrecer una clasificación de 360° para mapear, estructurar y verificar la integridad de los activos organizacionales. |
+| **Dominios / Capas** | Negocio, Datos, Aplicaciones, Infraestructura/Tecnología, Seguridad y Rendimiento. | **4 dominios clave:** Negocio (*Business*), Datos (*Data*), Aplicaciones (*Applications*) y Tecnología (*Technology*). | **6 bloques de modelado (columnas):** Datos (Qué), Procesos (Cómo), Redes (Dónde), Personas (Quién), Tiempo (Cuándo) y Motivación (Por qué). |
+| **Entregables y Lenguaje** | Modelos de referencia estandarizados e indicadores de rendimiento gubernamentales. | Entregables de formato flexible, representados formalmente con el lenguaje visual estándar **ArchiMate**. | Vistas preestructuradas por rol; neutral respecto a herramientas, utilizado comúnmente con notación **UML**. |
+| **Manejo del Riesgo** | Riesgo de inversión pública, incompatibilidad e ineficiencia en servicios compartidos. | **Riesgo de ejecución, proceso y deuda técnica:** Gestiona el cambio iterativo sin degradar la calidad. | **Riesgo estructural y de alcance:** Evita puntos ciegos informativos o componentes huérfanos en el diseño. |
+
+
+### Resumen de la Sinergia
+
+En la práctica real de las organizaciones, estos tres enfoques no compiten entre sí, sino que se integran funcionalmente:
+
+1. **El Marco Zachman funciona como la Ontología / Archivador:** Define *qué debe existir* para tener un modelo completo y libre de vacíos de gobernanza.
+
+2. **TOGAF funciona como el Motor Metodológico (ADM):** Proporciona la guía procesal del *cómo y cuándo* transformar la empresa a través de fases iterativas de desarrollo.
+
+3. **FEAF actúa como el Estándar de Referencia Dominial / Gubernamental:** Aporta taxonomías, catálogos e indicadores de rendimiento (*KPIs*) para evaluar la efectividad de los servicios interinstitucionales e inversiones.
+
+### Ejemplos de aplicación
+
+
+#### Ejemplo 1: Implementación de la Estrategia "Cloud-First" en Agencias Gubernamentales
+
+* **Contexto del Problema:** Diversas agencias y departamentos operaban sistemas fragmentados y centros de datos dispares, dificultando la colaboración interinstitucional y aumentando los costos operativos de TI.
+* **Aplicación Práctica de FEAF/FSAM:** 
+  * Se utilizó la metodología de arquitectura por segmentos de FEAF (**FSAM**) junto con el marco general de FEA para realizar una **evaluación de la nube** en cuatro fases (evaluación, despliegue, habilitación y transición).
+  * Se utilizaron los modelos de referencia de aplicaciones (ARM) e infraestructura (IRM) de FEAF para catalogar las aplicaciones críticas y definir cuáles podían migrarse hacia modelos SaaS, PaaS e IaaS.
+* **Resultados Obtenidos:** Permitieron crear *blueprints* de transformación en la nube alineados con la política pública *"Cloud-First"*, asegurando que la consolidación de servidores y la analítica de Big Data respetaran los estándares de interoperabilidad y seguridad federales.
+
+
+
+#### Ejemplo 2: Integración de Sistemas de Salud e Intercambio de Información Médica (NIH / *Caso "Health-Is-US"*)
+
+* **Contexto del Problema:** Una organización de salud del sector público (que brinda servicios a agencias federales como los *National Institutes of Health - NIH*) enfrentaba procesos aislados, aplicaciones personalizadas no reutilizables y dificultades para compartir datos de manera eficiente y segura.
+
+* **Aplicación Práctica de FEAF/FSAM:**
+  * La organización adoptó la metodología **FSAM** de FEAF combinada con marcos como TOGAF y Zachman para diseñar e institucionalizar su **Práctica de Arquitectura de Negocio (BAP)**.
+  * Se aplicó el modelo de datos de FEAF (DRM) y el modelo de aplicaciones (ARM) para descomponer sistemas monolíticos y acoplados en **servicios orientados a arquitectura (SOA)** reconfigurables e integrados sobre un bus de servicios empresariales (*Enterprise Service Bus - ESB*).
+
+* **Resultados Obtenidos:** Se facilitó la interoperabilidad del Registro Médico Electrónico (*EHR*) y la plataforma de Intercambio de Información de Salud (*HIE*), garantizando el cumplimiento estricto de las regulaciones gubernamentales de privacidad de datos médicos (*Affordable Care Act*) y reduciendo los costos de mantenimiento de software.
+
+
+
+---
 ## 📝 **Test:** Marcos de trabajo
 
 Antes de continuar, comprueba tus conocimientos.
 
 
 import QuizComponent from '@site/src/components/Quiz';
-import quiz from '@site/src/components/Quiz/data/ae.json';
+import quiz from '@site/src/components/Quiz/data/ae-marcos.json';
 
 
 <QuizComponent quiz={quiz} showInstantFeedback />
