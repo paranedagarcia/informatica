@@ -17,12 +17,22 @@ Zachman, quien trabajaba para la empresa IBM en el área de metodologías de pla
 
 Bajo la óptica de este marco, la arquitectura se define como un conjunto de artefactos de diseño o representaciones descriptivas que son relevantes para detallar un objeto complejo, de tal forma que pueda ser producido de acuerdo con requisitos de calidad específicos y mantenerse (cambiar) eficazmente a lo largo de su vida útil.
 
-El Marco de Zachman constituye la ontología fundamental de la empresa. No es una metodología de pasos, sino una taxonomía estática que proporciona una vista de 360 grados de los activos organizacionales. Funciona como un "Check de Calidad Total"; si una celda de la matriz está vacía, existe una brecha de gobernanza o un punto ciego informativo que pone en riesgo la integridad estructural.
+El Marco de Zachman constituye la *ontología* fundamental de la empresa. No es una metodología de pasos, sino una taxonomía estática que proporciona una vista de 360 grados de los activos organizacionales. Funciona como un "Check de Calidad Total"; si una celda de la matriz está vacía, existe una brecha de gobernanza o un punto ciego informativo que pone en riesgo la integridad estructural.
+
+:::info
+**Ontología:** Es una rama de la filosofía que estudia la naturaleza del ser y su existencia. En el ámbito de este marco la ontología es una estructura lógica y atemporal que define la existencia de los componentes esenciales de una empresa. 
+
+La Ontología define qué hay: El marco es una estructura fija que establece las reglas de clasificación para los artefactos de la empresa (documentos, modelos, datos). No te dice cómo construir la arquitectura ni en qué orden hacerlo.
+:::
 
 La matriz de 36 celdas se rige por la regla de la Perspectiva Única: cada celda representa un aspecto independiente y necesario para la completitud del modelo. Su estructura cruza las filas (Interesados) con las columnas (Interrogantes).
 
+:::success[Nota]
+**Define qué hay que documentar sobre la arquitectura empresarial, no cómo organizar el trabajo para lograrlo.**
+:::
 
 ### La Matriz de 6x6
+
 El marco toma la forma de una matriz de doble entrada que se rige por la regla de la Perspectiva Única: cada celda representa un aspecto independiente y necesario para la completitud del modelo. Intersecta **seis interrogantes básicas (las columnas)** con **seis perspectivas de los interesados (las filas)**, dando lugar a un esquema de clasificación descriptivo de 36 celdas en total:
 
 <center>
@@ -32,32 +42,41 @@ El marco toma la forma de una matriz de doble entrada que se rige por la regla d
 </figure>
 </center>
 
-**Las Columnas: Las Interrogantes (Abstracciones del Producto)**
+#### Las Columnas: 
+**Las Interrogantes (Abstracciones del Producto)**
 
 Cada columna aborda un aspecto específico y diferenciado de la organización:
-* **¿Qué? (Descripción de Datos - *What*):** Se enfoca en los elementos/objetos de negocio y activos de información importantes para el negocio y sus relaciones estructurales. *(Ejemplo: clases de entidades de negocio, modelos semánticos)*.
+1. **¿Qué datos existen en la organización? (Descripción de Datos - *What*):** Se enfoca en los elementos/objetos de negocio y activos de información importantes para el negocio y sus relaciones estructurales. *(Ejemplo: clases de entidades de negocio, modelos semánticos)*.
 
-* **¿Cómo? (Descripción de Funciones - *How*):** Las funciones y transformaciones del sistema. Describe cómo funcionan las partes del sistema tanto de forma independiente como conjunta. *(Ejemplo: procesos de negocio, funciones de computadora)*.
+2. **¿Cómo funcionan los procesos? (Descripción de Funciones - *How*):** Las funciones y transformaciones del sistema. Describe cómo funcionan las partes del sistema tanto de forma independiente como conjunta. *(Ejemplo: procesos de negocio, funciones de computadora)*. Esta columna no trata sobre qué sistema se ejecuta, sino sobre lo que ocurre dentro de él. Describe los flujos de trabajo y las funciones tal y como los realiza la organización.
 
-* **¿Dónde? (Descripción de Red - *Where*):** La distribución geográfica y logística de nodos. Muestra los aspectos de distribución física y de red, la ubicación de los elementos y sus dependencias. *(Ejemplo: nodos de hardware, protocolos de red)*.
+3. **¿Dónde tiene lugar el trabajo? (Descripción de Red - *Where*):** La distribución geográfica y logística de nodos. Muestra los aspectos de distribución física y de red, la ubicación de los elementos y sus dependencias. *(Ejemplo: nodos de hardware, protocolos de red)*. Esta columna abarca las ubicaciones, las redes y la distribución geográfica. También muestra cómo se conectan esas ubicaciones entre sí.
 
-* **¿Quién? (Descripción de Personas - *Who*):** La asignación de responsabilidades y roles (Silos vs. T-Shaped). Identifica a los agentes, roles y unidades organizacionales involucradas. *(Ejemplo: organigramas, modelos de flujo de trabajo)*.
+4. **¿Quién es responsable de qué? (Descripción de Personas - *Who*):** La asignación de responsabilidades y roles (Silos vs. T-Shaped). Identifica a los agentes, roles y unidades organizacionales involucradas. *(Ejemplo: organigramas, modelos de flujo de trabajo)*. No es un lugar para un organigrama. Es una visión de quién toma qué decisiones y quién es el responsable de qué procesos. Ayuda a mostrar dónde se cruzan los roles, las responsabilidades y el riesgo humano dentro de la arquitectura empresarial.
 
-* **¿Cuándo? (Descripción de Tiempo - *When*):** Los ciclos operativos, eventos y cronogramas. Describe los aspectos temporales y de programación significativos. *(Ejemplo: calendarios maestros, ciclos de negocio, eventos del sistema)*.
+5. **¿Cuándo se producen los procesos y qué los desencadena? (Descripción de Tiempo - *When*):** Los ciclos operativos, eventos y cronogramas. Describe los aspectos temporales y de programación significativos. *(Ejemplo: calendarios maestros, ciclos de negocio, eventos del sistema)*.
 
-* **¿Por qué? (Descripción de Motivación - *Why*):** La estrategia, metas y reglas de negocio. Proporciona los requerimientos lógicos y de justificación detrás de las decisiones. *(Ejemplo: metas de negocio, planes estratégicos, reglas de negocio)*.
+6. **¿Por qué? (Descripción de Motivación - *Why*):** La estrategia, metas y reglas de negocio. Proporciona los requerimientos lógicos y de justificación detrás de las decisiones. *(Ejemplo: metas de negocio, planes estratégicos, reglas de negocio)*. Objetivos, estrategias y la base de las decisiones. Esta columna pregunta por qué la organización actúa como lo hace en los seis niveles. 
 
-**Las Filas: Las Perspectivas (Roles de los Interesados)**
+#### Las Filas: 
+**Las Perspectivas (Roles de los Interesados)**
 
 Cada fila representa el punto de vista de un actor o rol clave en la cadena de diseño y construcción:
-1. **Planificador (Contextual - *Planner's View*):** El resumen ejecutivo que define el alcance (*scope*), tamaño global, costos y relación de la empresa con su entorno.
-2. **Propietario (Conceptual - *Owner's View*):** Representa el punto de vista de quien posee y opera el negocio; muestra modelos conceptuales de alto nivel de las entidades e interacciones.
-3. **Diseñador (Lógico - *Designer's View / System Model*):** Muestra el modelo del sistema desde una perspectiva lógica e independiente de las herramientas físicas específicas.
-4. **Constructor (Físico - *Builder's View / Technology Model*):** Representa el diseño técnico físico, adaptando los modelos lógicos a tecnologías específicas (hardware, lenguajes de programación, etc.).
-5. **Subcontratista (Fuera de Contexto - *Subcontractor's View*):** Proporciona las especificaciones detalladas e independientes para el ensamble de componentes modulares y configuraciones de bajo nivel.
-6. **Empresa en Funcionamiento (*Functioning Enterprise*):** El sistema real operando en producción, es decir, la organización física funcionando.
+1. **Planificador (Contextual - *Planner's View*):** **¿cuál es el contexto general?** El resumen ejecutivo que define el alcance (*scope*), tamaño global, costos y relación de la empresa con su entorno.
 
+2. **Propietario (Conceptual - *Owner's View*):** **¿cómo se ve a sí misma la organización?** Representa el punto de vista de quien posee y opera el negocio; muestra modelos conceptuales de alto nivel de las entidades e interacciones.
 
+3. **Diseñador (Lógico - *Designer's View / System Model*):** **¿cómo puede representarse técnicamente el modelo de negocio?** Muestra el modelo del sistema desde una perspectiva lógica e independiente de las herramientas físicas específicas. A este nivel, los arquitectos de sistemas traducen los requisitos del negocio en un modelo conceptual.
+
+4. **Constructor (Físico - *Builder's View / Technology Model*):** **¿qué se está construyendo realmente?** Representa el diseño técnico físico, adaptando los modelos lógicos a tecnologías específicas (hardware, lenguajes de programación, etc.). Los desarrolladores describen cómo se traduce el modelo de sistema en tecnologías concretas. Las plataformas, las interfaces y la infraestructura se vuelven tangibles a este nivel.
+
+5. **Subcontratista (Fuera de Contexto - *Subcontractor's View*):** **¿cuáles son las especificaciones técnicas?** Proporciona las especificaciones detalladas e independientes para el ensamble de componentes modulares y configuraciones de bajo nivel. Necesitan instrucciones precisas.
+
+6. **Empresa en Funcionamiento (*Functioning Enterprise*):** **¿qué es lo que realmente funciona en el mundo real?** El sistema real operando en producción, es decir, la organización física funcionando. Esta perspectiva muestra cómo funciona la organización en el día a día, incluidos los puntos en los que la realidad difiere del diseño original.
+
+:::info[Plantilla]
+[Descarga la plantilla Zachman acá](/files/zachman_framework_sosafe.pdf)
+:::
 
 ### Características y Reglas
 
@@ -77,6 +96,12 @@ Para aplicar correctamente el marco, John Zachman propuso un conjunto de siete r
 * **Desafíos:** Al no ofrecer un manual de procesos "paso a paso", muchas organizaciones encuentran complejo llevarlo a la práctica y recurren a consultorías externas ante la falta de conocimiento operativo (*know-how*). Además, la profundidad requerida para completar los modelos de cada una de las 36 celdas puede llegar a ser abrumadora para los equipos de arquitectura si se intenta modelar todo a la vez.
 
 Impacto Estratégico ("So What?"): Zachman mitiga el Riesgo Estructural y de Alcance (Appendix X2). Al mapear la realidad organizacional en esta matriz, el estratega puede identificar redundancias costosas y activos huérfanos. Si Zachman define "qué es" la empresa (el estándar), necesitamos un motor dinámico para gestionar "cómo transformarla": el ciclo ADM de TOGAF.
+
+#### Estructura vs. Proceso (Ontología vs. Metodología)
+
+• **La Ontología define qué hay:** El marco es una estructura fija que establece las reglas de clasificación para los artefactos de la empresa (documentos, modelos, datos). No te dice cómo construir la arquitectura ni en qué orden hacerlo.
+
+• **La Metodología transforma:** Otros marcos como TOGAF son metodologías porque describen un proceso o ciclo de vida paso a paso para crear la arquitectura. Zachman provee el "mapa conceptual" o el inventario donde se organiza todo lo que la metodología genera.
 
 ---
 ## **Marco TOGAF**
@@ -328,6 +353,7 @@ El FEAF se usa también fuera del Gobierno federal estadounidense como marco de 
 10. FEA Consolidated Reference Model Document, versión 2.3 (octubre de 2007). https://www.reginfo.gov/public/jsp/Utilities/FEA_CRM_v23_Final_Oct_2007_Revised.pdf
 11. EAPJ, *How the Federal EA Framework Supports Government Digital Transformation* (caso ACT Health). https://eapj.org/wp-content/uploads/2020/09/How-the-Federal-EA-Framework-Supports-Government-Digital-Transformation.pdf
 12. Nextgov, *The federal enterprise architecture: Where it fits* (2008). https://www.nextgov.com/modernization/2008/06/the-federal-enterprise-architecture-where-it-fits/198667/
+13. https://sosafe-awareness.com/es/glosario/zachman-framework/
 
 :::info
 **Nota:** este contenido se basa exclusivamente en las fuentes citadas, priorizando organismos oficiales (OMB, GAO, CMS, Congreso). Las cifras de ahorro corresponden a lo reportado por las propias agencias y verificado por la GAO.
@@ -347,6 +373,12 @@ El FEAF se usa también fuera del Gobierno federal estadounidense como marco de 
 | **Entregables y Lenguaje** | Modelos de referencia estandarizados e indicadores de rendimiento gubernamentales. | Entregables de formato flexible, representados formalmente con el lenguaje visual estándar **ArchiMate**. | Vistas preestructuradas por rol; neutral respecto a herramientas, utilizado comúnmente con notación **UML**. |
 | **Manejo del Riesgo** | Riesgo de inversión pública, incompatibilidad e ineficiencia en servicios compartidos. | **Riesgo de ejecución, proceso y deuda técnica:** Gestiona el cambio iterativo sin degradar la calidad. | **Riesgo estructural y de alcance:** Evita puntos ciegos informativos o componentes huérfanos en el diseño. |
 
+---
+| Marco | Enfoque Principal | Estructura Core |
+|---|---|---|
+| Zachman | Ontología teórica / Clasificación | Matriz estática (6x6) de interrogantes. |
+| TOGAF | Sector privado / Transformación Ágil | Metodología circular (ADM) orientada a procesos.|
+| FEAF | Sector público (Gobierno) / Estandarización a gran escala | Modelos de referencia (CRM) + Planificación (CPM).|
 
 ### Resumen de la Sinergia
 
