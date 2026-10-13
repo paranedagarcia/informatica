@@ -20,7 +20,10 @@ El uso de las tecnologísa de información es omniprescente en cadá ámbito de 
 
 Este manual es un apoyo a la formación en el área de informática, consistente en una recopilación de contenidos apropiados, depurados y editados para su mejor comprensión. Se han añadido ejemplos probados, en cuanto a códigos de programación y otros, así como esquemas o diagramas aclaratorios. Basados en las clases ofrecidas tanto a nivel de educación superior como en Bootcamps y cursos de formación.
 
-
+:::info
+Te recomiendo ver este video.
+<YouTubeVideo id="KGTFXoajruo" title="Qué estudiar en tiempos de Inteligencia Artificial?" />
+:::
 
 ## **Informática**
 

@@ -1,10 +1,11 @@
 ---
 id: concebir
-title: "Concebir"
+title: "Concepción"
 sidebar_label: "📄 Concepción"
 description: "Concepción de un problema y viabilidad de una solución tecnológica"
 ---
 
+## **Concebir el problema**
 
 En la fase inicial de un **Ciclo de Vida Predictivo Tradicional (SDLC)**, el analista asume un rol sociotécnico y de consultoría para identificar correctamente los problemas, objetivos y oportunidades del negocio antes de comprometer recursos en un estudio detallado. 
 
@@ -62,13 +63,150 @@ Para justificar económicamente el proyecto, el analista emplea técnicas financ
 
 *   **Modelos Matemáticos de Optimización:** Utilización de programación lineal, programación entera o dinámica (usando herramientas como *Solver* en Excel) para seleccionar la combinación óptima de proyectos independientes de un portafolio bajo restricciones presupuestarias estrictas.
 
-### Herramientas de Descubrimiento y Consenso
+---
+## **Herramientas**
+
+#### Herramientas de Descubrimiento y Consenso
 Durante las actividades de recolección de datos y "tormentas de ideas" en grupo, el analista actúa como facilitador utilizando técnicas creativas y visuales para descubrir los problemas y objetivos esenciales:
 *   **Diagramas de causa-efecto (Ishikawa o espina de pescado):** Para identificar de forma gráfica las causas raíz de las ineficiencias del sistema actual.
 
 *   **Diagramas de Pareto:** Histogramas ordenados descendentemente que permiten priorizar las causas de los problemas bajo la regla del 80-20.
 
 *   **Técnicas de consenso y priorización:** Mapas mentales, multivotación, votación por puntos (*dot voting*), técnica de grupo nominal, escritura de ideas en silencio (*brainwriting*) y diagramas de afinidad para consolidar los requisitos reales de los usuarios.
+
+### Diagrama Ishikawa
+
+El **diagrama de Ishikawa** —también conocido como **diagrama de causa-efecto** o **diagrama de espina de pescado** (*fishbone diagram*)— es una herramienta gráfica de análisis estructurado utilizada para identificar, clasificar y visualizar las causas raíz que originan un problema o efecto específico.
+
+Fue concebido por el químico y experto en gestión de la calidad japonés [**Kaoru Ishikawa**](https://es.wikipedia.org/wiki/Kaoru_Ishikawa), quien lo incluyó como una de las herramientas fundamentales del control de calidad total (TQM).
+
+![](img/ishikawa.jpg)
+
+#### Estructura Visual del Diagrama
+
+El gráfico adopta la forma del esqueleto de un pez:
+
+* **Cabeza (o caja del problema):** Ubicada en el extremo derecho (o final de la espina dorsal), contiene el enunciado claro y explícito del problema, defecto o síntoma que se desea analizar.
+* **Espina central (o tronco):** Es la línea horizontal principal que conecta el problema con las distintas categorías de causas.
+* **Espinas principales (Ramas):** Representan las categorías o áreas generales donde pueden originarse las causas.
+* **Espinas secundarias y menores (Sub-ramas):** Detallan las causas primarias y secundarias específicas, las cuales se desglosan preguntando iterativamente *¿por qué ocurre esto?* hasta llegar a los factores raíz.
+
+![](img/ishikawa-diagrama.jpg)
+
+#### Categorías Tradicionales de Causalidad
+
+Para facilitar las sesiones de lluvia de ideas (*brainstorming*) y evitar pasar por alto aspectos críticos, las causas se suelen agrupar bajo esquemas estandarizados:
+
+
+![](img/ishikawa-6m.jpg)
+
+#### Las **6 M's** (Enfoque tradicional de procesos y producción):
+1. **Mano de obra / Personal (*Personnel/Man*):** Falta de capacitación, errores humanos, comunicación inadecuada o fatiga.
+2. **Maquinaria / Equipos (*Machine*):** Fallas de hardware, falta de mantenimiento, problemas de calibración o herramientas inadecuadas.
+3. **Métodos / Procesos (*Method*):** Procedimientos mal diseñados, falta de estándares, cuellos de botella o políticas ambiguas.
+4. **Materiales (*Material*):** Defectos en insumos, especificaciones técnicas incorrectas o inconsistencia en los datos de entrada.
+5. **Medición (*Measurement*):** Métricas imprecisas, falta de indicadores de gestión o sesgos en las pruebas.
+6. **Medio ambiente / Entorno (*Environment/Milieu*):** Condiciones físicas de trabajo, cultura organizacional o factores ambientales externos.
+
+
+:::info
+*(En entornos de servicios o gestión administrativa, a veces se utiliza el modelo alternativo de las **4 P's**: Políticas, Procedimientos, Personal y Planta).*
+:::
+
+
+
+#### Utilidad e Importancia en la Ingeniería de Software y Proyectos
+
+![](img/ishikawa-equipo.jpg)
+
+* **Diferencia entre síntomas y causas raíz:** Ayuda a los equipos a evitar soluciones superficiales o "parches" temporales, atacando el origen real de la ineficiencia o falla del sistema.
+* **Trabajo colaborativo y consenso:** Fomenta la participación activa y el diálogo entre equipos multidisciplinarios (desarrolladores, analistas, usuarios y gerentes).
+* **Análisis de riesgos y proyectos:** En la gestión de proyectos de TI, se utiliza para mapear preventivamente las variables que pueden causar desviaciones de tiempo, sobrecostos, fallas de calidad o corrupción del alcance (*scope creep*).
+* **Complemento con el Diagrama de Pareto:** Mientras Ishikawa identifica *todas las causas posibles*, el **Diagrama de Pareto** permite priorizar numéricamente cuáles de esas causas representan el 80% de los problemas (regla del 80/20) para enfocar los esfuerzos de depuración.
+
+![](img/ishikawa-pareto.jpg)
+
+### Diagrama de Pareto
+
+El **diagrama de Pareto** es un tipo especial de **histograma ordenado descendentemente** que se complementa con una curva de porcentaje acumulado. Su objetivo principal es identificar y priorizar las causas o factores clave que generan la mayor parte de las fallas, problemas o efectos dentro de un sistema.
+
+![](img/pareto.jpg)
+
+El **diagrama de Pareto** fue creado por [**Joseph M. Juran**](https://es.wikipedia.org/wiki/Joseph_Juran), un destacado experto en gestión de la calidad.
+
+Aunque la herramienta gráfica fue desarrollada por Juran, él la bautizó en honor al economista y sociólogo italiano [**Vilfredo Pareto**](https://es.wikipedia.org/wiki/Vilfredo_Pareto). A finales del siglo XIX, Pareto formuló una observación matemática al descubrir que el 80% de la riqueza y de la tierra en Italia estaba en manos de solo el 20% de la población.
+
+A mediados del siglo XX, Juran aplicó este principio a la ingeniería de producción, gestión de proyectos y control de calidad, demostrando que el **80% de los defectos o fallas de un sistema proviene habitualmente de solo un 20% de las causas raíz**. Para representar visualmente esta distribución y ayudar a los equipos a priorizar los **"pocos críticos"** frente a los **"muchos no críticos"**, diseñó la gráfica combinada de histograma ordenado y curva de porcentaje acumulado que lleva el nombre de Pareto.
+
+Posteriormente, el Dr. **Kaoru Ishikawa** popularizó aún más esta herramienta al incluirla dentro de las **7 herramientas básicas de la calidad** para el análisis estadístico de procesos.
+
+
+
+#### El Principio de Pareto (Regla del 80/20)
+
+El diagrama se fundamenta en la **Ley de Pareto** o **Principio 80/20**, formulada a partir del trabajo de Vilfredo Pareto, popularizada en la gestión de calidad por Joseph Juran y promovida por Kaoru Ishikawa como una de las herramientas básicas de calidad. 
+
+
+
+Este principio establece que:
+* **El 80% de los problemas, defectos o impactos suele deberse a únicamente el 20% de las causas raíz.**
+* Permite diferenciar claramente los **"pocos vitales o críticos"** (las pocas causas que generan el mayor impacto) de los **"muchos triviales o no críticos"** (las múltiples causas menores con bajo impacto acumulado).
+
+
+
+#### Estructura y Componentes del Gráfico
+
+![](img/pareto-grafico.jpg)
+
+Un diagrama de Pareto combina dos elementos visuales en un mismo gráfico:
+
+1. **Gráfico de barras (Eje vertical izquierdo):** Muestra las categorías de problemas, defectos o causas individuales ordenadas de mayor a menor según su frecuencia de ocurrencia, impacto económico o gravedad.
+2. **Curva de porcentaje acumulado (Eje vertical derecho):** Una línea trazada por encima de las barras que muestra el porcentaje acumulado desde la primera categoría hasta la última, alcanzando el 100%.
+
+
+<center>
+<figure>
+![](img/pareto-pasos.jpg)
+<figcaption>Pasos para la creación del diagrama de Pareto.</figcaption>
+</figure>
+</center>
+
+#### Propósito y Aplicaciones Prácticas
+
+* **Priorización de esfuerzos:** Ayuda a los equipos de desarrollo y directores de proyecto a enfocar los recursos limitados en resolver el 20% de las fallas que causan el 80% del malestar en los usuarios o del costo operacional.
+* **Análisis de causa raíz e ineficiencias:** En la ingeniería de procesos e ingeniería de software, se utiliza para analizar registros de errores (*issue registers*), devoluciones de clientes, retrasos o sobrecostos.
+* **Evaluación de acciones correctivas:** Permite comparar un estado previo y un estado posterior a una intervención para verificar si las acciones implementadas lograron reducir los defectos de mayor impacto.
+
+#### Caso práctico
+En una fábrica de muebles se ha detectado el siguiente problema: El lote reciente tiene 40 puertas devueltas por defectos.
+
+Al analizar los datos crudos se detecta un registro caótico de fallas:
+- Taladro
+- Madera
+- Insumo
+- Electricidad
+- Negligencia
+- Lija
+
+El objetivo es detectar dónde enfocar el presupuesto de reparación urgente. Para ello ordenamos los datos en orden de frecuencia descendente.
+
+
+| Causa | Frecuencia | % | % Acumulado |
+| :--- | :--- | :--- | :--- |
+| Taladro | 21 | 52.5% | 52.5% |
+| Madera | 11 | 27.5% | 80.0% |
+| Insumo | 5 | 12.5% | 92.5% |
+| Electricidad | 1 | 2.5% | 95.0% |
+| Negligencia | 1 | 2.5% | 97.0% |
+| Lija | 1 | 2.5% | 100.0% |
+
+
+<center>
+<figure>
+![](img/pareto-chart.jpg)
+<figcaption>Al graficar la frecuencia y el % acumulado obtenemos los puntos relevantes a tratar: problemas con el taladro y madera.</figcaption>
+</figure>
+</center>
 
 ### Soporte Tecnológico y Software
 *   **Herramientas CASE Superiores (*Computer Aided Software Engineering*):** Plataformas como **Visible Analyst (VA)** que proveen un repositorio centralizado de datos (enciclopedia) para almacenar elementos, diagramas de contexto, DFDs y analizar de forma automática la consistencia sintáctica y lógica del diseño desde las etapas tempranas.
@@ -101,7 +239,7 @@ Este análisis se centra en responder a la pregunta fundamental de los analistas
 
 Para determinar si un proyecto es técnicamente viable, el analista de sistemas debe examinar tres frentes críticos:
 
-#### 1. Recursos de Hardware y Software (Disponibilidad y Compatibilidad)
+#### Recursos de Hardware y Software (Disponibilidad y Compatibilidad)
 El primer paso es evaluar el entorno computacional existente y su capacidad de integración:
 *   **Complemento al sistema actual:** Se debe determinar si los recursos técnicos actuales de la organización son suficientes para soportar la nueva solución. De no ser así, el analista evalúa si es viable actualizar, modificar o complementar la infraestructura existente para cumplir con los requerimientos.
 
@@ -109,7 +247,7 @@ El primer paso es evaluar el entorno computacional existente y su capacidad de i
 
 *   **Capacidad para cargas de trabajo (*workloads*):** Es indispensable estimar las cargas de trabajo actuales y proyectadas para asegurar que el hardware y el software tengan la capacidad física de manejar el volumen de transacciones sin sufrir colapsos o degradación del rendimiento.
 
-#### 2. Viabilidad del Factor Humano y Capacidades Técnicas
+#### Viabilidad del Factor Humano y Capacidades Técnicas
 La tecnología por sí sola no garantiza el éxito de un sistema; se requiere evaluar la capacidad de las personas para construirla y operarla:
 *   **Personal interno:** El analista debe verificar si los especialistas de TI de la empresa cuentan con las destrezas lógicas, lenguajes de programación y conocimientos de arquitectura específicos para desarrollar el sistema.
 
@@ -117,7 +255,7 @@ La tecnología por sí sola no garantiza el éxito de un sistema; se requiere ev
 
 
 
-#### 3. Análisis del Estado del Arte y Alternativas de Construcción
+#### Análisis del Estado del Arte y Alternativas de Construcción
 La viabilidad técnica requiere analizar si conviene construir el sistema desde cero o adquirir una solución ya diseñada:
 *   **Evaluar COTS (Commercial Off-The-Shelf) vs. Personalizado:** Se analiza si existen paquetes de software comercial disponibles que cubran las necesidades del negocio para evitar "reinventar la rueda" y disminuir el riesgo técnico, o si las necesidades particulares exigen un desarrollo completamente a la medida.
 
@@ -191,7 +329,7 @@ Es un documento de toma de decisiones que justifica la realización de una inver
 Sus componentes clave e integración en el ciclo de vida:
 
 
-### Detalles y Componentes
+#### Detalles y Componentes
 Para que un Business Case sea persuasivo y riguroso para la junta directiva o los patrocinadores, debe estructurarse con las siguientes secciones elementales:
 
 *   **Resumen Ejecutivo:** Una síntesis de una página que resume el problema, la solución propuesta, los costes estimativos, los beneficios financieros esperados (como el ROI o el tiempo de recuperación) y la recomendación final.
@@ -213,7 +351,7 @@ Para que un Business Case sea persuasivo y riguroso para la junta directiva o lo
 
 
 
-### Integración
+#### Integración
 El Business Case no es una actividad de programación; es el detonador estratégico del software:
 
 *   **Fase de Inicio (Inception / Pre-conceptual):** Ocurre antes de que comience el desarrollo formal del producto. El Business Case representa la **base estructural que justifica el "porqué" de un proyecto**. Utilizando una analogía de la industria petrolera, equivale a decidir si hay evidencias suficientes que justifiquen perforaciones de exploración antes de invertir en la excavación real.
@@ -225,7 +363,7 @@ El Business Case no es una actividad de programación; es el detonador estratég
 *   **La Brecha del Director del Proyecto:** Una de las grandes patologías en el desarrollo de software es que las empresas suelen excluir al Director del Proyecto (DP) de la redacción del Business Case porque asumen que los ingenieros no comprenden de finanzas. Esto suele derivar en que marketing o ventas elaboren un Business Case "altamente optimista" sin rigor técnico. Al asignarse el DP en fases tardías, este se ve presionado a aceptar suposiciones poco realistas de costo o tiempo, y si el proyecto falla debido a estas promesas ficticias, la culpa suele recaer injustamente en el equipo técnico.
 
 
-### Ejemplo Práctico 
+#### Ejemplo Práctico 
 **El Caso de "Marathon Vitamin Shops"**
 
 Imaginemos el escenario de **Marathon Vitamin Shops**, una cadena minorista tradicional que vende suplementos alimenticios en tiendas físicas y mediante un catálogo de pedidos por correspondencia. Los propietarios identifican que, para seguir siendo competitivos frente al mercado digital, deben dar soporte a compras electrónicas.
@@ -321,7 +459,7 @@ Para crear este documento de forma colaborativa durante las fases de concepción
 
 
 ---
-## ROI
+## **ROI**
 
 El cálculo del **Retorno sobre la Inversión (ROI)** —también denominado *RSI* o *Return on Investment*— en el ámbito del software es un componente crítico del **Business Case**. Su propósito es cuantificar la rentabilidad de una iniciativa tecnológica para que la gerencia pueda evaluar de manera objetiva si el proyecto merece la asignación de recursos frente a otras opciones del portafolio.
 
@@ -329,7 +467,7 @@ En la ingeniería de software, calcular el ROI requiere comprender dos enfoques 
 
 
 
-### 1. La Fórmula Básica del ROI (Enfoque Nominal)
+#### La Fórmula Básica del ROI (Enfoque Nominal)
 El ROI nominal se calcula dividiendo los **beneficios netos esperados del proyecto** entre la **inversión inicial** (multiplicado por 100 para obtener un porcentaje):
 
 $\text{ROI Nominal (\%)} = \left( \frac{\text{Beneficios Netos del Proyecto}}{\text{Inversión Inicial}} \right) \times 100$
@@ -342,14 +480,16 @@ En donde:
 
 
 
-### 2. El Enfoque Descontado: El valor del dinero en el tiempo
+#### El Enfoque Descontado
+**El valor del dinero en el tiempo**
+
 Para proyectos de software con horizontes de planeación medianos o largos (de 3 años o más), el análisis nominal es insuficiente e impreciso. Un dólar recibido en el tercer año no vale lo mismo que un dólar invertido en el "Año 0".
 
 Para resolver esto, se utiliza el **ROI Descontado**, el cual trabaja en conjunto con el **Valor Neto Actual (VNA)**. El analista de sistemas aplica una **tasa de descuento** (que refleja el costo de oportunidad del dinero de la empresa, típicamente entre el 8% y el 15% anual) para traer los flujos de efectivo futuros a moneda del día de hoy.
 
 
 
-### 3. Ejemplo Práctico Detallado: Desarrollo "In-House"
+### Ejemplo Práctico Detallado
 Supongamos que una empresa evalúa el desarrollo interno (*in-house*) de un sistema para automatizar sus flujos de trabajo. El horizonte de evaluación es de 3 años y la tasa de descuento de la empresa es del **15% anual**.
 
 #### Paso 1: Identificación de Flujos de Efectivo (Tabla de Costo-Beneficio)
@@ -385,7 +525,7 @@ Aunque el **ROI Nominal es positivo (21.67%)**, al considerar el valor del diner
 
 
 
-### 4. El Desafío de los "Intangibles" en el Software
+#### El Desafío de los "Intangibles" en el Software
 Uno de los mayores obstáculos al calcular el ROI en sistemas de información es que los modelos financieros tradicionales tienden a ignorar los **beneficios intangibles** (como el aumento en la satisfacción del cliente, una mejor toma de decisiones organizacionales o la reputación de innovador) debido a la incertidumbre para medirlos. 
 
 Si un analista descarta los intangibles, el software puede parecer financieramente poco atractivo, sesgando la decisión hacia no invertir. Por ello, las mejores prácticas de la disciplina sugieren:
