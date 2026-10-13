@@ -646,3 +646,148 @@ FinAlgoritmo
 
 7. **Suma Acumulada hasta Cero (Bucle Indefinido / `Mientras`)**  
    Crea un algoritmo que pida números al usuario de forma continua y los vaya sumando. El programa debe detenerse y mostrar el resultado total de la suma acumulada únicamente cuando el usuario ingrese el número **`0`**.
+
+
+### Área de Salud
+
+Tres ejemplos de programación con un nivel de dificultad equivalente (estructuras condicionales, entrada/salida de datos y operaciones aritméticas/lógicas), basados en el sistema de gestión de atención médica con:
+- gestion de pacientes
+- gestión de médicos
+- atenciones médicas
+- diagnósticos
+
+Donde: los medicos atienden pacientes y generan diagnósticos y tratamientos, los pacientes presentan síntomas de enfermedades y son tratados por médicos.
+
+
+#### Ejemplo 1: Gestión de Pacientes
+
+**Punto abordado:** Gestión de pacientes.
+
+**Enunciado del problema:**  
+Diseñar un algoritmo que permita registrar a un paciente y determinar la prioridad de su atención en la sala de urgencias. El programa debe solicitar el nombre del paciente, su edad y su nivel de dolor en una escala de 1 a 10. Si el nivel de dolor es mayor o igual a 8 o la edad del paciente es mayor a 65 años, la categoría asignada será **"Atención Inmediata"**. Si el nivel de dolor está entre 5 y 7, la categoría será **"Atención Prioritaria"**. En cualquier otro caso, se asignará **"Atención General"**. Finalmente, se deben imprimir los datos del paciente con su categoría correspondiente.
+
+<details>
+<summary>🖥️ Pseudocódigo</summary>
+
+```text
+Algoritmo GestionPacientes
+    Definir nombrePaciente, categoria Como Cadena
+    Definir edad, nivelDolor Como Entero
+
+    Escribir "Ingrese el nombre del paciente:"
+    Leer nombrePaciente
+    Escribir "Ingrese la edad del paciente:"
+    Leer edad
+    Escribir "Ingrese el nivel de dolor (1 al 10):"
+    Leer nivelDolor
+
+    Si nivelDolor >= 8 O edad > 65 Entonces
+        categoria <- "Atención Inmediata"
+    Sino
+        Si nivelDolor >= 5 Y nivelDolor <= 7 Entonces
+            categoria <- "Atención Prioritaria"
+        Sino
+            categoria <- "Atención General"
+        FinSi
+    FinSi
+
+    Escribir "=== FICHA DE REGISTRO DE PACIENTE ==="
+    Escribir "Nombre: ", nombrePaciente
+    Escribir "Edad: ", edad
+    Escribir "Nivel de Dolor: ", nivelDolor
+    Escribir "Categoría Asignada: ", categoria
+FinAlgoritmo
+```
+</details>
+
+
+#### Ejemplo 2: Gestión de Médicos
+
+**Punto abordado:** Gestión de médicos.
+
+**Enunciado del problema:**  
+Diseñar un algoritmo para la evaluación de disponibilidad y remuneración de un médico en el centro de salud. El programa debe recibir el nombre del médico, su especialidad ("General" o "Especialista") y la cantidad de horas trabajadas en la semana. Si las horas trabajadas son menores a 40, su estado será **"Disponible para Turno"**; de lo contrario, será **"Límite de Horas Alcanzado"**. Además, si es "Especialista" y está "Disponible para Turno", se le calculará un bono semanal del 15% sobre su pago base (el pago base se calcula a \$20 USD por hora). Se debe mostrar el resumen con la disponibilidad y el pago total del médico.
+
+<details>
+<summary>🖥️ Pseudocódigo</summary>
+
+```text
+Algoritmo GestionMedicos
+    Definir nombreMedico, especialidad, estadoDisponibilidad Como Cadena
+    Definir horasTrabajadas Como Entero
+    Definir pagoBase, bono, pagoTotal Como Real
+
+    Escribir "Ingrese el nombre del médico:"
+    Leer nombreMedico
+    Escribir "Ingrese la especialidad (General / Especialista):"
+    Leer especialidad
+    Escribir "Ingrese las horas trabajadas en la semana:"
+    Leer horasTrabajadas
+
+    pagoBase <- horasTrabajadas * 20.0
+    bono <- 0.0
+
+    Si horasTrabajadas < 40 Entonces
+        estadoDisponibilidad <- "Disponible para Turno"
+    Sino
+        estadoDisponibilidad <- "Límite de Horas Alcanzado"
+    FinSi
+
+    Si especialidad = "Especialista" Y estadoDisponibilidad = "Disponible para Turno" Entonces
+        bono <- pagoBase * 0.15
+    FinSi
+
+    pagoTotal <- pagoBase + bono
+
+    Escribir "=== ESTADO Y REMUNERACIÓN DEL MÉDICO ==="
+    Escribir "Médico: ", nombreMedico
+    Escribir "Especialidad: ", especialidad
+    Escribir "Horas Trabajadas: ", horasTrabajadas
+    Escribir "Estado: ", estadoDisponibilidad
+    Escribir "Pago Total Semanal ($): ", pagoTotal
+FinAlgoritmo
+```
+</details>
+
+#### Ejemplo 3: Diagnósticos y Tratamientos
+
+**Punto abordado:** Diagnósticos.
+
+**Enunciado del problema:**  
+Diseñar un algoritmo que genere de forma automática un diagnóstico preliminar y su correspondiente tratamiento según los síntomas del paciente. El sistema solicitará la temperatura corporal en °C, si el paciente presenta tos (Verdadero/Falso) y si presenta dificultad respiratoria (Verdadero/Falso). Si la temperatura es mayor a 38.0 °C y presenta dificultad respiratoria, el diagnóstico será **"Infección Respiratoria Severa"** y el tratamiento **"Evaluación de Urgencias y Nebulización"**. Si la temperatura es mayor a 38.0 °C con tos pero sin dificultad respiratoria, el diagnóstico será **"Cuadro Gripal Fuerte"** y el tratamiento **"Analgésicos y Reposo"**. En cualquier otro escenario, el diagnóstico será **"Observación Preventiva"** y el tratamiento **"Hidratación y Control Térmico"**.
+
+<details>
+<summary>🖥️ Pseudocódigo</summary>
+
+```text
+Algoritmo GeneracionDiagnostico
+    Definir temperatura Como Real
+    Definir tieneTos, tieneDificultadRespiratoria Como Logico
+    Definir diagnostico, tratamiento Como Cadena
+
+    Escribir "Ingrese la temperatura corporal (°C):"
+    Leer temperatura
+    Escribir "¿Presenta tos? (Verdadero / Falso):"
+    Leer tieneTos
+    Escribir "¿Presenta dificultad respiratoria? (Verdadero / Falso):"
+    Leer tieneDificultadRespiratoria
+
+    Si temperatura > 38.0 Y tieneDificultadRespiratoria = Verdadero Entonces
+        diagnostico <- "Infección Respiratoria Severa"
+        tratamiento <- "Evaluación de Urgencias y Nebulización"
+    Sino
+        Si temperatura > 38.0 Y tieneTos = Verdadero Entonces
+            diagnostico <- "Cuadro Gripal Fuerte"
+            tratamiento <- "Analgésicos y Reposo"
+        Sino
+            diagnostico <- "Observación Preventiva"
+            tratamiento <- "Hidratación y Control Térmico"
+        FinSi
+    FinSi
+
+    Escribir "=== INFORME DE DIAGNÓSTICO Y TRATAMIENTO ==="
+    Escribir "Diagnóstico Emitido: ", diagnostico
+    Escribir "Tratamiento Sugerido: ", tratamiento
+FinAlgoritmo
+```
+</details>
