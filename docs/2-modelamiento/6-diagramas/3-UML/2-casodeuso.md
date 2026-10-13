@@ -202,7 +202,7 @@ Actor Principal:   Cajero
 
 
 
-### Caso de Uso y Diagrama de Casos de Uso
+### Caso de Uso y Diagramas
 
 Un error común es asumir que "hacer el caso de uso" consiste únicamente en dibujar el diagrama UML. Sin embargo, en el diseño orientado a objetos y metodologías como el Proceso Unificado (UP), existe una diferencia conceptual y práctica radical:
 
