@@ -650,7 +650,7 @@ FinAlgoritmo
 
 ### Área de Salud
 
-Tres ejemplos de programación con un nivel de dificultad equivalente (estructuras condicionales, entrada/salida de datos y operaciones aritméticas/lógicas), basados en el sistema de gestión de atención médica con:
+Ejemplos de programación con un nivel de dificultad equivalente (estructuras condicionales, entrada/salida de datos y operaciones aritméticas/lógicas), basados en el sistema de gestión de atención médica con:
 - gestion de pacientes
 - gestión de médicos
 - atenciones médicas
@@ -659,17 +659,24 @@ Tres ejemplos de programación con un nivel de dificultad equivalente (estructur
 Donde: los medicos atienden pacientes y generan diagnósticos y tratamientos, los pacientes presentan síntomas de enfermedades y son tratados por médicos.
 
 
-#### Ejemplo 1: Gestión de Pacientes
+
+
+<br/>
+<Tabs>
+<TabItem value="ej1" label="Ejercicio 1" default>
+<div class="alert alert--primary">
+
+#### Gestión de Pacientes
 
 **Punto abordado:** Gestión de pacientes.
 
 **Enunciado del problema:**  
 Diseñar un algoritmo que permita registrar a un paciente y determinar la prioridad de su atención en la sala de urgencias. El programa debe solicitar el nombre del paciente, su edad y su nivel de dolor en una escala de 1 a 10. Si el nivel de dolor es mayor o igual a 8 o la edad del paciente es mayor a 65 años, la categoría asignada será **"Atención Inmediata"**. Si el nivel de dolor está entre 5 y 7, la categoría será **"Atención Prioritaria"**. En cualquier otro caso, se asignará **"Atención General"**. Finalmente, se deben imprimir los datos del paciente con su categoría correspondiente.
+</div>
+</TabItem>
+<TabItem value="ej1-ps" label="📄 Pseudocódigo">
 
-<details>
-<summary>🖥️ Pseudocódigo</summary>
-
-```text
+```text showLineNumbers
 Algoritmo GestionPacientes
     Definir nombrePaciente, categoria Como Cadena
     Definir edad, nivelDolor Como Entero
@@ -698,20 +705,63 @@ Algoritmo GestionPacientes
     Escribir "Categoría Asignada: ", categoria
 FinAlgoritmo
 ```
-</details>
+</TabItem>
+<TabItem value="ej1-py" label="🖥️ Python">
+Representamos al paciente como una entidad con atributos (nombre, edad, nivel_dolor) y encapsulamos la lógica de triage dentro del método **determinar_categoria()**
+
+```python
+class Paciente:
+    def __init__(self, nombre: str, edad: int, nivel_dolor: int):
+        self.nombre = nombre
+        self.edad = edad
+        self.nivel_dolor = nivel_dolor
+
+    def determinar_categoria(self) -> str:
+        """Determina la prioridad del paciente según su edad y nivel de dolor."""
+        if self.nivel_dolor >= 8 or self.edad > 65:
+            return "Atención Inmediata"
+        elif 5 <= self.nivel_dolor <= 7:
+            return "Atención Prioritaria"
+        else:
+            return "Atención General"
+
+    def mostrar_ficha(self):
+        """Imprime la ficha médica del paciente."""
+        categoria = self.determinar_categoria()
+        print("=== FICHA DE REGISTRO DE PACIENTE ===")
+        print(f"Nombre: {self.nombre}")
+        print(f"Edad: {self.edad} años")
+        print(f"Nivel de Dolor: {self.nivel_dolor}/10")
+        print(f"Categoría Asignada: {categoria}\n")
 
 
-#### Ejemplo 2: Gestión de Médicos
+# --- Ejemplo de uso ---
+paciente1 = Paciente(nombre="Ana Gómez", edad=70, nivel_dolor=4)
+paciente2 = Paciente(nombre="Carlos Ruiz", edad=30, nivel_dolor=6)
+
+paciente1.mostrar_ficha()
+paciente2.mostrar_ficha()
+```
+</TabItem>
+</Tabs><br/>
+
+
+<br/>
+<Tabs>
+<TabItem value="ej2" label="Ejercicio 2" default>
+<div class="alert alert--primary">
+
+#### Gestión de Médicos
 
 **Punto abordado:** Gestión de médicos.
 
 **Enunciado del problema:**  
 Diseñar un algoritmo para la evaluación de disponibilidad y remuneración de un médico en el centro de salud. El programa debe recibir el nombre del médico, su especialidad ("General" o "Especialista") y la cantidad de horas trabajadas en la semana. Si las horas trabajadas son menores a 40, su estado será **"Disponible para Turno"**; de lo contrario, será **"Límite de Horas Alcanzado"**. Además, si es "Especialista" y está "Disponible para Turno", se le calculará un bono semanal del 15% sobre su pago base (el pago base se calcula a \$20 USD por hora). Se debe mostrar el resumen con la disponibilidad y el pago total del médico.
+</div>
+</TabItem>
+<TabItem value="ej2-ps" label="📄 Pseudocódigo">
 
-<details>
-<summary>🖥️ Pseudocódigo</summary>
-
-```text
+```text showLineNumbers
 Algoritmo GestionMedicos
     Definir nombreMedico, especialidad, estadoDisponibilidad Como Cadena
     Definir horasTrabajadas Como Entero
@@ -747,19 +797,77 @@ Algoritmo GestionMedicos
     Escribir "Pago Total Semanal ($): ", pagoTotal
 FinAlgoritmo
 ```
-</details>
+</TabItem>
+<TabItem value="ej2-py" label="🖥️ Python">
+Utilizamos atributos de clase para tarifas estándar (TARIFA_HORA = 20.0), un @property para evaluar el estado de disponibilidad y métodos para calcular la remuneración semanal con bonos.
 
-#### Ejemplo 3: Diagnósticos y Tratamientos
+```python showLineNumbers
+class Medico:
+    TARIFA_HORA = 20.0  # Pago base por hora en USD
+
+    def __init__(self, nombre: str, especialidad: str, horas_trabajadas: int):
+        self.nombre = nombre
+        self.especialidad = especialidad
+        self.horas_trabajadas = horas_trabajadas
+
+    @property
+    def estado_disponibilidad(self) -> str:
+        """Evalúa si el médico sobrepasó el límite de horas permitidas."""
+        if self.horas_trabajadas < 40:
+            return "Disponible para Turno"
+        return "Límite de Horas Alcanzado"
+
+    def calcular_remuneracion(self) -> tuple[float, float, float]:
+        """Calcula el pago base, el bono por especialidad y el total semanal."""
+        pago_base = self.horas_trabajadas * self.TARIFA_HORA
+        bono = 0.0
+
+        # Aplica un 15% de bono si es especialista y está disponible para turnos
+        if self.especialidad.lower() == "especialista" and self.estado_disponibilidad == "Disponible para Turno":
+            bono = pago_base * 0.15
+
+        pago_total = pago_base + bono
+        return pago_base, bono, pago_total
+
+    def mostrar_resumen(self):
+        """Muestra el reporte consolidado de disponibilidad y remuneración."""
+        pago_base, bono, pago_total = self.calcular_remuneracion()
+        print("=== ESTADO Y REMUNERACIÓN DEL MÉDICO ===")
+        print(f"Médico: {self.nombre}")
+        print(f"Especialidad: {self.especialidad}")
+        print(f"Horas Trabajadas: {self.horas_trabajadas} hrs")
+        print(f"Estado: {self.estado_disponibilidad}")
+        print(f"Bono Aplicado: ${bono:.2f} USD")
+        print(f"Pago Total Semanal: ${pago_total:.2f} USD\n")
+
+
+# --- Ejemplo de uso ---
+medico1 = Medico(nombre="Dr. Roberto Silva", especialidad="Especialista", horas_trabajadas=35)
+medico2 = Medico(nombre="Dra. Laura Martínez", especialidad="General", horas_trabajadas=42)
+
+medico1.mostrar_resumen()
+medico2.mostrar_resumen()
+```
+</TabItem>
+</Tabs><br/>
+
+
+<br/>
+<Tabs>
+<TabItem value="ej3" label="Ejercicio 3" default>
+<div class="alert alert--primary">
+
+#### Diagnósticos y Tratamientos
 
 **Punto abordado:** Diagnósticos.
 
 **Enunciado del problema:**  
 Diseñar un algoritmo que genere de forma automática un diagnóstico preliminar y su correspondiente tratamiento según los síntomas del paciente. El sistema solicitará la temperatura corporal en °C, si el paciente presenta tos (Verdadero/Falso) y si presenta dificultad respiratoria (Verdadero/Falso). Si la temperatura es mayor a 38.0 °C y presenta dificultad respiratoria, el diagnóstico será **"Infección Respiratoria Severa"** y el tratamiento **"Evaluación de Urgencias y Nebulización"**. Si la temperatura es mayor a 38.0 °C con tos pero sin dificultad respiratoria, el diagnóstico será **"Cuadro Gripal Fuerte"** y el tratamiento **"Analgésicos y Reposo"**. En cualquier otro escenario, el diagnóstico será **"Observación Preventiva"** y el tratamiento **"Hidratación y Control Térmico"**.
+</div>
+</TabItem>
+<TabItem value="ej3-ps" label="📄 Pseudocódigo">
 
-<details>
-<summary>🖥️ Pseudocódigo</summary>
-
-```text
+```text showLineNumbers
 Algoritmo GeneracionDiagnostico
     Definir temperatura Como Real
     Definir tieneTos, tieneDificultadRespiratoria Como Logico
@@ -790,4 +898,47 @@ Algoritmo GeneracionDiagnostico
     Escribir "Tratamiento Sugerido: ", tratamiento
 FinAlgoritmo
 ```
-</details>
+</TabItem>
+<TabItem value="ej3-py" label="🖥️ Python">
+Encapsulamos la sintomatología del paciente en la clase **EvaluacionMedica**, retornando una tupla con el diagnóstico formal y la prescripción recomendada.
+
+```python showLineNumbers
+class EvaluacionMedica:
+    def __init__(self, temperatura: float, tiene_tos: bool, tiene_dificultad_respiratoria: bool):
+        self.temperatura = temperatura
+        self.tiene_tos = tiene_tos
+        self.tiene_dificultad_respiratoria = tiene_dificultad_respiratoria
+
+    def evaluar_diagnostico(self) -> tuple[str, str]:
+        """Evalúa los síntomas y emite un diagnóstico y tratamiento."""
+        if self.temperatura > 38.0 and self.tiene_dificultad_respiratoria:
+            diagnostico = "Infección Respiratoria Severa"
+            tratamiento = "Evaluación de Urgencias y Nebulización"
+        elif self.temperatura > 38.0 and self.tiene_tos:
+            diagnostico = "Cuadro Gripal Fuerte"
+            tratamiento = "Analgésicos y Reposo"
+        else:
+            diagnostico = "Observación Preventiva"
+            tratamiento = "Hidratación y Control Térmico"
+
+        return diagnostico, tratamiento
+
+    def emitir_informe(self):
+        """Imprime el resultado final de la consulta médica."""
+        diagnostico, tratamiento = self.evaluar_diagnostico()
+        print("=== INFORME DE DIAGNÓSTICO Y TRATAMIENTO ===")
+        print(f"Temperatura Corporal: {self.temperatura}°C")
+        print(f"Síntomas: Tos={self.tiene_tos}, Dificultad Respiratoria={self.tiene_dificultad_respiratoria}")
+        print(f"Diagnóstico Emitido: {diagnostico}")
+        print(f"Tratamiento Sugerido: {tratamiento}\n")
+
+
+# --- Ejemplo de uso ---
+consulta1 = EvaluacionMedica(temperatura=39.2, tiene_tos=True, tiene_dificultad_respiratoria=True)
+consulta2 = EvaluacionMedica(temperatura=37.5, tiene_tos=True, tiene_dificultad_respiratoria=False)
+
+consulta1.emitir_informe()
+consulta2.emitir_informe()
+```
+</TabItem>
+</Tabs><br/>

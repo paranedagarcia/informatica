@@ -23,7 +23,7 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 ----
 
 <details>
-<summary>🖥️ </summary>
+<summary>🖥️ Pseudocódigo</summary>
 
 </details>
 
@@ -36,12 +36,15 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 
 <br/>
 <Tabs>
-<TabItem value="mnp" label="Antecedentes" default>
+<TabItem value="ej1" label="Ejercicio" default>
 <div class="alert alert--primary">
 **texto**
 </div>
 </TabItem>
-<TabItem value="mnp-python" label="🖥️ Código">
+<TabItem value="ej1-ps" label="📄 Pseudocódigo">
+
+</TabItem>
+<TabItem value="ej1-py" label="🖥️ Python">
 
 </TabItem>
 </Tabs><br/>
