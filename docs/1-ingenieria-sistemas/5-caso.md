@@ -169,27 +169,33 @@ Este fenómeno ocurre porque los nuevos programadores no pueden ser productivos 
 La ingeniería de software y los marcos de trabajo ágiles proponen las siguientes **estrategias y alternativas de diseño para manejar y mitigar los efectos de la Ley de Brooks**:
 
 
-### Reestructurar en equipos pequeños y esenciales (*Core Teams*)
+### Reestructurar 
+**En equipos pequeños y esenciales (*Core Teams*)**
+
 Cuando un proyecto grande empieza a sufrir retrasos, la respuesta instintiva de la gerencia tradicional suele ser inyectar más personal. La *Guía Práctica de Ágil* propone exactamente lo contrario para mitigar el caos:
 
 *   **Reducir el equipo a sus miembros principales esenciales:** A menudo, tener demasiadas personas obstaculiza los procesos de desarrollo en lugar de ayudarlos. Reducir el tamaño del equipo disminuye la rotación, los costos y la complejidad de la comunicación.
 
 *   **Dividir proyectos grandes en múltiples iniciativas pequeñas:** En lugar de gestionar un único equipo masivo y descoordinado, se debe reestructurar el esfuerzo en equipos pequeños y multidisciplinarios, utilizando un marco de escalado ágil o Lean (como LeSS, DA o SAFe) para coordinar y sincronizar las entregas a través de una dirección de programa.
 
-### Ajustar el alcance en lugar de los recursos (Cajas de Tiempo)
+### Ajustar el alcance 
+**En lugar de los recursos (Cajas de Tiempo)**
+
 En las metodologías ágiles, la variable que se ajusta ante un retraso es el **alcance**, manteniendo fijos el tiempo y los recursos.
 
 *   **Negociar entregas por fases:** Se debe trabajar estrechamente con el cliente o el *Product Owner* para aplazar las historias de usuario de menor prioridad o las características más complejas hacia versiones futuras del software. Esto permite estabilizar el sistema y entregar un incremento funcional a tiempo.
 
 *   **Cajas de tiempo (*Timeboxing*):** Limitar estrictamente el tiempo en iteraciones cortas (de 1 a 2 semanas) obliga al equipo a enfocarse, tomar decisiones rápidas y evitar la expansión improductiva del trabajo (combatiendo la Ley de Parkinson).
 
-### Implementar el modelo de "Surgical Team" (Equipo Quirúrgico)
+### Implementar modelo de "Surgical Team"
 Brooks documentó un enfoque organizativo alternativo conocido como el **Surgical Team** (Equipo Quirúrgico), el cual IBM adoptó en su momento demostrando ser uno de sus procesos de desarrollo más productivos.
 *   **Estructura:** Funciona de manera similar a una cirugía médica, donde un programador principal altamente talentoso (el "cirujano") realiza la codificación clave, mientras que el resto del equipo (asistentes, expertos en herramientas, administradores de bases de datos, probadores) se dedica exclusivamente a darle soporte técnico, documentar y despejar el camino para que él se concentre.
 
 *   **Limitación sistémica:** Este modelo de "superprogramador" tiene la falla fatal de que **no escala fácilmente en grandes organizaciones**, ya que suele haber muy pocos profesionales capaces de asumir el rol de cirujano y mantener la elegancia conceptual del sistema a largo plazo.
 
-### Maximizar la eficiencia y limitar el Trabajo en Progreso (WIP)
+### Maximizar la eficiencia 
+**limitar el Trabajo en Progreso (WIP)**
+
 Para acelerar la velocidad de entrega (*throughput*), la solución más efectiva no es contratar más personas, sino suavizar el flujo de trabajo y eliminar los cuellos de botella:
 *   **Establecer límites estrictos de WIP:** Enfoques como Kanban demuestran que limitar el trabajo en curso fuerza a los desarrolladores ociosos a ayudar a sus compañeros a terminar las tareas pendientes antes de abrir nuevas iniciativas. Esto incrementa la productividad sin añadir personal.
 
