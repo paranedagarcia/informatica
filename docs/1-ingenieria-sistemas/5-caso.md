@@ -1,7 +1,7 @@
 ---
 id: ae-caso
-title:  "📄 Caso de estudio"
-sidebar_label: "📄 Caso de estudio"
+title:  "📄 Casos de estudio"
+sidebar_label: "📄 Casos de estudio"
 ---
 
 Para llevar a la práctica la teoría analizada en nuestro informe técnico de **Leyes Sistémicas**, diseñaremos el caso de estudio de **"Supermercados Alianza S.A."**, una cadena nacional con más de 100 salas de venta, centros de distribución regionales y una oficina corporativa.
