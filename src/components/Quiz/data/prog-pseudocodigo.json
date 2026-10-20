@@ -1,0 +1,247 @@
+{
+  "quizTitle": "Cuestionario de Pseudocódigo",
+  "quizSynopsis": "Evaluación sobre conceptos fundamentales, ventajas, reglas sintácticas, estructuras de control y buenas prácticas del pseudocódigo.",
+  "nrOfQuestions": "15",
+  "questions": [
+    {
+      "question": "¿Qué es el pseudocódigo en el contexto de la programación?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un lenguaje de programación compilado de bajo nivel que se ejecuta directamente en la CPU.",
+        "Un lenguaje informal o 'falso lenguaje' que permite describir la lógica de un algoritmo en lenguaje humano sin preocuparse por la sintaxis estricta de un lenguaje real.",
+        "Un software de diseño gráfico utilizado para crear diagramas de flujo interactivos.",
+        "Un archivo ejecutable compilado mediante herramientas como PSeInt o Python."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El pseudocódigo es una representación informal que permite expresar los pasos lógicos de un algoritmo utilizando una sintaxis cercana al lenguaje humano, sirviendo como puente hacia la programación en un lenguaje real.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la principal ventaja de utilizar pseudocódigo antes de escribir código en un lenguaje de programación definitivo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Permite ejecutar el programa a máxima velocidad en el procesador.",
+        "Es independiente de cualquier lenguaje de programación y permite centrarse exclusivamente en la lógica de resolución del problema.",
+        "Compila automáticamente el proyecto en archivos ejecutables para Windows y Linux.",
+        "Elimina la necesidad de utilizar variables y estructuras de control."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La principal ventaja del pseudocódigo es su independencia respecto a lenguajes específicos, lo que permite concentrar el pensamiento en la solución lógica sin distracciones sintácticas.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cómo se suele delimitar el inicio y el fin de un algoritmo en pseudocódigo estándar?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Con las palabras clave INICIO_PROGRAMA y FIN_PROGRAMA.",
+        "Con llaves { y } al estilo de lenguajes como C++ o Java.",
+        "Con la palabra clave ALGORITMO seguida de su nombre al inicio, y FIN ALGORITMO al final.",
+        "Con las etiquetas <algoritmo> y </algoritmo>."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "En el estándar de pseudocódigo (como en PSeInt), el bloque del algoritmo se encabeza con la instrucción ALGORITMO NombreAlgoritmo y concluye explícitamente con FIN ALGORITMO.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué operador o símbolo se utiliza habitualmente en pseudocódigo para asignar un valor a una variable?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El operador de flecha <- (o el signo =).",
+        "El operador relacional ==.",
+        "La flecha de salida ->.",
+        "La palabra reservada DEFINE."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El símbolo <- representa de forma explícita la transferencia o asignación del resultado de una expresión hacia la variable receptora ubicada a su izquierda.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué caracteriza a una estructura de control secuencial en pseudocódigo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Evalúa una condición lógica para decidir si omite ciertas instrucciones.",
+        "Ejecuta las instrucciones una a continuación de otra, en el orden lineal y consecutivo en que están escritas.",
+        "Repite un bloque de instrucciones de manera indefinida.",
+        "Permite seleccionar una opción entre múltiples alternativas."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "En una estructura secuencial, las instrucciones se ejecutan de manera estrictamente lineal, paso a paso, en el mismo orden de aparición.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué ocurre en una estructura condicional simple (SI condición ENTONCES ... FIN SI) si la condición evaluada resulta ser Falsa?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El programa genera un error de ejecución y se detiene.",
+        "Se ignora el bloque interno de instrucciones y el flujo del programa continúa en la instrucción posterior a FIN SI.",
+        "Se repite la evaluación de la condición hasta que sea Verdadera.",
+        "Se ejecutan las instrucciones en orden inverso."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Al evaluar una condición como Falsa en una estructura SI simple, el algoritmo pasa de largo el bloque condicionado y continúa con la siguiente instrucción tras FIN SI.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la función de la cláusula SINO dentro de una estructura condicional doble (SI - ENTONCES - SINO)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Especificar las instrucciones alternativas que se ejecutarán cuando la condición del SI sea Falsa.",
+        "Forzar la repetición del bucle desde la primera línea del algoritmo.",
+        "Detener la ejecución de todo el programa.",
+        "Declarar variables globales de forma dinámica."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La cláusula SINO define el camino alternativo o 'Plan B', ejecutando su bloque únicamente si la condición probada en el SI resulta Falsa.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuándo es especialmente recomendable utilizar la estructura condicional múltiple SEGÚN (o SEGÚN SEA)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Cuando se requiere ejecutar un bucle un número infinito de veces.",
+        "Cuando una variable puede tomar múltiples valores discretos conocidos y se desea evitar cadenas complejas de condicionales anidados (SI - SINO SI).",
+        "Cuando solo se evalúa una única condición lógica booleana simple.",
+        "Cuando no se conocen las variables de entrada."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La estructura SEGÚN evalúa el valor numérico o de carácter de una variable para dirigir el flujo directamente al caso correspondiente, simplificando condicionales múltiples anidados.",
+      "point": "10"
+    },
+    {
+      "question": "En la estructura iterativa MIENTRAS condición HACER ... FIN MIENTRAS, ¿cuándo se evalúa la condición de control?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Únicamente al finalizar la ejecución del bloque interno.",
+        "Al inicio de cada iteración (pre-prueba), antes de ejecutar el bloque de instrucciones interno.",
+        "En el punto medio del bloque de código.",
+        "No se evalúa ninguna condición; se ejecuta un número fijo de veces."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El bucle MIENTRAS evalúa la condición al comienzo. Si la condición resulta ser Falsa desde el principio, el bloque interno no se ejecuta ninguna vez.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la diferencia fundamental del bucle REPETIR ... HASTA QUE respecto al bucle MIENTRAS?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Evalúa la condición al final (post-prueba), garantizando que el bloque interno se ejecute al menos una vez.",
+        "No permite modificar el valor de las variables internas.",
+        "Solo puede utilizarse para contar valores enteros positivos.",
+        "Finaliza la ejecución del programa de forma inmediata."
+      ],
+      "correctAnswer": "1",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Dado que el bucle REPETIR evalúa su condición de parada al final del ciclo, se asegura que el cuerpo de instrucciones se ejecute como mínimo una vez.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué escenario es ideal utilizar la estructura iterativa PARA variable <- inicio HASTA fin HACER?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Cuando la cantidad de iteraciones depende de una condición impredecible ingresada por el usuario.",
+        "Cuando se conoce de antemano el número exacto de repeticiones o iteraciones que se deben realizar.",
+        "Cuando se requiere implementar un ciclo infinito de procesamiento.",
+        "Cuando no se utilizan variables contadoras."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El bucle PARA gestiona automáticamente la inicialización, condición de término e incremento de una variable contadora, siendo óptimo cuando se conoce previamente la cantidad fija de iteraciones.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué es PSeInt y cuál es su objetivo principal en el aprendizaje de algoritmos?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un lenguaje de programación comercial de bajo nivel utilizado en sistemas embebidos.",
+        "Una herramienta educativa diseñada para ayudar a los estudiantes en sus primeros pasos mediante un pseudocódigo intuitivo y flexible en español.",
+        "Un compilador automático que convierte archivos C++ en proyectos de Python.",
+        "Un motor de bases de datos relacionales."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "PSeInt es un software educativo muy popular que permite a los estudiantes enfocar su aprendizaje en la lógica de algoritmos construyendo pseudocódigo en español e inspeccionando su ejecución paso a paso.",
+      "point": "10"
+    },
+    {
+      "question": "¿Por qué es importante aplicar una adecuada sangría o indentación al escribir pseudocódigo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Porque de lo contrario el sistema operativo no podrá compilar el archivo.",
+        "Porque mejora sustancialmente la legibilidad del algoritmo y permite identificar con claridad la jerarquía de bloques condicionales o iterativos.",
+        "Porque determina automáticamente el tipo de datos de cada variable.",
+        "Porque exige exactamente 8 espacios por línea para funcionar."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La indentación o sangrado es una buena práctica fundamental que refleja visualmente qué grupo de instrucciones pertenece a cada bloque, estructura condicional o bucle.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué instrucción estándar se utiliza en pseudocódigo para enviar mensajes o mostrar datos por pantalla al usuario?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "LEER o INGRESAR.",
+        "ESCRIBIR o MOSTRAR.",
+        "IMPRIMIR_PDF.",
+        "RETORNAR."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La instrucción ESCRIBIR (o MOSTRAR) envía cadenas de texto o valores de variables hacia la pantalla o salida estándar.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué instrucción se utiliza en pseudocódigo para solicitar información al usuario y almacenarla en una variable?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "ESCRIBIR o MOSTRAR.",
+        "LEER o INGRESAR.",
+        "ASIGNAR.",
+        "CAPTURAR."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La instrucción LEER pausa la ejecución a la espera de que el usuario ingrese un dato por teclado, guardando el valor introducido en la variable correspondiente.",
+      "point": "10"
+    }
+  ]
+}

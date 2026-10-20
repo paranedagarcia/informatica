@@ -11,7 +11,12 @@ El **Ciclo de Vida del Desarrollo de Software (SDLC, por sus siglas en inglés)*
 
 A lo largo del tiempo, la ingeniería informática ha estructurado este ciclo bajo dos grandes filosofías: el **enfoque predictivo tradicional (en cascada)** y el **enfoque adaptable (ágil)**. A continuación, se detalla cómo opera cada uno desde la idea inicial hasta el mantenimiento.
 
-
+<center>
+<figure>
+![](img/ciclo-via.jpg)
+<figcaption>El Ciclo de Vida (Software Development Life Cycle) es el plano maestro que guía a los equipos de ingeniería desde la crisis hacia el valor continuo.</figcaption>
+</figure>
+</center>
 
 ## **El Ciclo de Vida Predictivo**
 En este modelo, las fases se ejecutan de manera secuencial y estructurada, donde cada fase debe completarse y validarse formalmente antes de comenzar la siguiente. Este enfoque se divide comúnmente en **siete fases interrelacionadas**:
@@ -86,6 +91,9 @@ La selección del ciclo de vida se estructura bajo los siguientes criterios y he
 
 
 ### Las 4 Categorías Base de Ciclos de Vida
+
+![](img/ciclo-tipos.jpg)
+
 El equipo de proyecto debe comprender las características intrínsecas de cada enfoque para determinar cuál ofrece la mayor probabilidad de éxito :
 
 *   **Ciclo de Vida Predictivo (Orientado al Plan o en Cascada):** Se utiliza cuando los **requisitos son fijos y conocidos de antemano**, la tecnología es probada y existe un bajo riesgo de cambios. El objetivo principal es **gestionar los costos** mediante una planificación detallada por adelantado y una ejecución en serie (analizar, diseñar, construir, probar, entregar).
@@ -207,3 +215,14 @@ Este gráfico conceptualiza de forma elegante cómo la interacción entre la inc
 #### La Ruta de Scrum (La flecha del gráfico)
 Un detalle clave que he incorporado en el gráfico es la **curva de transición de Scrum**. En lugar de dejar un proyecto a la deriva en la zona de alta incertidumbre, el enfoque ágil utiliza iteraciones cortas (Sprints) de inspección y adaptación. A través de este ciclo iterativo y de la entrega de incrementos de valor, el equipo captura retroalimentación constante del cliente y domina la tecnología paso a paso, **empujando de forma progresiva el proyecto desde la complejidad hacia la certidumbre (la zona Simple)**.
 
+---
+## 📝 **Test:** Ciclo de vida
+
+Antes de continuar, comprueba tus conocimientos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/mod-ciclovida.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

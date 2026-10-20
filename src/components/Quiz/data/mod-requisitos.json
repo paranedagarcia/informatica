@@ -1,0 +1,217 @@
+{
+  "quizTitle": "Cuestionario de Ingeniería de Requisitos",
+  "quizSynopsis": "Evaluación sobre los conceptos fundamentales de elicitar, analizar, especificar y validar requisitos en ingeniería de software.",
+  "nrOfQuestions": "15",
+  "questions": [
+    {
+      "question": "¿Cuál es la diferencia conceptual entre 'requerimiento' y 'requisito' en el contexto de la gestión de proyectos de software?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Requerimiento pertenece al diseño de interfaces y requisito al código fuente.",
+        "Requerimiento alude a la necesidad o carencia imprecisa del interesado, mientras que requisito es la condición técnica obligatoria, medible y verificable que el sistema debe cumplir.",
+        "Son términos exactamente idénticos sin ninguna diferencia conceptual.",
+        "Requisito se aplica únicamente en metodologías ágiles e historias de usuario."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El requerimiento representa la solicitud o necesidad planteada por el cliente, mientras que el requisito es la condición formalizada, medible y testeable que el producto debe satisfacer obligatoriamente.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué caracteriza a un Requisito No Funcional (RNF) o atributo de calidad del sistema?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Describe la lógica interna de los algoritmos de cálculo.",
+        "Especifica una acción o comportamiento funcional que el usuario ejecuta directamente.",
+        "Define restricciones, cualidades o condiciones ambientales del sistema, como rendimiento, seguridad, disponibilidad o mantenibilidad.",
+        "Representa la lista de historias de usuario del backlog del Sprint."
+      ],
+      "correctAnswer": "3",
+      "explanation": "Los requisitos no funcionales (atributos de calidad) establecen 'cómo' debe comportarse el sistema bajo ciertas restricciones de calidad, rendimiento o seguridad, a diferencia de los funcionales que definen 'qué' hace el sistema.",
+      "point": "10"
+    },
+    {
+      "question": "En el modelo de clasificación de requisitos FURPS+, ¿qué significan las siglas principales del acrónimo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Feasibility, Usability, Risk, Process, Security.",
+        "Functionality, Usability, Reliability, Performance, Supportability.",
+        "Features, Users, Roles, Protocols, Storage.",
+        "Frequency, Unity, Redundancy, Precision, Scalability."
+      ],
+      "correctAnswer": "2",
+      "explanation": "FURPS+ clasifica los requisitos en Funcionalidad (Functionality), Facilidad de uso (Usability), Fiabilidad (Reliability), Rendimiento (Performance) y Soporte (Supportability), además del símbolo '+' que añade restricciones de implementación, interfaz y legales.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuáles son las cuatro actividades o fases fundamentales del proceso de Ingeniería de Requisitos?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Planificación, Codificación, Pruebas unitarias y Despliegue.",
+        "Elicitación (descubrimiento), Análisis y negociación, Especificación (documentación) y Validación/Verificación.",
+        "Diseño de base de datos, Diagramación de clases, Refactorización y Mantenimiento.",
+        "Inicio, Elaboración, Construcción y Transición."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El ciclo clave de la Ingeniería de Requisitos comprende la Elicitación (captura/descubrimiento), Análisis y Negociación, Especificación (documentación formal) y Validación/Verificación.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué técnica de elicitar requisitos reúne en reuniones grupales a usuarios del negocio, analistas y facilitadores para lograr acuerdos rápidos sobre el alcance?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Acompañamiento o Job Shadowing.",
+        "Talleres JAD (Joint Application Design) / Facilitación de talleres.",
+        "Muestreo de datos duros.",
+        "Desarrollo Guiado por Pruebas (TDD)."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Los talleres JAD (Diseño Conjunto de Aplicaciones) o sesiones de facilitación grupal reúnen a los interesados clave con un facilitador neutral para definir requerimientos y alcanzar consensos acelerados.",
+      "point": "10"
+    },
+    {
+      "question": "Según las pautas de modelado de casos de uso (Cockburn / Larman), ¿a qué nivel de abstracción debe definirse un caso de uso principal?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Al nivel de instrucciones de código individual.",
+        "Al nivel de Proceso de Negocio Elemental (EBP) o nivel de objetivo del usuario.",
+        "Al nivel de clics individuales del ratón y elementos de la interfaz.",
+        "Al nivel de la arquitectura de red y base de datos física."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Un caso de uso principal debe definirse al nivel de Proceso de Negocio Elemental (EBP) o Nivel de Objetivo de Usuario, respondiendo a una tarea realizada por una persona en un lugar e instante como respuesta a un evento de negocio que aporta valor medible.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué consiste escribir casos de uso en un 'estilo esencial'?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Incluir capturas de pantalla y detalles técnicos de los botones de la interfaz de usuario.",
+        "Enfocarse en las intenciones del actor y responsabilidades del sistema, de manera independiente de la tecnología o diseño de la interfaz de usuario.",
+        "Escribir únicamente las excepciones o caminos de falla del sistema.",
+        "Traducir el texto directamente a sentencias SQL."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El estilo esencial de casos de uso se centra en la intención del actor y en la responsabilidad del sistema, evitando decisiones prematuras sobre la tecnología o elementos específicos de la interfaz gráfica.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuándo se utiliza la relación <<include>> entre dos casos de uso en UML?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Cuando un caso de uso extiende condicionalmente a otro en un punto de variación opcional.",
+        "Cuando un comportamiento común o subfunción obligatoria se factoriza para ser reutilizada por uno o más casos de uso base.",
+        "Cuando una clase hereda los atributos y métodos de una superclase.",
+        "Cuando el cliente rechaza una historia de usuario en la retrospectiva."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La relación <<include>> (inclusión) se utiliza cuando un caso de uso base incorpora de forma obligatoria e incondicional el comportamiento de un caso de uso secundario o subfunción (reutilización).",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la característica principal de la relación <<extend>> en los diagramas de casos de uso?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El caso de uso base siempre invoca al caso de uso extendido de forma obligatoria.",
+        "Describe un comportamiento opcional o una variación que se ejecuta solo si se cumple una condición específica en un punto de extensión.",
+        "Elimina la necesidad de escribir la ruta principal del caso de uso.",
+        "Se utiliza para vincular actores principales con actores de apoyo."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La relación <<extend>> modela comportamientos opcionales, variaciones o manejo de excepciones que interrumpen o extienden el flujo normal del caso de uso base solo cuando se cumple una condición explícita.",
+      "point": "10"
+    },
+    {
+      "question": "En metodologías ágiles, ¿cuál es el formato estándar recomendado para redactar una Historia de Usuario?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Si [condición], entonces [acción], de lo contrario [error].",
+        "Como [rol/usuario], quiero [funcionalidad/acción], para [beneficio/valor].",
+        "El sistema debe [función] con un tiempo de respuesta de [segundos].",
+        "Dado [contexto], cuando [evento], entonces [resultado]."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Las historias de usuario utilizan el patrón 'Como [rol], quiero [acción], para [beneficio]', identificando al usuario, la capacidad deseada y el valor de negocio generado.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué formato se especifican habitualmente los criterios de aceptación de una Historia de Usuario bajo el enfoque BDD (Behavior-Driven Development)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Diagramas Entidad-Relación.",
+        "El formato 'Dado [GIVEN] ... Cuando [WHEN] ... Entonces [THEN]'.",
+        "Tablas de decisión estructuradas.",
+        "Código ejecutable en ensamblador."
+      ],
+      "correctAnswer": "2",
+      "explanation": "En BDD / ATDD, los criterios de aceptación se redactan mediante el formato 'Dado (Given) el contexto inicial, Cuando (When) ocurre una acción, Entonces (Then) se verifica el resultado esperado'.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la función principal de la Matriz de Trazabilidad de Requisitos en un proyecto de software?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Calcular el salario de los desarrolladores en función de los puntos de historia.",
+        "Vincular cada requisito con su origen (objetivo de negocio) y con los entregables de diseño, código y pruebas para garantizar su seguimiento.",
+        "Generar automáticamente la interfaz gráfica a partir del texto.",
+        "Reemplazar la necesidad de validar el alcance con el cliente."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La Matriz de Trazabilidad de Requisitos asegura que cada requisito individual pueda rastrearse a lo largo del ciclo de vida, vinculando la necesidad del negocio con su diseño, implementación y casos de prueba.",
+      "point": "10"
+    },
+    {
+      "question": "¿A qué se refiere el término 'Corrupción del Alcance' (Scope Creep / Gold Plating)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "A la pérdida de datos por fallas en el almacenamiento físico.",
+        "A la adición no autorizada de características o funcionalidades al producto sin la aprobación formal del cliente ni pasar por control de cambios.",
+        "A la estimación de costos en proyectos con alta variabilidad cambiaria.",
+        "Al proceso normal de refactorización de código fuente."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La corrupción del alcance (Scope Creep o Gold Plating) ocurre cuando el equipo o los desarrolladores añaden funcionalidades adicionales al producto que no fueron aprobadas ni forman parte del alcance formalizado.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué tipo de información se documenta en el artefacto 'Especificación Complementaria' (Supplementary Specification)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El organigrama de la empresa y la lista de sueldos.",
+        "Requisitos no funcionales, reglas de negocio globales y restricciones técnicas que no encajan en los casos de uso individuales.",
+        "El código fuente ejecutable del backend.",
+        "El acta de constitución del proyecto firmada."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La Especificación Complementaria se utiliza como repositorio central para capturar los requisitos no funcionales globales (FURPS+), reglas de dominio y restricciones que aplican a todo el sistema.",
+      "point": "10"
+    },
+    {
+      "question": "En la Ingeniería de Requisitos, ¿cuál es la diferencia clave entre 'Validación' y 'Verificación'?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La verificación la realiza el cliente y la validación la realiza el compilador.",
+        "La Verificación asegura que el producto se construya correctamente según la especificación escrita ('¿Construimos el sistema correctamente?'), mientras que la Validación asegura que se construya el producto correcto que satisface la necesidad real del cliente ('¿Construimos el sistema correcto?').",
+        "La validación se aplica en metodologías tradicionales y la verificación solo en metodologías ágiles.",
+        "No existe diferencia; ambos términos son sinónimos absolutos."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La verificación comprueba que el software cumpla con las especificaciones técnicas escritas, mientras que la validación confirma que el producto satisface las necesidades reales y objetivos del cliente e interesados.",
+      "point": "10"
+    }
+  ]
+}

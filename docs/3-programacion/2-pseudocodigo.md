@@ -942,3 +942,15 @@ consulta2.emitir_informe()
 ```
 </TabItem>
 </Tabs><br/>
+
+---
+## 📝 **Test:** Pseudocódigo
+
+Antes de continuar, comprueba tus conocimientos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/prog-pseudocodigo.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

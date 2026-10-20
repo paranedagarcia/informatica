@@ -1,0 +1,147 @@
+{
+  "quizTitle": "Cuestionario sobre la Fase de Concepción y Viabilidad de Sistemas",
+  "quizSynopsis": "Evaluación de 10 preguntas acerca de la fase inicial (concepción), el caso de negocios, los tres pilares de viabilidad y las herramientas tecnológicas de soporte.",
+  "nrOfQuestions": "10",
+  "questions": [
+    {
+      "question": "En la fase inicial o de concepción de un Ciclo de Vida Predictivo Tradicional (SDLC), ¿qué rol asume principalmente el analista de sistemas?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un rol exclusivamente de programación y desarrollo de bases de datos físicas.",
+        "Un rol sociotécnico y de consultoría para identificar correctamente los problemas, objetivos y oportunidades del negocio.",
+        "Un rol de auditor de infraestructura y redes de telecomunicaciones.",
+        "Un rol pasivo enfocado únicamente en la firma de contratos comerciales."
+      ],
+      "correctAnswer": "2",
+      "explanation": "En la fase inicial del SDLC, el analista asume un rol sociotécnico y de consultoría para identificar correctamente los problemas, objetivos y oportunidades del negocio antes de comprometer recursos en un estudio detallado.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es el propósito fundamental del 'Caso de Negocios' (Business Case) en la etapa de concepción de un proyecto?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Generar el código fuente ejecutable del prototipo inicial.",
+        "Justificar formalmente la inversión documentando la necesidad de negocio, beneficios esperados, riesgos de alto nivel y alternativas iniciales.",
+        "Diseñar las interfaces gráficas y las pantallas de usuario finales.",
+        "Definir el plan detallado de pruebas unitarias e integración de código."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El Caso de Negocios es el documento fundamental que justifica si es conveniente o no realizar la inversión, detallando la necesidad de negocio, beneficios esperados, riesgos de alto nivel y alternativas iniciales (incluyendo la opción de 'no hacer nada').",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuáles son las tres dimensiones fundamentales bajo las cuales se evalúa un proyecto en un Estudio de Viabilidad?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Viabilidad Lógica, Viabilidad Física y Viabilidad Contractual.",
+        "Viabilidad Técnica, Viabilidad Operativa y Viabilidad Económica.",
+        "Viabilidad Temporal, Viabilidad de Código y Viabilidad de Pruebas.",
+        "Viabilidad Estratégica, Viabilidad Estética y Viabilidad de Marketing."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Para recomendar la aprobación de un proyecto de sistemas, este debe demostrar su factibilidad bajo las tres dimensiones: técnica, operativa y económica.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué aspecto evalúa específicamente la Viabilidad Operativa en la fase de concepción?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La velocidad del procesador y la cantidad de memoria RAM disponible.",
+        "Pronosticar si el sistema realmente funcionará y será utilizado por los miembros de la empresa, analizando la resistencia al cambio y las interfaces humanas.",
+        "La tasa de retorno de inversión expresada en porcentaje anual.",
+        "El cumplimiento de las licencias de software comercial COTS."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La viabilidad operativa pronostica si el sistema realmente funcionará y será utilizado por los miembros de la empresa una vez instalado, analizando la resistencia al cambio de los usuarios y las interfaces humanas elegidas.",
+      "point": "10"
+    },
+    {
+      "question": "En el marco de la Viabilidad Económica, ¿cómo se diferencian los beneficios tangibles de los intangibles?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Los tangibles son beneficios en hardware y los intangibles son licencias de software.",
+        "Los tangibles son cuantificables en dinero (como la velocidad de procesamiento), mientras que los intangibles son difíciles de medir (como la moral de los empleados o la reputación).",
+        "Los tangibles se obtienen en el primer mes y los intangibles después de 5 años.",
+        "No existe diferencia conceptual entre ambos tipos de beneficios."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La viabilidad económica compara costos y beneficios tangibles (cuantificables monetariamente) e intangibles (difíciles de medir en dinero, como la moral de los empleados o la reputación de la empresa).",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué función cumple una herramienta CASE Superior como Visible Analyst (VA) en la fase de concepción?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Simular el tráfico de red en servidores cloud.",
+        "Proveer un repositorio centralizado (enciclopedia) para analizar automáticamente la consistencia sintáctica y lógica del diseño desde etapas tempranas.",
+        "Calcular de forma automática los impuestos y la nómina de la empresa.",
+        "Generar animaciones 3D para la interfaz de usuario."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Las herramientas CASE Superiores como Visible Analyst proveen un repositorio centralizado de datos (enciclopedia) para almacenar elementos, diagramas de contexto, DFDs y analizar automáticamente la consistencia sintáctica y lógica del diseño.",
+      "point": "10"
+    },
+    {
+      "question": "Dentro del soporte tecnológico para la concepción, ¿para qué se utiliza específicamente un Sistema de Soporte de Decisiones (DSS) como Expert Choice?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Para dibujar esquemas de red TCP/IP.",
+        "Para guiar los procesos matemáticos de ponderación y asignación de prioridades de los objetivos del proyecto.",
+        "Para realizar la compilación de código fuente.",
+        "Para administrar las cuentas de correo electrónico del equipo."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Sistemas de Soporte de Decisiones (DSS) como Expert Choice están diseñados específicamente para guiar los procesos matemáticos de ponderación y asignación de prioridades de los objetivos del proyecto de sistemas.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la pregunta central que busca responder el análisis de Viabilidad Técnica?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "¿Cuánto dinero ganará el cliente en el primer trimestre?",
+        "¿Se puede construir el sistema de esta manera y con la tecnología disponible?",
+        "¿Quién será el diseñador gráfico de la interfaz?",
+        "¿Cuáles son las leyes laborales aplicables al proyecto?"
+      ],
+      "correctAnswer": "2",
+      "explanation": "El análisis de viabilidad técnica se centra en responder a la pregunta fundamental de los analistas: '¿Se puede construir el sistema de esta manera y con la tecnología disponible?'.",
+      "point": "10"
+    },
+    {
+      "question": "En proyectos de alta complejidad técnica o incertidumbre tecnológica, ¿por qué se recomienda utilizar Pruebas de Concepto (PoC)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Para reemplazar por completo la necesidad de contratar programadores.",
+        "Para explorar de forma empírica y a bajo costo si las herramientas de software propuestas funcionan correctamente bajo las restricciones físicas dadas.",
+        "Para elaborar el contrato legal final con los clientes.",
+        "Para automatizar la facturación electrónica del sistema."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Las Pruebas de Concepto (PoC) permiten evaluar la viabilidad técnica creando prototipos pequeños para explorar empíricamente a bajo costo si las herramientas de software propuestas funcionan bajo las restricciones dadas.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué representa el Análisis del Punto de Equilibrio (Break-Even Analysis) en las etapas iniciales de un proyecto de sistemas?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El nivel máximo de memoria RAM que puede consumir la base de datos.",
+        "La técnica financiera utilizada para determinar en qué momento o bajo qué volumen de operaciones el nuevo sistema comenzará a ser rentable.",
+        "El número exacto de desarrolladores necesarios en el equipo de trabajo.",
+        "La cantidad de errores permitidos durante la fase de pruebas unitarias."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El Análisis del Punto de Equilibrio es una técnica financiera y de control utilizada en las etapas iniciales para determinar en qué momento o bajo qué volumen de operaciones un nuevo sistema de información comenzará a ser rentable para la empresa.",
+      "point": "10"
+    }
+  ]
+}

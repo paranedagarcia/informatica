@@ -375,3 +375,15 @@ FICHA TÉCNICA DEL DICCIONARIO DE LA EDT (FORMULARIO PARA PRACTICA)
 
 ========================================================================================
 ```
+
+---
+## 📝 **Test:** Plan
+
+Antes de continuar, comprueba tus conocimientos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/mod-plan.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

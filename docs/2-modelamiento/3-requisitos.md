@@ -1,6 +1,6 @@
 ---
 id: requisitos
-title: "Ingeniería de requisitos y trazabilidad"
+title: "Ingeniería de requisitos"
 sidebar_label: "📄 Requisitos"
 description: "Ingeniería de requisitos y trazabilidad"
 ---
@@ -344,3 +344,15 @@ La forma en que se ejecuta el análisis y la negociación difiere según el cicl
 * **En Ciclos Predictivos (Cascada / Tradicional):** El análisis y la negociación se concentran en una fase inicial exhaustiva para congelar y aprobar formalmente las especificaciones de requisitos antes de pasar al diseño y la codificación.
 * **En Ciclos Adaptativos (Ágiles / Scrum):** Se reconoce que los requisitos son intrínsecamente cambiantes a medida que el cliente comprende mejor el sistema. El análisis y la negociación se convierten en un **proceso continuo e iterativo**. Eventos como el refinamiento del *Product Backlog* (*Backlog Refinement*) y las reuniones de planificación del incremento (*Sprint Planning*) funcionan como espacios permanentes para aclarar expectativas, renegociar prioridades e integrar cambios de alcance de forma colaborativa.
 
+
+---
+## 📝 **Test:** Requisitos
+
+Antes de continuar, comprueba tus conocimientos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/mod-requisitos.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

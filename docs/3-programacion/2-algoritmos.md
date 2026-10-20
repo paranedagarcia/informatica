@@ -242,3 +242,14 @@ Imagina que buscas un número dentro de una lista de **1,000,000 de elementos**:
 | **Búsqueda Lineal** | Ninguno (ordenada o desordenada) | \\(O(n)\\) | Hasta 1,000,000 |
 | **Búsqueda Binaria** | **Lista ordenada** | \\(O(\log n)\\) | **Máximo 20** |
 
+---
+## 📝 **Test:** Algoritmos
+
+Antes de continuar, comprueba tus conocimientos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/prog-algoritmos.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

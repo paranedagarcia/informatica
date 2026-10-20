@@ -1,0 +1,146 @@
+{
+  "quizTitle": "Cuestionario de Planificación y EDT/WBS",
+  "quizSynopsis": "Evaluación de 10 preguntas sobre los conceptos clave de la Estructura de Desglose del Trabajo (EDT/WBS), la línea base del alcance y la planificación gradual.",
+  "nrOfQuestions": "10",
+  "questions": [
+    {
+      "question": "¿Cómo se define la Estructura de Desglose del Trabajo (EDT / WBS) en el contexto de la planificación de proyectos?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un diagrama de red que representa las dependencias temporales y la ruta crítica.",
+        "Una descomposición jerárquica orientada a entregables del alcance total del proyecto.",
+        "Un inventario detallado de tareas diarias ordenadas cronológicamente.",
+        "Un contrato legal que establece las tarifas y costos unitarios del desarrollo."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La EDT/WBS es una descomposición jerárquica orientada a productos o entregables verificables que organiza y define la totalidad del alcance del proyecto.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué consiste la denominada 'Regla del 100%' en el diseño de una EDT / WBS?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El proyecto debe completar el 100% de las tareas antes de iniciar las pruebas.",
+        "La suma del trabajo de los elementos subordinados debe equivaler al 100% del trabajo del elemento padre.",
+        "Cada desarrollador debe dedicar el 100% de su jornada laboral al paquete asignado.",
+        "El 100% del presupuesto debe ser aprobado antes de iniciar la descomposición."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La Regla del 100% establece que la EDT abarca el 100% del alcance del proyecto. Por ende, la suma del trabajo de los componentes del nivel inferior debe sumar exactamente el 100% de su componente superior.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cómo se denomina al nivel más bajo de descomposición en una EDT / WBS?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Hito de control.",
+        "Cuenta de control.",
+        "Paquete de trabajo (Work Package).",
+        "Caso de uso primitivo."
+      ],
+      "correctAnswer": "3",
+      "explanation": "El nivel más bajo de cada rama de la EDT es el paquete de trabajo (work package), punto en el que el costo y la duración se pueden estimar y gestionar con precisión.",
+      "point": "10"
+    },
+    {
+      "question": "Al nombrar los componentes de una EDT / WBS, ¿qué tipo de palabras se debe utilizar para diferenciarlos de las actividades del cronograma?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Verbos en infinitivo.",
+        "Sustantivos o frases sustantivas que representen entregables concretos.",
+        "Verbos en tiempo futuro.",
+        "Siglas de roles y áreas organizacionales."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La EDT representa entregables o productos verificables ('qué se entrega') y no acciones ('qué se hace'). Por ello, sus elementos se nombran con sustantivos y no con verbos.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué documento complementa a la EDT detallando la descripción, responsable, criterios de aceptación y supuestos de cada paquete de trabajo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El Diccionario de la EDT (WBS Dictionary).",
+        "El Acta de Constitución del Proyecto.",
+        "El Gráfico de Gantt de Seguimiento.",
+        "La Matriz de Trazabilidad de Requisitos."
+      ],
+      "correctAnswer": "1",
+      "explanation": "Debido a la falta de espacio en el diagrama gráfico de la EDT, se utiliza el Diccionario de la EDT para detallar los términos, descripciones, entregables, responsables, costos e hitos de cada paquete.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué elementos integran formalmente la 'Línea Base del Alcance' (Scope Baseline)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El Enunciado del Alcance aprobado, la EDT / WBS y el Diccionario de la EDT.",
+        "El Acta de Constitución y el Cronograma de Hitos.",
+        "El Backlog del Producto y la Matriz RACI.",
+        "La Matriz de Riesgos y el Registro de Supuestos."
+      ],
+      "correctAnswer": "1",
+      "explanation": "La línea base del alcance está conformada por tres elementos clave aprobados: el Enunciado del Alcance del Proyecto, la EDT/WBS y el Diccionario de la EDT.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál de las siguientes opciones representa una ventaja fundamental de construir la EDT / WBS durante la planificación?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Elimina la necesidad de realizar control integrado de cambios.",
+        "Sirve como estructura base para estimar tiempos, costos, recursos y asignar responsabilidades.",
+        "Garantiza que el software se codifique de forma automatizada.",
+        "Sustituye la documentación de requerimientos del sistema."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La EDT organiza el trabajo en unidades manejables que sirven de cimiento para realizar estimaciones precisas de duraciones, costos, asignación de personal y control del proyecto.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cómo se llama la técnica de planificación iterativa en la que el trabajo cercano se descompone en detalle y el trabajo futuro se planifica a un nivel más general?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Planificación Gradual (Rolling Wave Planning).",
+        "Estimación Paramétrica Cuantitativa.",
+        "Análisis de Red Crítica.",
+        "Descomposición Ascendente Inversa."
+      ],
+      "correctAnswer": "1",
+      "explanation": "La planificación gradual (Rolling Wave Planning) permite descomponer en detalle únicamente los paquetes de trabajo cercanos en el tiempo, postergando el desglose detallado del trabajo futuro hasta obtener mayor información.",
+      "point": "10"
+    },
+    {
+      "question": "En la EDT, ¿qué punto de control de gestión se ubica por encima de los paquetes de trabajo para medir e integrar el desempeño del alcance, costo y cronograma?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Cuenta de Control (Control Account).",
+        "Hito de Cierre.",
+        "Paquete de Planificación Externa.",
+        "Línea de Corte."
+      ],
+      "correctAnswer": "1",
+      "explanation": "La Cuenta de Control es un punto de gestión en la EDT donde se consolidan el alcance, el presupuesto y el cronograma para medir la ejecución y rendimiento del proyecto.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es el criterio recomendado para determinar hasta qué nivel profundizar la descomposición de una EDT?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Subdividir siempre hasta un mínimo obligatorio de 6 niveles.",
+        "Subdividir hasta que el costo y la duración de cada paquete puedan estimarse y gestionarse con precisión.",
+        "Subdividir hasta llegar a instrucciones de código individual.",
+        "Limitar la descomposición siempre a exactamente dos niveles."
+      ],
+      "correctAnswer": "2",
+      "explanation": "La descomposición debe detenerse cuando los paquetes de trabajo sean lo suficientemente pequeños para permitir estimaciones fiables de tiempo y costo, evitar subdivisiones excesivas que generen ineficiencia administrativa."
+    }
+  ]
+}

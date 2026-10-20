@@ -1,0 +1,247 @@
+{
+  "quizTitle": "Cuestionario de Algoritmos",
+  "quizSynopsis": "Evaluación sobre conceptos fundamentales de algoritmos, pensamiento computacional, buenas prácticas y algoritmos de búsqueda lineal y binaria.",
+  "nrOfQuestions": "15",
+  "questions": [
+    {
+      "question": "Según el documento, ¿qué es un algoritmo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un lenguaje de programación compilado diseñado para la ciencia de datos.",
+        "Una receta detallada o secuencia de instrucciones que describe cómo resolver un problema específico o realizar una tarea computacional.",
+        "Un entorno de desarrollo integrado ejecutable en sistemas macOS y Linux.",
+        "Un software de depuración automática que detecta errores de sintaxis."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El texto define un algoritmo como una receta detallada o secuencia de instrucciones que describe cómo resolver un problema específico o realizar una tarea computacional mediante la programación.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué mide la notación 'Big O' (o de O grande) en el diseño de algoritmos?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La cantidad exacta de líneas de código contenidas en un programa.",
+        "El número de variables locales declaradas en una función de Python.",
+        "Cómo se comporta y escala el rendimiento de un código a medida que aumenta el tamaño de los datos de entrada.",
+        "El espacio consumido en memoria RAM por el editor Visual Studio Code."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La notación Big O clasifica objetivamente cómo se comporta y escala el rendimiento de un algoritmo a medida que aumenta el tamaño de los datos de entrada.",
+      "point": "10"
+    },
+    {
+      "question": "¿Por qué se reconoce a Python como uno de los mejores lenguajes para empezar a programar desde cero?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Porque viene preinstalado en todos los sistemas operativos Windows de forma obligatoria.",
+        "Porque su diseño enfatiza la legibilidad, simplicidad y claridad, siendo comparado con un 'pseudocódigo ejecutable'.",
+        "Porque no requiere el uso de variables ni de funciones.",
+        "Porque es el único lenguaje capaz de ejecutar algoritmos de búsqueda binaria."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Python se destaca por su legibilidad, simplicidad y claridad, al punto que los programadores lo comparan con un 'pseudocódigo ejecutable', lo que permite enfocar el aprendizaje en la lógica sin que la sintaxis sea una barrera.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuáles son las cuatro fases esenciales de la programación señaladas en la guía?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Instalar Windows, abrir VS Code, escribir código y vender el software.",
+        "Definir variables, crear bucles while, programar funciones y compilar en C++.",
+        "Comprender la resolución lógica, expresar la secuencia en sintaxis, ejecutar/verificar resultados y corregir errores (debugging).",
+        "Escribir en lenguaje natural, medir Big O, publicar en GitHub y participar en foros."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Las cuatro fases descritas son: 1) Comprender cómo resolver el problema con lógica, 2) Expresar la secuencia en la sintaxis del lenguaje, 3) Ejecutar y verificar resultados, y 4) Corregir errores (debugging).",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué recomendación inicial dan los expertos antes de escribir código al diseñar un algoritmo?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Configurar múltiples entornos virtuales en el sistema.",
+        "Escribir las tareas en lenguaje natural primero (en papel o mediante comentarios).",
+        "Instalar librerías de terceros utilizando comandos de terminal.",
+        "Memorizar las estructuras de datos avanzadas de Python."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Antes de tocar una línea de código, se recomienda escribir el algoritmo en lenguaje natural (español o inglés) para estructurar la lógica sin la restricción de la sintaxis estricta.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué algoritmo clásico se menciona para encontrar todos los números primos menores o iguales a un valor N?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Búsqueda Binaria.",
+        "Criba de Eratóstenes.",
+        "Random Walk (Caminata Aleatoria).",
+        "Ordenación por Enumerate."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La Criba de Eratóstenes es un algoritmo clásico y eficiente diseñado para encontrar todos los números primos menores o iguales a un número N.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué áreas tiene aplicaciones prácticas el algoritmo de Caminata Aleatoria (Random Walk)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Únicamente en la instalación de Python en Windows.",
+        "En física, biología, química (ej. movimiento de partículas) y economía.",
+        "Para formatear listas de texto en HTML.",
+        "Para verificar la sintaxis de programas 'Hola Mundo'."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "El algoritmo Random Walk sirve para simular fenómenos basados en decisiones al azar en física, biología, química (como el movimiento de polen en agua) y economía.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cómo opera el algoritmo de Búsqueda Lineal o secuencial?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Examina el punto medio y descarta la mitad de la colección en cada paso.",
+        "Exige que la lista esté estrictamente ordenada de menor a mayor.",
+        "Examina cada elemento de la lista de forma consecutiva de principio a fin hasta encontrar el valor buscado.",
+        "Calcula el hash directo de la posición en memoria del elemento."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La búsqueda lineal examina cada elemento de una lista de manera consecutiva de principio a fin, comparándolo con el valor buscado.",
+      "point": "10"
+    },
+    {
+      "question": "En el pseudocódigo presentado de la búsqueda lineal, ¿qué valor retorna la función si el elemento no está presente en la lista?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "0",
+        "None",
+        "1",
+        "-1"
+      ],
+      "correctAnswer": "4",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Si el recorrido por la secuencia finaliza sin hallar el elemento buscado, el algoritmo retorna -1 indicando su ausencia.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la complejidad temporal de la Búsqueda Lineal en el peor de los casos?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "O(1)",
+        "O(log n)",
+        "O(n)",
+        "O(n²)"
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La búsqueda lineal tiene una complejidad temporal O(n) en el peor caso, ya que requiere efectuar n comparaciones cuando el elemento está al final o no existe.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la principal ventaja/flexibilidad de la Búsqueda Lineal frente a la Búsqueda Binaria?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Requiere menos comparaciones en colecciones masivas.",
+        "Funciona sobre listas o secuencias no ordenadas.",
+        "Utiliza la técnica de divide y vencerás.",
+        "No consume tiempo de CPU."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "A diferencia de la búsqueda binaria (que exige un orden previo), la búsqueda lineal es flexible porque funciona sobre secuencias no ordenadas.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué función de Python se señala como la forma 'más pythonica' para implementar la búsqueda lineal de índice y valor?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "range()",
+        "enumerate()",
+        "len()",
+        "zip()"
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Usar enumerate() es la forma más pythonica de implementar una búsqueda lineal, pues obtiene el índice y el valor simultáneamente en cada iteración.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es el requisito estrictamente obligatorio para poder aplicar la Búsqueda Binaria?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Que la lista contenga un número par de elementos.",
+        "Que la lista esté previamente ordenada.",
+        "Que los elementos sean exclusivamente de tipo flotante.",
+        "Que se ejecute mediante un bucle for."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La búsqueda binaria exige estrictamente que la lista esté ordenada para poder descartar la mitad del rango en cada comparación.",
+      "point": "10"
+    },
+    {
+      "question": "¿Bajo qué técnica de diseño de algoritmos opera la Búsqueda Binaria?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Programación Dinámica.",
+        "Divide y vencerás.",
+        "Fuerza bruta consecutiva.",
+        "Búsqueda exhaustiva lineal."
+      ],
+      "correctAnswer": "2",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "La búsqueda binaria funciona bajo la técnica de 'divide y vencerás': examina el elemento central y descarta la mitad de la colección donde el valor no puede estar.",
+      "point": "10"
+    },
+    {
+      "question": "Para una lista de 1,000,000 de elementos, ¿cuántas comparaciones realiza como máximo la Búsqueda Binaria (O(log n)) en el peor caso?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "1,000,000 comparaciones.",
+        "500,000 comparaciones.",
+        "Como máximo 20 comparaciones.",
+        "100 comparaciones."
+      ],
+      "correctAnswer": "3",
+      "messageForCorrectAnswer": "¡Respuesta correcta!",
+      "messageForIncorrectAnswer": "Respuesta incorrecta.",
+      "explanation": "Debido a su complejidad O(log n), en el peor caso la búsqueda binaria requiere como máximo 20 comparaciones para 1,000,000 de elementos (ya que 2²⁰ = 1,048,576).",
+      "point": "10"
+    }
+  ]
+}

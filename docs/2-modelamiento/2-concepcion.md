@@ -533,3 +533,14 @@ Si un analista descarta los intangibles, el software puede parecer financieramen
 2.  Utilizar **modelos de calificación ponderada** (multi-criterio) donde la rentabilidad financiera (ROI/VNA) es solo uno de varios factores a evaluar, conviviendo con el alineamiento estratégico y la mitigación de riesgos.
 3.  Tener en cuenta el concepto de **dilución de impacto**: el valor de las inversiones de software suele apreciarse con total claridad a nivel de infraestructura básica de TI, pero se diluye o se vuelve difícil de rastrear cuando se intenta medir directamente desde los indicadores globales de balance de la compañía.
 
+---
+## 📝 **Test:** Concepción
+
+Antes de continuar, comprueba tus conocimientos.
+
+
+import QuizComponent from '@site/src/components/Quiz';
+import quiz from '@site/src/components/Quiz/data/mod-concepcion.json';
+
+
+<QuizComponent quiz={quiz} showInstantFeedback />

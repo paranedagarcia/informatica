@@ -1,0 +1,217 @@
+{
+  "quizTitle": "Cuestionario sobre Ciclos de Vida del Desarrollo de Software (SDLC)",
+  "quizSynopsis": "Evaluación de 15 preguntas sobre las fases del ciclo de vida tradicional, mantenimiento de sistemas, metodologías ágiles y estrategias de conversión.",
+  "nrOfQuestions": "15",
+  "questions": [
+    {
+      "question": "¿Cómo se define el Ciclo de Vida del Desarrollo de Sistemas (SDLC)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Un conjunto de instrucciones exclusivas para la compilación de código fuente.",
+        "Una metodología estructurada en fases para el análisis y diseño, donde los sistemas se desarrollan mediante un ciclo organizado de actividades.",
+        "Un contrato comercial entre proveedores de software y clientes externos.",
+        "Un modelo exclusivo de la metodología Scrum para entregas semanales."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El SDLC es una metodología en fases bien organizadas que guía al analista y a los usuarios a lo largo del análisis, diseño, desarrollo e implementación de un sistema de información.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es la primera fase del ciclo de vida clásico del desarrollo de sistemas?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Identificación de problemas, oportunidades y objetivos.",
+        "Diseño de la base de datos y modelo físico.",
+        "Programación y pruebas unitarias.",
+        "Determinación de requerimientos de información."
+      ],
+      "correctAnswer": "1",
+      "explanation": "La primera fase del SDLC consiste en identificar con precisión los problemas existentes, las oportunidades de mejora y los objetivos del negocio antes de comprometer recursos.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué consiste la segunda fase del SDLC (Determinación de los requerimientos de información)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Instalar el hardware y configurar los servidores de la empresa.",
+        "Comprender las necesidades de información que requieren los usuarios para realizar sus tareas mediante entrevistas, cuestionarios u observación.",
+        "Elaborar las tablas de decisión y los algoritmos de codificación.",
+        "Evaluar la factibilidad financiera y presupuestaria del proyecto."
+      ],
+      "correctAnswer": "2",
+      "explanation": "En esta fase, el analista recopila información interactuando con los usuarios para comprender qué datos e interfaces necesitan para ejecutar y mejorar su trabajo.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué herramientas y artefactos se utilizan principalmente en la tercera fase (Análisis de las necesidades del sistema)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Manuales de usuario e instrucciones de instalación.",
+        "Diagramas de Flujo de Datos (DFD), diccionarios de datos y análisis de decisiones estructuradas.",
+        "Código ejecutable en lenguajes orientados a objetos.",
+        "Pruebas de estrés de red y carga de servidores."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Durante el análisis, se estructuran los flujos de datos mediante DFDs, se definen los elementos en el diccionario de datos y se especifican los procesos mediante lenguaje estructurado o tablas de decisión.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es el foco principal de la cuarta fase del SDLC (Diseño del sistema recomendado)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "El diseño lógico del sistema, incluyendo procedimientos de entrada de datos, pantallas, formularios, archivos y bases de datos.",
+        "La compra directa de computadores y periféricos.",
+        "La corrección de errores de sintaxis en el código de desarrollo.",
+        "El cierre formal del contrato del proyecto."
+      ],
+      "correctAnswer": "1",
+      "explanation": "En la fase de diseño, el analista utiliza la información previa para construir el diseño lógico del sistema, definiendo la interfaz con el usuario y las estructuras de almacenamiento.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué rol desempeñan los programadores en la quinta fase (Desarrollo y documentación del software)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Evaluar la viabilidad económica del proyecto.",
+        "Entrevistar a los gerentes de alto nivel sobre la estrategia corporativa.",
+        "Realizar la auditoría financiera externa.",
+        "Diseñar, codificar y eliminar errores sintácticos de los programas, colaborando en la creación de manuales y ayuda en línea."
+      ],
+      "correctAnswer": "4",
+      "explanation": "En esta quinta fase, los programadores construyen el software original y desarrollan junto a los analistas y usuarios la documentación operativa y manuales de procedimientos.",
+      "point": "10"
+    },
+    {
+      "question": "¿Por qué se realiza la prueba del sistema antes de su puesta en producción en la sexta fase del SDLC?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Porque es una exigencia legal obligatoria en todos los países.",
+        "Porque detectar y corregir problemas en etapas tempranas con datos de prueba o datos reales es mucho menos costoso que corregirlos tras la entrega.",
+        "Para sustituir la necesidad de escribir la documentación técnica.",
+        "Para evitar que el cliente realice modificaciones al alcance."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Probar el sistema con datos simulados y reales permite identificar fallos antes del despliegue, reduciendo significativamente los costos de corrección y el impacto operativo.",
+      "point": "10"
+    },
+    {
+      "question": "¿Qué porcentaje estimado del tiempo e inversión total en proyectos de sistemas se destina al mantenimiento de sistemas existentes?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Aproximadamente el 10%.",
+        "Alrededor del 25%.",
+        "Hasta un 60% del tiempo total de los recursos informáticos.",
+        "Exactamente el 95%."
+      ],
+      "correctAnswer": "3",
+      "explanation": "Diversos estudios señalan que el mantenimiento consumen hasta el 60% del tiempo total invertido por las organizaciones en proyectos de software a lo largo del tiempo.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuáles son las dos razones fundamentales para llevar a cabo el mantenimiento de software?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Corregir errores (bugs) detectados en producción y actualizar o mejorar el software en respuesta a cambios de la empresa o tecnología.",
+        "Cambiar los salarios de los programadores y renegociar contratos de arrendamiento.",
+        "Eliminar la base de datos relacional y migrar a soportes en papel.",
+        "Reducir el tamaño de la interfaz gráfica a la mitad."
+      ],
+      "correctAnswer": "1",
+      "explanation": "El mantenimiento rutinario responde tanto a la corrección de fallas no detectadas en pruebas como a la evolución continua del software para adaptarse a las necesidades del negocio.",
+      "point": "10"
+    },
+    {
+      "question": "¿Para qué se utilizan las herramientas CASE (Computer-Aided Software Engineering) en el marco del SDLC?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Para enviar correos masivos a clientes finales.",
+        "Para proveer soporte automatizado que aumente la productividad, mejore la comunicación con los usuarios e integre los entregables del ciclo de vida.",
+        "Para reemplazar a los diseñadores de interfaz humana.",
+        "Para encriptar las conexiones Wi-Fi de la oficina."
+      ],
+      "correctAnswer": "2",
+      "explanation": "Las herramientas CASE respaldan el trabajo del analista automatizando la creación de diagramas, manteniendo el repositorio central y asegurando la consistencia del diseño.",
+      "point": "10"
+    },
+    {
+      "question": "En el desarrollo de modelado ágil, ¿cuáles son los cuatro valores fundamentales compartidos entre el equipo y el cliente?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Velocidad, Costo, Control y Rigidez.",
+        "Documentación, Jerarquía, Supervisión y Aislamiento.",
+        "Comunicación, Simpleza, Retroalimentación y Valentía.",
+        "Planificación, Contrato, Auditoría y Mantenimiento."
+      ],
+      "correctAnswer": "3",
+      "explanation": "Los métodos ágiles (como XP) se sustentan en cuatro valores básicos: comunicación abierta, simpleza en el diseño, retroalimentación constante y valentía para realizar cambios.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuáles son las cinco etapas del proceso de desarrollo en un proyecto ágil?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Exploración, Planeación, Iteraciones para la liberación de la primera versión, Puesta en producción y Mantenimiento.",
+        "Inicio, Análisis, Diseño, Pruebas y Cierre.",
+        "Concepto, Construcción, Aprobación, Venta y Retiro.",
+        "Investigación, Negociación, Contratación, Despliegue y Evaluación."
+      ],
+      "correctAnswer": "1",
+      "explanation": "El proceso ágil se organiza en etapas de exploración inicial, planeación con historias de usuario, ciclos iterativos de desarrollo, liberación a producción y mantenimiento continuo.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué consiste la práctica ágil de 'Programación en Pareja' (Pair Programming)?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Asignar dos proyectos distintos a un mismo desarrollador.",
+        "Alternar turnos de trabajo de 12 horas entre dos programadores.",
+        "Unir a dos empresas competidoras para desarrollar un módulo.",
+        "Dos desarrolladores trabajan juntos en la misma máquina, donde uno codifica y el otro revisa y piensa estratégicamente en tiempo real."
+      ],
+      "correctAnswer": "4",
+      "explanation": "La programación en pareja es una práctica donde dos desarrolladores colaboran en un único equipo; reduce errores, fomenta la creatividad y mejora la calidad del código.",
+      "point": "10"
+    },
+    {
+      "question": "¿Cuál es una ventaja principal de comprar software COTS (Commercial Off-The-Shelf) en lugar de desarrollar software a la medida?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "Permite personalizar el 100% de las funciones según caprichos locales.",
+        "Mayor confiabilidad, menor costo inicial y funcionalidades refinadas mediante la distribución comercial previa.",
+        "Garantiza que la empresa no pague licencias ni mantenimientos.",
+        "Evita el entrenamiento o capacitación de los usuarios."
+      ],
+      "correctAnswer": "2",
+      "explanation": "El software comercial empaquetado (COTS) ofrece alta confiabilidad y menor costo inicial al estar probado por múltiples usuarios en el mercado, aunque reduce la capacidad de personalización.",
+      "point": "10"
+    },
+    {
+      "question": "¿En qué se diferencia la 'Conversión paralela' de la 'Conversión directa' al implementar un nuevo sistema?",
+      "questionType": "text",
+      "answerSelectionType": "single",
+      "answers": [
+        "La conversión paralela ejecuta simultáneamente el sistema antiguo y el nuevo para verificar resultados y reducir riesgos, mientras que la directa apaga el sistema viejo e instala el nuevo de inmediato.",
+        "La conversión directa es más lenta y costosa que la paralela.",
+        "La conversión paralela se utiliza únicamente para aplicaciones móviles.",
+        "No existe ninguna diferencia operativa entre ambas estrategias."
+      ],
+      "correctAnswer": "1",
+      "explanation": "La conversión paralela mantiene ambos sistemas operando al mismo tiempo para validar datos y prevenir fallos graves, a costa de mayor esfuerzo, mientras que la directa realiza un cambio instantáneo.",
+      "point": "10"
+    }
+  ]
+}
