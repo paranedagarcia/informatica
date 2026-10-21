@@ -8,6 +8,12 @@ import YouTubeVideo from '@site/src/components/YouTubeVideo';
 
 ## **DFD**
 
+![](img/diagrama_de_flujo.jpg)
+
+:::info
+https://lucid.co/es/diagrama/diagrama-de-flujo
+:::
+
 Un **Diagrama de Flujo de Datos (DFD)** es una herramienta gráfica de análisis estructurado que se utiliza para **representar de manera lógica el movimiento, la transformación y el almacenamiento de los datos** a través de los componentes de un sistema de información. Su gran ventaja es que ofrece una descripción visual clara que facilita la comunicación entre usuarios y analistas, permitiendo comprender detalladamente cómo interactúan los subsistemas antes de comprometerse con decisiones tecnológicas de desarrollo.
 
 ![](img/dfd-intro.jpg)
@@ -23,6 +29,11 @@ Sin jerga técnica, revelan qué pasa con la información antes de definir cómo
 **Interrelación:** Demuestra cómo lso distintos subsistemas y departamentos se conectan.
 
 **Análisis diagnóstico:** Resalta datos faltantes, redundancia o callejones sin salida lógicos.
+
+**Diagrama de flujo de datos**
+<YouTubeVideo id="uYBJ3jJ0QfA" title="Diagrama de flujo de datos" />
+
+<YouTubeVideo id="b6d1cMbyHmM" title="Diagrama de flujo de datos" />
 
 ### Los Cuatro Símbolos Básicos del DFD
 Para documentar visualmente el flujo de información, la metodología emplea combinaciones de únicamente **cuatro símbolos básicos**:
@@ -308,3 +319,161 @@ El PDF incorpora una **Tabla Comparativa de Paradigmas** que resume las diferenc
 ### Sinergia de Paradigmas
 **Estos enfoques no son rivales, sino herramientas complementarias**. Un ingeniero moderno utiliza los DFD lógicos para entender los grandes flujos de información de la Arquitectura Empresarial (visión macro y de procesos de negocio) y, posteriormente, recurre a UML y sus Casos de Uso para diseñar el software específico, definir las APIs de integración y estructurar las clases orientadas a objetos que serán codificadas.
 
+***
+## **Ejemplos de diagramas**
+Cada ejemplo incluye la lista de **entidades externas, procesos, almacenes de datos (Data Stores) y flujos de información**, además de una tabla comparativa de sintaxis Mermaid para diagramas de flujo de datos.
+
+
+
+### Caso 1: Sistema de Procesamiento de Pedidos  
+**E-Commerce (Retail / Tienda en Línea)**
+
+#### Descripción del Escenario
+El sistema gestiona la compra de productos en una plataforma de comercio electrónico (como Mercado Libre o Amazon). Coordina la validación del carrito de compras, el procesamiento seguro del pago con una pasarela externa, la actualización del inventario en tiempo real y la emisión de órdenes de despacho hacia la bodega de logística.
+
+#### Componentes del DFD
+* **Entidades Externas:**
+  * `Cliente`: Usuario que realiza la compra y recibe confirmaciones.
+  * `Pasarela de Pagos`: Servicio externo (ej. Transbank, Stripe, PayPal) que autoriza la transacción.
+  * `Sistema de Logística`: Departamento o empresa tercera encargada del embalaje y despacho.
+
+* **Procesos (Nivel 1):**
+  * `1.0 Validar y Seleccionar Productos`: Revisa disponibilidad de stock e importe total.
+  * `2.0 Procesar Pago y Facturación`: Gestiona la transacción financiera y emite el comprobante.
+  * `3.0 Actualizar Inventario`: Descuenta las unidades vendidas de los almacenes.
+  * `4.0 Coordinar Despacho`: Genera la orden de envío y la guía de seguimiento.
+
+* **Almacenes de Datos (Data Stores):**
+  * `D1: Catálogo de Productos e Inventario`
+  * `D2: Registro de Clientes`
+  * `D3: Base de Datos de Pedidos y Facturas`
+
+#### Diagrama DFD
+
+```mermaid
+flowchart TD
+    %% Estilos de Notación DFD
+    classDef entidad fill:#e3f2fd,stroke:#1565c0,stroke-width:2px,color:#0d47a1,font-weight:bold
+    classDef proceso fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20,font-weight:bold
+    classDef almacen fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#bf360c,font-weight:bold
+
+    %% Entidades Externas
+    E1["Entidad: Cliente"]:::entidad
+    E2["Entidad: Pasarela de Pagos"]:::entidad
+    E3["Entidad: Sistema de Logística"]:::entidad
+
+    %% Procesos
+    P1("(1.0) Validar y Seleccionar Productos"):::proceso
+    P2("(2.0) Procesar Pago y Facturación"):::proceso
+    P3("(3.0) Actualizar Inventario"):::proceso
+    P4("(4.0) Coordinar Despacho"):::proceso
+
+    %% Almacenes de Datos
+    D1[("D1: Catálogo e Inventario")]:::almacen
+    D2[("D2: Registro de Clientes")]:::almacen
+    D3[("D3: Pedidos y Facturas")]:::almacen
+
+    %% Flujos de Datos
+    E1 -->|"1. Selección de artículos"| P1
+    D1 -->|"2. Consulta de stock y precios"| P1
+    P1 -->|"3. Carrito validado y total"| P2
+    
+    D2 -->|"4. Datos de facturación"| P2
+    P2 -->|"5. Solicitud de cargo ($)"| E2
+    E2 -->|"6. Confirmación de pago / Token"| P2
+    
+    P2 -->|"7. Registro de transacción exitosa"| D3
+    P2 -->|"8. Comprobante de venta"| E1
+
+    P2 -->|"9. Notificación de venta aprobada"| P3
+    P3 -->|"10. Actualizar descuento de stock"| D1
+
+    P2 -->|"11. Orden de pedido emitida"| P4
+    D3 -->|"12. Datos del envío y cliente"| P4
+    P4 -->|"13. Orden de empaque y guía"| E3
+    P4 -->|"14. Código de seguimiento (Tracking)"| E1
+```
+
+---
+
+### Caso 2: Sistema de Reserva y Check-in 
+**de Vuelos (Aerolínea)**
+
+#### Descripción del Escenario
+Este sistema automatiza la reserva de boletos aéreos y el proceso de Check-in para una aerolínea comercial. Maneja la asignación de asientos en tiempo real, el registro del PNR (*Passenger Name Record*), la generación de tarjetas de embarque digitales y la gestión del equipaje de bodega.
+
+#### Componentes del DFD
+* **Entidades Externas:**
+  * `Pasajero`: Cliente que consulta itinerarios, realiza check-in y recibe su pase de abordar.
+  * `Sistema de Control de Salidas (DCS)`: Plataforma del aeropuerto que valida el abordaje en puerta.
+  * `Servicio de Equipaje`: Sistema operativo de balanza y etiquetado de maletas.
+
+* **Procesos (Nivel 1):**
+  * `1.0 Consultar Itinerarios y Disponibilidad`: Busca vuelos según fechas y origen/destino.
+  * `2.0 Emitir Reserva y PNR`: Genera el código de reserva y registra los datos del pasajero.
+  * `3.0 Procesar Check-in y Asignación de Asientos`: Permite al usuario elegir asiento y confirma asistencia.
+  * `4.0 Registrar Equipaje y Bordo`: Genera las etiquetas de equipaje y envía la lista final de embarque.
+
+* **Almacenes de Datos (Data Stores):**
+  * `D1: Vuelos e Itinerarios`
+  * `D2: Registro de Pasajeros y Reservas (PNR)`
+  * `D3: Mapa de Asientos y Estado de Vuelo`
+  * `D4: Registro de Equipaje`
+
+#### Diagrama DFD
+
+```mermaid
+flowchart TD
+    %% Estilos de Notación DFD
+    classDef entidad fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px,color:#4a148c,font-weight:bold
+    classDef proceso fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px,color:#1b5e20,font-weight:bold
+    classDef almacen fill:#fff3e0,stroke:#e65100,stroke-width:2px,color:#bf360c,font-weight:bold
+
+    %% Entidades Externas
+    E1["Entidad: Pasajero"]:::entidad
+    E2["Entidad: Sistema de Control de Salidas (DCS)"]:::entidad
+    E3["Entidad: Servicio de Equipaje"]:::entidad
+
+    %% Procesos
+    P1("(1.0) Consultar Itinerarios"):::proceso
+    P2("(2.0) Emitir Reserva y PNR"):::proceso
+    P3("(3.0) Procesar Check-in y Asientos"):::proceso
+    P4("(4.0) Registrar Equipaje"):::proceso
+
+    %% Almacenes de Datos
+    D1[("D1: Vuelos e Itinerarios")]:::almacen
+    D2[("D2: Reservas (PNR)")]:::almacen
+    D3[("D3: Mapa de Asientos")]:::almacen
+    D4[("D4: Registro de Equipaje")]:::almacen
+
+    %% Flujos de Datos
+    E1 -->|"1. Criterios de búsqueda (Origen/Destino)"| P1
+    D1 -->|"2. Vuelos disponibles y tarifas"| P1
+    P1 -->|"3. Opciones de vuelo"| E1
+
+    E1 -->|"4. Datos personales y pago"| P2
+    P2 -->|"5. Guardar PNR y estado del boleto"| D2
+    P2 -->|"6. Código de reserva (PNR)"| E1
+
+    E1 -->|"7. Solicitud de Check-in (PNR + Apellido)"| P3
+    D2 -->|"8. Validar existencia de reserva"| P3
+    D3 <-->|"9. Consultar y bloquear asiento seleccionado"| P3
+    P3 -->|"10. Actualizar estado a 'Checked-In'"| D2
+    P3 -->|"11. Tarjeta de embarque digital (Boarding Pass)"| E1
+
+    E1 -->|"12. Declaración de maletas en mostrador"| P4
+    P4 -->|"13. Registrar peso y número de etiqueta"| D4
+    P4 -->|"14. Imprimir etiqueta de maleta"| E3
+    P4 -->|"15. Enviar manifiesto de pasajeros y equipaje"| E2
+```
+
+
+
+### Tabla Comparativa de Notación DFD
+
+| Elemento DFD | Representación Conceptual | Notación en Mermaid |
+| :--- | :--- | :--- |
+| **Entidad Externa** | Fuente o destino de datos fuera del sistema | `[Nombre Entidad]` |
+| **Proceso** | Transformación de datos o lógica de negocio | `(1.0 Nombre Proceso)` |
+| **Almacén de Datos** | Base de datos, archivo o tabla persistente | `[("D1: Nombre Almacén")]` |
+| **Flujo de Datos** | Flecha rotulada con la información que viaja | `-->|Etiqueta del flujo|` |
