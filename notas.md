@@ -110,3 +110,12 @@ Cómo usar bucles 'for' y 'while'
 ¿Cómo ayuda la homeostasis a la resiliencia?
 
 ¿Cómo manejar la Ley de Brooks?
+
+
+---
+
+💡 ¿Te gustaría que configuremos un archivo `launch.json` de ejemplo en Python para aprender a depurar scripts paso a paso en VS Code?
+
+---
+
+💡 ¿Te gustaría que escribamos un script en Python utilizando la librería `requests` para consultar automáticamente información o estadísticas de repositorios en GitHub mediante su API?
