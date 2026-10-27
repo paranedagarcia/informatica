@@ -26,10 +26,6 @@ export const links = [
       label: 'Inteligencia Artificial',
       href: 'https://patricioaraneda.cl/inteligencia-artificial/',
     },
-    {
-      label: 'IA en Gestión Pública',
-      href: 'https://patricioaraneda.cl/ia-gestionpublica/',
-    },
     
   ],
 },

@@ -2,6 +2,7 @@
 id: ae-empresarial
 title:  "📄 Arquitectura Empresarial"
 sidebar_label: "📄 Arquitectura Empresarial"
+description: "Lógica organizativa de los procesos de negocio y la infraestructura de TI de una organización."
 ---
 ## **AE**
 

@@ -2,6 +2,7 @@
 id: sistemas-intro
 title:  "📄 Ingeniería de Sistemas"
 sidebar_label: "📄 Introducción"
+description: "Disciplina integral y estructurada que aborda el desarrollo de tecnologías y procesos"
 ---
 
 ## **Sistemas** 

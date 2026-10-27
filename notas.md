@@ -1,3 +1,10 @@
+---
+id: ae-integracion
+title:  ""
+sidebar_label: "📄 Integración Empresarial"
+description: "De la Taxonomía Ontológica a la Agilidad Organizacional"
+tags: [] 
+---
 
 import YouTubeVideo from '@site/src/components/YouTubeVideo';
 
@@ -119,3 +126,8 @@ Cómo usar bucles 'for' y 'while'
 ---
 
 💡 ¿Te gustaría que escribamos un script en Python utilizando la librería `requests` para consultar automáticamente información o estadísticas de repositorios en GitHub mediante su API?
+
+BPM
+
+¿Cuáles son las fases del ciclo de vida de BPM?
+¿Qué es un motor de reglas de negocio?

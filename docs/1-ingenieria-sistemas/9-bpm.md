@@ -2,6 +2,7 @@
 id: bpm
 title:  "BPM"
 sidebar_label: "📄 BPM"
+description: "Gestión de procesos de negocios"
 ---
 
 ## **Gestión de procesos**
@@ -286,7 +287,7 @@ A continuación se muestran los archivos de definición en XML estándar compati
 Este archivo define el flujo de orquestación. La tarea **`Task_EvaluarCredito`** es de tipo `businessRuleTask` e invoca a la tabla de decisiones mediante el atributo `camunda:decisionRef="EvaluacionCreditoPersonal"`. La decisión retornada se mapea a la variable `resultadoEvaluacion` y se evalúa en la compuerta exclusiva (`Gateway_Decision`).
 
 <details>
-<summary>🖥️ Código XML</summary>
+<summary>🖥️ Código BPMN en XML</summary>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -385,10 +386,80 @@ Este archivo define el flujo de orquestación. La tarea **`Task_EvaluarCredito`*
     <bpmn:sequenceFlow id="Flow_5" sourceRef="Service_NotificarRechazo" targetRef="EndEvent_Rechazado" />
     
   </bpmn:process>
+
+  <bpmndi:BPMNDiagram id="BPMNDiagram_SolicitudCredito">
+    <bpmndi:BPMNPlane id="BPMNPlane_SolicitudCredito" bpmnElement="Process_SolicitudCredito">
+      <bpmndi:BPMNShape id="Shape_StartEvent_1" bpmnElement="StartEvent_1">
+        <dc:Bounds x="100" y="182" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Task_EvaluarCredito" bpmnElement="Task_EvaluarCredito">
+        <dc:Bounds x="200" y="160" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Gateway_Decision" bpmnElement="Gateway_Decision" isMarkerVisible="true">
+        <dc:Bounds x="370" y="175" width="50" height="50" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Service_NotificarAprobacion" bpmnElement="Service_NotificarAprobacion">
+        <dc:Bounds x="530" y="60" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_User_RevisionManual" bpmnElement="User_RevisionManual">
+        <dc:Bounds x="530" y="180" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_Service_NotificarRechazo" bpmnElement="Service_NotificarRechazo">
+        <dc:Bounds x="530" y="300" width="120" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_EndEvent_Aprobado" bpmnElement="EndEvent_Aprobado">
+        <dc:Bounds x="760" y="82" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_EndEvent_RevisionCompleta" bpmnElement="EndEvent_RevisionCompleta">
+        <dc:Bounds x="760" y="202" width="36" height="36" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Shape_EndEvent_Rechazado" bpmnElement="EndEvent_Rechazado">
+        <dc:Bounds x="760" y="322" width="36" height="36" />
+      </bpmndi:BPMNShape>
+
+      <bpmndi:BPMNEdge id="Edge_Flow_1" bpmnElement="Flow_1">
+        <di:waypoint x="136" y="200" />
+        <di:waypoint x="200" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_2" bpmnElement="Flow_2">
+        <di:waypoint x="300" y="200" />
+        <di:waypoint x="370" y="200" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_Aprobado" bpmnElement="Flow_Aprobado">
+        <di:waypoint x="420" y="180" />
+        <di:waypoint x="475" y="180" />
+        <di:waypoint x="475" y="100" />
+        <di:waypoint x="530" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_Revision" bpmnElement="Flow_Revision">
+        <di:waypoint x="420" y="200" />
+        <di:waypoint x="530" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_Rechazado" bpmnElement="Flow_Rechazado">
+        <di:waypoint x="420" y="220" />
+        <di:waypoint x="475" y="220" />
+        <di:waypoint x="475" y="340" />
+        <di:waypoint x="530" y="340" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_3" bpmnElement="Flow_3">
+        <di:waypoint x="650" y="100" />
+        <di:waypoint x="760" y="100" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_4" bpmnElement="Flow_4">
+        <di:waypoint x="650" y="220" />
+        <di:waypoint x="760" y="220" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Edge_Flow_5" bpmnElement="Flow_5">
+        <di:waypoint x="650" y="340" />
+        <di:waypoint x="760" y="340" />
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
 </bpmn:definitions>
 ```
 </details>
 
+![](img/bpmn-modelo.jpg)
 
 ### 2. Tabla de Decisiones DMN 
 **(`evaluacion_credito.dmn`)**

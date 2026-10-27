@@ -2,6 +2,7 @@
 id: ae-procesos
 title:  "Arquitectura de procesos"
 sidebar_label: "📄 Arquitectura de procesos"
+description: "No solo representación jerárquica unificada de los procesos de negocio de una empresa"
 ---
 
 ## **Procesos**

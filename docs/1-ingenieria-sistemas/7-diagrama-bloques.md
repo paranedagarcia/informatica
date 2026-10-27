@@ -2,6 +2,7 @@
 id: ae-bloques
 title:  "Diagrama"
 sidebar_label: "📄 Diagrama de bloques"
+description: "Modelado de sistemas como representación gráfica"
 ---
 
 ## **bloques**
