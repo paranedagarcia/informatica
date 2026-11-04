@@ -230,7 +230,7 @@ Sus componentes visuales principales son:
 
 * **Límite del Sistema (*System Boundary*):** Recuadro que encierra los óvalos para delimitar formalmente el alcance del proyecto.
 
-* **Relaciones:** Líneas de comunicación entre actores y casos de uso, así como relaciones entre casos de uso mediante las palabras clave `<<include>>` (subfunciones obligatorias), `<<extend>>` (comportamientos opcionales o excepciones) y *generalización*.
+* **Relaciones:** Líneas de comunicación entre actores y casos de uso, así como relaciones entre casos de uso mediante las palabras clave `&lt;&lt;include&gt;&gt;` (subfunciones obligatorias), `&lt;&lt;extend&gt;&gt;` (comportamientos opcionales o excepciones) y *generalización*.
 
 Sirve principalmente como un **diagrama de contexto de alto nivel** para que los desarrolladores y los clientes acuerden rápidamente qué funcionalidades están dentro o fuera del alcance del software.
 
@@ -305,12 +305,12 @@ Customer --> Checkout
 
 Para organizar la lógica y evitar redundancias en el modelo, se utilizan tres relaciones de comportamiento:
 
-* **Inclusión (`<<include>>`):** La Obligación. Indica que un caso de uso común (subfunción) se ejecuta de forma **obligatoria** dentro del flujo de otro caso de uso para evitar duplicar texto o lógica en la especificación.
+* **Inclusión (`&lt;&lt;include&gt;&gt;`):** La Obligación. Indica que un caso de uso común (subfunción) se ejecuta de forma **obligatoria** dentro del flujo de otro caso de uso para evitar duplicar texto o lógica en la especificación.
     * Dirección de flecha: Apunta al caso común (subfunción).
     * Condicionalidad: Obligatorio. El caso base no está completo sin él.
     * Cuándo usarlo: Para evitar duplicar texto (ej. validar usuario, pagar cuotas).
 
-* **Extensión (`<<extend>>`):** La excepción. Representa un comportamiento **opcional o de excepción** que solo se ejecuta en puntos específicos si se cumple una condición determinada.
+* **Extensión (`&lt;&lt;extend&gt;&gt;`):** La excepción. Representa un comportamiento **opcional o de excepción** que solo se ejecuta en puntos específicos si se cumple una condición determinada.
     * Dirección de flecha: Apunta DESDE el caso extendido HACIA el caso base.
     * Condicionalidad: Opcional/Condicional. El caso base funciona perfectamente por sí solo.
     * Cuándo usarlo: Para manejar excepciones (ej. Tarjeta rechazada, seguro adicional).
@@ -319,7 +319,7 @@ Para organizar la lógica y evitar redundancias en el modelo, se utilizan tres r
 
 ![](img/cu-relaciones.jpg)
 
-#### Aplicación de `<<include>>`
+#### Aplicación de `&lt;&lt;include&gt;&gt;`
 
 <div class="container">
   <div class="row">
@@ -342,7 +342,7 @@ Hospedaje ..> : include Pagar
   </div>
 </div>
 
-#### Aplicación de `<<extend>>`
+#### Aplicación de `&lt;&lt;extend&gt;&gt;`
 
 <div class="container">
   <div class="row">
@@ -511,4 +511,160 @@ Registrar --> Inventario
 </Tabs><br/>
 
 
+## **Ejemplos prácticos**
 
+### 1. Dominio de Comercio Electrónico: Sistema de Compras Online
+
+#### Enunciado
+Una tienda departamental en línea permite que los clientes exploren el catálogo y añadan artículos a su carrito. Para finalizar una compra (**Realizar Pedido**), el sistema exige incondicionalmente validar la identidad del usuario (**Autenticar Usuario**) y autorizar los fondos a través de una **Pasarela de Pagos externa**. Opcionalmente, si el cliente dispone de un código promocional válido durante el checkout, el flujo permite **Aplicar Cupón de Descuento**, deduciendo el saldo antes del cobro final. Si el stock físico de un producto es crítico, el sistema notifica de forma secundaria al **Servicio de Logística**.
+
+#### Actores y Relaciones
+* **Actores primarios:** Cliente.
+* **Actores secundarios (sistemas externos):** Pasarela de Pagos, Servicio de Logística.
+* **Relaciones clave:**
+  * `Realizar Pedido` **`<<include>>`** `Autenticar Usuario` (obligatorio para procesar la orden).
+  * `Realizar Pedido` **`<<include>>`** `Pagar con Tarjeta` (obligatorio para cerrar la transacción).
+  * `Aplicar Cupón` **`<<extend>>`** `Realizar Pedido` (condicional: solo si el cliente ingresa un cupón promocional).
+
+#### Diagrama de Casos de Uso
+
+```mermaid
+flowchart LR
+    %% Actores
+    Cliente["👤 Cliente<br>(Actor Primario)"]
+    Pasarela["🖥️ Pasarela de Pagos<br>(Sistema Externo)"]
+    Logistica["🖥️ Servicio de Logística<br>(Sistema Externo)"]
+
+    %% Límite del Sistema
+    subgraph ECommerce ["Plataforma E-Commerce"]
+        UC_Buscar(["Buscar Productos"])
+        UC_Carrito(["Gestionar Carrito"])
+        UC_Checkout(["Realizar Pedido<br>(Checkout)"])
+        UC_Auth(["Autenticar Usuario"])
+        UC_Cupon(["Aplicar Cupón<br>de Descuento"])
+        UC_Pago(["Pagar con Tarjeta"])
+    end
+
+    %% Asociaciones
+    Cliente --- UC_Buscar
+    Cliente --- UC_Carrito
+    Cliente --- UC_Checkout
+
+    %% Relaciones Include y Extend
+    UC_Checkout -.->|&lt;&lt;include&gt;&gt;| UC_Auth
+    UC_Checkout -.->|&lt;&lt;include&gt;&gt;| UC_Pago
+    UC_Cupon -.->|&lt;&lt;extend&gt;&gt;: si tiene código| UC_Checkout
+
+    %% Conexiones con Actores Secundarios
+    UC_Pago --- Pasarela
+    UC_Checkout --- Logistica
+```
+
+---
+
+### 2. Dominio Financiero: Banca Digital y Transferencias
+
+#### Enunciado
+Una entidad bancaria ofrece una aplicación móvil para que sus cuentahabientes realicen operaciones bancarias. Todo cliente que desea **Transferir Fondos** a terceros debe superar obligatoriamente una verificación de **Validar Segundo Factor (2FA / Token Digital)**. Adicionalmente, el banco cuenta con un motor analítico antifraude: si el monto transferido supera los límites habituales o el destinatario está marcado en listas de observación, se dispara de forma condicional el caso de uso **Auditar Transacción Sospechosa**, alertando en tiempo real al **Oficial de Cumplimiento / Fraude**.
+
+#### Actores y Relaciones
+* **Actores primarios:** Cliente Bancario.
+* **Actores secundarios:** Core Bancario (Servidor Central), Oficial de Prevención de Fraude.
+* **Relaciones clave:**
+  * `Transferir Fondos` **`<<include>>`** `Validar Segundo Factor (2FA)`.
+  * `Auditar Transacción Sospechosa` **`<<extend>>`** `Transferir Fondos` (punto de extensión: monto anómalo o alerta de riesgo).
+
+#### Diagrama de Casos de Uso
+```mermaid
+flowchart LR
+    %% Actores
+    Cliente["👤 Cliente Bancario"]
+    CoreBancario["🖥️ Core Bancario<br>(Sistema Central)"]
+    OficialFraude["👤 Oficial de Fraude<br>/ Cumplimiento"]
+
+    %% Límite del Sistema
+    subgraph BancaDigital ["Banca Digital"]
+        UC_Consultar(["Consultar Saldo y Movimientos"])
+        UC_Transferir(["Transferir Fondos"])
+        UC_Token(["Validar Segundo Factor<br>(2FA / Token)"])
+        UC_Auditoria(["Auditar Transacción<br>Sospechosa"])
+        UC_Credito(["Solicitar Crédito Preaprobado"])
+    end
+
+    %% Asociaciones
+    Cliente --- UC_Consultar
+    Cliente --- UC_Transferir
+    Cliente --- UC_Credito
+
+    %% Relaciones Include y Extend
+    UC_Transferir -.->|&lt;&lt;include&gt;&gt;| UC_Token
+    UC_Auditoria -.->|&lt;&lt;extend&gt;&gt;<br>supera umbral de riesgo| UC_Transferir
+
+    %% Conexiones Secundarias
+    UC_Consultar --- CoreBancario
+    UC_Transferir --- CoreBancario
+    UC_Auditoria --- OficialFraude
+```
+
+
+
+### 3. Dominio de Salud: Admisión, Triage y Atención en Urgencias
+
+#### Enunciado
+En el servicio de urgencias de un centro médico, el paciente llega y se le realiza la **Admisión Administrativa**. Posteriormente, una enfermera ejecuta el **Realizar Triage Clínico** midiendo signos vitales. Si el paciente presenta paro respiratorio o shock hemodinámico (Nivel 1 de gravedad), se ejecuta condicionalmente y de forma inmediata **Activar Código Rojo y Reanimación**. Cuando el paciente pasa a consulta médica (**Atender Paciente**), el médico puede ser un **Médico General** o un **Médico Especialista** (herencia de actores). Toda atención médica concluye obligatoriamente con el registro de la evolución y recetas (**Actualizar Ficha Clínica Electrónica / EHR**).
+
+#### Actores y Relaciones
+* **Actores primarios:** Paciente, Enfermero de Triage, Médico (General y Especialista vía generalización).
+* **Actores secundarios:** Sistema EHR / Ficha Clínica Electrónica.
+* **Relaciones clave:**
+  * **Generalización de actores:** `Médico Especialista` hereda de `Médico`.
+  * `Atender Paciente` **`<<include>>`** `Actualizar Ficha EHR`.
+  * `Activar Código Rojo / Reanimación` **`<<extend>>`** `Realizar Triage Clínico` (condición: saturación < 90% o paro inminente).
+
+#### Diagrama de Casos de Uso
+
+```mermaid
+flowchart LR
+    %% Actores
+    Paciente["👤 Paciente"]
+    Enfermero["👤 Enfermero de Triage"]
+    MedicoGen["👤 Médico General"]
+    MedicoEsp["👤 Médico Especialista"]
+    SistemaEHR["🖥️ Sistema EHR<br>(Ficha Clínica Central)"]
+
+    %% Herencia de Actores
+    MedicoGen ---|> Medico
+    MedicoEsp ---|> Medico
+
+    %% Límite del Sistema
+    subgraph Urgencias ["Límite del Sistema: Gestión Hospitalaria de Urgencias"]
+        UC_Admision(["Registrar Admisión y Datos"])
+        UC_Triage(["Realizar Triage Clínico"])
+        UC_Reanimacion(["Activar Código Rojo<br>y Asignar Reanimación"])
+        UC_Atencion(["Atender Paciente"])
+        UC_EHR(["Actualizar Ficha Clínica<br>(EHR / Diagnóstico)"])
+    end
+
+    %% Asociaciones
+    Paciente --- UC_Admision
+    Enfermero --- UC_Triage
+    Medico --- UC_Atencion
+
+    %% Relaciones Include y Extend
+    UC_Reanimacion -.->|&lt;&lt;extend&gt;&gt;<br>[si Nivel 1 - Emergencia Vital]| UC_Triage
+    UC_Atencion -.->|&lt;&lt;include&gt;&gt;| UC_EHR
+
+    %% Conexión Sistema Externo
+    UC_EHR --- SistemaEHR
+```
+
+
+
+### Resumen Comparativo de Estructuras UML Utilizadas
+
+| Elemento UML | Propósito Técnico | Ejemplo en los Modelos Anteriores |
+| :--- | :--- | :--- |
+| **Límite del Sistema (*System Boundary*)** | Delimita qué componentes pertenecen al software y cuáles son entidades externas. | Rectángulos contenedores (`ECommerce`, `BancaDigital`, `Urgencias`). |
+| **Inclusión (`&lt;&lt;include&gt;&gt;`)** | Invocación incondicional y obligatoria de un subcaso de uso reutilizable. | `Realizar Pedido` incluye obligatoriamente `Autenticar Usuario`. |
+| **Extensión (`&lt;&lt;extend&gt;&gt;`)** | Comportamiento condicional u opcional que se activa únicamente en puntos de variación específicos. | `Auditar Transacción` extiende a `Transferir Fondos` solo si hay riesgo de fraude. |
+| **Generalización de Actores** | Relación *es-un* donde un actor especializado hereda todos los casos de uso del actor base. | `Médico Especialista` hereda las facultades operativas de `Médico`. |
