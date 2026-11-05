@@ -305,12 +305,12 @@ Customer --> Checkout
 
 Para organizar la lógica y evitar redundancias en el modelo, se utilizan tres relaciones de comportamiento:
 
-* **Inclusión (`&lt;&lt;include&gt;&gt;`):** La Obligación. Indica que un caso de uso común (subfunción) se ejecuta de forma **obligatoria** dentro del flujo de otro caso de uso para evitar duplicar texto o lógica en la especificación.
+* **Inclusión (`<<include>>`):** La Obligación. Indica que un caso de uso común (subfunción) se ejecuta de forma **obligatoria** dentro del flujo de otro caso de uso para evitar duplicar texto o lógica en la especificación.
     * Dirección de flecha: Apunta al caso común (subfunción).
     * Condicionalidad: Obligatorio. El caso base no está completo sin él.
     * Cuándo usarlo: Para evitar duplicar texto (ej. validar usuario, pagar cuotas).
 
-* **Extensión (`&lt;&lt;extend&gt;&gt;`):** La excepción. Representa un comportamiento **opcional o de excepción** que solo se ejecuta en puntos específicos si se cumple una condición determinada.
+* **Extensión (`<<extend>>`):** La excepción. Representa un comportamiento **opcional o de excepción** que solo se ejecuta en puntos específicos si se cumple una condición determinada.
     * Dirección de flecha: Apunta DESDE el caso extendido HACIA el caso base.
     * Condicionalidad: Opcional/Condicional. El caso base funciona perfectamente por sí solo.
     * Cuándo usarlo: Para manejar excepciones (ej. Tarjeta rechazada, seguro adicional).
@@ -319,7 +319,7 @@ Para organizar la lógica y evitar redundancias en el modelo, se utilizan tres r
 
 ![](img/cu-relaciones.jpg)
 
-#### Aplicación de `&lt;&lt;include&gt;&gt;`
+#### Aplicación de `<<include>>`
 
 <div class="container">
   <div class="row">
@@ -342,7 +342,7 @@ Hospedaje ..> : include Pagar
   </div>
 </div>
 
-#### Aplicación de `&lt;&lt;extend&gt;&gt;`
+#### Aplicación de `<<extend>>`
 
 <div class="container">
   <div class="row">
@@ -372,16 +372,16 @@ config:
   usecase:
     colorScheme: rotate
 ---
-usecase-beta
+usecase-beta 
 actor Participante
 actor Presidente
 
 systemBoundary "GESTION DE CONFERENCIA"
   Registrar("Registrarse")
-  Organizar("Organizar Traducción")
-  Reservar("Reservar Cuarto")
+  Organizar("Organizar\nTraducción")
+  Reservar("Reservar\nCuarto")
 end
-Hotel[Reservaciones de Hotel]
+Hotel[Reservaciones\nde Hotel]
 
 Participante --> Registrar
 Presidente --> Registrar
@@ -484,18 +484,18 @@ config:
     colorScheme: rotate
 ---
 usecase-beta
-direction LR
+direction TD
 actor Customer("Cliente")
-systemBoundary "PLATAFORMA E-COMMERCE -POS"
+systemBoundary "PLATAFORMA E-COMMERCE"
   Checkout("UC-01: Procesar pago electrónico")
-  Rechazo("Notificar Rechazo de Pago")
+  Rechazo("Notificar Rechazo\nde Pago")
   Codigo("Aplicar Código Descuento")
   Validar("Validar Cliente y Carrito")
-  Autorizar("Autorizar Transacción")
-  Registrar("Registrar Venta y Stock")
+  Autorizar("Autorizar \nTransacción")
+  Registrar("Registrar Venta\n y Stock")
 end
-Pagos[Pasarela Pagos]
-Inventario[Sistema Inventario]
+Pagos[Pasarela \nPagos]
+Inventario[Sistema \nInventario]
 
 Customer --> Checkout
 Rechazo ..> : extend Checkout
@@ -529,7 +529,7 @@ Una tienda departamental en línea permite que los clientes exploren el catálog
 #### Diagrama de Casos de Uso
 
 ```mermaid
-flowchart LR
+flowchart TD
     %% Actores
     Cliente["👤 Cliente<br>(Actor Primario)"]
     Pasarela["🖥️ Pasarela de Pagos<br>(Sistema Externo)"]
@@ -576,7 +576,7 @@ Una entidad bancaria ofrece una aplicación móvil para que sus cuentahabientes 
 
 #### Diagrama de Casos de Uso
 ```mermaid
-flowchart LR
+flowchart TD
     %% Actores
     Cliente["👤 Cliente Bancario"]
     CoreBancario["🖥️ Core Bancario<br>(Sistema Central)"]
@@ -624,38 +624,43 @@ En el servicio de urgencias de un centro médico, el paciente llega y se le real
 #### Diagrama de Casos de Uso
 
 ```mermaid
-flowchart LR
-    %% Actores
-    Paciente["👤 Paciente"]
-    Enfermero["👤 Enfermero de Triage"]
-    MedicoGen["👤 Médico General"]
-    MedicoEsp["👤 Médico Especialista"]
-    SistemaEHR["🖥️ Sistema EHR<br>(Ficha Clínica Central)"]
+---
+config:
+  theme: redux-color
+  usecase:
+    colorScheme: rotate
+---
+usecase-beta
+direction TD
+actor Paciente("Paciente")
+actor Enfermero("Enfermero de Triage")
+actor MedicoGen("Médico General")
+actor MedicoEsp("Médico Especialista")
+actor SistemaEHR("🖥️ Sistema EHR\n(Ficha Clínica)")
 
-    %% Herencia de Actores
-    MedicoGen ---|> Medico
-    MedicoEsp ---|> Medico
+systemBoundary "Gestión Hospitalaria de Urgencias"
+  UC_Admision("Registrar Admisión y Datos")
+  UC_Triage("Realizar Triage Clínico")
+  UC_Reanimacion("Activar Código Rojo\ny Asignar Reanimación")
+  UC_Atencion("Atender \nPaciente")
+  UC_EHR("Actualizar Ficha Clínica\n(EHR / Diagnóstico)")
+end
 
-    %% Límite del Sistema
-    subgraph Urgencias ["Límite del Sistema: Gestión Hospitalaria de Urgencias"]
-        UC_Admision(["Registrar Admisión y Datos"])
-        UC_Triage(["Realizar Triage Clínico"])
-        UC_Reanimacion(["Activar Código Rojo<br>y Asignar Reanimación"])
-        UC_Atencion(["Atender Paciente"])
-        UC_EHR(["Actualizar Ficha Clínica<br>(EHR / Diagnóstico)"])
-    end
+%% Asociaciones
+Paciente --- UC_Admision
+Enfermero --- UC_Triage
+MedicoGen --- UC_Atencion
+UC_Atencion --- UC_EHR
+UC_Admision --- UC_Triage
+UC_Reanimacion --- MedicoEsp
 
-    %% Asociaciones
-    Paciente --- UC_Admision
-    Enfermero --- UC_Triage
-    Medico --- UC_Atencion
+%% Relaciones Include y Extend
+UC_Reanimacion ..> : extend UC_Triage
+UC_Triage ..> : include UC_Atencion
 
-    %% Relaciones Include y Extend
-    UC_Reanimacion -.->|&lt;&lt;extend&gt;&gt;<br>[si Nivel 1 - Emergencia Vital]| UC_Triage
-    UC_Atencion -.->|&lt;&lt;include&gt;&gt;| UC_EHR
 
-    %% Conexión Sistema Externo
-    UC_EHR --- SistemaEHR
+%% Conexión Sistema Externo
+UC_EHR --> SistemaEHR
 ```
 
 
@@ -665,6 +670,7 @@ flowchart LR
 | Elemento UML | Propósito Técnico | Ejemplo en los Modelos Anteriores |
 | :--- | :--- | :--- |
 | **Límite del Sistema (*System Boundary*)** | Delimita qué componentes pertenecen al software y cuáles son entidades externas. | Rectángulos contenedores (`ECommerce`, `BancaDigital`, `Urgencias`). |
-| **Inclusión (`&lt;&lt;include&gt;&gt;`)** | Invocación incondicional y obligatoria de un subcaso de uso reutilizable. | `Realizar Pedido` incluye obligatoriamente `Autenticar Usuario`. |
-| **Extensión (`&lt;&lt;extend&gt;&gt;`)** | Comportamiento condicional u opcional que se activa únicamente en puntos de variación específicos. | `Auditar Transacción` extiende a `Transferir Fondos` solo si hay riesgo de fraude. |
+| **Inclusión (`<<include>>`)** | Invocación incondicional y obligatoria de un subcaso de uso reutilizable. | `Realizar Pedido` incluye obligatoriamente `Autenticar Usuario`. |
+| **Extensión (`<<extend>>`)** | Comportamiento condicional u opcional que se activa únicamente en puntos de variación específicos. | `Auditar Transacción` extiende a `Transferir Fondos` solo si hay riesgo de fraude. |
 | **Generalización de Actores** | Relación *es-un* donde un actor especializado hereda todos los casos de uso del actor base. | `Médico Especialista` hereda las facultades operativas de `Médico`. |
+
