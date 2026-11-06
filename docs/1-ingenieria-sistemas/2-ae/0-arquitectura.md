@@ -1,12 +1,16 @@
 ---
-id: ae-empresarial
+id: empresarial
 title:  "📄 Arquitectura Empresarial"
-sidebar_label: "📄 Arquitectura Empresarial"
+sidebar_label: "📄 Presentación"
 description: "Lógica organizativa de los procesos de negocio y la infraestructura de TI de una organización."
 ---
 ## **AE**
 
-La **Arquitectura Empresarial (AE)** (o *Enterprise Architecture*, EA) es un enfoque holístico que define la lógica organizativa de los procesos de negocio y la infraestructura de TI de una organización. Su objetivo principal es traducir la visión y la estrategia empresarial en planos estructurados de capacidades tecnológicas, permitiendo que la tecnología y el negocio avancen alineados hacia sus metas.
+La **Arquitectura Empresarial (AE)** (o *Enterprise Architecture*, EA) es un enfoque *holístico* que define la lógica organizativa de los procesos de negocio y la infraestructura de TI de una organización. Su objetivo principal es traducir la visión y la estrategia empresarial en planos estructurados de capacidades tecnológicas, permitiendo que la tecnología y el negocio avancen alineados hacia sus metas.
+
+:::info[Holístico]
+Lo **holístico** es un enfoque que contempla la realidad, los sistemas o los problemas como un todo integrado y global, en lugar de analizarlos solo a través de sus partes aisladas. Proviene del griego **hólos**, que significa «todo», «entero» o «completo».
+:::
 
 <center>
 ![](img/ae.jpg)

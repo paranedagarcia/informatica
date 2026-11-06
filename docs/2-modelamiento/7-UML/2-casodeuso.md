@@ -510,6 +510,33 @@ Registrar --> Inventario
 </TabItem>
 </Tabs><br/>
 
+#### Sistema de registro de cursos
+
+```mermaid
+---
+config:
+  theme: redux-color
+  usecase:
+    colorScheme: rotate
+---
+usecase-beta
+direction LR
+actor Estudiante("Estudiante")
+actor API("Autorización")
+systemBoundary "Inscripción de ramos"
+  Checkout("UC-01:\n Inscribir ramos")
+  Validar("Validar \nidentidad")
+  Comprar("Comprar libro\n de texto")
+end
+
+Estudiante --- Checkout
+Validar --- API
+
+Comprar ..> : extend Checkout
+Checkout ..> : include Validar
+
+```
+
 
 ## **Ejemplos prácticos**
 
@@ -528,38 +555,42 @@ Una tienda departamental en línea permite que los clientes exploren el catálog
 
 #### Diagrama de Casos de Uso
 
+
 ```mermaid
-flowchart TD
-    %% Actores
-    Cliente["👤 Cliente<br>(Actor Primario)"]
-    Pasarela["🖥️ Pasarela de Pagos<br>(Sistema Externo)"]
-    Logistica["🖥️ Servicio de Logística<br>(Sistema Externo)"]
+---
+config:
+  theme: redux-color
+  usecase:
+    colorScheme: rotate
+---
+usecase-beta
+direction TD
 
-    %% Límite del Sistema
-    subgraph ECommerce ["Plataforma E-Commerce"]
-        UC_Buscar(["Buscar Productos"])
-        UC_Carrito(["Gestionar Carrito"])
-        UC_Checkout(["Realizar Pedido<br>(Checkout)"])
-        UC_Auth(["Autenticar Usuario"])
-        UC_Cupon(["Aplicar Cupón<br>de Descuento"])
-        UC_Pago(["Pagar con Tarjeta"])
-    end
+actor Cliente("Cliente")
+actor Pasarela("Pasarela \nde Pagos")
+actor Servicio("Servicio de\n Logística")
 
-    %% Asociaciones
-    Cliente --- UC_Buscar
-    Cliente --- UC_Carrito
-    Cliente --- UC_Checkout
+systemBoundary "Plataforma E-Commerce"
+    Checkout("Realizar Pedido")
+    Descuento("Cupón de\n descuento")
+    Buscar("Buscar Productos")
+    Carrito("Gestionar\nCarrito") 
+    Autenticar("Autenticar\n Usuario")
+    Pagar("Pagar con\n Tarjeta")
+end
 
-    %% Relaciones Include y Extend
-    UC_Checkout -.->|&lt;&lt;include&gt;&gt;| UC_Auth
-    UC_Checkout -.->|&lt;&lt;include&gt;&gt;| UC_Pago
-    UC_Cupon -.->|&lt;&lt;extend&gt;&gt;: si tiene código| UC_Checkout
+%% asociaciones
+Cliente --- Buscar
+Cliente --- Carrito
+Cliente --- Checkout
 
-    %% Conexiones con Actores Secundarios
-    UC_Pago --- Pasarela
-    UC_Checkout --- Logistica
+Servicio --- Checkout
+Pagar --- Pasarela
+
+Descuento ..> : extend Checkout
+Checkout ..> : include Autenticar
+Checkout ..> : include Pagar
 ```
-
 ---
 
 ### Financiero: Banca Digital

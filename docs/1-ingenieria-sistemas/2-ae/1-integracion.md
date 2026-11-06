@@ -1,5 +1,5 @@
 ---
-id: ae-integracion
+id: integracion
 title:  ""
 sidebar_label: "📄 Integración Empresarial"
 description: "De la Taxonomía Ontológica a la Agilidad Organizacional"

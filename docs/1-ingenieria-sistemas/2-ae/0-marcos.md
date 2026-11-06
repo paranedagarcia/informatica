@@ -1,5 +1,5 @@
 ---
-id: ae-marcos
+id: marcos
 title:  "📄 Marco Empresarial"
 sidebar_label: "📄 Marcos de trabajo"
 description: "Zachman, ADM TOGAF y FEAF"
