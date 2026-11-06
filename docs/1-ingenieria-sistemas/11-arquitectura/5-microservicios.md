@@ -6,6 +6,10 @@ description: "Arquitectura orientada a microservicios"
 ---
 
 ## **Microservicios (MSA)**
+El **Patrón de Arquitectura de Microservicios (*Micro-Service Architecture - MSA*)** es un estilo arquitectónico que estructura una aplicación como una **constelación de servicios pequeños, autónomos y débilmente acoplados**, donde cada servicio se ejecuta en su propio proceso de computación y modela una capacidad de negocio bien delimitada. 
+
+A diferencia de los sistemas monolíticos tradicionales, donde todos los componentes de software (presentación, lógica y datos) residen y compiten en un único proceso ejecutable, los microservicios distribuyen la responsabilidad para permitir despliegues independientes, alta tolerancia a fallos y escalabilidad granular.
+
 <center>
 
 ```mermaid
@@ -51,9 +55,7 @@ flowchart TD
 
 </center>
 
-El **Patrón de Arquitectura de Microservicios (*Micro-Service Architecture - MSA*)** es un estilo arquitectónico que estructura una aplicación como una **constelación de servicios pequeños, autónomos y débilmente acoplados**, donde cada servicio se ejecuta en su propio proceso de computación y modela una capacidad de negocio bien delimitada. 
 
-A diferencia de los sistemas monolíticos tradicionales, donde todos los componentes de software (presentación, lógica y datos) residen y compiten en un único proceso ejecutable, los microservicios distribuyen la responsabilidad para permitir despliegues independientes, alta tolerancia a fallos y escalabilidad granular.
 
 
 
