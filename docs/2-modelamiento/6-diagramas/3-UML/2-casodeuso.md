@@ -301,7 +301,7 @@ Checkout --> Pagos
 Customer --> Checkout
 
 ```
-### Relaciones entre Casos de Uso
+### Relaciones
 
 Para organizar la lógica y evitar redundancias en el modelo, se utilizan tres relaciones de comportamiento:
 
@@ -402,7 +402,7 @@ Reservar --> Hotel
 
 * **Para guiar el desarrollo iterativo:** Sirve de base para planificar las iteraciones (*sprints*), diseñar los diagramas de interacción y clases (como los DSS y los DCD), y estructurar las pruebas de aceptación finales.
 
-### Ejemplo Caso de Uso
+### Ejemplo
 
 
 <Tabs>
@@ -513,7 +513,7 @@ Registrar --> Inventario
 
 ## **Ejemplos prácticos**
 
-### 1. Dominio de Comercio Electrónico: Sistema de Compras Online
+### Comercio Electrónico
 
 #### Enunciado
 Una tienda departamental en línea permite que los clientes exploren el catálogo y añadan artículos a su carrito. Para finalizar una compra (**Realizar Pedido**), el sistema exige incondicionalmente validar la identidad del usuario (**Autenticar Usuario**) y autorizar los fondos a través de una **Pasarela de Pagos externa**. Opcionalmente, si el cliente dispone de un código promocional válido durante el checkout, el flujo permite **Aplicar Cupón de Descuento**, deduciendo el saldo antes del cobro final. Si el stock físico de un producto es crítico, el sistema notifica de forma secundaria al **Servicio de Logística**.
@@ -562,7 +562,7 @@ flowchart TD
 
 ---
 
-### 2. Dominio Financiero: Banca Digital y Transferencias
+### Financiero: Banca Digital
 
 #### Enunciado
 Una entidad bancaria ofrece una aplicación móvil para que sus cuentahabientes realicen operaciones bancarias. Todo cliente que desea **Transferir Fondos** a terceros debe superar obligatoriamente una verificación de **Validar Segundo Factor (2FA / Token Digital)**. Adicionalmente, el banco cuenta con un motor analítico antifraude: si el monto transferido supera los límites habituales o el destinatario está marcado en listas de observación, se dispara de forma condicional el caso de uso **Auditar Transacción Sospechosa**, alertando en tiempo real al **Oficial de Cumplimiento / Fraude**.
@@ -608,7 +608,7 @@ flowchart TD
 
 
 
-### 3. Dominio de Salud: Admisión, Triage y Atención en Urgencias
+### Salud: Admisión y Atención
 
 #### Enunciado
 En el servicio de urgencias de un centro médico, el paciente llega y se le realiza la **Admisión Administrativa**. Posteriormente, una enfermera ejecuta el **Realizar Triage Clínico** midiendo signos vitales. Si el paciente presenta paro respiratorio o shock hemodinámico (Nivel 1 de gravedad), se ejecuta condicionalmente y de forma inmediata **Activar Código Rojo y Reanimación**. Cuando el paciente pasa a consulta médica (**Atender Paciente**), el médico puede ser un **Médico General** o un **Médico Especialista** (herencia de actores). Toda atención médica concluye obligatoriamente con el registro de la evolución y recetas (**Actualizar Ficha Clínica Electrónica / EHR**).
@@ -665,7 +665,7 @@ UC_EHR --> SistemaEHR
 
 
 
-### Resumen Comparativo de Estructuras UML Utilizadas
+### Resumen Comparativo
 
 | Elemento UML | Propósito Técnico | Ejemplo en los Modelos Anteriores |
 | :--- | :--- | :--- |
