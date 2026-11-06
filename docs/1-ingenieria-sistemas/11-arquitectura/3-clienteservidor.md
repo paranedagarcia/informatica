@@ -43,11 +43,11 @@ El funcionamiento básico sigue el paradigma de **Petición-Respuesta (*Request-
 3. **Servidor (Receptor pasivo / reactivo):** Proceso o computador central que escucha permanentemente en un puerto de red. Al recibir la solicitud, valida la identidad y permisos, ejecuta la lógica o consulta correspondiente, y retorna un mensaje de respuesta con los datos solicitados o el estado de la operación.
 
 ```
-┌───────────────────┐                     ┌───────────────────┐
+┌───────────────────┐                      ┌───────────────────┐
 │     CLIENTE       │  ── Petición (Req) ─►│     SERVIDOR      │
 │  (Inicia el flujo │◄── Respuesta (Res) ─ │ (Procesa y provee │
-│  y presenta datos)│                     │  recursos/datos)  │
-└───────────────────┘                     └───────────────────┘
+│  y presenta datos)│                      │  recursos/datos)  │
+└───────────────────┘                      └───────────────────┘
 ```
 
 ---

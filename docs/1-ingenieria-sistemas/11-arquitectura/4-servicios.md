@@ -61,7 +61,7 @@ En el marco de SOA, un **servicio** es una unidad de software que encapsula una 
 
 5. **Autonomía y Sin Estado (*Statelessness*):**  
    Cada invocación de un servicio es independiente y no depende de que el servidor conserve el estado de la conversación o de sesiones específicas en memoria entre peticiones sucesivas. Toda la información requerida para ejecutar la tarea viaja dentro del propio mensaje.
-   
+
 6. **Descubrimiento Dinámico Basado en Metadatos (*Discoverable*):**  
    Los servicios se publican en catálogos o registros centralizados que permiten a los consumidores localizarlos, inspeccionar sus capacidades e integrarse a ellos de forma dinámica.
 
@@ -73,8 +73,8 @@ La interacción fundamental en SOA involucra tres roles que interactúan en un c
 
 ```
                       ┌─────────────────────────┐
-                      │   Registro de Servicios  │
-                      │       (Service Broker)  │
+                      │  Registro de Servicios  │
+                      │    (Service Broker)     │
                       └─────────────────────────┘
                          ▲                   │
           1. Publica     │                   │ 2. Busca / Descubre
