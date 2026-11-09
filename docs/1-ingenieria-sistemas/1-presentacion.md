@@ -17,7 +17,7 @@ La **Ingeniería de Sistemas** (o *systems engineering*) se describe como una di
 
 Desde mi experiencia de años trabajando en el área, he podido observar que todo proyecto informático parte de una situación fundamental: **comprender el problema que se busca resolver**.
 
-La informática tiene como propósito utilizar herramientas y tecnologías para resolver problemas y generar soluciones. Para hacerlo correctamente, no basta con conocer lenguajes de programación o herramientas tecnológicas; primero es necesario **comprender el negocio, la organización o el entorno donde se presenta el problema**. Se verá en [arquitectura empresarial](/docs/ingenieria-sistemas/ae-empresarial).
+La informática tiene como propósito utilizar herramientas y tecnologías para resolver problemas y generar soluciones. Para hacerlo correctamente, no basta con conocer lenguajes de programación o herramientas tecnológicas; primero es necesario **comprender el negocio, la organización o el entorno donde se presenta el problema**. Se verá en [arquitectura empresarial](/docs/ingenieria-sistemas/ae/empresarial).
 
 Además, cualquier negocio o industria, independiente de su tamaño, puede entenderse como un **sistema**, compuesto por elementos que se relacionan entre sí y que interactúan con su entorno.
 

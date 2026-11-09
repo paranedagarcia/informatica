@@ -45,8 +45,9 @@ A diferencia de los diagramas de clases (que muestran la estructura estática) o
 
 
 
-### Ejemplo
+## **Ejemplos**
 
+### Pago con tarjeta crédito
 Tomando el escenario de pago con tarjeta de crédito/débito, la secuencia de mensajes entre las capas del sistema funciona de la siguiente manera:
 
 1. **Invocación de Pago:** El actor `:Cliente` envía el mensaje `procesarPago(datosTarjeta, montoTotal)` hacia el objeto de presentación/dominio `:ControladorVenta`.
@@ -59,3 +60,98 @@ Tomando el escenario de pago con tarjeta de crédito/débito, la secuencia de me
 
 
 ![](img/sec-diagrama.jpg)
+
+
+### Atención de salud
+
+A continuación tienes el **diagrama de secuencia en Mermaid** que modela el flujo completo de atención médica, estructurado según las etapas de interacción entre los diferentes actores y el sistema de información clínica (HIS / Ficha Médica Electrónica).
+
+
+#### Diagrama de Secuencia en Mermaid
+
+
+```mermaid
+---
+config:
+  theme: 'default'
+  themeVariables:
+     fontSize: 20px
+     fontFamily: 'verdana'
+     darkMode: false
+---
+sequenceDiagram
+    autonumber
+    actor Paciente as 👤 Paciente
+    actor Admin as 📋 Administrativo
+    actor Enfermera as 🩺 Enfermera (Triage)
+    actor Medico as 👨‍⚕️ Médico
+    participant Sistema as 💻 Sistema Clínico<br> (HIS)
+
+    %% ==========================================
+    %% FASE 1: REGISTRO Y ADMISIÓN
+    %% ==========================================
+    rect rgb(240, 248, 255)
+    Note over Paciente,Sistema: FASE 1: REGISTRO Y ADMISIÓN
+    Paciente->>Admin: Solicita atención y presenta documento de identidad
+    Admin->>Sistema: Consultar antecedentes del paciente (RUT / DNI)
+    Sistema-->>Admin: Retorna datos de filiación y cobertura previsional
+    Admin->>Sistema: Registrar ingreso a lista de espera de Triage
+    Sistema-->>Admin: Confirmación de ingreso (N° de atención asignado)
+    Admin->>Paciente: Entrega comprobante e indica pasar a sala de espera
+    end
+
+    %% ==========================================
+    %% FASE 2: EVALUACIÓN DE ENFERMERÍA (TRIAGE)
+    %% ==========================================
+    rect rgb(255, 250, 240)
+    Note over Paciente,Sistema: FASE 2: EVALUACIÓN Y SIGNOS VITALES (TRIAGE)
+    Enfermera->>Sistema: Consultar siguiente paciente en lista de espera
+    Sistema-->>Enfermera: Datos del paciente asignado
+    Enfermera->>Paciente: Llama al paciente a box de categorización
+    Enfermera->>Paciente: Toma signos vitales (presión, FC, saturación, T°) y motivo
+    Enfermera->>Sistema: Registrar signos vitales y categorización clínica (Triage)
+    Sistema-->>Enfermera: Registro guardado y actualizado en cola médica
+    Enfermera->>Paciente: Deriva a sala de espera de atención médica
+    end
+
+    %% ==========================================
+    %% FASE 3: ATENCIÓN MÉDICA Y DIAGNÓSTICO
+    %% ==========================================
+    rect rgb(245, 255, 245)
+    Note over Paciente,Sistema: FASE 3: CONSULTA MÉDICA Y DIAGNÓSTICO
+    Medico->>Sistema: Llamar paciente priorizado según Triage
+    Sistema-->>Medico: Muestra ficha clínica y signos vitales registrados
+    Medico->>Paciente: Llama a consulta e inicia anamnesis / examen físico
+    Paciente-->>Medico: Describe síntomas y evolución del cuadro
+    Medico->>Medico: Evalúa signos, síntomas y antecedentes clínicos
+    Medico->>Sistema: Registrar hipótesis / diagnóstico definitivo (CIE-10/CIE-11)
+    end
+
+    %% ==========================================
+    %% FASE 4: DEFINICIÓN DE TRATAMIENTO Y ALTA
+    %% ==========================================
+    rect rgb(255, 245, 245)
+    Note over Paciente,Sistema: FASE 4: PLAN TERAPÉUTICO Y CIERRE
+    Medico->>Sistema: Generar receta médica electrónica e indicaciones terapéuticas
+    Sistema-->>Medico: Comprobante digital de prescripción médica generado
+    Medico->>Paciente: Explica diagnóstico, entrega receta e indicaciones de cuidado
+    Medico->>Sistema: Marcar atención médica como "Finalizada / Alta"
+    Sistema-->>Medico: Cierre de episodio de atención confirmado
+    end
+```
+
+
+
+#### Participantes y Fases
+
+1. **Participantes / Líneas de Vida (*Lifelines*):**
+   * **`Paciente` (Actor):** Usuario que inicia la demanda de salud y colabora en el interrogatorio clínico.
+   * **`Administrativo` (Actor):** Gestiona la identificación del usuario, valida coberturas y registra el ingreso formal al servicio.
+   * **`Enfermera` (Actor):** Ejecuta el primer filtro clínico (*Triage*), mide parámetros fisiológicos objetivos (presión arterial, temperatura, saturación de \\(O_2\\)) y clasifica el nivel de urgencia.
+   * **`Médico` (Actor):** Realiza el examen físico, establece el juicio diagnóstico y prescribe el plan terapéutico.
+   * **`Sistema Clínico` (Componente de Software):** Ficha Médica Electrónica o sistema hospitalario que centraliza la persistencia de datos, asegura la trazabilidad temporal del episodio y actualiza el estado de las colas de espera.
+
+2. **Flujo de Información y Buenas Prácticas UML:**
+   * **Mensajes Síncronos (`->>`):** Representan solicitudes activas de acción o consultas directas al sistema.
+   * **Mensajes de Respuesta (`-->>`):** Indican la devolución de datos procesados (por ejemplo, ficha del paciente, confirmación de registro o receta emitida).
+   * **Bloques Agrupadores (`rect`):** Delimitan claramente las cuatro transiciones de estado del paciente: Admisión \\(\rightarrow\\) Triage \\(\rightarrow\\) Consulta/Diagnóstico \\(\rightarrow\\) Tratamiento/Alta.

@@ -46,7 +46,7 @@ Sus principales responsabilidades y funciones incluyen:
    * Es un interlocutor clave con capacidad para traducir problemas de negocio en especificaciones técnicas de software y, a su vez, explicar decisiones técnicas complejas a clientes, analistas y directivos de forma comprensible.
 
 ***
-## Principios SOLID
+## **Principios SOLID**
 
 Aunque los principios **SOLID** suelen enseñarse a nivel de clases y programación orientada a objetos, su propósito original y más profundo es fundamentalmente **arquitectónico**. Formulados inicialmente por Robert C. Martin a partir de su trabajo sobre la degradación del software (*software rot*) y formalizados bajo el acrónimo acuñado por Michael Feathers, estos principios operan como heurísticas esenciales para definir los **límites estructurales, las dependencias y la modularidad** de un sistema.
 
@@ -54,16 +54,23 @@ A nivel de arquitectura de software, su relación se articula en torno a la **se
 
 
 
-### Prevención de los "Vicios Arquitectónicos" (*Software Rot*)
+### Vicios Arquitectónicos
+**(*Software Rot*)**
+
 La arquitectura de un sistema debe permitir que este evolucione con el tiempo sin colapsar bajo su propia complejidad. Cuando la arquitectura no se apoya en principios como SOLID, surgen cuatro síntomas clásicos de degradación arquitectónica:
 * **Rigidez:** La resistencia al cambio, donde una pequeña modificación en un requisito obliga a una cascada de alteraciones imprevistas en múltiples módulos o subsistemas.
+
 * **Fragilidad:** La tendencia del software a romperse en áreas no relacionadas conceptualmente cada vez que se introduce una modificación.
+
 * **Inmovilidad:** La incapacidad de reutilizar módulos o servicios en otras partes del sistema o en nuevas aplicaciones debido a que están estrechamente acoplados con componentes específicos.
+
 * **Viscosidad:** La dificultad técnica o arquitectónica para incorporar cambios de forma limpia, tentando a los desarrolladores a recurrir a parches rápidos o atajos que violan el diseño.
 
 
 
-### Dimensión Arquitectónica de cada Principio SOLID
+### Dimensión Arquitectónica
+
+La dimesión arquitectónica de cada principio SOLID se refleja en la tabla siguiente:
 
 | Principio | Manifestación a Nivel de Clases | Manifestación a Nivel de Arquitectura |
 | :--- | :--- | :--- |
@@ -74,37 +81,40 @@ La arquitectura de un sistema debe permitir que este evolucione con el tiempo si
 | **D – Inversión de Dependencias (*DIP*)** | Los módulos de alto nivel no deben depender de los de bajo nivel; ambos dependen de abstracciones. | **Límites Arquitectónicos (*Clean / Hexagonal Architecture*):** Las capas de más alto nivel (la lógica y las entidades del dominio) no deben depender directamente de la infraestructura técnica (bases de datos relacionales, frameworks web, controladores de red o librerías de terceros). En su lugar, el dominio define interfaces abstractas (puertos) y los detalles técnicos implementan esas interfaces (adaptadores), invirtiendo el flujo tradicional de dependencias. |
 
 
-### Conexión con Patrones de Arquitectura
+### Patrones de Arquitectura
 
 1. **Arquitectura en Capas (*Layered Architecture*):**  
    El patrón Capas organiza el sistema separando la capa de presentación, la lógica de negocio y los servicios técnicos/persistencia. SOLID —particularmente **SRP** y **DIP**— fundamenta esta organización al exigir que las capas no se mezclen y que la capa del dominio se mantenga protegida de la inestabilidad de las tecnologías externas.
+
 2. **Estabilidad de Paquetes y Subsistemas:**  
    Robert C. Martin formuló a nivel arquitectónico que **los paquetes más responsables (de los que más componentes dependen) deben ser los más estables**, consistiendo predominantemente en interfaces y abstracciones (**DIP** y **OCP**), mientras que el código concreto y volátil se despliega en paquetes periféricos fácilmente reemplazables.
+
 3. **Principio de Separación Modelo-Vista (*Model-View Separation*):**  
    Derivado directo de SRP, este principio arquitectónico establece que los objetos del modelo del dominio no deben conocer ni acoplarse a las ventanas o componentes de la interfaz de usuario, garantizando que el núcleo del negocio pueda ejecutarse de forma autónoma, reutilizarse con múltiples interfaces o trasladarse a otros entornos.
 
 ***
 
-## **Arquitecto**
+## **El Arquitecto**
 
 El rol, las competencias y las responsabilidades del arquitecto no son homogéneos. Por el contrario, existen **tensiones fundamentales y complementariedades críticas** en torno a cómo se concibe esta figura en el contexto de las vistas del sistema.
 
 A continuación las cuatro dimensiones principales que emergen de este cruce de perspectivas:
 
----
 
-### 1. La Gran Discusión: ¿El Arquitecto como "Rol Centralizado" vs. "Arquitectura Emergente del Equipo"?
+### Participación
+**¿El Arquitecto como "Rol Centralizado" vs. "Arquitectura Emergente del Equipo"?**
 
 El contraste más marcado entre las fuentes radica en **quién es el dueño de las decisiones arquitectónicas**:
 
 * **El Enfoque Estructurado y de Ingeniería de Software (Larman / Proceso Unificado):**  
   Larman sitúa al arquitecto como un **líder técnico con alta responsabilidad individual o de núcleo**. Su función primordial es el **análisis arquitectural**: identificar y resolver los atributos de calidad (requisitos no funcionales como fiabilidad, rendimiento o tolerancia a fallos) en las primeras fases mediante la construcción de un núcleo central o *arquitectura ejecutable*. Si bien Larman recalca que en un proceso iterativo "los programadores son también diseñadores", el arquitecto actúa como un **enlace activo** que visita a los distintos equipos en sus pizarras, detecta dependencias, resuelve conflictos y armoniza las decisiones para evitar divergencias estructurales.
+
 * **La Tesis Ágil Pura (*Agile Practice Guide* / Scrum):**  
   El principio 11 del Manifiesto Ágil sostiene de forma categórica que *"las mejores arquitecturas, requerimientos y diseños surgen de equipos auto-organizados"*. En los marcos ágiles estándar (como Scrum), no existe formalmente el cargo de "Arquitecto de Software"; los roles se limitan al equipo multidisciplinario, el dueño del producto (*Product Owner*) y el facilitador (*Scrum Master*). En este entorno, el dueño del producto puede consultar a expertos de dominio (como arquitectos) de forma externa, pero la responsabilidad arquitectónica se diluye y se asume colectivamente mediante refactorización continua, pruebas automatizadas y diseño evolutivo.
+
 * **La Síntesis (Scrum Management / FDD):**  
   Fuentes como *Flexibilidad con Scrum* e *International Conference on Complex Systems* advierten que confiar ciegamente en que la arquitectura emergerá sola sin experiencia técnica de alto nivel conduce a la "programación heroica" o a una severa degradación arquitectónica (*software rot*) en sistemas grandes o críticos. Por ello, marcos escalados como el *Desarrollo Impulsado por Características (FDD)* reincorporan formalmente la figura del **Arquitecto Jefe (*Chief Architect*)** para gobernar el modelo general, demostrando que la complejidad no puede eliminarse únicamente con autoorganización sin una visión técnica integradora.
 
----
 
 ### El Rol
 
@@ -115,12 +125,18 @@ Las fuentes demuestran que el término "arquitecto" sufre de una frecuente confu
 * **Amplitud (*Breadth*) vs. Profundidad (*Depth*):**  
   Como categoriza *Getting Started with Enterprise Architecture*, existen cuatro niveles genéricos bien diferenciados:
   1. **Enterprise Architect (EA):** Posee el alcance más amplio (*enterprise-wide ecosystem*) pero menor detalle de bajo nivel; traduce la estrategia de negocio y conecta los cuatro dominios organizacionales (Negocio, Datos, Aplicaciones, Tecnología).
+
   2. **Domain Architect:** Se especializa en un dominio corporativo específico (ej. Arquitecto de Negocio, Arquitecto de Datos o Arquitecto de Seguridad).
+
   3. **Solution Architect:** Se enfoca en la gobernanza integral del ciclo de vida de un sistema complejo de gran envergadura (como un CRM o ERP), orquestando sus dependencias.
+
   4. **Software Architect / Senior Software Engineer:** Opera en el extremo de mayor profundidad técnica y detalle de implementación. Mientras que el ingeniero se enfoca en componentes específicos, la responsabilidad del arquitecto de software es **la solución completa y las dependencias e interfaces entre componentes**.
+
 * **La Frontera entre Análisis y Arquitectura:**  
   Tanto en sistemas como en el plano empresarial, las fuentes (como Iyamu y Hendrickx) debaten la delgada línea entre el **analista de negocio/sistemas** y el **arquitecto**:
+
   * El **analista** opera a nivel táctico/operativo, traduciendo los requerimientos cotidianos de los usuarios y modelando procesos inmediatos.
+
   * El **arquitecto** opera a nivel estructural y de gobierno; es *dueño y responsable (accountable)* de descomponer la solución global en componentes funcionales estables y definir las reglas que gobernarán su evolución en el tiempo.
 
 
@@ -149,12 +165,12 @@ Las fuentes identifican que las competencias indispensables se dividen en dos fa
 ```
 
 * **Traducción y Mediación:** Autores como van der Torre y Van Zee señalan que el arquitecto debe descomponer su rol en dos figuras: el **ingeniero** (que crea modelos formales) y el **facilitador** (que media entre el lenguaje de los desarrolladores y las prioridades de los directivos).
+
 * **Decisiones Económicas y Estratégicas (*Build vs. Buy*):** Como ilustra Larman en el caso del punto de venta (PDV) NuevaEra, una competencia arquitectónica crítica no es inventar código nuevo, sino saber cuándo **comprar o reutilizar librerías y componentes comerciales existentes** (por ejemplo, adoptar estándares JavaPOS o frameworks de persistencia probados) para ahorrar costos de desarrollo y evitar sobrecargar al equipo con mantenimiento prescindible.
 
----
 
 ### Responsabilidades
-**"Vistas Arquitectónicas" (El Modelo de Múltiples Vistas**
+**"Vistas Arquitectónicas"**
 
 Un principio fundamental en el que convergen tanto el Proceso Unificado (Larman) como TOGAF e ISO/IEC/IEEE 42010 es que **un sistema complejo no puede describirse mediante un único plano unificado**. La responsabilidad cardinal del arquitecto es **diseñar y mantener las distintas vistas (*views*) basadas en puntos de vista (*viewpoints*) específicos** para satisfacer las preocupaciones (*concerns*) de los distintos interesados:
 
@@ -167,27 +183,32 @@ Un principio fundamental en el que convergen tanto el Proceso Unificado (Larman)
 | **Vista de Casos de Uso (Escenarios / 4+1)** | Realizaciones de los casos de uso más críticos y significativos para la arquitectura. | Usuarios, directores de proyecto, patrocinadores y arquitectos. | Validar tempranamente que el diseño arquitectónico realmente cumpla con los objetivos y requisitos prioritarios del negocio. |
 
 #### Las Perspectivas Transversales (*Architectural Perspectives*)
-Autores en *Enterprise Process Management Systems* añaden que el arquitecto no solo diseña vistas estáticas aisladas, sino que debe aplicar **perspectivas transversales**: actividades y tácticas de diseño que atraviesan todas las vistas para garantizar los atributos de calidad (como la perspectiva de *Seguridad*, *Escalabilidad* o *Resiliencia*).
+Algunos autores añaden que el arquitecto no solo diseña vistas estáticas aisladas, sino que debe aplicar **perspectivas transversales**: actividades y tácticas de diseño que atraviesan todas las vistas para garantizar los atributos de calidad (como la perspectiva de *Seguridad*, *Escalabilidad* o *Resiliencia*).
 
----
+
 
 ### Resumen
 
-Las fuentes demuestran que el arquitecto de software no es un "diseñador aislado en una torre de marfil" que entrega planos detallados e inmutables para que otros los codifiquen (lo cual las fuentes rechazan como una falacia del modelo en cascada tradicional). 
+El arquitecto de software no es un "diseñador aislado en una torre de marfil" que entrega planos detallados e inmutables para que otros los codifiquen (lo cual las fuentes rechazan como una falacia del modelo en cascada tradicional). 
 
 En la ingeniería de sistemas moderna, el arquitecto es un **negociador continuo de compromisos técnicos y organizacionales**:
 1. Construye tempranamente una **base arquitectónica ejecutable** para disipar la incertidumbre.
+
 2. Modela a través de **múltiples vistas simplificadas** para que cada grupo de interesados entienda y valide el sistema.
+
 3. Aplica **principios de diseño disciplinados** (separación de intereses, modularidad, SOLID) para dotar al software de resiliencia ante el cambio.
+
 4. En contextos ágiles, ejerce un **liderazgo de servicio y facilitación**, empoderando al equipo para que tome decisiones locales sin perder de vista la integridad y coherencia del sistema global.
 
-## mermaid
 
-A continuación se presenta el **diagrama en Mermaid** que ilustra formalmente cómo el **Principio de Inversión de Dependencias (DIP)** establece la frontera y la dirección de las dependencias en una **Arquitectura Limpia (*Clean Architecture*)** o **Hexagonal (*Ports & Adapters*)**, junto con el desglose de su funcionamiento técnico.
+## **Inversión de Dependencias**
 
----
+A continuación se presenta el **diagrama** que ilustra formalmente cómo el **Principio de Inversión de Dependencias (DIP)** establece la frontera y la dirección de las dependencias en una **Arquitectura Limpia (*Clean Architecture*)** o **Hexagonal (*Ports & Adapters*)**, junto con el desglose de su funcionamiento técnico.
 
-### 1. Diagrama Arquitectónico: Inversión de Dependencias y Límites del Dominio
+
+
+### Diagrama Arquitectónico
+**Inversión de Dependencias y Límites del Dominio**
 
 ```mermaid
 flowchart TD
@@ -260,13 +281,14 @@ flowchart TD
     class PuertoEntrada,PuertoRepo,PuertoPago interface;
 ```
 
----
 
-### 2. Anatomía Técnica del Límite Arquitectónico
+
+### Anatomía del Límite Arquitectónico
 
 #### A. El Enfoque Tradicional vs. El Enfoque Invertido (DIP)
 * **Arquitectura Clásica en Capas (Dependencia Directa de Arriba hacia Abajo):**  
   En un diseño tradicional sin DIP, la lógica de negocio depende directamente de la capa de acceso a datos (`Lógica de Negocio ──► Repositorio SQL`). Si la base de datos cambia de esquema, de tecnología o de librería, el cambio se propaga hacia el núcleo del negocio.
+
 * **Arquitectura Limpia / Hexagonal (Inversión de Dependencias):**  
   El núcleo de la aplicación **no importa librerías externas ni tecnologías de persistencia**. En su lugar, el caso de uso declara lo que necesita mediante una interfaz abstracta: el **Puerto de Salida** (`RepositorioOrdenes`). La clase concreta (`RepositorioPostgres`) reside en la capa externa de infraestructura y es la que **depende e implementa la interfaz del núcleo**.
 
@@ -277,24 +299,25 @@ Como se aprecia en el diagrama, todas las flechas que cruzan los límites arquit
 3. **Facilidad de Pruebas Unitarias (*Testability*):** Dado que el caso de uso interactúa únicamente con interfaces (`PuertoRepo`, `PuertoPago`), se pueden inyectar implementaciones en memoria (*Mocks* o *Fakes*) durante las pruebas sin levantar contenedores de base de datos ni conectar pasarelas de pago reales.
 
 ***
-## Ejemplo codigo
+## **Ejemplo codigo**
 
 A continuación tienes un ejemplo conciso, autocontenido y ejecutable en **Python** que implementa la estructura de **Arquitectura Limpia / Hexagonal (*Ports & Adapters*)**, demostrando cómo el **Principio de Inversión de Dependencias (DIP)** protege las reglas de negocio del dominio.
 
----
 
 ### Estructura de las Capas
 
 1. **Núcleo del Dominio (*Domain*):** Entidades puras y reglas de negocio invariantes. Sin dependencias externas.
+
 2. **Puertos de la Aplicación (*Application Ports*):** Interfaces abstractas (`ABC`) que definen qué necesita el sistema para persistir datos o procesar pagos.
+
 3. **Caso de Uso (*Use Case*):** Orquesta el flujo de negocio dependiendo **únicamente** de los puertos abstractos.
+
 4. **Adaptadores de Infraestructura (*Adapters*):** Implementaciones concretas (ej. base de datos SQL o pasarela de pagos) que implementan las interfaces del núcleo, invirtiendo la dirección tradicional de las dependencias.
 
----
 
 ### Código en Python
 
-```python
+```python showLineNumbers
 """
 Ejemplo de Arquitectura Hexagonal / Clean Architecture demostrando DIP.
 El caso de uso y el dominio NUNCA importan detalles de infraestructura (SQL, APIs).
@@ -431,7 +454,7 @@ if __name__ == "__main__":
     print(f"Estado de la orden en la BD: {orden_actualizada.estado}")
 ```
 
----
+
 
 ### ¿Cómo se evidencia aquí el Principio de Inversión de Dependencias (DIP)?
 
@@ -445,17 +468,16 @@ if __name__ == "__main__":
 ***
 
 
-### Pruebas unitarias del codigo
+### Pruebas unitarias
 
 A continuación tienes una suite de pruebas unitarias completa con el módulo estándar `unittest` de Python. 
 
 Esta suite demuestra el verdadero poder del **Principio de Inversión de Dependencias (DIP)**: verificar la lógica del caso de uso y de la entidad del dominio aislando completamente el sistema mediante **adaptadores simulados (*Test Mocks / Fakes*)**, sin necesidad de conectar bases de datos reales ni pasarelas de pago externas.
 
----
 
-### Código de Pruebas Unitarias (`test_arquitectura_hexagonal.py`)
+#### Código de Pruebas Unitarias (`test_arquitectura_hexagonal.py`)
 
-```python
+```python showLineNumbers
 """
 Suite de Pruebas Unitarias para el Caso de Uso de Pago de Órdenes.
 Verifica la lógica del dominio y la orquestación del caso de uso aislando
@@ -588,9 +610,9 @@ if __name__ == "__main__":
     unittest.main(verbosity=2)
 ```
 
----
 
-### Salida esperada al ejecutar las pruebas:
+
+#### Salida esperada
 
 ```text
 test_orden_inexistente_retorna_falso_y_no_invoca_pasarela (__main__.TestCasoUsoProcesarPagoOrden) ... ok
@@ -604,7 +626,7 @@ Ran 4 tests in 0.002s
 OK
 ```
 
-### Beneficios Arquitectónicos Comprobados:
+#### Beneficios Arquitectónicos Comprobados:
 1. **Velocidad de ejecución:** Los 4 tests se ejecutan en milésimas de segundo porque no hay conexiones I/O ni esperas de red.
 2. **Determinismo:** Ninguna prueba fallará por problemas de conectividad con Stripe ni caídas del servidor de base de datos.
 3. **Aislamiento real:** Se comprueba tanto la regla pura del dominio (invariante de monto > 0) como la orquestación del caso de uso de manera independiente.

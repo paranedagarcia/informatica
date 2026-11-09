@@ -33,3 +33,7 @@
 .hero--primary {
   background-color: #3b385d !important;
 }
+
+.docusaurus-mermaid-container {
+  font-size: 18px !important;
+}
