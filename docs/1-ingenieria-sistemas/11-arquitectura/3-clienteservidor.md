@@ -1,7 +1,7 @@
 ---
 id: a-clienteservidor
 title:  "📄 Arquitectura cliente-servidor"
-sidebar_label: "📄 A. cliente-servidor"
+sidebar_label: "📄 A. Cliente-servidor"
 description: "Arquitectura cliente-servidor"
 ---
 

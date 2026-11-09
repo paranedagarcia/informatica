@@ -1,7 +1,7 @@
 ---
 id: a-servicios
 title:  "📄 Arquitectura SOA"
-sidebar_label: "📄 Arquitectura SOA"
+sidebar_label: "📄 A. Orientada a servicios"
 description: "Arquitectura orientada a servicios"
 ---
 
@@ -303,7 +303,7 @@ Una empresa comercializadora necesita procesar órdenes de compra integrando dis
 
 El siguiente script en Python utiliza la biblioteca estándar (`dataclasses`, `typing`, `json`) para simular una implementación desacoplada y ejecutable de SOA:
 
-```python
+```python showLineNumbers
 """
 Ejemplo de Implementación de Arquitectura Orientada a Servicios (SOA) en Python.
 Demuestra: Contratos canónicos, Servicios desacoplados y Bus de Servicios (ESB).
@@ -501,7 +501,7 @@ class EnterpriseServiceBus:
 
 **Reutilización de Servicios:** El `NotificationService` o el `InventoryService` pueden ser consumidos en el futuro por otros procesos (por ejemplo, devoluciones de mercancía o auditorías de almacén) sin reescribir una sola línea de su lógica interna.
 
-```python showlineNumbers
+```python showLineNumbers
 # ============================================================================
 # 4. PROGRAMA CONSUMIDOR / CLIENTE (DEMOSTRACIÓN DE CASOS DE USO)
 # ============================================================================

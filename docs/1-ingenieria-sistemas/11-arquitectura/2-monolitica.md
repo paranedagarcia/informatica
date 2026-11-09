@@ -1,7 +1,7 @@
 ---
 id: a-monolitica
 title:  "📄 Arquitectura monolítica"
-sidebar_label: "📄 A. monolítica"
+sidebar_label: "📄 A. Monolítica"
 description: "Arquitectura monolítica"
 ---
 

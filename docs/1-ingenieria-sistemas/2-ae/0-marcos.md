@@ -13,7 +13,6 @@ El **Marco Zachman** (o *Zachman Framework*) es uno de los pilares fundamentales
 ![](img/ae-zachman-infografia.jpg)
 
 
-
 Zachman, quien trabajaba para la empresa IBM en el área de metodologías de planificación de sistemas de información, propuso este modelo aplicando por analogía los conceptos de la **arquitectura de construcción clásica** al diseño y desarrollo de empresas y sus sistemas de computación. Al hacerlo, acuñó el término "Arquitectura Empresarial" (*Enterprise Architecture*).
 
 Bajo la óptica de este marco, la arquitectura se define como un conjunto de artefactos de diseño o representaciones descriptivas que son relevantes para detallar un objeto complejo, de tal forma que pueda ser producido de acuerdo con requisitos de calidad específicos y mantenerse (cambiar) eficazmente a lo largo de su vida útil.
@@ -138,24 +137,36 @@ Como meta-arquitectura, TOGAF está constituido por dos partes esenciales que tr
 TOGAF prescribe que la Arquitectura Empresarial debe subdividirse en cuatro capas o dominios interdependientes para poder ser gestionada de manera efectiva:
 
 1.  **Arquitectura de Negocio (*Business*):** Define la estrategia del negocio, la gobernanza, la organización y los procesos de negocio clave.
+
 2.  **Arquitectura de Datos/Información (*Data*):** Describe la estructura de los activos físicos y lógicos de datos de la empresa, así como sus recursos de gestión de datos.
+
 3.  **Arquitectura de Aplicaciones (*Applications*):** Define las especificaciones de las aplicaciones individuales y de software que se implementan para dar soporte y activar los procesos de negocio.
+
 4.  **Arquitectura de Tecnología (*Technology*):** Detalla las capacidades lógicas y físicas de hardware y software (servidores, redes, middleware) que sustentan la infraestructura para ejecutar las aplicaciones.
 
 
 
-### Las Fases del Ciclo ADM
+### Las fases del ficlo ADM
 El método ADM se representa de forma circular y cuenta con un conjunto de fases que guían el ciclo de vida del desarrollo arquitectónico:
 
 *   **Fase Preliminar:** Se ejecuta al inicio para definir el contexto, obtener el respaldo (*buy-in*) de los patrocinadores del proyecto, establecer los principios arquitectónicos generales y definir los roles y responsabilidades del equipo.
+
 *   **Fase A (Visión de la Arquitectura):** Define el alcance inicial del esfuerzo, la visión del proyecto y los criterios de validación de éxito.
+
 *   **Fase B (Arquitectura de Negocio):** Diseña y modela el dominio de la arquitectura de negocio para alinearla con la visión.
+
 *   **Fase C (Arquitectura de Sistemas de Información):** Desarrolla los planos específicos de las aplicaciones y de los activos de datos que interactúan con el negocio.
+
 *   **Fase D (Arquitectura de Tecnología):** Mapea la infraestructura de hardware y software necesaria para habilitar la arquitectura de sistemas de información.
+
 *   **Fase E (Oportunidades y Soluciones):** Evalúa los paquetes de trabajo y las opciones de implementación (p. ej., definir si conviene construir software a la medida o comprar soluciones comerciales ya hechas).
+
 *   **Fase F (Planificación de la Migración):** Prioriza los proyectos o paquetes de trabajo, analiza sus dependencias y genera un plan detallado de migración.
+
 *   **Fase G (Gobernanza de la Implementación):** Supervisa y coordina la ejecución de los proyectos para garantizar que la construcción real cumpla de forma conforme con los planos de la arquitectura.
+
 *   **Fase H (Gestión de Cambios de la Arquitectura):** Implementa un proceso de control y gobernanza para evaluar y gestionar de manera ordenada cualquier alteración futura que sufra la arquitectura en producción.
+
 *   **Gestión de Requisitos (*Requirements Management*):** Se ubica en el centro exacto del ciclo ADM. Es un proceso dinámico que interactúa de manera bidireccional y continua con cada una de las fases, asegurando que todos los requisitos del cliente estén alineados en todo momento.
 
 
@@ -165,8 +176,8 @@ Un aspecto clave es que **TOGAF no prescribe ni define el aspecto o la aparienci
 
 Por esta razón, la organización que promueve TOGAF (*The Open Group*) proporciona un lenguaje de modelado visual estándar llamado **ArchiMate** para dar soporte gráfico al diseño de las vistas de AE. Asimismo, dada la flexibilidad de TOGAF, es una práctica común de la industria **unirlo de forma sinérgica con el Marco Zachman**; se utiliza el proceso dinámico ADM de TOGAF para guiar el orden de construcción de los planos del proyecto, y se utiliza la matriz estática de Zachman como el "archivador o repositorio taxonómico" ideal para clasificar y organizar esos planos una vez generados.
 
----
-## **TOGAF vs Zachman**
+
+### TOGAF vs Zachman
 
 Las diferencias fundamentales entre el **Marco Zachman** y **TOGAF** (*The Open Group Architecture Framework*) radican en su naturaleza, su propósito metodológico y la forma en que estructuran la Arquitectura Empresarial (AE). Mientras que uno es un esquema de clasificación taxonómica (una ontología), el otro es una metodología basada en procesos de gestión y planificación.
 
@@ -176,30 +187,30 @@ Las diferencias fundamentales entre el **Marco Zachman** y **TOGAF** (*The Open 
 
 A continuación se detallan las diferencias clave:
 
-### Naturaleza y Enfoque
+#### Naturaleza y Enfoque
 * **El Marco Zachman es un esquema de clasificación o taxonomía:** No prescribe ningún proceso, secuencia o ciclo de vida para el desarrollo de la arquitectura. Su enfoque consiste en asegurar que todos los planos y descripciones relevantes de una empresa estén mapeados y clasificados de forma integral.
 
 * **TOGAF es un enfoque y metodología orientados a procesos:** No es en sí mismo un marco arquitectónico rígido, sino un manual de fases organizadas en torno a un método llamado **ADM** (*Architecture Development Method*). Se enfoca principalmente en la gestión, planificación y gobernanza de la creación de la AE, más que en predefinir el aspecto final de las vistas.
 
-### Estructura y Componentes
+#### Estructura y Componentes
 * **Zachman utiliza una Matriz Estática (6x6):** La clasificación cruza **seis interrogantes básicas** (las columnas: *Qué, Cómo, Dónde, Quién, Cuándo, Por qué*) con **seis perspectivas de los interesados** (las filas: *Planificador, Propietario, Diseñador, Constructor, Subcontratista y Empresa en funcionamiento*). Cuenta con reglas estrictas de completitud (el formato es fijo y las columnas no tienen un orden jerárquico o temporal).
 
 * **TOGAF utiliza el Ciclo ADM:** Es una estructura circular e iterativa de **fases consecutivas** (desde la Fase Preliminar y Visión de la Arquitectura, pasando por Negocio, Sistemas de Información y Tecnología, hasta la Planificación de la Migración, Gobernanza y Gestión de Cambios). También introduce el *Enterprise Continuum* para guiar el tránsito de la empresa desde su estado actual al deseado.
 
-### Dominios y Capas
+#### Dominios y Capas
 * **TOGAF prescribe cuatro capas específicas de arquitectura:** Negocio (*Business*), Datos/Información (*Data/Information*), Aplicaciones (*Applications*) y Tecnología (*Technology*).
 
 * **Zachman descompone la organización en seis bloques de modelado (las columnas):** Datos, Procesos, Redes, Personas, Tiempo y Motivación.
 
-### Entregables
+#### Entregables
 * **Zachman define vistas preestructuradas:** Trata de predefinir qué representaciones lógicas y físicas requiere cada rol (por ejemplo, el modelo semántico para el Propietario o la arquitectura de red para el Diseñador). Sin embargo, carece de un instrumento o herramienta de modelado propio, por lo que frecuentemente se utiliza con la notación UML.
 
 * **TOGAF es flexible en el formato de sus entregables:** Las salidas del proceso ADM no tienen una forma gráfica o look definido por defecto; pueden ser textos planos en un Wiki, documentos tradicionales o modelos lógicos en herramientas de software. The Open Group proporciona un lenguaje estandarizado llamado **ArchiMate** para dar soporte visual al modelado de AE bajo las fases de TOGAF.
 
-### Sinergia
+#### Sinergia
 En el diseño real de Arquitectura Empresarial, **ambos marcos no son excluyentes, sino altamente complementarios y a menudo se combinan**. Las organizaciones suelen adoptar el **ADM de TOGAF** para tener un mapa de ruta metodológico claro (el "cómo" y en qué orden avanzar), y utilizan la **Matriz de Zachman** como el repositorio o "archivador" estructurado para clasificar, gobernar y asegurar la completitud de todos los artefactos de diseño que se producen a lo largo de esas fases.
 
-### Análisis Comparativo
+### Análisis comparativo
 **Zachman (Estático) vs. TOGAF (Dinámico)**
 
 La madurez arquitectónica de una organización se mide por su capacidad para integrar ambos marcos. No son excluyentes: Zachman define el Estándar y TOGAF define la Transformación.
@@ -214,7 +225,7 @@ La madurez arquitectónica de una organización se mide por su capacidad para in
 
 Impacto Estratégico ("So What?"): Esta dualidad permite gestionar la variabilidad. Zachman asegura que no olvidemos componentes críticos (integridad), mientras que TOGAF asegura que el proceso de cambio sea gobernado y adaptativo (agilidad). Juntos, proporcionan una base empírica para la toma de decisiones estratégicas.
 
-### Sinergia Práctica y Adaptabilidad
+### Sinergia práctica
 **Implementación en la Empresa Ágil**
 
 Para el estratega moderno, la integración de estos marcos no es opcional. Bajo una mentalidad ágil, el marco de Zachman funciona como el Backlog de la Arquitectura (la estructura de lo que debe ser), mientras que TOGAF opera como el Sprint (el flujo de mejora continua).
@@ -340,25 +351,7 @@ El FEAF se usa también fuera del Gobierno federal estadounidense como marco de 
 
 - **Valor práctico**: cuando se aplica con compromiso directivo, el FEAF ha demostrado ahorros cuantificables (consolidación de centros de datos, retiro de sistemas, eliminación de aplicaciones duplicadas) y mejoras de interoperabilidad entre agencias.
 
-#### Referencias
 
-1. The White House (archivo), *Federal Enterprise Architecture (FEA)* — guía oficial, modelos de referencia y herramientas de la OMB. https://obamawhitehouse.archives.gov/omb/e-gov/fea
-2. Centers for Medicare & Medicaid Services (CMS), *Federal Enterprise Architecture Framework*. https://www.cms.gov/data-research/cms-information-technology/enterprise-architecture/federal-enterprise-architecture-framework
-3. OMB, *The Common Approach to Federal Enterprise Architecture* (2 de mayo de 2012) y *Federal Enterprise Architecture Framework version 2* (29 de enero de 2013). Disponibles en la referencia 1.
-4. U.S. GAO, *Organizational Transformation: Enterprise Architecture Value Needs to Be Measured and Reported* (GAO-12-791). https://www.gao.gov/products/gao-12-791
-5. Congressional Research Service, *Federal Enterprise Architecture and E-Government: Issues for Information Technology Management* (RL33417). https://www.everycrsreport.com/reports/RL33417.html
-6. Congresso de EE. UU., audiencia *Federal Enterprise Architecture* (House of Representatives, 108.º Congreso). https://www.govinfo.gov/content/pkg/CHRG-108hhrg96944/html/CHRG-108hhrg96944.htm
-7. ScienceDirect, *Federal Enterprise Architecture – an overview*. https://www.sciencedirect.com/topics/computer-science/federal-enterprise-architecture
-8. Wikipedia, *Federal enterprise architecture* (historia y legislación). https://en.wikipedia.org/wiki/Federal_enterprise_architecture
-9. Project Open Data, *FEMA Case Study (DisasterAssistance.gov)*. https://github.com/project-open-data/project-open-data.github.io/blob/master/fema-case-study.md
-10. FEA Consolidated Reference Model Document, versión 2.3 (octubre de 2007). https://www.reginfo.gov/public/jsp/Utilities/FEA_CRM_v23_Final_Oct_2007_Revised.pdf
-11. EAPJ, *How the Federal EA Framework Supports Government Digital Transformation* (caso ACT Health). https://eapj.org/wp-content/uploads/2020/09/How-the-Federal-EA-Framework-Supports-Government-Digital-Transformation.pdf
-12. Nextgov, *The federal enterprise architecture: Where it fits* (2008). https://www.nextgov.com/modernization/2008/06/the-federal-enterprise-architecture-where-it-fits/198667/
-13. https://sosafe-awareness.com/es/glosario/zachman-framework/
-
-:::info
-**Nota:** este contenido se basa exclusivamente en las fuentes citadas, priorizando organismos oficiales (OMB, GAO, CMS, Congreso). Las cifras de ahorro corresponden a lo reportado por las propias agencias y verificado por la GAO.
-:::
 
 
 
@@ -381,7 +374,7 @@ El FEAF se usa también fuera del Gobierno federal estadounidense como marco de 
 | TOGAF | Sector privado / Transformación Ágil | Metodología circular (ADM) orientada a procesos.|
 | FEAF | Sector público (Gobierno) / Estandarización a gran escala | Modelos de referencia (CRM) + Planificación (CPM).|
 
-### Resumen de la Sinergia
+### Resumen de la sinergia
 
 En la práctica real de las organizaciones, estos tres enfoques no compiten entre sí, sino que se integran funcionalmente:
 
@@ -447,6 +440,26 @@ A continuación se presenta el **cuadro comparativo y de mapeo** de los componen
 
 3. **Alineación de Resultados:** Esta combinación asegura que las iniciativas tecnológicas no solo sigan un proceso riguroso de diseño y migración, sino que también cumplan con los estándares de interoperabilidad, eficiencia y medición de valor.
 
+
+## 📚 **Referencias**
+
+1. The White House (archivo), *Federal Enterprise Architecture (FEA)* — guía oficial, modelos de referencia y herramientas de la OMB. https://obamawhitehouse.archives.gov/omb/e-gov/fea
+2. Centers for Medicare & Medicaid Services (CMS), *Federal Enterprise Architecture Framework*. https://www.cms.gov/data-research/cms-information-technology/enterprise-architecture/federal-enterprise-architecture-framework
+3. OMB, *The Common Approach to Federal Enterprise Architecture* (2 de mayo de 2012) y *Federal Enterprise Architecture Framework version 2* (29 de enero de 2013). Disponibles en la referencia 1.
+4. U.S. GAO, *Organizational Transformation: Enterprise Architecture Value Needs to Be Measured and Reported* (GAO-12-791). https://www.gao.gov/products/gao-12-791
+5. Congressional Research Service, *Federal Enterprise Architecture and E-Government: Issues for Information Technology Management* (RL33417). https://www.everycrsreport.com/reports/RL33417.html
+6. Congresso de EE. UU., audiencia *Federal Enterprise Architecture* (House of Representatives, 108.º Congreso). https://www.govinfo.gov/content/pkg/CHRG-108hhrg96944/html/CHRG-108hhrg96944.htm
+7. ScienceDirect, *Federal Enterprise Architecture – an overview*. https://www.sciencedirect.com/topics/computer-science/federal-enterprise-architecture
+8. Wikipedia, *Federal enterprise architecture* (historia y legislación). https://en.wikipedia.org/wiki/Federal_enterprise_architecture
+9. Project Open Data, *FEMA Case Study (DisasterAssistance.gov)*. https://github.com/project-open-data/project-open-data.github.io/blob/master/fema-case-study.md
+10. FEA Consolidated Reference Model Document, versión 2.3 (octubre de 2007). https://www.reginfo.gov/public/jsp/Utilities/FEA_CRM_v23_Final_Oct_2007_Revised.pdf
+11. EAPJ, *How the Federal EA Framework Supports Government Digital Transformation* (caso ACT Health). https://eapj.org/wp-content/uploads/2020/09/How-the-Federal-EA-Framework-Supports-Government-Digital-Transformation.pdf
+12. Nextgov, *The federal enterprise architecture: Where it fits* (2008). https://www.nextgov.com/modernization/2008/06/the-federal-enterprise-architecture-where-it-fits/198667/
+13. https://sosafe-awareness.com/es/glosario/zachman-framework/
+
+:::info
+**Nota:** este contenido se basa exclusivamente en las fuentes citadas, priorizando organismos oficiales (OMB, GAO, CMS, Congreso). Las cifras de ahorro corresponden a lo reportado por las propias agencias y verificado por la GAO.
+:::
 
 ---
 ## 📝 **Test:** Marcos de trabajo

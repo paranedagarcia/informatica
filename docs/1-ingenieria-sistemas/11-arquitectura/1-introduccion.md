@@ -1,5 +1,5 @@
 ---
-id: arquitectura-intro
+id: a-intro
 title:  "📄 Arquitectura de sistemas"
 sidebar_label: "📄 Arquitectura"
 description: "Arquitectura de sistemas. Diseño y organización de componentes tecnológicos"
@@ -11,7 +11,7 @@ La **arquitectura de sistemas** es la disciplina y el plano estructural que defi
 
 
 
-### Definición Formal
+### Definición formal
 De acuerdo con las definiciones estándar (como IEEE 1471 / ISO 42010 citadas en las fuentes), la arquitectura no es solo el código o el hardware aislado, sino el marco formal que organiza las partes constitutivas de una solución tecnológica:
 * **Como sustantivo (el artefacto o plano):** Es la representación abstracta y estructurada de los elementos del sistema, sus responsabilidades, mecanismos de interacción y las motivaciones de diseño detrás de esas decisiones.
 
@@ -19,7 +19,7 @@ De acuerdo con las definiciones estándar (como IEEE 1471 / ISO 42010 citadas en
 
 
 
-### Dimensiones y Componentes Clave
+### Dimensiones y componentes
 Todo sistema computarizado e informático integra tres partes fundamentales: **hardware** (procesadores, redes, almacenamiento), **software** (aplicaciones, servicios, bibliotecas) y **datos** (estructuras persistentes y en memoria). La arquitectura de sistemas organiza estos elementos a través de:
 
 1. **Partición y Modularidad:** Divide un problema complejo en elementos o subsistemas más pequeños con límites, responsabilidades y alcances claramente delimitados.
@@ -34,7 +34,7 @@ Todo sistema computarizado e informático integra tres partes fundamentales: **h
 
 
 
-### Vistas y Perspectivas
+### Vistas y perspectivas
 Dado que ningún diagrama único puede capturar la totalidad de un sistema, la arquitectura se documenta mediante **múltiples vistas complementarias** dirigidas a diferentes partes interesadas (*stakeholders*:
 * **Vista Lógica / de Aplicación:** Describe la organización conceptual del software en capas, paquetes, interfaces y subsistemas (por ejemplo, modelos N-capas o Modelo-Vista-Controlador).
 
@@ -46,7 +46,7 @@ Dado que ningún diagrama único puede capturar la totalidad de un sistema, la a
 
 
 
-### Niveles de Escala
+### Niveles de escala
 **Sistema vs. Arquitectura Empresarial (AE)**
 
 La arquitectura de sistemas opera en dos escalas interconectadas:
@@ -54,7 +54,7 @@ La arquitectura de sistemas opera en dos escalas interconectadas:
 
 * **A nivel organizacional (*Enterprise Architecture - AE*):** Adopta una visión holística basada en el pensamiento sistémico para evitar los "silos" tecnológicos. Integra la arquitectura del sistema dentro de **cuatro dominios corporativos**: *Arquitectura de Negocio* (procesos y estrategia), *Arquitectura de Datos/Información*, *Arquitectura de Aplicaciones* y *Arquitectura Tecnológica* (redes e infraestructura).
 
-### Patrones de Arquitectura
+### Patrones de arquitectura
 
 #### Monolítico
 ```mermaid
@@ -128,7 +128,7 @@ flowchart LR
     end
 ```
 
-#### SOA
+#### Orientada a Servicios (SOA)
 ```mermaid
 ---
 config:
@@ -197,6 +197,4 @@ flowchart TD
         MA_SVC -. "Eventos Asíncronos" .-> MB_SVC
     end
 ```
-
----
 

@@ -1,7 +1,7 @@
 ---
 id: a-microservicios
 title:  "📄 Arquitectura microservicios"
-sidebar_label: "📄 A. microservicios"
+sidebar_label: "📄 A. Microservicios"
 description: "Arquitectura orientada a microservicios"
 ---
 
