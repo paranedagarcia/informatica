@@ -65,6 +65,7 @@ Para documentar visualmente el flujo de información, la metodología emplea com
 ![](img/dfd-objetos.jpg)
 
 ### Reglas para un DFD
+
 Para garantizar que el diagrama sea sintácticamente correcto, los analistas deben seguir reglas de diseño que impiden inconsistencias lógicas:
 
 ![](img/dfd-oro.jpg)
