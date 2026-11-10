@@ -3,8 +3,9 @@ id: empresarial
 title:  "📄 Arquitectura Empresarial"
 sidebar_label: "📄 Presentación"
 description: "Lógica organizativa de los procesos de negocio y la infraestructura de TI de una organización."
+hide_title: true
 ---
-## **AE**
+## **Arquitectura Empresarial**
 
 La **Arquitectura Empresarial (AE)** (o *Enterprise Architecture*, EA) es un enfoque *holístico* que define la lógica organizativa de los procesos de negocio y la infraestructura de TI de una organización. Su objetivo principal es traducir la visión y la estrategia empresarial en planos estructurados de capacidades tecnológicas, permitiendo que la tecnología y el negocio avancen alineados hacia sus metas.
 
@@ -16,7 +17,7 @@ Lo **holístico** es un enfoque que contempla la realidad, los sistemas o los pr
 ![](img/ae.jpg)
 </center>
 
-La Arquitectura Empresarial actúa como un puente entre la **planificación estratégica** y los **esfuerzos de implementación** técnica. En lugar de ver a la tecnología y al negocio como silos separados, la AE proporciona un "mapa general" o *big picture* que unifica procesos, personas, información y sistemas. 
+La AE actúa como un puente entre la **planificación estratégica** y los **esfuerzos de implementación** técnica. En lugar de ver a la tecnología y al negocio como silos separados, la AE proporciona un "mapa general" o *big picture* que unifica procesos, personas, información y sistemas. 
 
 En la práctica, sirve para diseñar tanto el **estado actual ("As-Is")** de la organización como el **estado futuro deseado ("To-Be")**, trazando una ruta de migración clara que minimice riesgos y redundancias. Esto ayuda a superar el problema histórico de los "silos de aplicaciones" —sistemas aislados que funcionan bien por sí mismos pero que juntos impiden la coordinación organizacional— y a construir una base unificada para la ejecución.
 
@@ -25,6 +26,7 @@ En la práctica, sirve para diseñar tanto el **estado actual ("As-Is")** de la 
 :::
 
 ### Los 4 Dominios de la AE
+
 Tradicionalmente, la AE divide la complejidad de una organización en **cuatro dominios interconectados e interdependientes**:
 
 <center>
@@ -72,10 +74,15 @@ La **Arquitectura de Negocio** (*Business Architecture* - BA o EBA) es la discip
 
 #### Artefactos y Entregables Típicos
 * **Mapa/Paisaje de Procesos (*Process Landscape*):** Representación jerárquica de las cadenas de valor y procesos organizacionales.
+
 * **Matriz de Capacidades de Negocio (*Business Capability Matrix*):** Catálogo estructurado de las capacidades evaluadas según su rendimiento y prioridad estratégica.
+
 * **Diagramas de Procesos y Nadaderos (*Swimlane Diagrams / BPMN*):** Modelos de flujo de trabajo que asignan actividades a roles específicos.
+
 * **Casos de Uso y Escenarios de Negocio (*Business Scenarios / Use Cases*):** Narrativas y esquemas que identifican problemas de negocio, actores y resultados esperados.
+
 * **Redes de Valor de la Empresa (*Enterprise Value Networks - EVN*):** Diagramas que mapean las interacciones y el intercambio de valor entre la empresa, sus clientes y sus aliados comerciales.
+
 * **Caso de Negocio de Inversión (*Investment Business Case*):** Documentación que justifica el valor, riesgo y retorno de inversión de las iniciativas de transformación.
 
 
@@ -83,6 +90,7 @@ La **Arquitectura de Negocio** (*Business Architecture* - BA o EBA) es la discip
 #### Arquitectura de Negocio vs. Análisis de Negocio
 Aunque suelen confundirse, operan en distintos niveles de abstracción:
 * **Arquitectura de Negocio (*Business Architecture*):** Es de alcance holístico y estratégico para **toda la empresa**. El *Business Architect* opera en el diseño del estado futuro (*To-Be*), asegura la alineación con la visión ejecutiva y garantiza la continuidad del negocio.
+
 * **Análisis de Negocio (*Business Analysis*):** Es de alcance táctico y se enfoca en **proyectos o soluciones específicas**. El *Business Analyst* trabaja capturando y traduciendo los requerimientos detallados de los usuarios para guiar la construcción de software.
 
 
@@ -125,11 +133,16 @@ En la práctica organizativa e industrial existe una confusión habitual donde l
 
 * **Arquitectura de Datos (*Data Architecture*):**
   * **Enfoque:** Se centra en los aspectos técnicos y estructurales de los datos crudos (*raw data*).
+
   * **Alcance:** Trata sobre cómo se recolectan, almacenan, organizan e integran los datos físicamente en bases de datos relacionales (SQL), no relacionales (NoSQL), almacenes de datos (*Data Warehouses*) y entornos de Big Data.
+
   * **Requisitos:** Capacidad de almacenamiento, velocidad de lectura/escritura, rendimiento, integridad referencial, encriptación y soporte para altos volúmenes y variedades de datos.
+
 * **Arquitectura de Información (*Information Architecture*):**
   * **Enfoque:** Se enfoca en otorgar significado, utilidad, valor y contexto a los datos para convertirlos en información comprensible por los seres humanos y los procesos de negocio.
+
   * **Alcance:** Modela la **cadena de suministro e intercambio de información** (*information supply chain / information flows*) entre procesos, departamentos y socios externos.
+
   * **Dimensiones de Valor de la Información:** Evalúa la **velocidad** (*velocity* - rapidez de transmisión), el **alcance** (*reach* - difusión y acceso) y la **densidad** (*density* - volumen de valor útil por espacio).
 
 
@@ -156,6 +169,7 @@ Para estructurar los datos e información de una empresa, este dominio se organi
 * **TOGAF (*The Open Group Architecture Framework*):**
   * Se aborda dentro de la **Fase C: Arquitecturas de Sistemas de Información** (*Information Systems Architectures*), la cual se divide formalmente en dos partes: **Arquitectura de Datos** y **Arquitectura de Aplicaciones**.
   * Desarrolla los modelos de datos del negocio, modelos lógicos de datos, modelos de gestión de datos y matrices de Entidad de Datos vs. Función de Negocio.
+
 * **Marco Zachman:**
   * Corresponde a la columna del **"Qué" (*Data / What*)**.
   * Organiza las representaciones abstractas en filas: desde la lista de cosas importantes para el negocio (*Scope/Planner*), pasando por el modelo semántico conceptual (*Owner*), el modelo lógico de datos (*Designer*), el modelo físico (*Builder*), las definiciones detalladas fuera de contexto (*Subcontractor*) hasta la base de datos funcionando (*Functioning Enterprise*).
@@ -178,6 +192,7 @@ Para estructurar los datos e información de una empresa, este dominio se organi
 
 En el contexto de la transformación digital, la Arquitectura de Datos e Información asume la responsabilidad de:
 * **Gobernanza de Datos, Privacidad y Seguridad:** Establecer políticas corporativas para el control de acceso, cumplimiento normativo (ej. GDPR), trazabilidad y protección de datos sensibles.
+
 * **Gestión de Big Data e Integración:** Manejar las "3V" o "5V" del Big Data (Volumen, Variedad, Velocidad, Veracidad, Valor), integrando fuentes heterogéneas internas y externas (sensores IoT, redes sociales, servicios en la nube).
 
 
@@ -228,8 +243,11 @@ Para gestionar el estado actual (*As-Is*) y definir la transición al estado fut
 ```
 
 1. **Mantener / Evolucionar (*Maintain / Evolve* - Alto Valor / Excelente Condición):** Sistemas estratégicos bien diseñados que deben conservarse y actualizarse periódicamente según las necesidades del negocio.
+
 2. **Desarrollar Infraestructura (*Develop Application Infrastructure* - Alto Valor / Condición Deficiente):** Aplicaciones críticas para la operación que sufren de deuda técnica, fragilidad o problemas de integración. Requieren refactorización o migración de arquitectura.
+
 3. **Reevaluar / Reubicar (*Re-evaluate / Reposition* - Bajo Valor / Excelente Condición):** Software técnicamente estable pero con bajo impacto en la estrategia actual; se analiza si se puede simplificar o consolidar en otra área.
+
 4. **Descontinuar / Reemplazar (*Phase Out / Replace* - Bajo Valor / Condición Deficiente):** Aplicaciones obsoletas con alto costo de mantenimiento y poco retorno de inversión, marcadas para su retiro inmediato.
 
 
@@ -239,9 +257,10 @@ Para gestionar el estado actual (*As-Is*) y definir la transición al estado fut
 Toda iniciativa en la Arquitectura de Aplicaciones se rige por tres rutas de implementación guiadas por la gobernanza arquitectónica:
 
 * **Construir (*Build*):** Se reserva para capacidades centrales (*core*) que otorgan una ventaja competitiva única a la empresa y no existen como soluciones estándar en el mercado.
-* **Comprar (*Buy*):** Se aplica a procesos estandarizados de la industria (como ERP, CRM o nómina) mediante la adquisición de software COTS (*Commercial Off-The-Shelf*) o servicios SaaS.
-* **Reutilizar (*Reuse*):** Aprovecha servicios de software e interfaces existentes (mediante arquitecturas orientadas a servicios - SOA o microservicios) para acelerar la entrega y evitar la duplicación de código.
 
+* **Comprar (*Buy*):** Se aplica a procesos estandarizados de la industria (como ERP, CRM o nómina) mediante la adquisición de software COTS (*Commercial Off-The-Shelf*) o servicios SaaS.
+
+* **Reutilizar (*Reuse*):** Aprovecha servicios de software e interfaces existentes (mediante arquitecturas orientadas a servicios - SOA o microservicios) para acelerar la entrega y evitar la duplicación de código.
 
 
 ### Arquitectura Tecnológica
@@ -269,6 +288,8 @@ Para gestionar la complejidad de la infraestructura corporativa, la Arquitectura
 1. **Plataformas de Cómputo (*Platform Architecture*):**
    * Define los componentes de hardware (servidores físicos, máquinas virtuales, estaciones de trabajo), sistemas operativos (ej. Windows Server, Linux) y entornos de motores de bases de datos (DBMS).
 
+   [detallar ...]
+
 2. **Redes y Telecomunicaciones (*Network Architecture*):**
    * Especifica la infraestructura de comunicación de datos, voz y video, abarcando redes de área local (LAN), redes extendidas (WAN), topologías físicas/lógicas, enrutadores, conmutadores, enlaces móviles y protocolos de red (como TCP/IP).
 
@@ -286,9 +307,13 @@ Para gestionar la complejidad de la infraestructura corporativa, la Arquitectura
 #### Entregables y Artefactos Típicos
 
 * **Catálogo de Portafolio de Tecnología (*Technology Portfolio Catalog*):** Registro estructurado e inventario de todos los componentes tecnológicos en uso (dispositivos, versiones de SO, proveedores, nivel de soporte y servidor asociado).
+
 * **Perfil de Estándares Tecnológicos (*Technology Standards Profile - ST-1*):** Catálogo formal de tecnologías y productos aprobados por la organización bajo criterios de estandarización (*Buy, Build, Reuse*) para evitar la proliferación descontrolada de herramientas.
+
 * **Pronóstico Tecnológico (*Technology Forecast - ST-2*):** Evaluación prospectiva de la evolución tecnológica, tendencias del mercado y nivel de fragilidad o riesgo de obsolescencia de las plataformas actuales.
+
 * **Diagrama de Conectividad y Redes (*Network Connectivity Diagram / Topology*):** Mapa visual que ilustra la topología lógica y física de la red, nodos de comunicación, ubicaciones geográficas y enlaces de interconexión.
+
 * **Matriz de Tecnología vs. Funciones de Aplicación (*Technology/Application Function Map*):** Matriz cruzada que relaciona los componentes tecnológicos y sus servicios de infraestructura con los módulos y componentes de aplicación que alojan.
 
 

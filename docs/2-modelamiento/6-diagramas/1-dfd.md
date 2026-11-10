@@ -1,12 +1,13 @@
 ---
 id: dfd
-title: "📄 Diagrama de Flujo de Datos"
+title: "📄 DFD"
 sidebar_label: "📄 DFD"
 description: "Diagrama que cómo se mueven y transforman los datos dentro de un sistema de información o proceso de negocio."
+hide_title: true
 ---
 import YouTubeVideo from '@site/src/components/YouTubeVideo';
 
-## **DFD**
+## **Diagrama de Flujo de Datos**
 
 ![](img/diagrama_de_flujo.jpg)
 
@@ -35,7 +36,8 @@ Sin jerga técnica, revelan qué pasa con la información antes de definir cómo
 
 <YouTubeVideo id="b6d1cMbyHmM" title="Diagrama de flujo de datos" />
 
-### Los Cuatro Símbolos Básicos del DFD
+### Los símbolos básicos
+
 Para documentar visualmente el flujo de información, la metodología emplea combinaciones de únicamente **cuatro símbolos básicos**:
 
 ![](img/dfd-kit.jpg)
@@ -62,7 +64,7 @@ Para documentar visualmente el flujo de información, la metodología emplea com
 
 ![](img/dfd-objetos.jpg)
 
-### Reglas de Oro para Construir un DFD
+### Reglas para un DFD
 Para garantizar que el diagrama sea sintácticamente correcto, los analistas deben seguir reglas de diseño que impiden inconsistencias lógicas:
 
 ![](img/dfd-oro.jpg)

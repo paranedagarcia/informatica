@@ -3,7 +3,10 @@ id: requisitos
 title: "Ingeniería de requisitos"
 sidebar_label: "📄 Requisitos"
 description: "Ingeniería de requisitos y trazabilidad"
+hide_title: true
 ---
+
+## **Ingeniería de Requisitos**
 
 ![](img/ingeniería_de_requisitos.jpg)
 
@@ -25,7 +28,7 @@ Tiene como objetivo convertir necesidades difusas en lenguaje natural a requerim
 **Técnicas habituales:** Entrevistas, cuestionarios, talleres de trabajo (workshops), observación directa, prototipado y análisis de documentación.
 :::
 
-### Requisitos Funcionales vs. No Funcionales
+### Tipos de requisitos
 
 En este ámbito, las necesidades del sistema se clasifican principalmente en dos grandes categorías:
 
@@ -47,21 +50,30 @@ En este ámbito, las necesidades del sistema se clasifican principalmente en dos
 ![](img/requisitos-furps.jpg)
 
 
-### Historias de Usuario (*User Stories*)
+### Historias de Usuario 
+**(*User Stories*)**
+
 * Son descripciones breves y sencillas de una funcionalidad deseada, redactadas desde la perspectiva del usuario final para capturar el valor de negocio que se busca entregar.
+
 * En metodologías ágiles y marcos como Scrum, sustituyen las listas tradicionales de especificaciones extensas por un **Product Backlog** dinámico y vivo, sirviendo como un compromiso de diálogo continuo entre el equipo de desarrollo y el dueño del producto (*Product Owner*).
 
-### Criterios de Aceptación (*Acceptance Criteria*)
+### Criterios de Aceptación
+
 * Son las condiciones, reglas o pruebas específicas que una historia de usuario o requisito debe cumplir para ser validado y considerado "terminado" (*Definition of Done*) por el cliente o el negocio.
+
 * Guían el desarrollo guiado por pruebas de aceptación (ATDD / BDD) y garantizan que el software entregado satisfaga de forma verificable el comportamiento esperado.
 
-### Reglas de Negocio (*Business Rules*)
+### Reglas de Negocio 
+**(*Business Rules*)**
+
 * Son las políticas, fórmulas, procedimientos o restricciones organizacionales y legales que rigen el funcionamiento de la empresa.
+
 * No son requisitos de software en sí mismas, pero **condicionan y restringen** directamente los requisitos del sistema. *Ejemplo:* Una norma corporativa que exige un 20% de descuento a empleados condiciona la lógica del requisito de cálculo de ventas.
 
 
 ### Priorización
 * Es la actividad de evaluar y ordenar los requisitos o historias de usuario según su valor para el cliente, impacto en el negocio, urgencia o riesgo técnico.
+
 * En ciclos de vida iterativos, permite al *Product Owner* seleccionar en cada iteración los elementos de mayor valor para construir incrementos funcionales tempranos. Se utilizan técnicas como la votación multicriterio, análisis costo-beneficio o dinámicas de grupo (*dot voting*).
 
 
@@ -81,7 +93,7 @@ En este ámbito específico —donde el objetivo central es capturar, analizar y
 A continuación se desglosan en detalle las cuatro técnicas fundamentales:
 
 
-### Entrevistas (*Interviews*)
+### Entrevistas
 
 La entrevista es un método interactivo basado en una conversación dirigida con un propósito específico, estructurada en un formato de preguntas y respuestas entre el analista de requisitos y los actores clave de la organización.
 
@@ -104,8 +116,8 @@ La entrevista es un método interactivo basado en una conversación dirigida con
 
 ![](img/requisitos-owner.jpg)
 
-### Talleres JAD (*Joint Application Design*) 
-**Diseño Conjunto de Aplicaciones**
+### Talleres JAD 
+(*Joint Application Design*) **Diseño Conjunto de Aplicaciones**
 
 Desarrollado por IBM, JAD es una técnica interactiva de trabajo en grupo diseñada para acelerar la elicitación de requisitos y el diseño de interfaces en un entorno colaborativo estructurado.
 
@@ -120,7 +132,8 @@ Desarrollado por IBM, JAD es una técnica interactiva de trabajo en grupo diseñ
 
 
 
-### Prototipos (*Prototyping*) y Modelado Interactivo
+### Prototipos
+**Modelado Interactivo**
 
 Consiste en construir un modelo funcional, operacional o visual en etapas tempranas del ciclo de vida del software (SDLC) para capturar las reacciones de los usuarios y refinar los requisitos preliminares bajo el principio de *"lo sabré cuando lo vea"*.
 
@@ -136,7 +149,7 @@ Consiste en construir un modelo funcional, operacional o visual en etapas tempra
 
 
 
-### Observación (*Observation*) y Método STROBE
+### Observación y STROBE
 
 La observación es un método discreto y no intrusivo que consiste en presenciar directamente cómo los usuarios ejecutan sus tareas cotidianas e interactúan con la tecnología de la información.
 
@@ -166,7 +179,6 @@ La observación es un método discreto y no intrusivo que consiste en presenciar
 
 
 ---
-
 ## **Importancia en el Ciclo de Vida**
 
 La IR no es simplemente una etapa inicial de documentación; es el eje que atraviesa y condiciona todo el **Ciclo de Vida del Desarrollo de Software (SDLC)**:

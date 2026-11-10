@@ -1,8 +1,9 @@
 ---
 id: plan
-title: "Planificación del proyecto"
+title: "Planificación"
 sidebar_label: "📄 Planificación"
 description: "Planificación del proyecto"
+hide_title: true
 ---
 
 ## **EDT/WBS**

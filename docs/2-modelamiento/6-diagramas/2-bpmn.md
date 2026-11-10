@@ -1,7 +1,8 @@
 ---
 id: bpmn
-title: "📄 Business Process Model and Notation"
+title: "📄 BPMN"
 sidebar_label: "📄 BPMN"
+hide_title: true
 ---
 import YouTubeVideo from '@site/src/components/YouTubeVideo';
 

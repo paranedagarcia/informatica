@@ -3,7 +3,10 @@ id: presentacion
 title: "Modelamiento"
 sidebar_label: "📄 Presentación"
 sidebar_position: 1
+hide_title: true
 ---
+
+## **Modelamiento**
 
 El **modelamiento (o modelado)** es una disciplina fundamental que actúa como puente entre los problemas del mundo real y las soluciones computacionales de software, hardware y procesos. Al mencionar "problemas del mundo real" asumiremos el conocimiento del concepto de sistema que describe la industria objeto del análisis.
 

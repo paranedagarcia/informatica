@@ -1,11 +1,13 @@
 ---
 id: a-microservicios
 title:  "📄 Arquitectura microservicios"
+hide_title: true
 sidebar_label: "📄 A. Microservicios"
 description: "Arquitectura orientada a microservicios"
+hide_table_of_contents: false
 ---
 
-## **Microservicios (MSA)**
+## **Microservicios**
 El **Patrón de Arquitectura de Microservicios (*Micro-Service Architecture - MSA*)** es un estilo arquitectónico que estructura una aplicación como una **constelación de servicios pequeños, autónomos y débilmente acoplados**, donde cada servicio se ejecuta en su propio proceso de computación y modela una capacidad de negocio bien delimitada. 
 
 A diferencia de los sistemas monolíticos tradicionales, donde todos los componentes de software (presentación, lógica y datos) residen y compiten en un único proceso ejecutable, los microservicios distribuyen la responsabilidad para permitir despliegues independientes, alta tolerancia a fallos y escalabilidad granular.
@@ -89,8 +91,8 @@ En un diseño integral de microservicios, la interacción se organiza en las sig
                    │
                    ▼ (HTTPS / REST)
        ┌────────────────────────┐
-       │      API Gateway       │  <── Enrutamiento, Autenticación, Rate Limiting
-       └────────────────────────┘
+       │      API Gateway       │  <── Enrutamiento, Autenticación, 
+       └────────────────────────┘      Rate Limiting
          │          │          │
          ▼          ▼          ▼
    ┌──────────┐┌──────────┐┌──────────┐
@@ -120,13 +122,48 @@ En un diseño integral de microservicios, la interacción se organiza en las sig
 
 ### Microservicios vs. SOA vs. Monolito
 
-| Dimensión | Arquitectura Monolítica | SOA (Orientada a Servicios Tradicional) | Microservicios (MSA) |
-| :--- | :--- | :--- | :--- |
-| **Límite de Ejecución** | Un único proceso de SO; componentes acoplados en memoria. | Varios sistemas y servicios heterogéneos. | Múltiples servicios pequeños en procesos/contenedores aislados. |
-| **Gobernanza de Datos** | Base de datos centralizada compartida por todos los módulos. | Tiende a compartir bases de datos corporativas o esquemas comunes. | **Base de datos por servicio** (descentralizada y políglota). |
-| **Middleware de Comunicación** | Llamadas a funciones o métodos locales (`in-process`). | **ESB inteligente**: orquestación centralizada, adaptadores y transformación de datos. | **Tuberías tontas (*Dumb Pipes*)**: APIs REST livianas o brokers de eventos simples. |
-| **Granularidad del Servicio** | Gruesa / Monobloque (sin servicios externos). | Gruesa o Mediana; orientada a la integración corporativa. | **Fina y enfocada**: delimitada estrictamente por contexto de negocio. |
-| **Acoplamiento Operacional** | Máximo; un fallo en un módulo puede tumbar el proceso entero. | Medio; mitigado por el bus pero con dependencia del ESB central. | Mínimo; alta resiliencia y autonomía de despliegue. |
+<table>
+   <thead>
+      <tr>
+         <th>Dimensión</th>
+         <th>Arquitectura Monolítica</th>
+         <th>SOA (Orientada a Servicios Tradicional)</th>
+         <th>Microservicios (MSA)</th>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <th scope="row">Límite de Ejecución</th>
+         <td>Un único proceso de SO; componentes acoplados en memoria.</td>
+         <td>Varios sistemas y servicios heterogéneos.</td>
+         <td>Múltiples servicios pequeños en procesos/contenedores aislados.</td>
+      </tr>
+      <tr>
+         <th scope="row">Gobernanza de Datos</th>
+         <td>Base de datos centralizada compartida por todos los módulos.</td>
+         <td>Tiende a compartir bases de datos corporativas o esquemas comunes.</td>
+         <td><strong>Base de datos por servicio</strong> (descentralizada y políglota).</td>
+      </tr>
+      <tr>
+         <th scope="row">Middleware de Comunicación</th>
+         <td>Llamadas a funciones o métodos locales (<code>in-process</code>).</td>
+         <td><strong>ESB inteligente</strong>: orquestación centralizada, adaptadores y transformación de datos.</td>
+         <td><strong>Tuberías tontas (<em>Dumb Pipes</em>)</strong>: APIs REST livianas o brokers de eventos simples.</td>
+      </tr>
+      <tr>
+         <th scope="row">Granularidad del Servicio</th>
+         <td>Gruesa / Monobloque (sin servicios externos).</td>
+         <td>Gruesa o Mediana; orientada a la integración corporativa.</td>
+         <td><strong>Fina y enfocada</strong>: delimitada estrictamente por contexto de negocio.</td>
+      </tr>
+      <tr>
+         <th scope="row">Acoplamiento Operacional</th>
+         <td>Máximo; un fallo en un módulo puede tumbar el proceso entero.</td>
+         <td>Medio; mitigado por el bus pero con dependencia del ESB central.</td>
+         <td>Mínimo; alta resiliencia y autonomía de despliegue.</td>
+      </tr>
+   </tbody>
+</table>
 
 
 
@@ -179,12 +216,12 @@ El protocolo tradicional de transacciones distribuidas en bases de datos es el *
 Para resolver este dilema, la arquitectura de microservicios adopta la **consistencia eventual** y las **transacciones de larga duración (*Long-Running Transactions*)**, donde el trabajo se confirma de manera local e incremental y se recurre a **actividades de compensación** en caso de aborto o error.
 
 
+***
+## **Patrón Saga**
 
-### Patrón Saga
+El patrón Saga es un patrón de diseño arquitectónico para gestionar **transacciones distribuidas de larga duración (Long-Running Transactions)** en sistemas compuestos por servicios o microservicios que manejan bases de datos independientes. Donde cada servicio administra su propia base de datos (*Database-per-Service*).
 
-El patrón Saga es un patrón de diseño arquitectónico para gestionar transacciones distribuidas de larga duración (Long-Running Transactions) en sistemas compuestos por servicios o microservicios que manejan bases de datos independientes.
-
-A diferencia de las bases de datos relacionales tradicionales, donde todas las operaciones se agrupan en una única transacción atómica local bajo el estándar ACID (mediante sentencias BEGIN TRANSACTION ... COMMIT / ROLLBACK), en un entorno de microservicios con persistencia descentralizada (Database-per-Service) no es viable retener bloqueos globales sin degradar severamente la disponibilidad y el rendimiento del sistema.
+A diferencia de las bases de datos relacionales tradicionales, donde todas las operaciones se agrupan en una única transacción atómica local bajo el estándar **ACID** (mediante sentencias BEGIN TRANSACTION ... COMMIT / ROLLBACK), en un entorno de microservicios con persistencia descentralizada (Database-per-Service) no es viable retener bloqueos globales sin degradar severamente la disponibilidad y el rendimiento del sistema. El patrón SAGA sustituye las transacciones atómicas globales por **consistencia eventual** apoyada en acciones compensatorias.
 
 El **Patrón Saga** modela una transacción de negocio que abarca múltiples microservicios como una **secuencia ordenada de transacciones locales independientes**.
 
@@ -192,7 +229,7 @@ El **Patrón Saga** modela una transacción de negocio que abarca múltiples mic
 \text{Saga} = \{T_1, T_2, T_3, \dots, T_n\}
 ```
 
-* **Compromiso Local Inmediato:** Cada paso $T_i$ actualiza la base de datos local de un microservicio específico y publica un mensaje o evento que desencadena la siguiente transacción local $T_{i+1}$.
+* **Compromiso Local Inmediato:** Cada microservicio ejecuta su transacción local $T_i$, confirma (*commit*) los cambios en su base de datos privada y publica un evento o mensaje para desencadenar el siguiente paso $T_{i+1}$.
 
 * **Reversión Semántica mediante Compensación:** Si alguna de las transacciones locales falla (por ejemplo, fondos insuficientes en el servicio de pagos o falta de stock en inventario), la Saga no puede ejecutar un rollback físico tradicional porque los pasos previos ya hicieron commit en sus bases de datos locales. En su lugar, el patrón ejecuta una serie de **transacciones compensatorias** en orden inverso para revertir semánticamente los efectos ya confirmados:
 
@@ -228,7 +265,6 @@ Existen dos estrategias principales para orquestar la secuencia de eventos y com
 
 * **Desventajas:** Riesgo de sobrecargar al orquestador con lógica de dominio si no se respeta la separación de responsabilidades.
 
----
 
 ### Transacción Clásica (ACID / 2PC) y Patrón Saga
 
@@ -239,10 +275,22 @@ Existen dos estrategias principales para orquestar la secuencia de eventos y com
 | **Mecanismo de Deshacer** | *Rollback* técnico directo en el motor de base de datos. | **Compensación semántica** (nueva transacción de negocio que contrarresta el efecto previo). |
 | **Tolerancia y Escalabilidad** | Baja en redes distribuidas; susceptible a bloqueos prolongados y caídas de nodos. | **Alta escalabilidad y resiliencia**; adecuada para arquitecturas de microservicios en la nube. |
 
-***
+
+### Principales Casos de Uso
+
+El patrón SAGA se aplica cuando una operación de negocio debe mantener la consistencia a través de múltiples límites de datos independientes:
+
+* **Comercio Electrónico y Procesamiento de Órdenes:** Coordinación secuencial de *Crear Pedido* $\rightarrow$ *Reservar Inventario* $\rightarrow$ *Cobrar con Tarjeta* $\rightarrow$ *Generar Envío*. Si el cobro falla, se devuelve el inventario retenido.
+
+* **Reservas de Viajes y Turismo:** Reserva conjunta de vuelo, hotel y arriendo de vehículo. Si el hotel no tiene disponibilidad, se cancela la reserva del vuelo sin penalización.
+
+* **Servicios Financieros y Transferencias Interbancarias:** Débito en la cuenta de origen, validación de fraude y acreditación en la cuenta de destino.
+
+* **Procesos de Negocio en BPMS / BPMN:** Flujos donde subprocesos transaccionales integran servicios web heterogéneos y requieren eventos y manejadores de compensación (`compensationHandler`) ante excepciones.
 
 
-### Diagrama de Secuencia UML
+
+### Diagrama de secuencia
 **Saga Orquestada de Compra y Pago**
 
 El siguiente diagrama de secuencia ilustra el flujo de una compra en comercio electrónico bajo el patrón Saga orquestado, demostrando tanto el **camino de éxito** como el **manejo de fallos con compensación semántica**:
@@ -342,7 +390,7 @@ flowchart LR
 
 
 
-### Consideraciones de Diseño para Sagas
+### Consideraciones de Diseño
 
 | Desafío en Microservicios | Riesgo Técnico | Solución con Patrón Saga |
 | :--- | :--- | :--- |
@@ -350,3 +398,118 @@ flowchart LR
 | **Mensajes Duplicados o Fuera de Orden** | La red o el broker pueden entregar el mismo evento más de una vez (*at-least-once delivery*). | **Receptores Idempotentes:** Registrar claves de deduplicación de transacciones antes de procesar cualquier comando o compensación. |
 | **Fallos en la Compensación** | Si un servicio de inventario falla cuando intenta devolver el stock al almacén. | **Reintentos automáticos e intervención asistida:** Los comandos compensatorios deben garantizarse mediante colas persistentes con reintentos exponenciales y alertas a colas de mensajes fallidos (*Dead-Letter Queues*). |
 
+
+
+
+### Ejemplo de Implementación
+
+El siguiente ejemplo ilustra la arquitectura de una **Saga Orquestada** con registro de pasos y ejecución automática de compensaciones ante excepciones:
+
+```python showLineNumberss
+from dataclasses import dataclass, field
+from typing import List, Callable, Any
+
+@dataclass
+class PasoSaga:
+    nombre: str
+    accion: Callable[[], bool]          # Transacción local (Ti)
+    compensacion: Callable[[], None]    # Compensación semántica (Ci)
+
+class OrquestadorSaga:
+    def __init__(self):
+        self.pasos: List[PasoSaga] = []
+        self.pasos_completados: List[PasoSaga] = []
+
+    def registrar_paso(self, nombre: str, accion: Callable[[], bool], compensacion: Callable[[], None]):
+        self.pasos.append(PasoSaga(nombre, accion, compensacion))
+
+    def ejecutar(self) -> bool:
+        print("=== Iniciando Ejecución de la Saga ===")
+        for paso in self.pasos:
+            print(f"Ejecutando: {paso.nombre}...")
+            try:
+                exito = paso.accion()
+                if not exito:
+                    print(f"[!] Fallo de negocio en: {paso.nombre}")
+                    self._compensar()
+                    return False
+                self.pasos_completados.append(paso)
+            except Exception as e:
+                print(f"[!] Excepción técnica en {paso.nombre}: {e}")
+                self._compensar()
+                return False
+
+        print("=== Saga Completada con Éxito ===")
+        return True
+
+    def _compensar(self):
+        print("\n>>> INICIANDO FLUXO DE COMPENSACIÓN (Orden Inverso) <<<")
+        for paso in reversed(self.pasos_completados):
+            print(f"Compensando: {paso.nombre}...")
+            try:
+                paso.compensacion()
+            except Exception as e:
+                print(f"Error crítico en compensación de {paso.nombre}: {e}")
+        print(">>> Compensación Finalizada: Estado Consistente <<<\n")
+
+# --- SIMULACIÓN DE MICROSERVICIOS INDEPENDIENTES ---
+
+class ServicioPedidos:
+    def crear_orden(self): 
+        print("  [Pedidos] Orden creada en estado PENDIENTE.")
+        return True
+    def cancelar_orden(self): 
+        print("  [Pedidos] Compensación: Orden marcada como CANCELADA.")
+
+class ServicioInventario:
+    def __init__(self, stock: int):
+        self.stock = stock
+    def reservar(self):
+        if self.stock >= 1:
+            self.stock -= 1
+            print(f"  [Inventario] Stock reservado. Restante: {self.stock}")
+            return True
+        print("  [Inventario] Error: Sin existencias.")
+        return False
+    def liberar(self):
+        self.stock += 1
+        print(f"  [Inventario] Compensación: Stock restaurado. Total: {self.stock}")
+
+class ServicioPagos:
+    def cobrar(self, fondos_suficientes: bool):
+        if fondos_suficientes:
+            print("  [Pagos] Cobro procesado exitosamente.")
+            return True
+        print("  [Pagos] Error: Tarjeta declinada por fondos insuficientes.")
+        return False
+    def reembolsar(self):
+        print("  [Pagos] Compensación: Reembolso emitido al cliente.")
+
+# --- PRUEBA DEL CASO DE FALLO ---
+if __name__ == "__main__":
+    pedidos = ServicioPedidos()
+    inventario = ServicioInventario(stock=5)
+    pagos = ServicioPagos()
+
+    saga = OrquestadorSaga()
+    
+    # Se encadenan las transacciones y sus compensadores
+    saga.registrar_paso("Crear Pedido", pedidos.crear_orden, pedidos.cancelar_orden)
+    saga.registrar_paso("Reservar Stock", inventario.reservar, inventario.liberar)
+    # Simulamos fallo de pago en el paso 3
+    saga.registrar_paso("Procesar Pago", lambda: pagos.cobrar(fondos_suficientes=False), pagos.reembolsar)
+
+    resultado = saga.ejecutar()
+    print(f"Resultado final de la transacción global: {'Éxito' if resultado else 'Transacción Abortada'}")
+```
+
+
+### Consideraciones de Diseño
+
+Al implementar Sagas, se deben resolver tres retos inherentes a la consistencia eventual:
+
+1. **Falta de Aislamiento (*Lack of Isolation*):** Dado que cada transacción local hace *commit* inmediatamente, otros servicios o usuarios pueden ver datos en estado intermedio (lecturas sucias). Se mitiga usando **estados semánticos pendientes** (ej. `PENDIENTE_PAGO` en lugar de `APROBADO`) o versionamiento de registros.
+
+2. **Idempotencia Obligatoria:** En entornos de red distribuidos, los mensajes pueden duplicarse o reintentarse. Tanto las transacciones de acción ($T$) como las de compensación ($C$) deben ser **idempotentes** (procesar el mismo mensaje múltiples veces debe producir el mismo resultado que procesarlo una sola vez).
+
+3. **Manejo de Fallos en la Compensación:** Si una compensación falla (por ejemplo, el servicio de inventario se cae justo cuando debe reponer el producto), la saga debe contar con **reintentos exponenciales automáticos**, colas de mensajes fallidos (*Dead-Letter Queues*) y alertas para intervención técnica.
