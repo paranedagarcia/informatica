@@ -1,0 +1,9 @@
+{
+  "label": "📁 Cloud computing",
+  "link": {
+    "type": "generated-index",
+    "title": "📚 Cloud Computing",
+    "description": "Computación en la nube. Uso de recursos y servicios a través de internet para almacenamiento, procesamiento y gestión de datos.",
+    "slug": "/cloud"
+  }
+}
