@@ -3,9 +3,10 @@ id: ae-bloques
 title:  "Diagrama"
 sidebar_label: "📄 Diagrama de bloques"
 description: "Modelado de sistemas como representación gráfica"
+hide_title: true
 ---
 
-## **bloques**
+## **Diagrama de bloques**
 
 Un **Diagrama de Bloques** en el modelado de sistemas es una representación gráfica, simplificada y de alto nivel que describe la estructura, composición o comportamiento funcional de un sistema. En él, las funciones principales, subsistemas, módulos o componentes se representan mediante **bloques** (generalmente rectángulos), mientras que las interconexiones, flujos de datos, señales o relaciones se representan mediante **líneas o flechas** que unen dichos bloques.
 
