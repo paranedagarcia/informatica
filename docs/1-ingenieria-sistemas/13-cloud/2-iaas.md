@@ -1,9 +1,9 @@
 ---
-id: cloud-iaas
+id: iaas
 title:  "📄 IaaS"
 sidebar_label: "📄 IaaS"
 description: "Infraestructura como servicio"
-hide_title: true
+slug: /cloud/iaas
 ---
 
 ## **Infraestructura como servicio**

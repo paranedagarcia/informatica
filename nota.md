@@ -34,3 +34,12 @@ Dame un ejemplo de cómo evitar la deuda técnica usando principios SOLID.
 ¿Cómo se aplica SAGA en microservicios?
 Ejemplo práctico de SAGA con compensaciones
 Diferencias entre SAGA y 2PC
+
+## faas
+Explora cómo funciona el nivel gratuito en AWS Lambda
+
+Compara las características de seguridad en Cloud Functions
+
+Analiza las ventajas de usar AWS Fargate para contenedores
+
+📊 Si te interesa, podemos diseñar una arquitectura de referencia serverless multirregión seleccionando la combinación óptima de estos servicios para un caso de uso concreto (como una API transaccional o un pipeline de ingesta de datos).

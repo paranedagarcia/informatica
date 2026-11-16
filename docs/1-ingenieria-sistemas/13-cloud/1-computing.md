@@ -4,6 +4,7 @@ title:  "📄 Computación en la nube"
 sidebar_label: "📄 Introducción"
 description: "Computación en la nube"
 hide_title: true
+slug: /cloud/intro
 ---
 
 ## **Computación en la nube**

@@ -1,9 +1,9 @@
 ---
-id: cloud-paas
+id: paas
 title:  "📄 PaaS"
 sidebar_label: "📄 PaaS"
 description: "Plataforma como servicio"
-hide_title: true
+slug: /cloud/paas
 ---
 
 ## **Plataforma como servicio**
