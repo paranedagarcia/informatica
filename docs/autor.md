@@ -25,12 +25,13 @@ slug: /autor
   </div>
 </div>
 <div class="col col--7">
-<br />
 Profesional senior con +25 años de experiencia en informática y software, especializado en data science, gobierno de datos y transformación digital. 
 
 Líder de equipos multidisciplinarios y gestión de programas end-to-end (Agile/Waterfall) integrando analítica avanzada y soluciones en nube (Azure). 
 
 Con experiencia transversal como CTO/CIO/PO/Program Manager.
+
+Profesor Asistente, Universidad de Los Lagos.
 
 </div>
 </div>
@@ -62,7 +63,7 @@ Bases de Datos * Analítica de Negocios * Análisis de Datos * Fundamentos de Si
 ## ☕ Contacto
 
 * **Web**: https://patricioaraneda.cl
-* **Email**: [paraneda@ug.uchile.cl](mailto:paraneda@ug.uchile.cl) / [patricioaranedagarcia@gmail.com](mailto:patricioaranedagarcia@gmail.com)
+* **Email**: [patricio@aranedagarcia.cl](mailto:patricio@aranedagarcia.cl) / [patricioaranedagarcia@gmail.com](mailto:patricioaranedagarcia@gmail.com)
 * **LinkedIn**: https://www.linkedin.com/in/patricioaraneda/
 * **GitHub**: https://github.com/paranedagarcia
 
