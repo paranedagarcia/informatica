@@ -37,9 +37,9 @@ function resolveSecureMode(value) {
 function buildAccessOptions(overrides = {}) {
   const secureOptions = {
     minVersion: 'TLSv1.2',
-    maxVersion: 'TLSv1.2',
     rejectUnauthorized: FTP_SECURE_REJECT_UNAUTHORIZED,
     servername: FTP_SECURE_SERVERNAME || FTP_HOST,
+    ciphers: 'DEFAULT:!aNULL:!eNULL:!MD5:!3DES:!DES:!RC4:!IDEA:!SEED:!aDSS:!SRP:!PSK',
     ...(overrides.secureOptions || {})
   }
 
@@ -62,6 +62,7 @@ function shouldRetryWithImplicitFtps(err) {
 function shouldRetryWithoutCertificateValidation(err) {
   return err && err.code === 'ERR_TLS_CERT_ALTNAME_INVALID'
 }
+
 
 if (!FTP_HOST || !FTP_USER || !FTP_PASSWORD) {
   console.error('Missing FTP configuration. Please set FTP_HOST, FTP_USER, FTP_PASSWORD.')
@@ -86,26 +87,37 @@ async function uploadDir(client, localDir, remoteDir) {
 
 async function connectClient(client) {
   try {
-    await client.access(buildAccessOptions())
+    const options = buildAccessOptions()
+    console.log('Connecting to FTP server with secure mode:', options.secure)
+    await client.access(options)
   } catch (err) {
-    if (!shouldRetryWithImplicitFtps(err) || FTP_SECURE_RAW === 'implicit') {
-      throw err
+    const message = String(err && err.message ? err.message : err).toLowerCase()
+    
+    if (message.includes('cleartext') || message.includes('tls security mechanisms')) {
+      if (resolveSecureMode(FTP_SECURE_RAW) === false) {
+        client.close()
+        console.warn('Server requires TLS. Retrying with explicit FTPS...')
+        await client.access(buildAccessOptions({ secure: true }))
+        return
+      }
     }
 
-    client.close()
-    if (resolveSecureMode(FTP_SECURE_RAW) === false) {
-      console.warn('Server rejected cleartext FTP. Retrying with explicit FTPS.')
-      await client.access(buildAccessOptions({ secure: true }))
+    if (err && err.code === 'ERR_TLS_CERT_ALTNAME_INVALID' && FTP_SECURE_REJECT_UNAUTHORIZED) {
+      client.close()
+      console.warn('Certificate validation failed. Retrying with validation disabled...')
+      await client.access(
+        buildAccessOptions({
+          secureOptions: {
+            minVersion: 'TLSv1.2',
+            rejectUnauthorized: false,
+            servername: FTP_SECURE_SERVERNAME || FTP_HOST,
+          },
+        })
+      )
       return
     }
 
-    console.warn('Explicit FTPS was rejected by the server. Retrying with implicit FTPS.')
-    await client.access(
-      buildAccessOptions({
-        secure: 'implicit',
-        port: FTP_PORT === 21 ? 990 : FTP_PORT,
-      })
-    )
+    throw err
   }
 }
 
@@ -128,31 +140,6 @@ async function deployBuild(client) {
     await connectClient(client)
     await deployBuild(client)
   } catch (err) {
-    if (shouldRetryWithoutCertificateValidation(err) && FTP_SECURE_REJECT_UNAUTHORIZED) {
-      try {
-        client.close()
-        console.warn(
-          'The FTP server certificate does not match the configured host. Retrying with certificate validation disabled.'
-        )
-        await client.access(
-          buildAccessOptions({
-            secureOptions: {
-              minVersion: 'TLSv1.2',
-              rejectUnauthorized: false,
-              servername: FTP_SECURE_SERVERNAME || FTP_HOST,
-            },
-          })
-        )
-
-        await deployBuild(client)
-        return
-      } catch (retryErr) {
-        console.error('FTP upload failed:', retryErr)
-        process.exitCode = 1
-        return
-      }
-    }
-
     console.error('FTP upload failed:', err)
     process.exitCode = 1
   } finally {
