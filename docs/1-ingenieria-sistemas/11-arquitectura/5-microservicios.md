@@ -1,10 +1,11 @@
 ---
-id: a-microservicios
+id: microservicios
 title:  "📄 Arquitectura microservicios"
 hide_title: true
 sidebar_label: "📄 A. Microservicios"
 description: "Arquitectura orientada a microservicios"
 hide_table_of_contents: false
+slug: /arquitectura/microservicios
 ---
 
 ## **Microservicios**

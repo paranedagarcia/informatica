@@ -1,8 +1,9 @@
 ---
-id: a-clienteservidor
+id: clienteservidor
 title:  "📄 Arquitectura cliente-servidor"
 sidebar_label: "📄 A. Cliente-servidor"
 description: "Arquitectura cliente-servidor"
+slug: /arquitectura/cliente-servidor
 ---
 
 ## **Cliente-Servidor**

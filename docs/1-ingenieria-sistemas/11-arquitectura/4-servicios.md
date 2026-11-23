@@ -1,8 +1,9 @@
 ---
-id: a-servicios
+id: soa
 title:  "📄 Arquitectura SOA"
 sidebar_label: "📄 A. Orientada a servicios"
 description: "Arquitectura orientada a servicios"
+slug: /arquitectura/soa
 ---
 
 
